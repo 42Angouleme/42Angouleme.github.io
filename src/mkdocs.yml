@@ -20,3 +20,8 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Passer au mode clair
+
+markdown_extensions:
+  - pymdownx.highlight:
+      use_pygments: true
+  - pymdownx.superfences
