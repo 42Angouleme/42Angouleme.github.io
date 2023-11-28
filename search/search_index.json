@@ -1,1 +1,0 @@
-{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"Le projet Pybot","text":"<p>L'objectif est de cr\u00e9er une librairie python qui permettra \u00e0 des \u00e9l\u00e8ves de niveau 3\u00e9me du r\u00e9aliser un robot.</p>"},{"location":"dev/","title":"Progression","text":""}]}

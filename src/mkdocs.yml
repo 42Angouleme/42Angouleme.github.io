@@ -1,0 +1,22 @@
+site_name: La bibliothèque pybot 
+nav:
+  - Documentation élèves: index.md
+  - Progression du projet: dev.md
+  - Contribution au projet: contribute.md
+
+theme: 
+  name: material 
+  language: fr
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: amber
+      toggle:
+        icon: material/brightness-4
+        name: Passer au mode sombre
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: amber
+      toggle:
+        icon: material/brightness-7
+        name: Passer au mode clair
