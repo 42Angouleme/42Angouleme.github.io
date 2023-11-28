@@ -1,5 +1,32 @@
 site_name: Pybot Documentation
 nav:
-  - Home: index.md
-  - About: about.md
-theme: readthedocs
+  - Pybot: index.md
+  - Progression: dev.md
+
+theme: 
+  name: material
+  palette:
+    # primary: blue
+
+    # Palette toggle for light mode
+    - scheme: amber
+      toggle:
+        icon: material/brightness-7 
+
+
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+    # - scheme: default
+    #   toggle:
+    #     icon: material/brightness-7 
+    #     name: Passer au mode sombre
+    # - scheme: slate
+    #   toggle:
+    #     icon: material/brightness-4
+    #     name: Passer au mode clair

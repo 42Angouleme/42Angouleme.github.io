@@ -8,6 +8,6 @@ https://www.mkdocs.org/
 ```
 python -m venv venv
 source venv/bin/activate
-pip install mkdocs
+pip install mkdocs mkdocs-material
 mkdocs --help
 ```
