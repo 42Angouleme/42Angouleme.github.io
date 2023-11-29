@@ -3,10 +3,13 @@ nav:
   - La documentation de Pybot: index.md
   - Installer et utiliser Pybot: config.md
   - Apprendre le Python: python.md
-  - Progression du projet: roadmap.md
   - Contribuer au projet: contribute.md
+  - Progression du projet: roadmap.md
 
 theme: 
+  icon:
+    logo: material/robot-love-outline
+    favicon: images/favicon.png
   name: material 
   language: fr
   palette:

@@ -8,8 +8,8 @@ Bonjour vous trouverez ici les informations pour utiliser la bibliothèque pybot
 
 * Une interface graphique pour intéragir avec le robot.
 * Une reconnaissance visuelle par caméra (pas biométrique comme le visage mais des dessins sur cartes).
-* Une base de donnée et une administration web pour enregistrer les cartes des élèves.
 * Des fonctionnalités de communication avec une IA utilisant un microphone et un haut parleur.
+* Une base de donnée et une administration web pour configurer le robot, par exemple: enregistrer les cartes d'identification des élèves.
 
 ## Utilisation de la bibliothèque
 
