@@ -29,7 +29,6 @@ Une fois que le ticket est créé, tout le monde peut participer à la discussio
 
 ![Screenshot](contribute/6.png)
 
-
 TODO
 
 ![Screenshot](contribute/7.png)
