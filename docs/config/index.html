@@ -9,21 +9,25 @@
       
       
       
+        <link rel="prev" href="..">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../python/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
     
     
       
-        <title>La bibliothèque pybot</title>
+        <title>Installer et utiliser Pybot - La bibliothèque pybot</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.fad675c6.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.fad675c6.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -42,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -70,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#configurer-lediteur-vs-code-pour-programmer-le-robot" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -82,7 +91,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="/." title="La bibliothèque pybot" class="md-header__button md-logo" aria-label="La bibliothèque pybot" data-md-component="logo">
+    <a href=".." title="La bibliothèque pybot" class="md-header__button md-logo" aria-label="La bibliothèque pybot" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -102,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Installer et utiliser Pybot
             
           </span>
         </div>
@@ -200,7 +209,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="La bibliothèque pybot" class="md-nav__button md-logo" aria-label="La bibliothèque pybot" data-md-component="logo">
+    <a href=".." title="La bibliothèque pybot" class="md-nav__button md-logo" aria-label="La bibliothèque pybot" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -218,7 +227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -235,10 +244,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/config/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -247,6 +265,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -258,7 +277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/python/" class="md-nav__link">
+      <a href="../python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -278,7 +297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/roadmap/" class="md-nav__link">
+      <a href="../roadmap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -298,7 +317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/contribute/" class="md-nav__link">
+      <a href="../contribute/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -328,6 +347,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -339,8 +360,46 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+<h1 id="configurer-lediteur-vs-code-pour-programmer-le-robot">Configurer l'éditeur VS Code pour programmer le robot</h1>
+<p>Pour installer les dépendances
+<div class="highlight"><pre><span></span><code>git clone git@github.com:42Angouleme/initiation_python.git
+cd initiation_python
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+</code></pre></div></p>
+<p>Pour préparer vscode
+<div class="highlight"><pre><span></span><code>code --install-extension ms-python.python
+code --install-extension MS-CEINTL.vscode-language-pack-fr
+cd initiation_python
+code main.py
+</code></pre></div></p>
+<h1 id="cliquer-sur-licone-extension">Cliquer sur l'icone extension</h1>
+<p><img alt="width:800px" src="python1.png" /></p>
+<h1 id="chercher-python-et-installer">Chercher python et installer</h1>
+<p><img alt="width:800px" src="python2.png" /></p>
+<h1 id="python-est-installe">Python est installé</h1>
+<p><img alt="width:800px" src="python3.png" /></p>
+<h1 id="ouvrir-lexplorateur-de-fichiers">Ouvrir l'explorateur de fichiers</h1>
+<p><img alt="width:800px" src="vscode0.png" /></p>
+<h1 id="creer-un-nouveau-fichier">Créer un nouveau fichier</h1>
+<p><img alt="width:800px" src="vscode1.png" /></p>
+<h1 id="nommer-le-fichier">Nommer le fichier</h1>
+<p><img alt="width:800px" src="vscode2.png" /></p>
+<h1 id="ecrire-son-code-dans-le-fichier">Écrire son code dans le fichier</h1>
+<p><img alt="width:800px" src="vscode3.png" /></p>
+<h1 id="lancer-le-programme">Lancer le programme</h1>
+<p><img alt="width:800px" src="vscode4.png" /></p>
+<h1 id="configurer-la-librairie-pybot-sur-debian-la-distribution-linux-sur-le-raspberry-pi">Configurer la librairie pybot sur Debian (La distribution linux sur le raspberry pi)</h1>
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -373,10 +432,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": [], "search": "/assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      <script src="../assets/javascripts/bundle.cd18aaf1.min.js"></script>
       
     
   </body>

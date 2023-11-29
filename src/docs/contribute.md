@@ -2,7 +2,7 @@
 
 > L'objectif est de créer une bibliothèque logicielle qui permettra à des élèves de collège de niveau 3éme de réaliser un robot par eux même (Tout en s'initiant à la programmation Python).
 
-Il existe deux dépôts public sur github, l'un avec la [bibliothèque python](https://github.com/42Angouleme/robot-python) et l'autre avec [la démo](https://github.com/42Angouleme/initiation_python) qui a servi aux collègiens lors de la journée d'immersion.
+Il existe deux dépôts public sur github, l'un avec la [bibliothèque python](https://github.com/42Angouleme/robot-python) et l'autre avec [la démo](https://github.com/42Angouleme/initiation_python) qui a servi aux collègiens lors de la journée d'immersion à l'écode de 42 Angoulême.
 
 ## Installation du projet
 

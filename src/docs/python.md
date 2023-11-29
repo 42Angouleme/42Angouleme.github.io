@@ -1,60 +1,8 @@
 # Apprendre python
 
-
-# Cliquer sur l'icone extension
-
-
-![width:800px](python/python1.png)
-
-
-# Chercher python et installer
-
-
-![width:800px](python/python2.png)
-
-
-# Python est installé
-
-
-![width:800px](python/python3.png)
-
-
-# Ouvrir l'explorateur de fichiers
-
-
-![width:800px](python/vscode0.png)
-
-
-
-# Créer un nouveau fichier
-
-
-![width:800px](python/vscode1.png)
-
-
-
-# Nommer le fichier
-
-
-![width:800px](python/vscode2.png)
-
-
-# Écrire son code dans le fichier
-
-
-![width:800px](python/vscode3.png)
-
-
-# Lancer le programme
-
-
-![width:800px](python/vscode4.png)
-
-
-<!-- backgroundImage: url('./50_b_w.png') -->
+Un cours d'initiation au language python avec des exemples.
 
 # 1. Les Variables
-
 
 Une variable est une manière de stocker une donnée. La variable doit avoir un type pour définir la donnée stockée.
 
@@ -137,13 +85,13 @@ def dire_bonjour_a_tous_les_etudiants(nombre_etudiants: int):
         indice = indice + 1
 ```
 
-# 5. Les Class
+# 5. Les classes
 
 
-Les class sont des structures de code qui définissent un objet et les comportements qu'il peut réaliser.
-Comme dans l'exemple suivant, vous pouvez importer une class "Robot" depuis la bibliothèque "Robot". 
+Les classes sont des structures de code qui définissent un objet et les comportements qu'il peut réaliser.
+Comme dans l'exemple suivant, vous pouvez importer une classes "Robot" depuis la bibliothèque "Robot". 
 Ensuite, il vous faut créer un objet Robot, avec ici un nom et un âge.
-Par la suite, vous pouvez donner des ordres à votre robot, en faisant appel aux méthodes que la class Robot contient.
+Par la suite, vous pouvez donner des ordres à votre robot, en faisant appel aux méthodes que la classes Robot contient.
 
 # Exemple:
 

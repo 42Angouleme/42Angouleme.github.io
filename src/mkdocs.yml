@@ -1,9 +1,10 @@
 site_name: La bibliothèque pybot 
 nav:
-  - Documentation élèves: index.md
+  - La documentation de Pybot: index.md
+  - Installer et utiliser Pybot: config.md
   - Apprendre le Python: python.md
-  - Progression du projet: dev.md
-  - Contribution au projet: contribute.md
+  - Progression du projet: roadmap.md
+  - Contribuer au projet: contribute.md
 
 theme: 
   name: material 
