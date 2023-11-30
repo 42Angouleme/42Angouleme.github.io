@@ -406,9 +406,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#module-audio" class="md-nav__link">
+  <a href="#module-audio-speaker" class="md-nav__link">
     <span class="md-ellipsis">
-      Module Audio
+      Module Audio (Speaker)
     </span>
   </a>
   
@@ -425,6 +425,24 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#liste-des-different-materiel-et-fonctionnement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liste des différent matériel et fonctionnement :
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation
+    </span>
+  </a>
   
 </li>
       
@@ -518,9 +536,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#module-audio" class="md-nav__link">
+  <a href="#module-audio-speaker" class="md-nav__link">
     <span class="md-ellipsis">
-      Module Audio
+      Module Audio (Speaker)
     </span>
   </a>
   
@@ -540,6 +558,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#liste-des-different-materiel-et-fonctionnement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liste des différent matériel et fonctionnement :
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -556,6 +592,9 @@
 
 
 <h1 id="progression-generale">Progression générale</h1>
+<blockquote>
+<p>L'objectif est d'obtenir une librairie qui permettra aux élèves d'interagir avec lui par la voix, le texte et l’image. Une IA (conversationnelle) interagira avec eux. Ce robot aura pour fonction principale d'accueillir le public dans le Hall de l'établissement et pourrait par exemple, si entrainé avec les données du collège, répondre à des questions comme: <em>"Que mange t'on ce midi à la cantine ?"</em>.</p>
+</blockquote>
 <p>Le projet se découpe en deux niveaux, la classe générale <strong>Robot</strong> qui doit avoir des méthodes accédant à toutes les fonctionnalités des modules de manière simple, correctement nommées et documentées (en français) pour l'utilisation par les élèves.</p>
 <p>Les <strong>modules</strong>, avec leurs fonctionnalités plus bas niveau doivent aussi étre documenté pour que les étudiants de 42 puisse s'intégrer plus facilement et participer au développement.</p>
 <h2 id="liste-des-fonctionnalites-de-la-classe-robot-et-leur-avancement">Liste des fonctionnalités de la classe Robot et leur avancement:</h2>
@@ -563,26 +602,101 @@
 <h3 id="module-ecran">Module écran</h3>
 <ul>
 <li>Wrapper pygame et pygame_gui</li>
+<li>Visage minimaliste avec expressions. S’anime en cas de connexion ou réagit aux erreurs.</li>
+<li>Possibilité d'affichage de texte défilant des interactions, pouvant remplacer le speaker.</li>
+<li>
+<p>Un application graphique (pygame GUI) client pour afficher le stream camera, des boutons, du texte ou des images depuis la base de données.</p>
+</li>
+<li>
+<p>Dès l’identification :</p>
+</li>
+<li>saluer, variable</li>
+<li>déclencher les questions pré-enregistrées actives de la DB</li>
+<li>échange libre</li>
 </ul>
 <h3 id="module-camera">Module caméra</h3>
 <ul>
-<li>Reconnaissance de carte</li>
+<li>[x] Reconnaissance (identification) via la caméra d’un élève grâce à son motif.</li>
 </ul>
 <h3 id="module-webapp">Module webapp</h3>
 <ul>
-<li>Travailler avec la base de donnée, et administration robot</li>
+<li>Permet de faire le backend pour travailler avec la base de donnée, propose aussi un interface client web pour aider à l'administration du robot.</li>
+<li>Un serveur web flask local avec base de données dans laquelle se
+trouvent les élèves. Cette base de donnée contient a minima:</li>
+<li>nom</li>
+<li>prénom</li>
+<li>image carte (chemin vers un dossier local)</li>
+<li>année ou date de création (RGPD)</li>
+<li>
+<p>string: résumé du dernier échange pour des conversations filées</p>
+</li>
+<li>
+<p>Application web permettant :</p>
+<ul>
+<li>CRUD : formulaire nom + prénom + image.</li>
+<li>Avec bouton image qui déclenche une photo, en analyse la validité : carte valide (sens, présence d’une carte), et pas de match d’un motif existant.</li>
+<li>Puis l’enregistre.</li>
+<li>Modifier des champs existants.</li>
+<li>Supprimer un utilisateur.</li>
+<li>Lire le tableau des utilisateurs.</li>
+<li>Page de logs (erreurs)</li>
+</ul>
+</li>
+<li>
+<p>DB question à poser avec fenêtre de temps (deux dates), avec une liste définie de réponses possibles : oui/non, ou une “enum” (chat gpt saura retranscrire la réponse de l’élève).</p>
+</li>
+<li>Champs :<ul>
+<li>from</li>
+<li>to</li>
+<li>question</li>
+<li>réponse valide</li>
+<li>Liste<Réponse &élève></li>
+</ul>
+</li>
+<li>Liste des questions actives</li>
+<li>Liste des réponses à une question + nombre d’occurences de chaque
+réponse</li>
 </ul>
 <h3 id="module-ia">Module IA</h3>
 <ul>
 <li>Communiquer avec chatgpt</li>
 </ul>
-<h3 id="module-audio">Module Audio</h3>
+<h3 id="module-audio-speaker">Module Audio (Speaker)</h3>
 <ul>
-<li>Text to speech</li>
+<li>Text to speech. Le texte est l’output de l’IA vers speaker.</li>
+<li>Capable de réagir de manière adaptee au public, répondre à des questions. Réponses courtes.</li>
 </ul>
 <h3 id="module-microphone">Module Microphone</h3>
 <ul>
-<li>Speech to text</li>
+<li>Speech to text. Capture du son et transformation en texte pour donner en input a l’IA.</li>
+<li>Partir d’un input (module microphone), préparer un prompt pour obtenir la réponse qui servira d’output (module speaker et module écran).</li>
+<li>Limitations des tokens, réponses courtes. Des sujets de discussions.</li>
+<li>Donner de la donnée concernant le college en apprentissage au modèle. (Par exemple renseigner sur les horaires cantines.)</li>
+<li>Actif sur commande (fonction listen on/off), capable d’écouter la voix en isolant les bruits parasites et transcrire le contenu en texte.</li>
+</ul>
+<h2 id="liste-des-different-materiel-et-fonctionnement">Liste des différent matériel et fonctionnement :</h2>
+<ul>
+<li>
+<p>Raspberry PI alimente un microphone, une camera, des hauts-parleurs</p>
+<ul>
+<li>Raspberry 4B 4GO</li>
+<li>2 cartes micro SD 64 GO</li>
+<li>écran tactile LCD tactile</li>
+<li>câble HDMI vers micro-hdmi</li>
+<li>alimentation 48W</li>
+<li>heat sinks</li>
+<li>camera v3</li>
+<li>camera HQ</li>
+<li>objectif camera HQ</li>
+<li>Nappe câble</li>
+<li>mini haut parleur usb</li>
+<li>microphone usb</li>
+</ul>
+</li>
+</ul>
+<h2 id="documentation">Documentation</h2>
+<ul>
+<li>Documentation en français, accessible par le web, décrivant les fonctions et fonctionnalités du robot.</li>
 </ul>
 
 
