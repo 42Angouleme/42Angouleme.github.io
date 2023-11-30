@@ -41,7 +41,6 @@ code main.py
 ![width:800px](config/vscode0.png)
 
 
-
 # Créer un nouveau fichier
 
 

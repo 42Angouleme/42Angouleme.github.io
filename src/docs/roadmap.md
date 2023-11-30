@@ -24,7 +24,7 @@ Les **modules**, avec leurs fonctionnalités plus bas niveau doivent aussi étre
 
 ### Module caméra
 
-- [x] Reconnaissance (identification) via la caméra d’un élève grâce à son motif.
+* Reconnaissance (identification) via la caméra d’un élève grâce à son motif.
 
 ### Module webapp
 
