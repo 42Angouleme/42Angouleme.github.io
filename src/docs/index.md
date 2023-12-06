@@ -2,7 +2,8 @@
 
 > Pybot est une bibliothèque logicielle permettant à des élèves de collége à programmer eux même un robot.
 
-Bonjour vous trouverez ici les informations pour utiliser la bibliothèque pybot avec des exemples concret pour réaliser des programmes jusqu'à un robot conversationnel complet.
+Bonjour vous trouverez ici les informations pour utiliser la bibliothèque pybot avec des exemples concret pour réaliser des programmes d'un simple affichage de caméra jusqu'à un robot conversationnel complet.
+
 
 ## Les fonctionnalités du robot :
 
@@ -10,6 +11,7 @@ Bonjour vous trouverez ici les informations pour utiliser la bibliothèque pybot
 * Une reconnaissance visuelle par caméra (pas biométrique comme le visage mais des dessins sur cartes).
 * Des fonctionnalités de communication avec une IA utilisant un microphone et un haut parleur.
 * Une base de donnée et une administration web pour configurer le robot, par exemple: enregistrer les cartes d'identification des élèves.
+
 
 ## Utilisation de la bibliothèque
 
@@ -20,6 +22,7 @@ print("bonjour, pybot")
 Pybot est une bibliothèque avec une Class Robot que l'on peut utiliser pour faire un programme graphique.
 
 Voici les méthodes et des exemples d'utilisation:
+
 
 ### Pour demarrer nous avons besoin d'importer la bibliothèque et de démarrer le robot :
 
@@ -43,6 +46,10 @@ robot.demarrer_webapp()
 Le site sera accessible à l'adresse : http://127.0.0.1:5000
 
 > Il est possible de configurer le raspberry pi pour faire serveur et rendre le site accessible sur le réseau local.
+
+
+---> REPRENDRE ICI LA DOC
+
 
 ### Pour allumer l'écran avec une longueur et une hauteur :
 

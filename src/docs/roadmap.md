@@ -9,10 +9,24 @@ Les **modules**, avec leurs fonctionnalités plus bas niveau doivent aussi étre
 ## Liste des fonctionnalités de la classe Robot et leur avancement:
 
 ## fonctionnalitées à créer, commenter et documenter
-- robot.demarrer_webapp() : créé [x], commentaire [], documentation [x]
-- robot.is_actif() : créé [x], commentaire [x], documentation []
-- robot.allumer_ecran(longueur, hauteur) : créé [x], commentaire [x], documentation []
-- robot.eteindre_ecran() : créé [x], commentaire [x], documentation []
+- robot.demarrer_webapp() : créé :white_check_mark:, commentaire :x:, documentation :white_check_mark:
+- robot.is_actif() : créé :white_check_mark:, commentaire :white_check_mark:, documentation :x:
+- robot.allumer_ecran(longueur, hauteur) : créé :white_check_mark:, commentaire :white_check_mark:, documentation :x:
+- robot.eteindre_ecran() : créé :white_check_mark:, commentaire :white_check_mark:, documentation :x:
+- robot.changer_titre() : créé :white_check_mark:, commentaire :x:, documentation :x:
+- robot.dort() : créé :white_check_mark:, commentaire :x:, documentation :x:
+- robot.plein_ecran(changer) : créé :x:, commentaire :x:, documentation :x:
+- robot.dessiner_ecran() : créé :x:, commentaire :x:, documentation :x:
+---
+- robot.ajouter_evenement(touche, fonction) : créé :x:, commentaire :x:, documentation :x:
+- robot.supprimer_evenement(touche) : créé :x:, commentaire :x:, documentation :x:
+- robot.verifier_evenement(touche) : créé :x:, commentaire :x:, documentation :x:
+- robot.ajouter_bouton(nom, fonction) : créé :x:, commentaire :x:, documentation :x:
+- robot.supprimer_bouton(nom) : créé :x:, commentaire :x:, documentation :x:
+- robot.xxx() : créé :x:, commentaire :x:, documentation :x:
+---
+- robot.message_erreur() : créé :white_check_mark:, commentaire :x:, documentation :x:
+- robot.xxx() : créé :x:, commentaire :x:, documentation :x:
 
 ## Liste des différent modules et leur avancement:
 

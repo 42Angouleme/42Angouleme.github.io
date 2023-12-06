@@ -430,16 +430,17 @@ Comme dans l'exemple suivant, vous pouvez importer une classes "Robot" depuis la
 Ensuite, il vous faut créer un objet Robot, avec ici un nom et un âge.
 Par la suite, vous pouvez donner des ordres à votre robot, en faisant appel aux méthodes que la classes Robot contient.</p>
 <h1 id="exemple_4">Exemple:</h1>
-<p>```python {.line-numbers}
-from pybot import Robot</p>
-<p>def main():
-    robot = Robot("Nono", 11)
-    robot.dire_bonjour()
-    robot.rendre_muet()
-    robot.dire_bonjour()
-    robot.donner_la_parole()
-    robot.dire_bonjour()
-```</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pybot</span> <span class="kn">import</span> <span class="n">Robot</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">(</span><span class="s2">&quot;Nono&quot;</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">dire_bonjour</span><span class="p">()</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">rendre_muet</span><span class="p">()</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">dire_bonjour</span><span class="p">()</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">donner_la_parole</span><span class="p">()</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">dire_bonjour</span><span class="p">()</span>
+</code></pre></div>
 
 
 

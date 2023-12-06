@@ -95,7 +95,7 @@ Par la suite, vous pouvez donner des ordres à votre robot, en faisant appel aux
 
 # Exemple:
 
-```python {.line-numbers}
+```python
 from pybot import Robot
 
 
