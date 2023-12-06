@@ -29,6 +29,21 @@ from pybot import Robot
 robot = Robot()
 ```
 
+
+### Lancer l'application web
+
+La première chose à faire est de lancer le serveur, l'application web, qui permettra de travailler avec la base de donnée et de configurer le robot depuis un site web.
+
+Le serveur web se lance et ne bloque pas le programme, on peut donc ensuite s'occuper de programmer le robot.
+
+```python
+robot.demarrer_webapp()
+```
+
+Le site sera accessible à l'adresse : http://127.0.0.1:5000
+
+> Il est possible de configurer le raspberry pi pour faire serveur et rendre le site accessible sur le réseau local.
+
 ### Pour allumer l'écran avec une longueur et une hauteur :
 
 ```python

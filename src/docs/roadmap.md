@@ -8,6 +8,12 @@ Les **modules**, avec leurs fonctionnalités plus bas niveau doivent aussi étre
 
 ## Liste des fonctionnalités de la classe Robot et leur avancement:
 
+## fonctionnalitées à créer, commenter et documenter
+- robot.demarrer_webapp() : créé [x], commentaire [], documentation [x]
+- robot.is_actif() : créé [x], commentaire [x], documentation []
+- robot.allumer_ecran(longueur, hauteur) : créé [x], commentaire [x], documentation []
+- robot.eteindre_ecran() : créé [x], commentaire [x], documentation []
+
 ## Liste des différent modules et leur avancement:
 
 ### Module écran

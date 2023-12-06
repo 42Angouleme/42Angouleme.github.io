@@ -299,6 +299,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#lancer-lapplication-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lancer l'application web
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pour-allumer-lecran-avec-une-longueur-et-une-hauteur" class="md-nav__link">
     <span class="md-ellipsis">
       Pour allumer l'écran avec une longueur et une hauteur :
@@ -581,6 +590,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#lancer-lapplication-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lancer l'application web
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pour-allumer-lecran-avec-une-longueur-et-une-hauteur" class="md-nav__link">
     <span class="md-ellipsis">
       Pour allumer l'écran avec une longueur et une hauteur :
@@ -757,6 +775,15 @@
 
 <span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
 </code></pre></div>
+<h3 id="lancer-lapplication-web">Lancer l'application web</h3>
+<p>La première chose à faire est de lancer le serveur, l'application web, qui permettra de travailler avec la base de donnée et de configurer le robot depuis un site web.</p>
+<p>Le serveur web se lance et ne bloque pas le programme, on peut donc ensuite s'occuper de programmer le robot.</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">demarrer_webapp</span><span class="p">()</span>
+</code></pre></div>
+<p>Le site sera accessible à l'adresse : http://127.0.0.1:5000</p>
+<blockquote>
+<p>Il est possible de configurer le raspberry pi pour faire serveur et rendre le site accessible sur le réseau local.</p>
+</blockquote>
 <h3 id="pour-allumer-lecran-avec-une-longueur-et-une-hauteur">Pour allumer l'écran avec une longueur et une hauteur :</h3>
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">allumer_ecran</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">)</span>
 </code></pre></div>

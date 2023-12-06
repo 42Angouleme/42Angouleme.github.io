@@ -1,6 +1,7 @@
 # Configurer l'éditeur VS Code pour programmer le robot
 
-Pour installer les dépendances
+## Configurer l'environnement python et installer les dépendances
+
 ```
 git clone git@github.com:42Angouleme/initiation_python.git
 cd initiation_python
@@ -9,7 +10,28 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Pour préparer vscode
+## Ajouter un package python et mettre à jour le fichier requirements.txt
+
+```
+python3 -m pip install <package_name>
+python3 -m pip freeze > requirements.txt
+```
+
+## Lancer le programme principal
+
+```
+python3 main.py
+```
+
+ou
+
+```
+chmod +x main.py
+./main.py
+```
+
+## Pour préparer vscode
+
 ```
 code --install-extension ms-python.python
 code --install-extension MS-CEINTL.vscode-language-pack-fr
@@ -47,7 +69,6 @@ code main.py
 ![width:800px](config/vscode1.png)
 
 
-
 # Nommer le fichier
 
 
@@ -68,3 +89,29 @@ code main.py
 
 # Configurer la librairie pybot sur Debian (La distribution linux sur le raspberry pi)
 
+
+# Démo interractives avec JupyterLab
+
+### Setup
+
+Setup à ne faire qu'une fois. Placez-vous à la racine du projet avec l'environnement virtuel activé et lancez la commande suivante.
+
+```sh
+ipython profile create && echo "c.InteractiveShellApp.exec_lines = ['import sys; sys.path.append(\"$(pwd)\")']" >> ~/.ipython/profile_default/ipython_config.py
+```
+
+> Celà permet au notebook de trouver les modules locaux à notre package
+
+La dernière ligne du fichier `~/.ipython/profile_default/ipython_config.py` devraient maintenant contenir:
+
+```python
+c.InteractiveShellApp.exec_lines = ['import sys; sys.path.append("<chemin_vers_robot-python>")']
+```
+
+### Lancer les démo
+
+```sh
+jupyter lab notebooks/sommaire.ipynb
+```
+
+> Les notebooks [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/index.html) combinent descriptions Markdown et sections de code interractif.

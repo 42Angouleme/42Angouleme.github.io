@@ -256,6 +256,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Installer et utiliser Pybot
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -265,6 +276,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configurer-lenvironnement-python-et-installer-les-dependances" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurer l'environnement python et installer les dépendances
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ajouter-un-package-python-et-mettre-a-jour-le-fichier-requirementstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ajouter un package python et mettre à jour le fichier requirements.txt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lancer-le-programme-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lancer le programme principal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pour-preparer-vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pour préparer vscode
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -350,6 +416,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configurer-lenvironnement-python-et-installer-les-dependances" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurer l'environnement python et installer les dépendances
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ajouter-un-package-python-et-mettre-a-jour-le-fichier-requirementstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ajouter un package python et mettre à jour le fichier requirements.txt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lancer-le-programme-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lancer le programme principal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pour-preparer-vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pour préparer vscode
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -364,19 +474,30 @@
 
 
 <h1 id="configurer-lediteur-vs-code-pour-programmer-le-robot">Configurer l'éditeur VS Code pour programmer le robot</h1>
-<p>Pour installer les dépendances
+<h2 id="configurer-lenvironnement-python-et-installer-les-dependances">Configurer l'environnement python et installer les dépendances</h2>
 <div class="highlight"><pre><span></span><code>git clone git@github.com:42Angouleme/initiation_python.git
 cd initiation_python
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-</code></pre></div></p>
-<p>Pour préparer vscode
+</code></pre></div>
+<h2 id="ajouter-un-package-python-et-mettre-a-jour-le-fichier-requirementstxt">Ajouter un package python et mettre à jour le fichier requirements.txt</h2>
+<div class="highlight"><pre><span></span><code>python3 -m pip install &lt;package_name&gt;
+python3 -m pip freeze &gt; requirements.txt
+</code></pre></div>
+<h2 id="lancer-le-programme-principal">Lancer le programme principal</h2>
+<div class="highlight"><pre><span></span><code>python3 main.py
+</code></pre></div>
+<p>ou</p>
+<div class="highlight"><pre><span></span><code>chmod +x main.py
+./main.py
+</code></pre></div>
+<h2 id="pour-preparer-vscode">Pour préparer vscode</h2>
 <div class="highlight"><pre><span></span><code>code --install-extension ms-python.python
 code --install-extension MS-CEINTL.vscode-language-pack-fr
 cd initiation_python
 code main.py
-</code></pre></div></p>
+</code></pre></div>
 <h1 id="cliquer-sur-licone-extension">Cliquer sur l'icone extension</h1>
 <p><img alt="width:800px" src="python1.png" /></p>
 <h1 id="chercher-python-et-installer">Chercher python et installer</h1>
@@ -394,6 +515,23 @@ code main.py
 <h1 id="lancer-le-programme">Lancer le programme</h1>
 <p><img alt="width:800px" src="vscode4.png" /></p>
 <h1 id="configurer-la-librairie-pybot-sur-debian-la-distribution-linux-sur-le-raspberry-pi">Configurer la librairie pybot sur Debian (La distribution linux sur le raspberry pi)</h1>
+<h1 id="demo-interractives-avec-jupyterlab">Démo interractives avec JupyterLab</h1>
+<h3 id="setup">Setup</h3>
+<p>Setup à ne faire qu'une fois. Placez-vous à la racine du projet avec l'environnement virtuel activé et lancez la commande suivante.</p>
+<div class="highlight"><pre><span></span><code>ipython<span class="w"> </span>profile<span class="w"> </span>create<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;c.InteractiveShellApp.exec_lines = [&#39;import sys; sys.path.append(\&quot;</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">\&quot;)&#39;]&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.ipython/profile_default/ipython_config.py
+</code></pre></div>
+<blockquote>
+<p>Celà permet au notebook de trouver les modules locaux à notre package</p>
+</blockquote>
+<p>La dernière ligne du fichier <code>~/.ipython/profile_default/ipython_config.py</code> devraient maintenant contenir:</p>
+<div class="highlight"><pre><span></span><code><span class="n">c</span><span class="o">.</span><span class="n">InteractiveShellApp</span><span class="o">.</span><span class="n">exec_lines</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;import sys; sys.path.append(&quot;&lt;chemin_vers_robot-python&gt;&quot;)&#39;</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="lancer-les-demo">Lancer les démo</h3>
+<div class="highlight"><pre><span></span><code>jupyter<span class="w"> </span>lab<span class="w"> </span>notebooks/sommaire.ipynb
+</code></pre></div>
+<blockquote>
+<p>Les notebooks <a href="https://jupyterlab.readthedocs.io/en/stable/index.html">JupyterLab</a> combinent descriptions Markdown et sections de code interractif.</p>
+</blockquote>
 
 
 
