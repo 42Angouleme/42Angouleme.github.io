@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../chap8/">
+        <link rel="prev" href="../chap2/">
       
       
-        <link rel="next" href="../config/">
+        <link rel="next" href="../chap4/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Apprendre le Python - La documentation de la bibliothèque Pybot</title>
+        <title>Pybot - chapitre 3 - ... - La documentation de la bibliothèque Pybot</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#apprendre-python" class="md-skip">
+        <a href="#chapitre-3-des-boutons-et-des-couleurs" class="md-skip">
           Aller au contenu
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Apprendre le Python
+              Pybot - chapitre 3 - ...
             
           </span>
         </div>
@@ -292,10 +292,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../chap3/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Pybot - chapitre 3 - ...
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -304,6 +324,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pour-ajouter-un-bouton-avec-le-nom-du-bouton-et-la-fonction-executee-au-click-de-ce-bouton" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pour ajouter un bouton, avec le nom du bouton et la fonction executée au click de ce bouton :
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -412,19 +461,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -433,7 +473,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -518,6 +557,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pour-ajouter-un-bouton-avec-le-nom-du-bouton-et-la-fonction-executee-au-click-de-ce-bouton" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pour ajouter un bouton, avec le nom du bouton et la fonction executée au click de ce bouton :
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -531,83 +587,9 @@
                   
 
 
-<h1 id="apprendre-python">Apprendre python</h1>
-<p>Un cours d'initiation au language python avec des exemples.</p>
-<h1 id="1-les-variables">1. Les Variables</h1>
-<p>Une variable est une manière de stocker une donnée. La variable doit avoir un type pour définir la donnée stockée.</p>
-<p>Les types possibles sont:
-- int =&gt; Chiffre ou nombre
-- str =&gt; Caractère ou chaîne de caractères
-- bool =&gt; Boolean True ("Vrai") ou False ("Faux")
-- ...</p>
-<h1 id="exemple">Exemple:</h1>
-<div class="highlight"><pre><span></span><code><span class="n">un_bool</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">un_int</span> <span class="o">=</span> <span class="mi">42</span>
-<span class="n">une_str</span> <span class="o">=</span> <span class="s2">&quot;Coucou&quot;</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ceci est un boolean:&quot;</span><span class="p">,</span> <span class="n">un_bool</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ceci est un integer:&quot;</span><span class="p">,</span> <span class="n">un_int</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ceci est une chaine de caracteres:&quot;</span><span class="p">,</span> <span class="n">une_str</span><span class="p">)</span>
-</code></pre></div>
-<h1 id="2-les-fonctions">2. Les fonctions</h1>
-<p>Les fonctions définissent des actions à faire lors de leur appel.
-Une fonction est constituée de son nom, des paramètres pris en entrée et de son type de retour.</p>
-<h1 id="exemple_1">Exemple:</h1>
-<div class="highlight"><pre><span></span><code><span class="c1"># Cette fonction affiche &quot;bonjour&quot;</span>
-<span class="k">def</span> <span class="nf">afficher_bonjour</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bonjour&quot;</span><span class="p">)</span>
-
-<span class="c1"># Cette fonction affiche le contenu de mot</span>
-<span class="k">def</span> <span class="nf">afficher_argument</span><span class="p">(</span><span class="n">mot</span><span class="o">=</span><span class="s2">&quot;Salut&quot;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span>
-
-<span class="c1"># Cette fonction affiche &quot;Coucou&quot; et renvoi le même mot</span>
-<span class="k">def</span> <span class="nf">afficher_et_renvoyer_coucou</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-    <span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Coucou&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">mot</span>
-
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">afficher_bonjour</span><span class="p">()</span>
-    <span class="n">afficher_argument</span><span class="p">(</span><span class="s2">&quot;Bonjour à tous, je suis un argument&quot;</span><span class="p">)</span>
-    <span class="n">afficher_argument</span><span class="p">()</span>
-    <span class="n">retour</span> <span class="o">=</span> <span class="n">afficher_et_renvoyer_coucou</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;retour =&quot;</span><span class="p">,</span> <span class="n">retour</span><span class="p">)</span>
-</code></pre></div>
-<h1 id="3-les-conditions">3. Les conditions</h1>
-<p>Les conditions permettent de limiter l'exécution d'une action si et seulement si la condition est valide.</p>
-<h1 id="exemple_2">Exemple:</h1>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">positif_ou_negatif</span><span class="p">(</span><span class="n">nombre</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">nombre</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="s2">&quot;est positif !&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="s2">&quot;est negatif !&quot;</span><span class="p">)</span>
-</code></pre></div>
-<h1 id="4-les-boucles">4. Les Boucles</h1>
-<p>Les boucles sont des éléments qui permettent de répéter une action, un nombre de fois définit par la condition d'arrêt.</p>
-<h1 id="exemple_3">Exemple:</h1>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">dire_bonjour_a_tous_les_etudiants</span><span class="p">(</span><span class="n">nombre_etudiants</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-    <span class="n">indice</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">while</span> <span class="n">indice</span> <span class="o">&lt;=</span> <span class="n">nombre_etudiants</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bonjour etudiant numero&quot;</span><span class="p">,</span> <span class="n">indice</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="n">indice</span> <span class="o">=</span> <span class="n">indice</span> <span class="o">+</span> <span class="mi">1</span>
-</code></pre></div>
-<h1 id="5-les-classes">5. Les classes</h1>
-<p>Les classes sont des structures de code qui définissent un objet et les comportements qu'il peut réaliser.
-Comme dans l'exemple suivant, vous pouvez importer une classes "Robot" depuis la bibliothèque "Robot". 
-Ensuite, il vous faut créer un objet Robot, avec ici un nom et un âge.
-Par la suite, vous pouvez donner des ordres à votre robot, en faisant appel aux méthodes que la classes Robot contient.</p>
-<h1 id="exemple_4">Exemple:</h1>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pybot</span> <span class="kn">import</span> <span class="n">Robot</span>
-
-
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">(</span><span class="s2">&quot;Nono&quot;</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
-    <span class="n">robot</span><span class="o">.</span><span class="n">dire_bonjour</span><span class="p">()</span>
-    <span class="n">robot</span><span class="o">.</span><span class="n">rendre_muet</span><span class="p">()</span>
-    <span class="n">robot</span><span class="o">.</span><span class="n">dire_bonjour</span><span class="p">()</span>
-    <span class="n">robot</span><span class="o">.</span><span class="n">donner_la_parole</span><span class="p">()</span>
-    <span class="n">robot</span><span class="o">.</span><span class="n">dire_bonjour</span><span class="p">()</span>
+<h1 id="chapitre-3-des-boutons-et-des-couleurs">Chapitre 3: Des boutons et des couleurs.</h1>
+<h3 id="pour-ajouter-un-bouton-avec-le-nom-du-bouton-et-la-fonction-executee-au-click-de-ce-bouton">Pour ajouter un bouton, avec le nom du bouton et la fonction executée au click de ce bouton :</h3>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">ajouter_bouton</span><span class="p">(</span><span class="s2">&quot;Quitter&quot;</span><span class="p">,</span> <span class="n">robot</span><span class="o">.</span><span class="n">eteindre_ecran</span><span class="p">)</span>
 </code></pre></div>
 
 
