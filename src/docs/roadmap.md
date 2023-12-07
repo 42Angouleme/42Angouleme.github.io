@@ -9,29 +9,41 @@ Les **modules**, avec leurs fonctionnalités plus bas niveau doivent aussi étre
 ## Liste des fonctionnalités de la classe Robot et leur avancement:
 
 ## fonctionnalitées à créer, commenter et documenter
-- robot.demarrer_webapp() : créé :white_check_mark:, commentaire :x:, documentation :white_check_mark:
-- robot.is_actif() : créé :white_check_mark:, commentaire :white_check_mark:, documentation :x:
-- robot.allumer_ecran(longueur, hauteur) : créé :white_check_mark:, commentaire :white_check_mark:, documentation :x:
-- robot.eteindre_ecran() : créé :white_check_mark:, commentaire :white_check_mark:, documentation :x:
-- robot.changer_titre() : créé :white_check_mark:, commentaire :x:, documentation :x:
-- robot.dort() : créé :white_check_mark:, commentaire :x:, documentation :x:
-- robot.plein_ecran(changer) : créé :x:, commentaire :x:, documentation :x:
-- robot.dessiner_ecran() : créé :x:, commentaire :x:, documentation :x:
----
-- robot.ajouter_evenement(touche, fonction) : créé :x:, commentaire :x:, documentation :x:
-- robot.supprimer_evenement(touche) : créé :x:, commentaire :x:, documentation :x:
-- robot.verifier_evenement(touche) : créé :x:, commentaire :x:, documentation :x:
-- robot.ajouter_bouton(nom, fonction) : créé :x:, commentaire :x:, documentation :x:
-- robot.supprimer_bouton(nom) : créé :x:, commentaire :x:, documentation :x:
-- robot.xxx() : créé :x:, commentaire :x:, documentation :x:
----
-- robot.message_erreur() : créé :white_check_mark:, commentaire :x:, documentation :x:
-- robot.xxx() : créé :x:, commentaire :x:, documentation :x:
+
+* :one: commentaire dans le code
+* :two: fonction documentée dans un chapitre
+
+### part 1 - screen basics
+
+- robot.demarrer_webapp() : :one::white_check_mark: , :two::white_check_mark:
+- robot.allumer_ecran(longueur, hauteur) : :one::white_check_mark: , :two::white_check_mark:
+- robot.changer_titre() : :one::white_check_mark: , :two::white_check_mark:
+- robot.dessiner_ecran() : :one::white_check_mark: , :two::white_check_mark:
+- robot.plein_ecran(changer) : :one::white_check_mark: , :two::white_check_mark:
+- robot.dort() : :one::white_check_mark: , :two::white_check_mark:
+
+### part 2 - loop and events
+
+- robot.est_actif() : :one::white_check_mark: , :two::x:
+- robot.eteindre_ecran() : :one::white_check_mark: , :two::x:
+- robot.ajouter_evenement(touche, nom) : :one::x: , :two::x:
+- robot.supprimer_evenement(touche) : :one::x: , :two::x:
+- robot.verifier_evenements() : :one::x: , :two::x:
+
+### part 3 - buttons, layout and theming
+
+- robot.couleur_fond(couleur) : :one::x: , :two::x:
+- robot.ajouter_bouton(longueur, hauteur, couleur, nom, fonction) : :one::x: , :two::x:
+- robot.supprimer_bouton(nom) : :one::x: , :two::x:
+- robot.xxx() : :one::x: , :two::x:
+
+### extra
+- robot.message_erreur() : :one::x: , :two::x:
+- robot.xxx() : :one::x: , :two::x:
 
 ## Liste des différent modules et leur avancement:
 
 ### Module écran
-
 * Wrapper pygame et pygame_gui
 * Visage minimaliste avec expressions. S’anime en cas de connexion ou réagit aux erreurs.
 * Possibilité d'affichage de texte défilant des interactions, pouvant remplacer le speaker.

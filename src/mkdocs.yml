@@ -1,15 +1,25 @@
-site_name: La bibliothèque pybot 
+site_name: La documentation de la bibliothèque Pybot 
 nav:
-  - La documentation de Pybot: index.md
-  - Installer et utiliser Pybot: config.md
+  - Pybot - introduction: index.md
+  - Pybot - chapitre 1 - Un premier programme: chap1.md
+  - Pybot - chapitre 2 - Une boucle et des évènements: chap2.md
+  - Pybot - chapitre 3 - ...: chap3.md
+  - Pybot - chapitre 4 - ...: chap4.md
+  - Pybot - chapitre 5 - ...: chap5.md
+  - Pybot - chapitre 6 - ...: chap6.md
+  - Pybot - chapitre 7 - ...: chap7.md
+  - Pybot - chapitre 8 - ...: chap8.md
   - Apprendre le Python: python.md
-  - Contribuer au projet: contribute.md
-  - Progression du projet: roadmap.md
+  - Installer et utiliser Pybot: config.md
+  - Dev - Contribuer au projet: contribute.md
+  - Dev - Progression du projet: roadmap.md
 
 theme: 
   icon:
     logo: material/robot-love-outline
     favicon: images/favicon.png
+    admonition:
+      note: material/robot-love-outline
   name: material 
   language: fr
   palette:
@@ -34,3 +44,6 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
