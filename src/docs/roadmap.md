@@ -26,9 +26,9 @@ Les **modules**, avec leurs fonctionnalités plus bas niveau doivent aussi étre
 
 - robot.est_actif() : :one::white_check_mark: , :two::x:
 - robot.eteindre_ecran() : :one::white_check_mark: , :two::x:
-- robot.ajouter_evenement(touche, nom) : :one::x: , :two::x:
-- robot.supprimer_evenement(touche) : :one::x: , :two::x:
-- robot.verifier_evenements() : :one::x: , :two::x:
+- robot.ajouter_evenement(touche, nom) : :one::white_check_mark: , :two::x:
+- robot.supprimer_evenement(touche) : :one::white_check_mark: , :two::x:
+- robot.verifier_evenements() : :one::white_check_mark: , :two::x:
 
 ### part 3 - buttons, layout and theming
 
