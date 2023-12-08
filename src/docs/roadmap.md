@@ -10,8 +10,8 @@ Les **modules**, avec leurs fonctionnalités plus bas niveau doivent aussi étre
 
 ## fonctionnalitées à créer, commenter et documenter
 
-* :one: commentaire dans le code
-* :two: fonction documentée dans un chapitre
+* :one: commentaire attaché à la fonction dans le code
+* :two: fonction documentée dans un chapitre et la référence
 
 ### part 1 - screen basics
 
@@ -35,7 +35,19 @@ Les **modules**, avec leurs fonctionnalités plus bas niveau doivent aussi étre
 - robot.couleur_fond(couleur) : :one::x: , :two::x:
 - robot.ajouter_bouton(longueur, hauteur, couleur, nom, fonction) : :one::x: , :two::x:
 - robot.supprimer_bouton(nom) : :one::x: , :two::x:
-- robot.xxx() : :one::x: , :two::x:
+- robot.ajouter_espace_de_texte(longueur, hauteur, couleur, nom) : :one::x: , :two::x:
+- robot.afficher_texte(nom_espace_de_texte, texte) : :one::x: , :two::x:
+- robot.supprimer_espace_de_texte(nom) : :one::x: , :two::x:
+
+### part 4 - camera, photo and filters
+
+### part 5 - card detection
+
+### part 6 - talk to robot
+
+### part 7 - robot is talking
+
+### part 8 - robot face and emotions
 
 ### extra
 - robot.message_erreur() : :one::x: , :two::x:
@@ -122,7 +134,3 @@ réponse
     - Nappe câble
     - mini haut parleur usb
     - microphone usb
-
-## Documentation
-
-* Documentation en français, accessible par le web, décrivant les fonctions et fonctionnalités du robot.

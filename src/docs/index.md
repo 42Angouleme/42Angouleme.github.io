@@ -1,4 +1,4 @@
-# La bibliothèque Pybot, Une introduction
+# La bibliothèque Pybot
 
 !!! note "Ce qu'est Pybot"
     Pybot est une bibliothèque logicielle permettant à des élèves de collége de programmer eux même un robot.
@@ -28,3 +28,5 @@ print("bonjour, Pybot!")
 Pybot se présente comme un objet avec des méthodes que l'on peut utiliser ensemble pour faire le programme.
 
 Les chapitres suivant vous présentent les différentes méthodes possibles et des exemples d'utilisation.
+
+Avant de suivre ce tutoriel, vous souhaitez peut-être savoir [comment configurer et utiliser pybot](config.md).

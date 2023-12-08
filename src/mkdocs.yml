@@ -1,18 +1,23 @@
-site_name: La documentation de la bibliothèque Pybot 
+site_name: Pybot
 nav:
-  - Pybot - introduction: index.md
-  - Pybot - chapitre 1 - Un premier programme: chap1.md
-  - Pybot - chapitre 2 - Une boucle et des évènements: chap2.md
-  - Pybot - chapitre 3 - ...: chap3.md
-  - Pybot - chapitre 4 - ...: chap4.md
-  - Pybot - chapitre 5 - ...: chap5.md
-  - Pybot - chapitre 6 - ...: chap6.md
-  - Pybot - chapitre 7 - ...: chap7.md
-  - Pybot - chapitre 8 - ...: chap8.md
-  - Apprendre le Python: python.md
-  - Installer et utiliser Pybot: config.md
-  - Dev - Contribuer au projet: contribute.md
-  - Dev - Progression du projet: roadmap.md
+  - La documentation de la bibliothèque:
+    - introduction: index.md
+    - chapitre 1 - Un premier programme: chap1.md
+    - chapitre 2 - Une boucle et des évènements: chap2.md
+    - chapitre 3 - ...: chap3.md
+    - chapitre 4 - ...: chap4.md
+    - chapitre 5 - ...: chap5.md
+    - chapitre 6 - ...: chap6.md
+    - chapitre 7 - ...: chap7.md
+    - chapitre 8 - ...: chap8.md
+    - Référence complète: ref.md
+  - Utiliser la bibliothèque:
+    - Apprendre le Python: python.md
+    - Installer et utiliser Pybot: config.md
+    - Configurer le raspberry pi: rpi.md
+  - Développer la bibliothèque:
+    - Contribuer au projet: contribute.md
+    - Progression du projet: roadmap.md
 
 theme: 
   icon:
@@ -35,6 +40,13 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Passer au mode clair
+  features:
+    - navigation.expand
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    # - navigation.sections
+    # - navigation.top
+    # - toc.follow
 
 markdown_extensions:
   - pymdownx.highlight:

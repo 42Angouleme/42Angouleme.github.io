@@ -4,7 +4,7 @@
 
 Il existe deux dépôts public sur github, l'un avec la [bibliothèque pybot](https://github.com/42Angouleme/pybot) et l'autre avec [la démo](https://github.com/42Angouleme/demo_pybot) qui a servi aux collègiens lors de la journée d'immersion à l'école de 42 Angoulême le *27 Novembre 2023*.
 
-La démo est archivée est sert seulement comme référence, le développement se déroule exclusivement sur le dépôt de la bibliothèque pybot et les [tickets sont tous rassemblés ici](https://github.com/42Angouleme/pybot/issues).
+La démo est archivée et sert seulement comme référence, le développement se déroule exclusivement sur le dépôt de la bibliothèque pybot et les [tickets sont tous rassemblés ici](https://github.com/42Angouleme/pybot/issues).
 
 ## Installation du projet
 
