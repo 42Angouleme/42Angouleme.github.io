@@ -24,11 +24,12 @@ Les **modules**, avec leurs fonctionnalités plus bas niveau doivent aussi étre
 
 ### part 2 - loop and events
 
-- robot.est_actif() : :one::white_check_mark: , :two::x:
-- robot.eteindre_ecran() : :one::white_check_mark: , :two::x:
-- robot.ajouter_evenement(touche, nom) : :one::white_check_mark: , :two::x:
-- robot.supprimer_evenement(touche) : :one::white_check_mark: , :two::x:
-- robot.verifier_evenements() : :one::white_check_mark: , :two::x:
+- robot.est_actif() : :one::white_check_mark: , :two::white_check_mark:
+- robot.desactiver() : :one::white_check_mark: , :two::white_check_mark:
+- robot.eteindre_ecran() : :one::white_check_mark: , :two::white_check_mark:
+- robot.ajouter_evenement(touche, nom) : :one::white_check_mark: , :two::white_check_mark:
+- robot.verifier_evenements() : :one::white_check_mark: , :two::white_check_mark:
+- robot.supprimer_evenement(touche) : :one::white_check_mark: , :two::white_check_mark:
 
 ### part 3 - buttons, layout and theming
 

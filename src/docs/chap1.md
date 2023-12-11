@@ -28,6 +28,8 @@ Le serveur web se lance et ne bloque pas le programme, on peut donc ensuite s'oc
 !!! note
     Il est possible de configurer le raspberry pi pour faire serveur et rendre le site accessible sur le réseau local pour ainsi se connecter à distance au robot.
 
+!!! warning
+    Pour terminer le serveur il faut taper dans le terminal la combinaison au clavier : **CTRL+C**.
 
 ## 3. Allumer l'écran pour démarrer l'affichage.
 
