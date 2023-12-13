@@ -1,1 +1,1 @@
-# Chapitre 7: Le robot répond.
+# Chapitre 7: Écouter le robot.

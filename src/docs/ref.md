@@ -52,7 +52,7 @@ robot.est_actif()
 robot.desactiver()
 ```
 
-* Passet le robot en mode inactif et fermer l'affichage.
+* Passer le robot en mode inactif et fermer l'affichage.
 ```python
 robot.eteindre_ecran()
 ```
@@ -131,6 +131,26 @@ robot.verifier_evenements()
 robot.supprimer_evenement(nom)
 ```
 
+### fond d'écran
+
+* Changer la couleur du fond
+
+```python
+robot.couleur_fond(couleur)
+```
+
+* Afficher la couleur du fond d'écran
+
+```python
+robot.afficher_fond()
+```
+
 ### les boutons
+* 
+
 ### la caméra et la carte
+*
+
 ### parler avec le robot
+*
+

@@ -32,7 +32,7 @@ La méthode **robot.eteindre_ecran** permet d'arrêter l'affichage de l'écran.
 !!! note
     En général, il est préférable d'utiliser **robot.eteindre_ecran** car le programme s'arrêtera plus proprement qu'en sortant simplement de la boucle avec **robot.desactiver**.
 
-# 3. Créer un évènement.
+## 3. Créer un évènement.
 
 !!! note
     Un évènement est une action sur le clavier associée à un nom d'évènement. Nous créons un nouvel évènement avec la méthode **ajouter_evenement(touche, nom)**.
@@ -45,7 +45,7 @@ La méthode **robot.eteindre_ecran** permet d'arrêter l'affichage de l'écran.
 !!! info
     Voir la référence pour voir une liste des touches possible, par exemple la touche du clavier **a** s'appelera **"a"**. À noter, les touches qui se nomment **"espace"** et **"echap"** pour la barre d'espace et la touche d'échappement.
 
-# 4. Vérifier un évènement.
+## 4. Vérifier un évènement.
 
 Nous pouvons récupérer les évènements dans une boucle en faisant appel à la méthode **robot.verifier_evenements()**.
 
@@ -59,7 +59,7 @@ Nous pouvons récupérer les évènements dans une boucle en faisant appel à la
             print("stop")
     ```
 
-# 5. Supprimer un évènement.
+## 5. Supprimer un évènement.
 
 Il est ensuite possible de supprimer un évènement avec la méthode **robot.supprimer_evenement(nom)**.
 

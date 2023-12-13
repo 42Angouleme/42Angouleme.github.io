@@ -31,16 +31,19 @@ Les **modules**, avec leurs fonctionnalités plus bas niveau doivent aussi étre
 - robot.verifier_evenements() : :one::white_check_mark: , :two::white_check_mark:
 - robot.supprimer_evenement(touche) : :one::white_check_mark: , :two::white_check_mark:
 
-### part 3 - buttons, layout and theming
+### part 3 - buttons and layout
 
-- robot.couleur_fond(couleur) : :one::x: , :two::x:
-- robot.ajouter_bouton(longueur, hauteur, couleur, nom, fonction) : :one::x: , :two::x:
-- robot.supprimer_bouton(nom) : :one::x: , :two::x:
-- robot.ajouter_espace_de_texte(longueur, hauteur, couleur, nom) : :one::x: , :two::x:
-- robot.afficher_texte(nom_espace_de_texte, texte) : :one::x: , :two::x:
-- robot.supprimer_espace_de_texte(nom) : :one::x: , :two::x:
+- robot.couleur_fond(couleur) : :one::white_check_mark: , :two::white_check_mark:
+- robot.afficher_fond() : :one::white_check_mark: , :two::white_check_mark:
+- robot.creer_bouton(...) : :one::x: , :two::x:
+    - bouton.ajouter_texte(...) : :one::x: , :two::x:
+    - bouton.verifier_contact() : :one::x: , :two::x:
+    - bouton.afficher() : :one::x: , :two::x:
+- robot.afficher_bouton(bouton) : :one::x: , :two::x:
+- robot.dessiner_rectangle(...) : :one::x: , :two::x:
+- robot.afficher_texte(...) : :one::x: , :two::x:
 
-### part 4 - camera, photo and filters
+### part 4 - camera and photos
 
 ### part 5 - card detection
 
@@ -52,7 +55,7 @@ Les **modules**, avec leurs fonctionnalités plus bas niveau doivent aussi étre
 
 ### extra
 - robot.message_erreur() : :one::x: , :two::x:
-- robot.xxx() : :one::x: , :two::x:
+<!-- - robot.xxx() : :one::x: , :two::x: -->
 
 ## Liste des différent modules et leur avancement:
 
