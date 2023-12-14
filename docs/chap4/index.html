@@ -508,15 +508,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pour-supprimer-une-photo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pour supprimer une photo :
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#pour-appliquer-un-filtre-sur-une-photo" class="md-nav__link">
     <span class="md-ellipsis">
       Pour appliquer un filtre sur une photo :
@@ -609,6 +600,27 @@
   
   <span class="md-ellipsis">
     chapitre 8 - Le visage et les émotions du robot.
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utiliser l'administration web
   </span>
   
 
@@ -842,6 +854,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../doc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mettre à jour la documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -912,15 +945,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pour-supprimer-une-photo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pour supprimer une photo :
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#pour-appliquer-un-filtre-sur-une-photo" class="md-nav__link">
     <span class="md-ellipsis">
       Pour appliquer un filtre sur une photo :
@@ -949,21 +973,16 @@
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">afficher_camera</span><span class="p">()</span>
 </code></pre></div>
 <h3 id="pour-eteindre-la-camera">Pour éteindre la caméra :</h3>
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">éteindre_camera</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">eteindre_camera</span><span class="p">()</span>
 </code></pre></div>
 <h3 id="pour-enregistrer-une-photo">Pour enregistrer une photo :</h3>
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">enregistrer_photo</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">prendre_photo</span><span class="p">(</span><span class="n">nom_fichier</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="pour-afficher-une-photo">Pour afficher une photo :</h3>
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">afficher_photo</span><span class="p">()</span>
-</code></pre></div>
-<h3 id="pour-supprimer-une-photo">Pour supprimer une photo :</h3>
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">supprimer_photo</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">afficher_photo</span><span class="p">(</span><span class="n">nom_fichier</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="pour-appliquer-un-filtre-sur-une-photo">Pour appliquer un filtre sur une photo :</h3>
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">appliquer_filtre_noir_et_blanc</span><span class="p">()</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">appliquer_filtre_amour</span><span class="p">()</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">tourner_photo</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">appliquer_filtre</span><span class="p">(</span><span class="n">nom_fichier</span><span class="p">,</span> <span class="n">filtre</span><span class="p">)</span>
 </code></pre></div>
 
 

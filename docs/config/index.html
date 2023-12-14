@@ -531,6 +531,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../admin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utiliser l'administration web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ref/" class="md-nav__link">
         
   
@@ -677,15 +698,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ajouter-un-package-python-et-mettre-a-jour-le-fichier-requirementstxt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ajouter un package python et mettre à jour le fichier requirements.txt
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lancer-le-programme-principal" class="md-nav__link">
     <span class="md-ellipsis">
       Lancer le programme principal
@@ -824,6 +836,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../doc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mettre à jour la documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -867,15 +900,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ajouter-un-package-python-et-mettre-a-jour-le-fichier-requirementstxt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ajouter un package python et mettre à jour le fichier requirements.txt
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lancer-le-programme-principal" class="md-nav__link">
     <span class="md-ellipsis">
       Lancer le programme principal
@@ -908,31 +932,33 @@
                   
 
 
-<h1 id="configurer-lediteur-vs-code-pour-programmer-le-robot">Configurer l'éditeur VS Code pour programmer le robot</h1>
+<h1 id="configurer-lediteur-vs-code-pour-programmer-le-robot">Configurer l'éditeur VS Code pour programmer le robot.</h1>
 <h2 id="configurer-lenvironnement-python-et-installer-les-dependances">Configurer l'environnement python et installer les dépendances</h2>
-<div class="highlight"><pre><span></span><code>git clone git@github.com:42Angouleme/initiation_python.git
-cd initiation_python
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
+<div class="admonition success">
+<p class="admonition-title">Commandes :</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:42Angouleme/pybot.git
+<span class="nb">cd</span><span class="w"> </span>pybot
+python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+<span class="nb">source</span><span class="w"> </span>venv/bin/activate
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </code></pre></div>
-<h2 id="ajouter-un-package-python-et-mettre-a-jour-le-fichier-requirementstxt">Ajouter un package python et mettre à jour le fichier requirements.txt</h2>
-<div class="highlight"><pre><span></span><code>python3 -m pip install &lt;package_name&gt;
-python3 -m pip freeze &gt; requirements.txt
-</code></pre></div>
+</div>
 <h2 id="lancer-le-programme-principal">Lancer le programme principal</h2>
-<div class="highlight"><pre><span></span><code>python3 main.py
+<div class="admonition success">
+<p class="admonition-title">Commandes :</p>
+<p>Utiliser la commande python avec le nom du fichier terminant avec .py où se trouve le programme.</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>main.py
 </code></pre></div>
-<p>ou</p>
-<div class="highlight"><pre><span></span><code>chmod +x main.py
-./main.py
-</code></pre></div>
+</div>
 <h2 id="pour-preparer-vscode">Pour préparer vscode</h2>
-<div class="highlight"><pre><span></span><code>code --install-extension ms-python.python
-code --install-extension MS-CEINTL.vscode-language-pack-fr
-cd initiation_python
-code main.py
+<div class="admonition success">
+<p class="admonition-title">Commandes :</p>
+<div class="highlight"><pre><span></span><code>code<span class="w"> </span>--install-extension<span class="w"> </span>ms-python.python
+code<span class="w"> </span>--install-extension<span class="w"> </span>MS-CEINTL.vscode-language-pack-fr
+<span class="nb">cd</span><span class="w"> </span>pybot
+code<span class="w"> </span>main.py
 </code></pre></div>
+</div>
 <h1 id="cliquer-sur-licone-extension">Cliquer sur l'icone extension</h1>
 <p><img alt="width:800px" src="python1.png" /></p>
 <h1 id="chercher-python-et-installer">Chercher python et installer</h1>
