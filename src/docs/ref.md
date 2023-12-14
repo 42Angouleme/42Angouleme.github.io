@@ -146,11 +146,14 @@ robot.afficher_fond()
 ```
 
 ### les boutons
+
 * 
 
 ### la caméra et la carte
+
 *
 
 ### parler avec le robot
+
 *
 

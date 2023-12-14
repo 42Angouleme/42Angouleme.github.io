@@ -37,25 +37,39 @@ Les **modules**, avec leurs fonctionnalités plus bas niveau doivent aussi étre
 - robot.afficher_fond() : :one::white_check_mark: , :two::white_check_mark:
 - robot.creer_bouton(...) : :one::x: , :two::x:
     - bouton.ajouter_texte(...) : :one::x: , :two::x:
-    - bouton.verifier_contact() : :one::x: , :two::x:
     - bouton.afficher() : :one::x: , :two::x:
-- robot.afficher_bouton(bouton) : :one::x: , :two::x:
+    - bouton.verifier_contact() : :one::x: , :two::x:
 - robot.dessiner_rectangle(...) : :one::x: , :two::x:
 - robot.afficher_texte(...) : :one::x: , :two::x:
 
 ### part 4 - camera and photos
 
+- robot.afficher_camera() : :one::x: , :two::x:
+- robot.eteindre_camera() : :one::x: , :two::x:
+- robot.prendre_photo(nom_fichier) : :one::x: , :two::x:
+- robot.appliquer_filtre(nom_fichier, filtre) : :one::x: , :two::x:
+- robot.afficher_image(nom_fichier) : :one::x: , :two::x:
+
 ### part 5 - card detection
+
+- robot.detecter_carte() : :one::x: , :two::x:
 
 ### part 6 - talk to robot
 
+- robot.entrainer(texte) : :one::x: , :two::x:
+- robot.envoyer_question(texte) : :one::x: , :two::x:
+
 ### part 7 - robot is talking
+
+- robot.parler(texte) : :one::x: , :two::x: 
 
 ### part 8 - robot face and emotions
 
+- robot.choisir_emotion(texte, liste_emotions) : :one::x: , :two::x:
+- robot.afficher_visage(emotion) : :one::x: , :two::x:
+
 ### extra
 - robot.message_erreur() : :one::x: , :two::x:
-<!-- - robot.xxx() : :one::x: , :two::x: -->
 
 ## Liste des différent modules et leur avancement:
 
@@ -95,12 +109,12 @@ trouvent les élèves. Cette base de donnée contient a minima:
     - Page de logs (erreurs)
 
 * DB question à poser avec fenêtre de temps (deux dates), avec une liste définie de réponses possibles : oui/non, ou une “enum” (chat gpt saura retranscrire la réponse de l’élève).
-* Champs :
-    * from
-    * to
-    * question
-    * réponse valide
-    * Liste<Réponse &élève>
+    * Champs :
+        * from
+        * to
+        * question
+        * réponse valide
+        * Liste<Réponse &élève>
 * Liste des questions actives
 * Liste des réponses à une question + nombre d’occurences de chaque
 réponse

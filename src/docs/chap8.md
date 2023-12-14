@@ -1,10 +1,14 @@
 # Chapitre 8: Le visage et les émotions du robot.
 
-### Pour afficher un visage :
+
+## Pour trouver l'émotion d'un texte.
 
 ```python
-robot.afficher_visage_triste()
-robot.afficher_visage_content()
-robot.afficher_visage_colere()
-robot.afficher_visage_fier()
+robot.choisir_emotion(texte, liste_emotions)
+```
+
+## Pour afficher un visage.
+
+```python
+robot.afficher_visage(emotion)
 ```

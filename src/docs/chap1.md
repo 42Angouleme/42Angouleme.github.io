@@ -1,4 +1,4 @@
-# Chapitre 1: Un premier programme
+# Chapitre 1: Un premier programme.
 
 ## 1. Pour demarrer nous avons besoin d'importer la bibliothèque et de démarrer le robot
 
@@ -103,6 +103,9 @@ Il est parfois utile de ralentir l'exécution du programme en lui faisant faire 
     ```
 
 ## Exemple 1: Un premier programme.
+
+!!! warning
+    Il est recommandé de ne pas copier l'exemple mais de chercher par vous même des utilisations possibles.
 
 Nous verrons aprés comment maintenir le programme actif avec une boucle et des évènements. Mais pour le moment nous allons faire dormir le robot pour ralentir l'exécution du robot.
 

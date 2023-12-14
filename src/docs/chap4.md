@@ -9,31 +9,23 @@ robot.afficher_camera()
 ### Pour éteindre la caméra :
 
 ```python
-robot.éteindre_camera()
+robot.eteindre_camera()
 ```
 
 ### Pour enregistrer une photo :
 
 ```python
-robot.enregistrer_photo()
+robot.prendre_photo(nom_fichier)
 ```
 
 ### Pour afficher une photo :
 
 ```python
-robot.afficher_photo()
-```
-
-### Pour supprimer une photo :
-
-```python
-robot.supprimer_photo()
+robot.afficher_photo(nom_fichier)
 ```
 
 ### Pour appliquer un filtre sur une photo :
 
 ```python
-robot.appliquer_filtre_noir_et_blanc()
-robot.appliquer_filtre_amour()
-robot.tourner_photo()
+robot.appliquer_filtre(nom_fichier, filtre)
 ```

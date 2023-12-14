@@ -73,6 +73,9 @@ Il est ensuite possible de supprimer un évènement avec la méthode **robot.sup
 
 ## Exemple 2: Utiliser des évènements.
 
+!!! warning
+    Il est recommandé de ne pas copier l'exemple mais de chercher par vous même des utilisations possibles.
+
 !!! info
     Le robot final n'utilisera pas de clavier mais simplement une intéraction par la voix et par le touché sur écran. Ces évènements par clavier servent principalement à l'apprentissage du code python. Il s'agit d'une période de transition.
 

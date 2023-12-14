@@ -10,6 +10,7 @@ nav:
     - chapitre 6 - Parler au robot.: chap6.md
     - chapitre 7 - Écouter le robot.: chap7.md
     - chapitre 8 - Le visage et les émotions du robot.: chap8.md
+    - Utiliser l'administration web: admin.md
     - Référence complète: ref.md
   - Utiliser la bibliothèque:
     - Apprendre le Python: python.md
@@ -18,6 +19,7 @@ nav:
   - Développer la bibliothèque:
     - Contribuer au projet: contribute.md
     - Progression du projet: roadmap.md
+    - Mettre à jour la documentation: doc.md
 
 theme: 
   icon:
@@ -43,10 +45,6 @@ theme:
   features:
     - navigation.expand
     - navigation.tabs
-    # - navigation.tabs.sticky
-    # - navigation.sections
-    # - navigation.top
-    # - toc.follow
 
 markdown_extensions:
   - pymdownx.highlight:

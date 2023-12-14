@@ -1,43 +1,36 @@
-# Configurer l'éditeur VS Code pour programmer le robot
+# Configurer l'éditeur VS Code pour programmer le robot.
 
 ## Configurer l'environnement python et installer les dépendances
 
-```
-git clone git@github.com:42Angouleme/initiation_python.git
-cd initiation_python
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
+!!! success "Commandes :"
 
-## Ajouter un package python et mettre à jour le fichier requirements.txt
-
-```
-python3 -m pip install <package_name>
-python3 -m pip freeze > requirements.txt
-```
+    ```bash
+    git clone git@github.com:42Angouleme/pybot.git
+    cd pybot
+    python -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
+    ```
 
 ## Lancer le programme principal
 
-```
-python3 main.py
-```
+!!! success "Commandes :"
+    Utiliser la commande python avec le nom du fichier terminant avec .py où se trouve le programme.
 
-ou
-
-```
-chmod +x main.py
-./main.py
-```
+    ```bash
+    python3 main.py
+    ```
 
 ## Pour préparer vscode
 
-```
-code --install-extension ms-python.python
-code --install-extension MS-CEINTL.vscode-language-pack-fr
-cd initiation_python
-code main.py
-```
+!!! success "Commandes :"
+
+    ```bash
+    code --install-extension ms-python.python
+    code --install-extension MS-CEINTL.vscode-language-pack-fr
+    cd pybot
+    code main.py
+    ```
 
 # Cliquer sur l'icone extension
 
