@@ -58,7 +58,7 @@ robot.creer_bouton(longueur, hauteur, position_x, position_y, couleur)
 bouton.ajouter_texte(self, texte, position_x, position_y, taille, couleur)
 
 !!! note "Les positions x et y sur le"
-    x, y... explications, coordonées sur le bouton
+    x, y sont les coordonées sur le bouton et non l'écran
         
 ## 5. Afficher le bouton.
 

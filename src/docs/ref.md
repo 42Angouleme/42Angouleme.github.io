@@ -149,7 +149,11 @@ robot.afficher_fond()
 
 * 
 
-### la caméra et la carte
+### la caméra
+
+*
+
+### reconnaissance carte et session
 
 *
 

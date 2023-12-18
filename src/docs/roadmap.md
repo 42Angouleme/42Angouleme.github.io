@@ -16,7 +16,7 @@ Les **modules**, avec leurs fonctionnalités plus bas niveau doivent aussi étre
 ### part 1 - screen basics
 
 - robot.demarrer_webapp() : :one::white_check_mark: , :two::white_check_mark:
-- robot.allumer_ecran(longueur, hauteur) : :one::white_check_mark: , :two::white_check_mark:
+- robot.allumer_ecran(...) : :one::white_check_mark: , :two::white_check_mark:
 - robot.changer_titre() : :one::white_check_mark: , :two::white_check_mark:
 - robot.dessiner_ecran() : :one::white_check_mark: , :two::white_check_mark:
 - robot.plein_ecran(changer) : :one::white_check_mark: , :two::white_check_mark:
@@ -27,9 +27,9 @@ Les **modules**, avec leurs fonctionnalités plus bas niveau doivent aussi étre
 - robot.est_actif() : :one::white_check_mark: , :two::white_check_mark:
 - robot.desactiver() : :one::white_check_mark: , :two::white_check_mark:
 - robot.eteindre_ecran() : :one::white_check_mark: , :two::white_check_mark:
-- robot.ajouter_evenement(touche, nom) : :one::white_check_mark: , :two::white_check_mark:
+- robot.ajouter_evenement(...) : :one::white_check_mark: , :two::white_check_mark:
 - robot.verifier_evenements() : :one::white_check_mark: , :two::white_check_mark:
-- robot.supprimer_evenement(touche) : :one::white_check_mark: , :two::white_check_mark:
+- robot.supprimer_evenement(...) : :one::white_check_mark: , :two::white_check_mark:
 
 ### part 3 - buttons and layout
 
@@ -46,27 +46,29 @@ Les **modules**, avec leurs fonctionnalités plus bas niveau doivent aussi étre
 
 - robot.afficher_camera() : :one::x: , :two::x:
 - robot.eteindre_camera() : :one::x: , :two::x:
-- robot.prendre_photo(nom_fichier) : :one::x: , :two::x:
-- robot.appliquer_filtre(nom_fichier, filtre) : :one::x: , :two::x:
-- robot.afficher_image(nom_fichier) : :one::x: , :two::x:
+- robot.prendre_photo(...) : :one::x: , :two::x:
+- robot.appliquer_filtre(...) : :one::x: , :two::x:
+- robot.afficher_image(...) : :one::x: , :two::x:
 
 ### part 5 - card detection
 
 - robot.detecter_carte() : :one::x: , :two::x:
+- robot.creer_session(...) : :one::x: , :two::x:
+- robot.fermer_session(): :one::x: , :two::x:
+- robot.verifier_session(): :one::x: , :two::x:
 
 ### part 6 - talk to robot
 
-- robot.entrainer(texte) : :one::x: , :two::x:
-- robot.envoyer_question(texte) : :one::x: , :two::x:
+- robot.entrainer(...) : :one::x: , :two::x:
+- robot.envoyer_question(...) : :one::x: , :two::x:
 
 ### part 7 - robot is talking
 
-- robot.parler(texte) : :one::x: , :two::x: 
+- robot.parler(...) : :one::x: , :two::x: 
 
-### part 8 - robot face and emotions
+### part 8 - robot emotions
 
-- robot.choisir_emotion(texte, liste_emotions) : :one::x: , :two::x:
-- robot.afficher_visage(emotion) : :one::x: , :two::x:
+- robot.choisir_emotion(...) : :one::x: , :two::x:
 
 ### extra
 - robot.message_erreur() : :one::x: , :two::x:
