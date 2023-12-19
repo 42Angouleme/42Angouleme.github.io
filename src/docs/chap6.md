@@ -3,7 +3,6 @@
 ```python
 - robot.entrainer(texte)
 ```
-
 ```python
 - robot.envoyer_question(texte)
 ```

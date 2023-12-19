@@ -10,68 +10,68 @@ Les **modules**, avec leurs fonctionnalités plus bas niveau doivent aussi étre
 
 ## fonctionnalitées à créer, commenter et documenter
 
+* :zero: code terminé et fonctionnel
 * :one: commentaire attaché à la fonction dans le code
 * :two: fonction documentée dans un chapitre et la référence
 
 ### part 1 - screen basics
 
-- robot.demarrer_webapp() : :one::white_check_mark: , :two::white_check_mark:
-- robot.allumer_ecran(...) : :one::white_check_mark: , :two::white_check_mark:
-- robot.changer_titre() : :one::white_check_mark: , :two::white_check_mark:
-- robot.dessiner_ecran() : :one::white_check_mark: , :two::white_check_mark:
-- robot.plein_ecran(changer) : :one::white_check_mark: , :two::white_check_mark:
-- robot.dort() : :one::white_check_mark: , :two::white_check_mark:
+- robot.demarrer_webapp() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
+- robot.allumer_ecran(...) : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
+- robot.changer_titre() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
+- robot.dessiner_ecran() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
+- robot.plein_ecran(changer) : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
+- robot.dort() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
 
 ### part 2 - loop and events
 
-- robot.est_actif() : :one::white_check_mark: , :two::white_check_mark:
-- robot.desactiver() : :one::white_check_mark: , :two::white_check_mark:
-- robot.eteindre_ecran() : :one::white_check_mark: , :two::white_check_mark:
-- robot.ajouter_evenement(...) : :one::white_check_mark: , :two::white_check_mark:
-- robot.verifier_evenements() : :one::white_check_mark: , :two::white_check_mark:
-- robot.supprimer_evenement(...) : :one::white_check_mark: , :two::white_check_mark:
+- robot.est_actif() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
+- robot.desactiver() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
+- robot.eteindre_ecran() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
+- robot.ajouter_evenement(...) : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
+- robot.verifier_evenements() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
+- robot.supprimer_evenement(...) : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
 
 ### part 3 - buttons and layout
 
-- robot.couleur_fond(couleur) : :one::white_check_mark: , :two::white_check_mark:
-- robot.afficher_fond() : :one::white_check_mark: , :two::white_check_mark:
-- robot.creer_bouton(...) : :one::x: , :two::x:
-    - bouton.ajouter_texte(...) : :one::x: , :two::x:
-    - bouton.afficher() : :one::x: , :two::x:
-    - bouton.verifier_contact() : :one::x: , :two::x:
-- robot.dessiner_rectangle(...) : :one::x: , :two::x:
-- robot.afficher_texte(...) : :one::x: , :two::x:
+- robot.couleur_fond(couleur) : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
+- robot.afficher_fond() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
+- robot.creer_bouton(...) : :zero::white_check_mark:, :one::x: , :two::x:
+    - bouton.ajouter_texte(...) : :zero::white_check_mark:, :one::x: , :two::x:
+    - bouton.afficher() : :zero::white_check_mark:, :one::x: , :two::x:
+    - bouton.verifier_contact() : :zero::white_check_mark:, :one::x: , :two::x:
+- robot.dessiner_rectangle(...) : :zero::white_check_mark:, :one::x: , :two::x:
+- robot.afficher_texte(...) : :zero::white_check_mark:, :one::x: , :two::x:
 
 ### part 4 - camera and photos
 
-- robot.afficher_camera() : :one::x: , :two::x:
-- robot.eteindre_camera() : :one::x: , :two::x:
-- robot.prendre_photo(...) : :one::x: , :two::x:
-- robot.appliquer_filtre(...) : :one::x: , :two::x:
-- robot.afficher_image(...) : :one::x: , :two::x:
+- robot.afficher_camera() : :zero::white_check_mark:, :one::x: , :two::x:
+- robot.prendre_photo(...) : :zero::white_check_mark:, :one::x: , :two::x:
+- robot.afficher_image(...) : :zero::white_check_mark:, :one::x: , :two::x:
+- robot.appliquer_filtre(...) : :zero::white_check_mark:, :one::x: , :two::x:
 
-### part 5 - card detection
+### part 5 - card detection and user session
 
-- robot.detecter_carte() : :one::x: , :two::x:
-- robot.creer_session(...) : :one::x: , :two::x:
-- robot.fermer_session(): :one::x: , :two::x:
-- robot.verifier_session(): :one::x: , :two::x:
+- robot.detecter_carte() : :zero::x:, :one::x: , :two::x:
+- robot.creer_session(...) : :zero::x:, :one::x: , :two::x:
+- robot.fermer_session(): :zero::x:, :one::x: , :two::x:
+- robot.verifier_session(): :zero::x:, :one::x: , :two::x:
 
 ### part 6 - talk to robot
 
-- robot.entrainer(...) : :one::x: , :two::x:
-- robot.envoyer_question(...) : :one::x: , :two::x:
+- robot.entrainer(...) : :zero::x:, :one::x: , :two::x:
+- robot.envoyer_question(...) : :zero::x:, :one::x: , :two::x:
 
 ### part 7 - robot is talking
 
-- robot.parler(...) : :one::x: , :two::x: 
+- robot.parler(...) : :zero::x:, :one::x: , :two::x: 
 
 ### part 8 - robot emotions
 
-- robot.choisir_emotion(...) : :one::x: , :two::x:
+- robot.choisir_emotion(...) : :zero::x:, :one::x: , :two::x:
 
 ### extra
-- robot.message_erreur() : :one::x: , :two::x:
+- robot.message_erreur() : :zero::white_check_mark:, :one::x: , :two::x:
 
 ## Liste des différent modules et leur avancement:
 

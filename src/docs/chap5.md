@@ -2,6 +2,7 @@
 
 ```python
 - robot.detecter_carte()
+Retourne le nom_eleve qui peut être utilisé pour créer une session.
 ```
 ```python
 - robot.creer_session(nom_eleve)

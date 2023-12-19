@@ -153,6 +153,20 @@ robot.afficher_fond()
 
 *
 
+## les filtres
+
+Liste des filtres que l'on peut appliquer sur une image
+```
+* cartoon
+* ocean
+* alien
+* rose
+* flou
+* noir_et_blanc
+* tourner
+* vernis
+```
+
 ### reconnaissance carte et session
 
 *

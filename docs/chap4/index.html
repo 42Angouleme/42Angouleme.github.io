@@ -481,15 +481,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pour-eteindre-la-camera" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pour éteindre la caméra :
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#pour-enregistrer-une-photo" class="md-nav__link">
     <span class="md-ellipsis">
       Pour enregistrer une photo :
@@ -499,9 +490,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pour-afficher-une-photo" class="md-nav__link">
+  <a href="#pour-afficher-une-image-ex-la-photo-enregistree" class="md-nav__link">
     <span class="md-ellipsis">
-      Pour afficher une photo :
+      Pour afficher une image (ex. la photo enregistrée) :
     </span>
   </a>
   
@@ -511,6 +502,15 @@
   <a href="#pour-appliquer-un-filtre-sur-une-photo" class="md-nav__link">
     <span class="md-ellipsis">
       Pour appliquer un filtre sur une photo :
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple 4 :
     </span>
   </a>
   
@@ -918,15 +918,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pour-eteindre-la-camera" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pour éteindre la caméra :
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#pour-enregistrer-une-photo" class="md-nav__link">
     <span class="md-ellipsis">
       Pour enregistrer une photo :
@@ -936,9 +927,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pour-afficher-une-photo" class="md-nav__link">
+  <a href="#pour-afficher-une-image-ex-la-photo-enregistree" class="md-nav__link">
     <span class="md-ellipsis">
-      Pour afficher une photo :
+      Pour afficher une image (ex. la photo enregistrée) :
     </span>
   </a>
   
@@ -948,6 +939,15 @@
   <a href="#pour-appliquer-un-filtre-sur-une-photo" class="md-nav__link">
     <span class="md-ellipsis">
       Pour appliquer un filtre sur une photo :
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple 4 :
     </span>
   </a>
   
@@ -972,17 +972,167 @@
 <h3 id="pour-afficher-la-camera">Pour afficher la caméra :</h3>
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">afficher_camera</span><span class="p">()</span>
 </code></pre></div>
-<h3 id="pour-eteindre-la-camera">Pour éteindre la caméra :</h3>
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">eteindre_camera</span><span class="p">()</span>
-</code></pre></div>
 <h3 id="pour-enregistrer-une-photo">Pour enregistrer une photo :</h3>
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">prendre_photo</span><span class="p">(</span><span class="n">nom_fichier</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="pour-afficher-une-photo">Pour afficher une photo :</h3>
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">afficher_photo</span><span class="p">(</span><span class="n">nom_fichier</span><span class="p">)</span>
+<h3 id="pour-afficher-une-image-ex-la-photo-enregistree">Pour afficher une image (ex. la photo enregistrée) :</h3>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">afficher_image</span><span class="p">(</span><span class="n">chemin_fichier</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="pour-appliquer-un-filtre-sur-une-photo">Pour appliquer un filtre sur une photo :</h3>
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">appliquer_filtre</span><span class="p">(</span><span class="n">nom_fichier</span><span class="p">,</span> <span class="n">filtre</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">appliquer_filtre</span><span class="p">(</span><span class="n">chemin_fichier</span><span class="p">,</span> <span class="n">nom_filtre</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="exemple-4">Exemple 4 :</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pybot</span> <span class="kn">import</span> <span class="n">Robot</span>
+<span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
+
+<span class="n">long</span> <span class="o">=</span> <span class="mi">1200</span>
+<span class="n">haut</span> <span class="o">=</span> <span class="mi">1000</span>
+
+<span class="n">blanc</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+<span class="n">noir</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">rouge</span> <span class="o">=</span> <span class="p">(</span><span class="mi">235</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">52</span><span class="p">)</span>
+<span class="n">rouge_sombre</span> <span class="o">=</span> <span class="p">(</span><span class="mi">117</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+<span class="n">bleu</span> <span class="o">=</span> <span class="p">(</span><span class="mi">52</span><span class="p">,</span> <span class="mi">164</span><span class="p">,</span> <span class="mi">235</span><span class="p">)</span>
+<span class="n">bleu_sombre</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">133</span><span class="p">)</span>
+<span class="n">vert</span> <span class="o">=</span> <span class="p">(</span><span class="mi">105</span><span class="p">,</span> <span class="mi">230</span><span class="p">,</span> <span class="mi">83</span><span class="p">)</span>
+<span class="n">vert_sombre</span> <span class="o">=</span> <span class="p">(</span><span class="mi">59</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">46</span><span class="p">)</span>
+<span class="n">jaune</span> <span class="o">=</span> <span class="p">(</span><span class="mi">237</span><span class="p">,</span> <span class="mi">212</span><span class="p">,</span> <span class="mi">66</span><span class="p">)</span>
+<span class="n">jaune_sombre</span> <span class="o">=</span> <span class="p">(</span><span class="mi">171</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">19</span><span class="p">)</span>
+
+<span class="n">bouton_camera</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">bouton_capture</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">bouton_photo</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">bouton_stop</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">bouton_filter_1</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">bouton_filter_2</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">bouton_filter_3</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">bouton_filter_4</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">bouton_filter_5</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">bouton_filter_6</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">bouton_filter_7</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">bouton_filter_8</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="n">afficher_camera</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">afficher_photo</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="n">mettre_a_jour_affichage</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="k">def</span> <span class="nf">preparer_programme</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">bouton_camera</span><span class="p">,</span> <span class="n">bouton_capture</span><span class="p">,</span> <span class="n">bouton_photo</span><span class="p">,</span> <span class="n">bouton_stop</span><span class="p">,</span> \
+    <span class="n">bouton_filter_1</span><span class="p">,</span> <span class="n">bouton_filter_2</span><span class="p">,</span> <span class="n">bouton_filter_3</span><span class="p">,</span> <span class="n">bouton_filter_4</span><span class="p">,</span> \
+    <span class="n">bouton_filter_5</span><span class="p">,</span> <span class="n">bouton_filter_6</span><span class="p">,</span> <span class="n">bouton_filter_7</span><span class="p">,</span> <span class="n">bouton_filter_8</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">allumer_ecran</span><span class="p">(</span><span class="n">long</span><span class="p">,</span> <span class="n">haut</span><span class="p">)</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">changer_titre</span><span class="p">(</span><span class="s2">&quot;Bonjour camera!&quot;</span><span class="p">)</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">couleur_fond</span><span class="p">(</span><span class="n">noir</span><span class="p">)</span>
+
+    <span class="n">robot</span><span class="o">.</span><span class="n">ajouter_evenement</span><span class="p">(</span><span class="s2">&quot;echap&quot;</span><span class="p">,</span> <span class="s2">&quot;stop&quot;</span><span class="p">)</span>
+    <span class="n">bouton_camera</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">creer_bouton</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">bleu</span><span class="p">)</span>
+    <span class="n">bouton_camera</span><span class="o">.</span><span class="n">ajouter_texte</span><span class="p">(</span><span class="s2">&quot;camera - allumer&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+    <span class="n">bouton_capture</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">creer_bouton</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="n">rouge</span><span class="p">)</span>
+    <span class="n">bouton_capture</span><span class="o">.</span><span class="n">ajouter_texte</span><span class="p">(</span><span class="s2">&quot;capture photo&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+    <span class="n">bouton_photo</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">creer_bouton</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="n">jaune</span><span class="p">)</span>
+    <span class="n">bouton_photo</span><span class="o">.</span><span class="n">ajouter_texte</span><span class="p">(</span><span class="s2">&quot;afficher photo&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+    <span class="n">bouton_filter_1</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">creer_bouton</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="n">jaune_sombre</span><span class="p">)</span>
+    <span class="n">bouton_filter_1</span><span class="o">.</span><span class="n">ajouter_texte</span><span class="p">(</span><span class="s2">&quot;filtre: ocean&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+    <span class="n">bouton_filter_2</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">creer_bouton</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">290</span><span class="p">,</span> <span class="n">jaune_sombre</span><span class="p">)</span>
+    <span class="n">bouton_filter_2</span><span class="o">.</span><span class="n">ajouter_texte</span><span class="p">(</span><span class="s2">&quot;filtre: cartoon&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+    <span class="n">bouton_filter_3</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">creer_bouton</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">360</span><span class="p">,</span> <span class="n">jaune_sombre</span><span class="p">)</span>
+    <span class="n">bouton_filter_3</span><span class="o">.</span><span class="n">ajouter_texte</span><span class="p">(</span><span class="s2">&quot;filtre: alien&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+    <span class="n">bouton_filter_4</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">creer_bouton</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">430</span><span class="p">,</span> <span class="n">jaune_sombre</span><span class="p">)</span>
+    <span class="n">bouton_filter_4</span><span class="o">.</span><span class="n">ajouter_texte</span><span class="p">(</span><span class="s2">&quot;filtre: rose&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+    <span class="n">bouton_filter_5</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">creer_bouton</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="n">jaune_sombre</span><span class="p">)</span>
+    <span class="n">bouton_filter_5</span><span class="o">.</span><span class="n">ajouter_texte</span><span class="p">(</span><span class="s2">&quot;filtre: flou&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+    <span class="n">bouton_filter_6</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">creer_bouton</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">570</span><span class="p">,</span> <span class="n">jaune_sombre</span><span class="p">)</span>
+    <span class="n">bouton_filter_6</span><span class="o">.</span><span class="n">ajouter_texte</span><span class="p">(</span><span class="s2">&quot;filtre: noir et blanc&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+    <span class="n">bouton_filter_7</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">creer_bouton</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">640</span><span class="p">,</span> <span class="n">jaune_sombre</span><span class="p">)</span>
+    <span class="n">bouton_filter_7</span><span class="o">.</span><span class="n">ajouter_texte</span><span class="p">(</span><span class="s2">&quot;filtre: tourner&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+    <span class="n">bouton_filter_8</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">creer_bouton</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">710</span><span class="p">,</span> <span class="n">jaune_sombre</span><span class="p">)</span>
+    <span class="n">bouton_filter_8</span><span class="o">.</span><span class="n">ajouter_texte</span><span class="p">(</span><span class="s2">&quot;filtre: vernis&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+    <span class="n">bouton_stop</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">creer_bouton</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">900</span><span class="p">,</span> <span class="n">vert</span><span class="p">)</span>
+    <span class="n">bouton_stop</span><span class="o">.</span><span class="n">ajouter_texte</span><span class="p">(</span><span class="s2">&quot;quitter&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">affichage_ecran</span><span class="p">():</span>  
+    <span class="k">global</span> <span class="n">mettre_a_jour_affichage</span>
+    <span class="k">if</span> <span class="n">mettre_a_jour_affichage</span><span class="p">:</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">afficher_fond</span><span class="p">()</span>
+        <span class="n">bouton_camera</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+        <span class="n">bouton_photo</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+        <span class="n">bouton_filter_1</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+        <span class="n">bouton_filter_2</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+        <span class="n">bouton_filter_3</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+        <span class="n">bouton_filter_4</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+        <span class="n">bouton_filter_5</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+        <span class="n">bouton_filter_6</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+        <span class="n">bouton_filter_7</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+        <span class="n">bouton_filter_8</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+        <span class="n">bouton_stop</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">afficher_camera</span><span class="p">:</span>
+            <span class="n">bouton_capture</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+        <span class="n">mettre_a_jour_affichage</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="k">def</span> <span class="nf">verifier_boutons</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">mettre_a_jour_affichage</span><span class="p">,</span> <span class="n">afficher_camera</span><span class="p">,</span> <span class="n">afficher_photo</span>
+    <span class="k">if</span> <span class="n">bouton_camera</span><span class="o">.</span><span class="n">verifier_contact</span><span class="p">():</span>
+        <span class="n">afficher_camera</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">afficher_camera</span>
+        <span class="k">if</span> <span class="n">afficher_camera</span><span class="p">:</span>
+            <span class="n">bouton_camera</span><span class="o">.</span><span class="n">ajouter_texte</span><span class="p">(</span><span class="s2">&quot;camera - eteindre&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">bouton_camera</span><span class="o">.</span><span class="n">ajouter_texte</span><span class="p">(</span><span class="s2">&quot;camera - alumer&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">afficher_photo</span><span class="p">:</span>
+            <span class="n">bouton_photo</span><span class="o">.</span><span class="n">ajouter_texte</span><span class="p">(</span><span class="s2">&quot;cacher photo&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">bouton_photo</span><span class="o">.</span><span class="n">ajouter_texte</span><span class="p">(</span><span class="s2">&quot;afficher photo&quot;</span><span class="p">)</span>
+        <span class="n">mettre_a_jour_affichage</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">afficher_camera</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">bouton_capture</span><span class="o">.</span><span class="n">verifier_contact</span><span class="p">():</span>
+            <span class="n">robot</span><span class="o">.</span><span class="n">prendre_photo</span><span class="p">(</span><span class="s2">&quot;photo&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">bouton_photo</span><span class="o">.</span><span class="n">verifier_contact</span><span class="p">():</span>
+        <span class="n">afficher_photo</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">afficher_photo</span>
+        <span class="n">mettre_a_jour_affichage</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">bouton_stop</span><span class="o">.</span><span class="n">verifier_contact</span><span class="p">():</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">desactiver</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">bouton_filter_1</span><span class="o">.</span><span class="n">verifier_contact</span><span class="p">():</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">appliquer_filtre</span><span class="p">(</span><span class="s2">&quot;/images/photo.jpg&quot;</span><span class="p">,</span> <span class="s2">&quot;ocean&quot;</span><span class="p">)</span>
+        <span class="n">mettre_a_jour_affichage</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">bouton_filter_2</span><span class="o">.</span><span class="n">verifier_contact</span><span class="p">():</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">appliquer_filtre</span><span class="p">(</span><span class="s2">&quot;/images/photo.jpg&quot;</span><span class="p">,</span> <span class="s2">&quot;cartoon&quot;</span><span class="p">)</span>
+        <span class="n">mettre_a_jour_affichage</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">bouton_filter_3</span><span class="o">.</span><span class="n">verifier_contact</span><span class="p">():</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">appliquer_filtre</span><span class="p">(</span><span class="s2">&quot;/images/photo.jpg&quot;</span><span class="p">,</span> <span class="s2">&quot;alien&quot;</span><span class="p">)</span>
+        <span class="n">mettre_a_jour_affichage</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">bouton_filter_4</span><span class="o">.</span><span class="n">verifier_contact</span><span class="p">():</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">appliquer_filtre</span><span class="p">(</span><span class="s2">&quot;/images/photo.jpg&quot;</span><span class="p">,</span> <span class="s2">&quot;rose&quot;</span><span class="p">)</span>
+        <span class="n">mettre_a_jour_affichage</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">bouton_filter_5</span><span class="o">.</span><span class="n">verifier_contact</span><span class="p">():</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">appliquer_filtre</span><span class="p">(</span><span class="s2">&quot;/images/photo.jpg&quot;</span><span class="p">,</span> <span class="s2">&quot;flou&quot;</span><span class="p">)</span>
+        <span class="n">mettre_a_jour_affichage</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">bouton_filter_6</span><span class="o">.</span><span class="n">verifier_contact</span><span class="p">():</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">appliquer_filtre</span><span class="p">(</span><span class="s2">&quot;/images/photo.jpg&quot;</span><span class="p">,</span> <span class="s2">&quot;noir_et_blanc&quot;</span><span class="p">)</span>
+        <span class="n">mettre_a_jour_affichage</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">bouton_filter_7</span><span class="o">.</span><span class="n">verifier_contact</span><span class="p">():</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">appliquer_filtre</span><span class="p">(</span><span class="s2">&quot;/images/photo.jpg&quot;</span><span class="p">,</span> <span class="s2">&quot;tourner&quot;</span><span class="p">)</span>
+        <span class="n">mettre_a_jour_affichage</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">bouton_filter_8</span><span class="o">.</span><span class="n">verifier_contact</span><span class="p">():</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">appliquer_filtre</span><span class="p">(</span><span class="s2">&quot;/images/photo.jpg&quot;</span><span class="p">,</span> <span class="s2">&quot;vernis&quot;</span><span class="p">)</span>
+        <span class="n">mettre_a_jour_affichage</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="k">def</span> <span class="nf">boucle_programme</span><span class="p">():</span>
+    <span class="k">while</span> <span class="n">robot</span><span class="o">.</span><span class="n">est_actif</span><span class="p">():</span>
+        <span class="n">events</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">verifier_evenements</span><span class="p">()</span>
+        <span class="k">if</span> <span class="s2">&quot;stop&quot;</span> <span class="ow">in</span> <span class="n">events</span><span class="p">:</span>
+            <span class="n">robot</span><span class="o">.</span><span class="n">eteindre_ecran</span><span class="p">()</span>
+        <span class="n">affichage_ecran</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">afficher_camera</span><span class="p">:</span>
+            <span class="n">robot</span><span class="o">.</span><span class="n">afficher_camera</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">afficher_photo</span><span class="p">:</span>
+            <span class="n">robot</span><span class="o">.</span><span class="n">afficher_image</span><span class="p">(</span><span class="s2">&quot;/images/photo.jpg&quot;</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+            <span class="n">robot</span><span class="o">.</span><span class="n">afficher_image</span><span class="p">(</span><span class="s2">&quot;/images/fier.png&quot;</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+        <span class="n">verifier_boutons</span><span class="p">()</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">dessiner_ecran</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">preparer_programme</span><span class="p">()</span>
+    <span class="n">boucle_programme</span><span class="p">()</span>
 </code></pre></div>
 
 
