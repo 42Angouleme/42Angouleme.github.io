@@ -4,5 +4,5 @@
 - robot.entrainer(texte)
 ```
 ```python
-- robot.envoyer_question(texte)
+- robot.repondre_question(texte)
 ```

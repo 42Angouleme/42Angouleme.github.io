@@ -60,7 +60,7 @@ Les **modules**, avec leurs fonctionnalités plus bas niveau doivent aussi étre
 ### part 6 - talk to robot
 
 - robot.entrainer(...) : :zero::x:, :one::x: , :two::x:
-- robot.envoyer_question(...) : :zero::x:, :one::x: , :two::x:
+- robot.repondre_question(...) : :zero::x:, :one::x: , :two::x:
 
 ### part 7 - robot is talking
 
