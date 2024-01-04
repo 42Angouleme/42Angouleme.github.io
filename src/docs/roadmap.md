@@ -36,7 +36,7 @@ Les **modules**, avec leurs fonctionnalités plus bas niveau doivent aussi étre
 
 - robot.couleur_fond(couleur) : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
 - robot.afficher_fond() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.creer_bouton(...) : :zero::white_check_mark:, :one::x: , :two::x:
+- robot.creer_bouton(...) : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
     - bouton.ajouter_texte(...) : :zero::white_check_mark:, :one::x: , :two::x:
     - bouton.afficher() : :zero::white_check_mark:, :one::x: , :two::x:
     - bouton.verifier_contact() : :zero::white_check_mark:, :one::x: , :two::x:

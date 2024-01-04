@@ -147,7 +147,11 @@ robot.afficher_fond()
 
 ### les boutons
 
-* 
+* créer un bouton
+
+```python
+robot.creer_bouton(longueur, hauteur, position_x, position_y, couleur)
+```
 
 ### la caméra
 

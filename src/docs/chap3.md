@@ -47,11 +47,26 @@ Pour afficher cette couleur il faut utiliser une autre méthode **robot.afficher
     
 ## 3. Créer un bouton.
 
-robot.creer_bouton(longueur, hauteur, position_x, position_y, couleur)
+Créer et retourner un bouton qui peut être affiché et vérifié plus tard :
 
-!!! note "Les positions x et y sur l'écran"
-    x, y... explications, y depuis le haut
+!!! success
+    ```python
+    robot.creer_bouton(longueur, hauteur, position_x, position_y, couleur)
+    ```
 
+Les paramètres attendus sont :  
+    * la longueur et la hauteur du bouton.  
+    * la position x et y du bouton (son coin en haut à gauche).  
+    * la couleur du bouton.
+
+
+!!! warning "Les positions x et y sur l'écran"
+    Les coordonnées sur un écran informatique sont généralement définies à partir du coin supérieur gauche.  
+    Le **premier pixel** qui se trouve en haut à gauche correspond aux coordonnées **x = 0 et y = 0**.  
+    Alors que le dernier pixel en bas à droite correspond à la coordonnée x maximale et à la coordonnée y maximale.  
+    Par exemple, si l'écran fait 300 pixels de long et 200 pixels de haut. Le **dernier pixel** a les coordonnées **x = 299 et y = 199**.
+
+![Les coordonnées en informatique](coordinates.jpg)
 
 ## 4. Ajouter un texte au bouton.
 
