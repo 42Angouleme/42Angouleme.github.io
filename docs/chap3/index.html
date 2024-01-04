@@ -1083,11 +1083,24 @@ Par exemple, le <strong>blanc</strong> pur est obtenu en ayant les trois composa
 </code></pre></div>
 </div>
 <h2 id="3-creer-un-bouton">3. Créer un bouton.</h2>
-<p>robot.creer_bouton(longueur, hauteur, position_x, position_y, couleur)</p>
-<div class="admonition note">
-<p class="admonition-title">Les positions x et y sur l'écran</p>
-<p>x, y... explications, y depuis le haut</p>
+<p>Créer et retourner un bouton qui peut être affiché et vérifié plus tard :</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">creer_bouton</span><span class="p">(</span><span class="n">longueur</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">,</span> <span class="n">position_x</span><span class="p">,</span> <span class="n">position_y</span><span class="p">,</span> <span class="n">couleur</span><span class="p">)</span>
+</code></pre></div>
 </div>
+<p>Les paramètres attendus sont :<br />
+    * la longueur et la hauteur du bouton.<br />
+    * la position x et y du bouton (son coin en haut à gauche).<br />
+    * la couleur du bouton.</p>
+<div class="admonition warning">
+<p class="admonition-title">Les positions x et y sur l'écran</p>
+<p>Les coordonnées sur un écran informatique sont généralement définies à partir du coin supérieur gauche.<br />
+Le <strong>premier pixel</strong> qui se trouve en haut à gauche correspond aux coordonnées <strong>x = 0 et y = 0</strong>.<br />
+Alors que le dernier pixel en bas à droite correspond à la coordonnée x maximale et à la coordonnée y maximale.<br />
+Par exemple, si l'écran fait 300 pixels de long et 200 pixels de haut. Le <strong>dernier pixel</strong> a les coordonnées <strong>x = 299 et y = 199</strong>.</p>
+</div>
+<p><img alt="Les coordonnées en informatique" src="../coordinates.jpg" /></p>
 <h2 id="4-ajouter-un-texte-au-bouton">4. Ajouter un texte au bouton.</h2>
 <p>bouton.ajouter_texte(self, texte, position_x, position_y, taille, couleur)</p>
 <div class="admonition note">
