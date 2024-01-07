@@ -1102,15 +1102,60 @@ Par exemple, si l'écran fait 300 pixels de long et 200 pixels de haut. Le <stro
 </div>
 <p><img alt="Les coordonnées en informatique" src="../coordinates.jpg" /></p>
 <h2 id="4-ajouter-un-texte-au-bouton">4. Ajouter un texte au bouton.</h2>
-<p>bouton.ajouter_texte(self, texte, position_x, position_y, taille, couleur)</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<div class="highlight"><pre><span></span><code><span class="n">bouton</span><span class="o">.</span><span class="n">ajouter_texte</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">texte</span><span class="p">,</span> <span class="n">position_x</span><span class="p">,</span> <span class="n">position_y</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">couleur</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<p>La méthode qui s'applique sur le bouton (et non le robot comme les méthodes précédentes) permet d'ajouter un texte dans le bouton.</p>
+<p>Est attendu dans la méthode, le texte, la position x et y, la taille et la couleur.</p>
 <div class="admonition note">
-<p class="admonition-title">Les positions x et y sur le</p>
-<p>x, y sont les coordonées sur le bouton et non l'écran</p>
+<p class="admonition-title">Les positions x et y sur le bouton</p>
+<p>x, y sont les coordonées par rapport au coin gauche et haut du bouton et non l'écran.</p>
 </div>
 <h2 id="5-afficher-le-bouton">5. Afficher le bouton.</h2>
-<p>bouton.afficher()</p>
+<p>Pour afficher le bouton dans la fenêtre principale.</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<div class="highlight"><pre><span></span><code><span class="n">bouton</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+</code></pre></div>
+</div>
 <h2 id="6-verifier-le-clique-sur-le-bouton">6. Vérifier le clique sur le bouton.</h2>
-<p>bouton.verifier_contact()</p>
+<p>Pour vérifier que le bouton est cliqué ou non, une valeur vrai (True) ou faux (False) est retournée, voir l'exemple.</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<div class="highlight"><pre><span></span><code><span class="n">bouton</span><span class="o">.</span><span class="n">verifier_contact</span><span class="p">()</span>
+</code></pre></div>
+</div>
+<p>Exemple de création et utilisation d'un bouton:
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pybot</span> <span class="kn">import</span> <span class="n">Robot</span>
+<span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
+
+<span class="n">long</span> <span class="o">=</span> <span class="mi">600</span>
+<span class="n">haut</span> <span class="o">=</span> <span class="mi">300</span>
+
+<span class="n">blanc</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+<span class="n">noir</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="n">mettre_a_jour</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">allumer_ecran</span><span class="p">(</span><span class="n">long</span><span class="p">,</span> <span class="n">haut</span><span class="p">)</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">changer_titre</span><span class="p">(</span><span class="s2">&quot;Un bouton.&quot;</span><span class="p">)</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">couleur_fond</span><span class="p">(</span><span class="n">noir</span><span class="p">)</span>
+
+<span class="n">bouton_quitter</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">creer_bouton</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="n">blanc</span><span class="p">)</span>
+<span class="n">bouton_quitter</span><span class="o">.</span><span class="n">ajouter_texte</span><span class="p">(</span><span class="s2">&quot;Quitter&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="n">noir</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="n">robot</span><span class="o">.</span><span class="n">est_actif</span><span class="p">():</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">verifier_evenements</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">mettre_a_jour</span><span class="p">:</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">afficher_fond</span><span class="p">()</span>
+        <span class="n">bouton_quitter</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+        <span class="n">mettre_a_jour</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">if</span> <span class="n">bouton_quitter</span><span class="o">.</span><span class="n">verifier_contact</span><span class="p">():</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">desactiver</span><span class="p">()</span>
+</code></pre></div></p>
 <h2 id="7-dessiner-un-espace-de-texte-un-rectangle">7. Dessiner un espace de texte (un rectangle).</h2>
 <p>robot.dessiner_rectangle(longueur, hauteur, position_x, position_y, couleur)</p>
 <h2 id="8-afficher-du-texte">8. Afficher du texte.</h2>

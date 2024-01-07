@@ -70,18 +70,65 @@ Les paramètres attendus sont :
 
 ## 4. Ajouter un texte au bouton.
 
-bouton.ajouter_texte(self, texte, position_x, position_y, taille, couleur)
+!!! success
+    ```python
+	bouton.ajouter_texte(self, texte, position_x, position_y, taille, couleur)
+	```
+La méthode qui s'applique sur le bouton (et non le robot comme les méthodes précédentes) permet d'ajouter un texte dans le bouton.
 
-!!! note "Les positions x et y sur le"
-    x, y sont les coordonées sur le bouton et non l'écran
+Est attendu dans la méthode, le texte, la position x et y, la taille et la couleur.
+	
+!!! note "Les positions x et y sur le bouton"
+    x, y sont les coordonées par rapport au coin gauche et haut du bouton et non l'écran.
         
 ## 5. Afficher le bouton.
 
-bouton.afficher()
+Pour afficher le bouton dans la fenêtre principale.
 
+!!! success
+    ```python
+	bouton.afficher()
+	```
+	
 ## 6. Vérifier le clique sur le bouton.
 
-bouton.verifier_contact()
+Pour vérifier que le bouton est cliqué ou non, une valeur vrai (True) ou faux (False) est retournée, voir l'exemple.
+
+!!! success
+    ```python
+	bouton.verifier_contact()
+	```
+	
+Exemple de création et utilisation d'un bouton:
+```python
+from pybot import Robot
+robot = Robot()
+
+long = 600
+haut = 300
+
+blanc = (255, 255, 255)
+noir = (0, 0, 0)
+
+mettre_a_jour = True
+
+robot.allumer_ecran(long, haut)
+robot.changer_titre("Un bouton.")
+robot.couleur_fond(noir)
+
+bouton_quitter = robot.creer_bouton(120, 50, 10, 110, blanc)
+bouton_quitter.ajouter_texte("Quitter", 10, 10, 24, noir)
+
+while robot.est_actif():
+    robot.verifier_evenements()
+    if mettre_a_jour:
+        robot.afficher_fond()
+        bouton_quitter.afficher()
+        mettre_a_jour = False
+    
+    if bouton_quitter.verifier_contact():
+        robot.desactiver()
+```
 
 ## 7. Dessiner un espace de texte (un rectangle).
 

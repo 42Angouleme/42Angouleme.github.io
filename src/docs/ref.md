@@ -147,15 +147,39 @@ robot.afficher_fond()
 
 ### les boutons
 
-* créer un bouton
+* Créer un nouveau bouton.
 
 ```python
-robot.creer_bouton(longueur, hauteur, position_x, position_y, couleur)
+bouton = robot.creer_bouton(longueur, hauteur, position_x, position_y, couleur)
 ```
+
+* Ajouter un texte au bouton.
+
+```python
+bouton.ajouter_texte(texte, position_x, position_y, taille, couleur)
+```
+
+* Afficher le bouton.
+
+```python
+bouton.afficher()
+```
+
+* Vérifier le clique sur le bouton.
+
+```python
+bouton.verifier_contact()
+```
+
+### rectangle et texte
 
 ### la caméra
 
 *
+
+```python
+
+```
 
 ## les filtres
 
