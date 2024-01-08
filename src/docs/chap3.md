@@ -130,13 +130,34 @@ while robot.est_actif():
         robot.desactiver()
 ```
 
-## 7. Dessiner un espace de texte (un rectangle).
+## 7. Dessiner un rectangle.
 
-robot.dessiner_rectangle(longueur, hauteur, position_x, position_y, couleur)
+Afficher un rectangle pouvant servir, par exemple, de fond pour afficher du texte.
+
+!!! success
+    ```python
+	robot.dessiner_rectangle(longueur, hauteur, position_x, position_y, couleur)
+	```
+Les paramètres attendus sont :  
+la longueur et la hauteur du rectangle.   
+la position x et y du rectangle (son coin en haut à gauche) par rapport à la fenêtre.  
+la couleur du rectangle.
+
 
 ## 8. Afficher du texte.
 
-robot.afficher_texte(texte, position_x, position_y, taille, couleur)
+Afficher une ligne de texte.
+
+!!! success
+    ```python
+	robot.afficher_texte(texte, position_x, position_y, taille, couleur)
+	```
+Les paramètres attendus sont:  
+le texte à afficher.  
+la position x et y du texte (son coin en haut à gauche) par rapport à la fenêtre.  
+la taille du texte.  
+la couleur du texte.
+
 
 ## 9. Exemple 3 :
 

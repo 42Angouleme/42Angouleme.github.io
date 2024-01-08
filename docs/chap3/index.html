@@ -505,9 +505,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-dessiner-un-espace-de-texte-un-rectangle" class="md-nav__link">
+  <a href="#7-dessiner-un-rectangle" class="md-nav__link">
     <span class="md-ellipsis">
-      7. Dessiner un espace de texte (un rectangle).
+      7. Dessiner un rectangle.
     </span>
   </a>
   
@@ -999,9 +999,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-dessiner-un-espace-de-texte-un-rectangle" class="md-nav__link">
+  <a href="#7-dessiner-un-rectangle" class="md-nav__link">
     <span class="md-ellipsis">
-      7. Dessiner un espace de texte (un rectangle).
+      7. Dessiner un rectangle.
     </span>
   </a>
   
@@ -1156,10 +1156,29 @@ Par exemple, si l'écran fait 300 pixels de long et 200 pixels de haut. Le <stro
     <span class="k">if</span> <span class="n">bouton_quitter</span><span class="o">.</span><span class="n">verifier_contact</span><span class="p">():</span>
         <span class="n">robot</span><span class="o">.</span><span class="n">desactiver</span><span class="p">()</span>
 </code></pre></div></p>
-<h2 id="7-dessiner-un-espace-de-texte-un-rectangle">7. Dessiner un espace de texte (un rectangle).</h2>
-<p>robot.dessiner_rectangle(longueur, hauteur, position_x, position_y, couleur)</p>
+<h2 id="7-dessiner-un-rectangle">7. Dessiner un rectangle.</h2>
+<p>Afficher un rectangle pouvant servir, par exemple, de fond pour afficher du texte.</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">dessiner_rectangle</span><span class="p">(</span><span class="n">longueur</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">,</span> <span class="n">position_x</span><span class="p">,</span> <span class="n">position_y</span><span class="p">,</span> <span class="n">couleur</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<p>Les paramètres attendus sont :<br />
+la longueur et la hauteur du rectangle. <br />
+la position x et y du rectangle (son coin en haut à gauche) par rapport à la fenêtre.<br />
+la couleur du rectangle.</p>
 <h2 id="8-afficher-du-texte">8. Afficher du texte.</h2>
-<p>robot.afficher_texte(texte, position_x, position_y, taille, couleur)</p>
+<p>Afficher une ligne de texte.</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">afficher_texte</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">position_x</span><span class="p">,</span> <span class="n">position_y</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">couleur</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<p>Les paramètres attendus sont:<br />
+le texte à afficher.<br />
+la position x et y du texte (son coin en haut à gauche) par rapport à la fenêtre.<br />
+la taille du texte.<br />
+la couleur du texte.</p>
 <h2 id="9-exemple-3">9. Exemple 3 :</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>

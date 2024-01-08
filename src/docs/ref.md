@@ -134,13 +134,11 @@ robot.supprimer_evenement(nom)
 ### fond d'écran
 
 * Changer la couleur du fond
-
 ```python
 robot.couleur_fond(couleur)
 ```
 
 * Afficher la couleur du fond d'écran
-
 ```python
 robot.afficher_fond()
 ```
@@ -148,19 +146,16 @@ robot.afficher_fond()
 ### les boutons
 
 * Créer un nouveau bouton.
-
 ```python
 bouton = robot.creer_bouton(longueur, hauteur, position_x, position_y, couleur)
 ```
 
 * Ajouter un texte au bouton.
-
 ```python
 bouton.ajouter_texte(texte, position_x, position_y, taille, couleur)
 ```
 
 * Afficher le bouton.
-
 ```python
 bouton.afficher()
 ```
@@ -172,6 +167,16 @@ bouton.verifier_contact()
 ```
 
 ### rectangle et texte
+
+* Afficher un rectangle.
+```
+robot.dessiner_rectangle(longueur, hauteur, position_x, position_y, couleur)
+```
+
+* Afficher du texte.
+```
+robot.afficher_texte(texte, position_x, position_y, taille, couleur)
+```
 
 ### la caméra
 
