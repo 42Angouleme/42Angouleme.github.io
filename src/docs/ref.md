@@ -180,10 +180,28 @@ robot.afficher_texte(texte, position_x, position_y, taille, couleur)
 
 ### la caméra
 
-*
+* Afficher la caméra.
 
 ```python
+robot.afficher_camera(position_x, position_y)
+```
 
+* Capturer une photo de la caméra.
+
+```python
+robot.prendre_photo(self, nom_fichier)
+```
+
+* Afficher une image.
+
+```python
+robot.afficher_image(chemin_fichier, position_x, position_y)
+```
+
+* Appliquer un filtre.
+
+```python
+robot.appliquer_filtre(chemin_fichier, nom_filtre)
 ```
 
 ## les filtres

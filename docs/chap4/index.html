@@ -970,18 +970,45 @@
 
 <h1 id="chapitre-4-prendre-une-photo-avec-une-camera-et-appliquer-des-filtres">Chapitre 4: Prendre une photo avec une caméra et appliquer des filtres.</h1>
 <h3 id="pour-afficher-la-camera">Pour afficher la caméra :</h3>
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">afficher_camera</span><span class="p">()</span>
+<p>Il est possible d'afficher la caméra dans la fenêtre.</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">afficher_camera</span><span class="p">(</span><span class="n">position_x</span><span class="p">,</span> <span class="n">position_y</span><span class="p">)</span>
 </code></pre></div>
+</div>
+<p>La caméra sera affiché aux coordonnées x et y passées en paramètres.</p>
 <h3 id="pour-enregistrer-une-photo">Pour enregistrer une photo :</h3>
+<p>On peut capturer une photo de la caméra avec cette méthode:</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">prendre_photo</span><span class="p">(</span><span class="n">nom_fichier</span><span class="p">)</span>
 </code></pre></div>
+</div>
+<p>La photo sera enregistré dans le dossier images au nom_fichier passé en paramètre.</p>
 <h3 id="pour-afficher-une-image-ex-la-photo-enregistree">Pour afficher une image (ex. la photo enregistrée) :</h3>
+<p>On peut afficher une image avec la méthode:</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">afficher_image</span><span class="p">(</span><span class="n">chemin_fichier</span><span class="p">)</span>
 </code></pre></div>
+</div>
+<p>Nous avons besoin du chemin et du nom du fichier. (ex: /images/photo.jpg) passé en paramètre, ainsi que les coordonnées x et y ou seront affiché l'image.</p>
 <h3 id="pour-appliquer-un-filtre-sur-une-photo">Pour appliquer un filtre sur une photo :</h3>
+<p>Nous pouvons appliquer une filtre à une image avec la méthode:</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">appliquer_filtre</span><span class="p">(</span><span class="n">chemin_fichier</span><span class="p">,</span> <span class="n">nom_filtre</span><span class="p">)</span>
 </code></pre></div>
+</div>
+<p>Les paramètres attendus sont le chemin et nom du fichier. (ex: /images/photo.jpg) ainsi que le nom du filtre. (ex: cartoon, alien, tourner...)  </p>
+<ul>
+<li><a href="/ref#les-filtres">voir documentation pour la liste complète des filtres</a></li>
+</ul>
 <h2 id="exemple-4">Exemple 4 :</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Il est recommandé de ne pas copier l'exemple mais de chercher par vous même des utilisations possibles.</p>
+</div>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pybot</span> <span class="kn">import</span> <span class="n">Robot</span>
 <span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
 

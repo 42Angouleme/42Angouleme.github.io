@@ -2,29 +2,56 @@
 
 ### Pour afficher la caméra :
 
-```python
-robot.afficher_camera()
-```
+Il est possible d'afficher la caméra dans la fenêtre.
+
+!!! success
+	```python
+	robot.afficher_camera(position_x, position_y)
+	```
+
+La caméra sera affiché aux coordonnées x et y passées en paramètres.
 
 ### Pour enregistrer une photo :
 
-```python
-robot.prendre_photo(nom_fichier)
-```
+On peut capturer une photo de la caméra avec cette méthode:
+
+!!! success
+	```python
+	robot.prendre_photo(nom_fichier)
+	```
+
+La photo sera enregistré dans le dossier images au nom_fichier passé en paramètre.
 
 ### Pour afficher une image (ex. la photo enregistrée) :
 
-```python
-robot.afficher_image(chemin_fichier)
-```
+On peut afficher une image avec la méthode:
+
+!!! success
+	```python
+	robot.afficher_image(chemin_fichier)
+	```
+
+Nous avons besoin du chemin et du nom du fichier. (ex: /images/photo.jpg) passé en paramètre, ainsi que les coordonnées x et y ou seront affiché l'image.
+
 
 ### Pour appliquer un filtre sur une photo :
 
-```python
-robot.appliquer_filtre(chemin_fichier, nom_filtre)
-```
+Nous pouvons appliquer une filtre à une image avec la méthode:
+
+!!! success
+	```python
+	robot.appliquer_filtre(chemin_fichier, nom_filtre)
+	```
+
+Les paramètres attendus sont le chemin et nom du fichier. (ex: /images/photo.jpg) ainsi que le nom du filtre. (ex: cartoon, alien, tourner...)  
+
+* [voir documentation pour la liste complète des filtres](/ref#les-filtres)
+
 
 ## Exemple 4 :
+
+!!! warning
+    Il est recommandé de ne pas copier l'exemple mais de chercher par vous même des utilisations possibles.
 
 
 ```python

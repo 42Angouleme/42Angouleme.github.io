@@ -45,10 +45,10 @@ Les **modules**, avec leurs fonctionnalités plus bas niveau doivent aussi étre
 
 ### part 4 - camera and photos
 
-- robot.afficher_camera() : :zero::white_check_mark:, :one::x: , :two::x:
-- robot.prendre_photo(...) : :zero::white_check_mark:, :one::x: , :two::x:
-- robot.afficher_image(...) : :zero::white_check_mark:, :one::x: , :two::x:
-- robot.appliquer_filtre(...) : :zero::white_check_mark:, :one::x: , :two::x:
+- robot.afficher_camera() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
+- robot.prendre_photo(...) : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
+- robot.afficher_image(...) : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
+- robot.appliquer_filtre(...) : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
 
 ### part 5 - card detection and user session
 
