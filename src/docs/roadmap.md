@@ -52,10 +52,13 @@ Les **modules**, avec leurs fonctionnalités plus bas niveau doivent aussi étre
 
 ### part 5 - card detection and user session
 
-- robot.detecter_carte() : :zero::x:, :one::x: , :two::x:
-- robot.creer_session(...) : :zero::x:, :one::x: , :two::x:
-- robot.fermer_session(): :zero::x:, :one::x: , :two::x:
-- robot.verifier_session(): :zero::x:, :one::x: , :two::x:
+- robot.detecter_carte() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
+- robot.creer_utilisateur(...)  : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
+- robot.supprimer_utilisateur() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
+- robot.robot.recuperer_utilisateur_connecte() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
+- robot.connexion() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
+- robot.deconnexion() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
+- robot.verifier_session() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
 
 ### part 6 - talk to robot
 
