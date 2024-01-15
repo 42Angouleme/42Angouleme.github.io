@@ -619,9 +619,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lecran" class="md-nav__link">
+  <a href="#la-fenetre" class="md-nav__link">
     <span class="md-ellipsis">
-      l'écran
+      La fenêtre
     </span>
   </a>
   
@@ -978,9 +978,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lecran" class="md-nav__link">
+  <a href="#la-fenetre" class="md-nav__link">
     <span class="md-ellipsis">
-      l'écran
+      La fenêtre
     </span>
   </a>
   
@@ -1086,64 +1086,62 @@
 
 
 <h1 id="reference-de-la-bibliotheque">Référence de la bibliothèque</h1>
-<p>Pour en savoir plus, dans un éditeur tel que vscode, il suffit de passer la souris sur une fonction pour voir les commentaires la concernant.</p>
+<p>Pour en savoir plus, dans un éditeur tel que <em>visual studio code</em>, il suffit de passer la souris sur une fonction pour voir les commentaires la concernant.</p>
 <p><img alt="Commentaires" src="../ref.png" /></p>
-<h2 id="lecran">l'écran</h2>
+<h2 id="la-fenetre">La fenêtre</h2>
 <ul>
-<li>
-<p>Importer et utiliser pybot
+<li>Importer et utiliser <em>pybot</em></li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pybot</span> <span class="kn">import</span> <span class="n">Robot</span>
 <span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Démarrer webapp.
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">demarrer_webapp</span><span class="p">()</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Allumer l'écran.
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">allumer_ecran</span><span class="p">(</span><span class="n">longeur</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">)</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Changer le titre.
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">changer_titre</span><span class="p">(</span><span class="n">titre</span><span class="p">)</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Mettre à jour l'affichage dans la fenêtre.
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">dessiner_ecran</span><span class="p">()</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Entrer ou sortir du plein écran.
-<div class="highlight"><pre><span></span><code><span class="n">plein_ecran</span><span class="p">(</span><span class="n">changer</span><span class="p">)</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Mettre en pause le robot.
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">dort</span><span class="p">(</span><span class="n">secondes</span><span class="p">)</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Vérifier si le robot est actif (Vrai ou Faux).
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">est_actif</span><span class="p">()</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Passer le robot en mode inactif.
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">desactiver</span><span class="p">()</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Passer le robot en mode inactif et fermer l'affichage.
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">eteindre_ecran</span><span class="p">()</span>
-</code></pre></div></p>
-</li>
+</code></pre></div>
+<ul>
+<li>Démarrer la webapp.</li>
 </ul>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">demarrer_webapp</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Ouvrir une fenêtre.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">creer_fenetre</span><span class="p">(</span><span class="n">longeur</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Changer le titre.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">changer_titre</span><span class="p">(</span><span class="n">titre</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Mettre à jour l'affichage de la fenêtre.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">actualiser_affichage</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Entrer ou sortir du plein écran.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">plein_ecran</span><span class="p">(</span><span class="n">changer</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Mettre en pause le robot.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">dort</span><span class="p">(</span><span class="n">secondes</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Vérifier si le robot est actif (Vrai ou Faux).</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">est_actif</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Passer le robot en mode inactif.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">desactiver</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Passer le robot en mode inactif et fermer l'affichage.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">fermer_fenetre</span><span class="p">()</span>
+</code></pre></div>
 <h2 id="les-evenements">les évènements</h2>
-<p>Liste des touches pour créer des évènements:
+<p>Liste des touches pour créer des évènements:</p>
 <div class="highlight"><pre><span></span><code>* echap (touche Échap)
 * espace (touche Espace)
 * 0
@@ -1197,73 +1195,65 @@
 * F13
 * F14
 * F15
-</code></pre></div></p>
+</code></pre></div>
 <ul>
-<li>
-<p>Créer un nouvel évènement.
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">ajouter_evenement</span><span class="p">(</span><span class="n">touche</span><span class="p">,</span> <span class="n">nom</span><span class="p">)</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Vérifier les évènements.
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">verifier_evenements</span><span class="p">()</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Supprimer un évènement.
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">supprimer_evenement</span><span class="p">(</span><span class="n">nom</span><span class="p">)</span>
-</code></pre></div></p>
-</li>
+<li>Créer un nouvel évènement.</li>
 </ul>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">ajouter_evenement</span><span class="p">(</span><span class="n">touche</span><span class="p">,</span> <span class="n">nom</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Vérifier les évènements.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">verifier_evenements</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Supprimer un évènement.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">supprimer_evenement</span><span class="p">(</span><span class="n">nom</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="fond-decran">fond d'écran</h3>
 <ul>
-<li>
-<p>Changer la couleur du fond
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">couleur_fond</span><span class="p">(</span><span class="n">couleur</span><span class="p">)</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Afficher la couleur du fond d'écran
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">afficher_fond</span><span class="p">()</span>
-</code></pre></div></p>
-</li>
+<li>Changer la couleur du fond</li>
 </ul>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">couleur_fond</span><span class="p">(</span><span class="n">couleur</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Afficher la couleur du fond d'écran</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">afficher_fond</span><span class="p">()</span>
+</code></pre></div>
 <h3 id="les-boutons">les boutons</h3>
 <ul>
-<li>
-<p>Créer un nouveau bouton.
-<div class="highlight"><pre><span></span><code><span class="n">bouton</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">creer_bouton</span><span class="p">(</span><span class="n">longueur</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">,</span> <span class="n">position_x</span><span class="p">,</span> <span class="n">position_y</span><span class="p">,</span> <span class="n">couleur</span><span class="p">)</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Ajouter un texte au bouton.
-<div class="highlight"><pre><span></span><code><span class="n">bouton</span><span class="o">.</span><span class="n">ajouter_texte</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">position_x</span><span class="p">,</span> <span class="n">position_y</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">couleur</span><span class="p">)</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Afficher le bouton.
-<div class="highlight"><pre><span></span><code><span class="n">bouton</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Vérifier le clique sur le bouton.</p>
-</li>
+<li>Créer un nouveau bouton.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">bouton</span><span class="o">.</span><span class="n">verifier_contact</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">bouton</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">creer_bouton</span><span class="p">(</span><span class="n">longueur</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">,</span> <span class="n">position_x</span><span class="p">,</span> <span class="n">position_y</span><span class="p">,</span> <span class="n">couleur</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Ajouter un texte au bouton.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">bouton</span><span class="o">.</span><span class="n">ajouter_texte</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">position_x</span><span class="p">,</span> <span class="n">position_y</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">couleur</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Afficher le bouton.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">bouton</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Vérifier le clique sur le bouton.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">bouton</span><span class="o">.</span><span class="n">est_actif</span><span class="p">()</span>
 </code></pre></div>
 <h3 id="rectangle-et-texte">rectangle et texte</h3>
 <ul>
-<li>
-<p>Afficher un rectangle.
-<div class="highlight"><pre><span></span><code>robot.dessiner_rectangle(longueur, hauteur, position_x, position_y, couleur)
-</code></pre></div></p>
-</li>
-<li>
-<p>Afficher du texte.
-<div class="highlight"><pre><span></span><code>robot.afficher_texte(texte, position_x, position_y, taille, couleur)
-</code></pre></div></p>
-</li>
+<li>Afficher un rectangle.</li>
 </ul>
+<div class="highlight"><pre><span></span><code>robot.dessiner_rectangle(longueur, hauteur, position_x, position_y, couleur)
+</code></pre></div>
+<ul>
+<li>Afficher du texte.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>robot.afficher_texte(texte, position_x, position_y, taille, couleur)
+</code></pre></div>
 <h3 id="la-camera">la caméra</h3>
 <ul>
 <li>Afficher la caméra.</li>
@@ -1286,7 +1276,7 @@
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">appliquer_filtre</span><span class="p">(</span><span class="n">chemin_fichier</span><span class="p">,</span> <span class="n">nom_filtre</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="les-filtres">les filtres</h2>
-<p>Liste des filtres que l'on peut appliquer sur une image
+<p>Liste des filtres que l'on peut appliquer sur une image</p>
 <div class="highlight"><pre><span></span><code>* cartoon
 * ocean
 * alien
@@ -1295,11 +1285,11 @@
 * noir_et_blanc
 * tourner
 * vernis
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="reconnaissance-carte-et-session">reconnaissance carte et session</h3>
-<p>*</p>
+<p>-</p>
 <h3 id="parler-avec-le-robot">parler avec le robot</h3>
-<p>*</p>
+<p>-</p>
 
 
 

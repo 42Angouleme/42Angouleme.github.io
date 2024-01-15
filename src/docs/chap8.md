@@ -7,7 +7,7 @@
 robot.choisir_emotion(texte, liste_emotions)
 ```
 
-## Pour afficher un visage, si les emotions correspondent à une image.
+## Pour afficher un visage, si les émotions correspondent à une image.
 
 ```python
 robot.afficher_image(emotion)

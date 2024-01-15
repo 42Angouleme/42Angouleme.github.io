@@ -585,18 +585,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ne-plus-se-souvenir" class="md-nav__link">
+  <a href="#effacer-la-memoire" class="md-nav__link">
     <span class="md-ellipsis">
-      Ne plus se souvenir
+      Effacer la mémoire
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#recuperer-la-memoire-du-robot-lhistorique-de-conversation" class="md-nav__link">
+  <a href="#recuperer-la-memoire-du-robot" class="md-nav__link">
     <span class="md-ellipsis">
-      Recuperer la mémoire du robot / l'historique de conversation
+      Récupérer la mémoire du robot
     </span>
   </a>
   
@@ -1064,18 +1064,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ne-plus-se-souvenir" class="md-nav__link">
+  <a href="#effacer-la-memoire" class="md-nav__link">
     <span class="md-ellipsis">
-      Ne plus se souvenir
+      Effacer la mémoire
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#recuperer-la-memoire-du-robot-lhistorique-de-conversation" class="md-nav__link">
+  <a href="#recuperer-la-memoire-du-robot" class="md-nav__link">
     <span class="md-ellipsis">
-      Recuperer la mémoire du robot / l'historique de conversation
+      Récupérer la mémoire du robot
     </span>
   </a>
   
@@ -1118,103 +1118,104 @@
 <h1 id="chapitre-6-parler-au-robot">Chapitre 6: Parler au robot</h1>
 <h2 id="discuter-avec-le-robot">Discuter avec le robot</h2>
 <h3 id="commencer-a-discuter-avec-le-robot">Commencer à discuter avec le robot</h3>
-<p>Pour commencer une discussion avec le robot et ainsi parler avec lui, il faut utiliser la méthode <strong>demarrer_discussion()</strong>.</p>
+<p>Pour commencer une discussion avec le robot, il faut utiliser la méthode <strong>demarrer_discussion()</strong>.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<div class="highlight"><pre><span></span><code><span class="o">-</span> <span class="n">robot</span><span class="o">.</span><span class="n">demarrer_discussion</span><span class="p">()</span>
-</code></pre></div>
 </div>
+<p><code>python
+    - robot.demarrer_discussion()</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Il faut toujours commencer une discussion avec le robot avant d'utiliser les méthodes suivantes.</p>
 </div>
+<p>Il faut toujours commencer une discussion avec le robot avant d'utiliser les méthodes suivantes.</p>
 <h3 id="arreter-de-discuter-avec-le-robot">Arrêter de discuter avec le robot</h3>
 <p>Pour arrêter la discussion avec le robot, il faut utiliser la méthode <strong>arreter_discussion()</strong>.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<div class="highlight"><pre><span></span><code><span class="o">-</span> <span class="n">robot</span><span class="o">.</span><span class="n">arreter_discussion</span><span class="p">()</span>
-</code></pre></div>
 </div>
+<p><code>python
+    - robot.arreter_discussion()</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>A partir de ce moment là le robot ne pourra plus vous répondre et il faudra recommencer la discussion avec <strong>demarrer_discussion()</strong>.</p>
 </div>
+<p>A partir de ce moment là le robot ne pourra plus vous répondre et il faudra recommencer la discussion avec <strong>demarrer_discussion()</strong>.</p>
 <h3 id="poser-une-question-parler-au-robot">Poser une question / parler au robot</h3>
 <p>Pour pouvoir parler au robot (poser des questions, donner des informations, ...), il faut utiliser la méthode <strong>repondre_question(question)</strong>.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<div class="highlight"><pre><span></span><code><span class="o">-</span> <span class="n">robot</span><span class="o">.</span><span class="n">repondre_question</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
-</code></pre></div>
 </div>
+<p><code>python
+    - robot.repondre_question(question)</code></p>
 <p>Le robot répondra à la question posée en paramètre.
 Cette fonction retourne la réponse du robot.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Le robot vous répondra dans le terminal et non dans la fenêtre, se sera à vous de coder ce qu'il faut si vous voulez que la réponse s'affiche dans la fenêtre.
-Le robot peut prendre un certain temps de réflexion pour vous répondre pendant ce temps de réflexion le robot sera comme en pause (inutilisable), il suffit simplement d'attendre sa réponse pour qu'il ne soit plus en pause (utilisable).</p>
 </div>
+<p>La réponse du robot apparaîtra dans le terminal. Quelques lignes de code supplémentaire permettront de récupérer la réponse pour la manipuler.
+Le robot peut prendre un certain temps de réflexion pour vous répondre pendant ce temps de réflexion le robot semblera être en pause (inutilisable). Il suffit simplement d'attendre sa réponse pour qu'il ne soit plus en pause (utilisable).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Tant qu'aucun historique n'est chargé le robot ne se rappellera rien (après chaque réponse il oublie tout).</p>
 </div>
+<p>Tant qu'aucun historique n'est chargé le robot est dépourvu de mémoire de précédents messages.</p>
 <h2 id="la-memoire-du-robot">La mémoire du robot</h2>
-<p>Comme dit précédemment si on ne donne pas d'historique au robot (une "mémoire") le robot ne se rappellera de rien entre les questions.</p>
-<p>Alors pour créer la mémoire du robot / avoir un historique de conversation, il faut utiliser la méthode <strong>creer_historique()</strong> ainsi le robot gardera en mémoire l'historique de la conversation actuelle.</p>
+<p>Comme dit précédemment si on ne donne pas de mémoire au robot, il ne se rappellera de rien entre les questions.</p>
+<p>La méthode <strong>creer_historique()</strong> permet au robot de lui demander de garder en mémoire l'historique de la conversation à venir.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<div class="highlight"><pre><span></span><code><span class="o">-</span> <span class="n">robot</span><span class="o">.</span><span class="n">creer_historique</span><span class="p">()</span>
-</code></pre></div>
 </div>
+<p><code>python
+    - robot.creer_historique()</code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Il est préférable d'avoir un historique de conversation par utilisateur et aussi de sauvegarder l'historique de conversation dans les données de l'utilisateur correspondant</p>
 </div>
+<p>Il est préférable d'avoir un historique de conversation par utilisateur et aussi de sauvegarder l'historique de conversation dans les données de l'utilisateur correspondant.</p>
 <h3 id="gerer-lhistorique-de-conversation">Gérer l'historique de conversation</h3>
 <h4 id="se-souvenir">Se souvenir</h4>
-<p>Une fois l'historique de conversation créé il faut le charger dans le robot avec la méthode <strong>charger_historique(historique_de_conversation)</strong>, ici vous donnez donc au robot la capacité de se souvenir des interactions qu'il a eu avec l'utilisateur.</p>
+<p>Une fois l'historique de conversation créé il faut le charger dans le robot avec la méthode <strong>charger_historique(historique_de_conversation)</strong>. Ici, vous donnez donc au robot la capacité de se souvenir des interactions qu'il a eues avec l'utilisateur.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<div class="highlight"><pre><span></span><code><span class="o">-</span> <span class="n">robot</span><span class="o">.</span><span class="n">charger_historique</span><span class="p">(</span><span class="n">historique_de_conversation</span><span class="p">)</span>
-</code></pre></div>
 </div>
+<p><code>python
+    - robot.charger_historique(historique_de_conversation)</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Si un historique de conversation est déjà chargé est qu'un autre historique vient à être chargé le nouveau historique écrasera l'ancien historique.</p>
 </div>
+<p>Si un historique de conversation est déjà chargé et qu'un autre historique vient à être chargé l'ancien historique sera écrasé.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Si l'historique n'est pas vide, le robot reprendra la discussion là où l'utilisateur l'avait arrêté la dernière fois.</p>
 </div>
-<h4 id="ne-plus-se-souvenir">Ne plus se souvenir</h4>
-<p>Si vous voulez changer de discussion ou bien arrêter tout simplement d'avoir un historique de conversation (retirer la mémoire du robot) vous pouvez utilisez la méthode <strong>supprimer_historique()</strong>.</p>
+<p>Si l'historique n'est pas vide, le robot reprendra la discussion là où l'utilisateur l'avait arrêtée la dernière fois.</p>
+<h4 id="effacer-la-memoire">Effacer la mémoire</h4>
+<p>Si vous voulez changer de discussion ou bien effacer l'historique de la conversation vous pouvez utilisez la méthode <strong>supprimer_historique()</strong>.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<div class="highlight"><pre><span></span><code><span class="o">-</span> <span class="n">robot</span><span class="o">.</span><span class="n">supprimer_historique</span><span class="p">()</span>
-</code></pre></div>
 </div>
+<p><code>python
+    - robot.supprimer_historique()</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Pensez à recuperer et sauvegarder l'historique avant de le supprimer</p>
 </div>
-<h4 id="recuperer-la-memoire-du-robot-lhistorique-de-conversation">Recuperer la mémoire du robot / l'historique de conversation</h4>
+<p>Pensez à recuperer et sauvegarder l'historique avant de le supprimer</p>
+<h4 id="recuperer-la-memoire-du-robot">Récupérer la mémoire du robot</h4>
 <p>Pour pouvoir sauvegarder l'historique de conversation (mémoire du robot), il faut pouvoir récupérer l'historique de conversation pour cela il faut utiliser la méthode <strong>recuperer_historique_de_conversation()</strong>.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<div class="highlight"><pre><span></span><code><span class="o">-</span> <span class="n">robot</span><span class="o">.</span><span class="n">recuperer_historique_de_conversation</span><span class="p">()</span>
-</code></pre></div>
 </div>
-<p>Cette méthode renvoie la mémoire du robot permettant ainsi la sauvegarde de celle-ci.</p>
+<p><code>python
+    - robot.recuperer_historique_de_conversation()</code></p>
+<p>Cette méthode renvoit la mémoire du robot permettant ainsi la sauvegarde de celle-ci.</p>
 <h2 id="exemple-5">Exemple 5 :</h2>
 <p>Voilà un exemple de fonction permettant la gestion de la discussion avec le robot</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Cela n'est qu'un exemple, il n'est pas parfait car par exemple l'entrée de l'utilisateur n'est pas effacée, le robot n'a pas de mémoire (historique de conversation), ...</p>
-<p>Je vous conseille donc de vous en inspirer mais pas de le copier-coller.
-De plus, il manque toutes les parties (vu précédemment) nécessaires au fonctionnement du robot.</p>
 </div>
+<p>Cela n'est qu'un exemple, il n'est pas parfait car par exemple l'entrée de l'utilisateur n'est pas effacée, le robot n'a pas de mémoire (historique de conversation), etc.</p>
+<div class="highlight"><pre><span></span><code>Je vous conseille donc de vous en inspirer mais pas de le copier-coller.
+De plus, il manque toutes les parties (vu précédemment) nécessaires au fonctionnement du robot.
+</code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">declencher_discussion</span><span class="p">(</span><span class="n">robot</span> <span class="p">:</span> <span class="n">Robot</span><span class="p">):</span>
     <span class="k">global</span> <span class="n">mettre_a_jour_affichage</span><span class="p">,</span> <span class="n">discussion_commencer</span><span class="p">,</span> <span class="n">text_area</span><span class="p">,</span> <span class="n">bouton_question</span>
-    <span class="k">if</span> <span class="n">bouton_question</span><span class="o">.</span><span class="n">verifier_contact</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">bouton_question</span><span class="o">.</span><span class="n">est_actif</span><span class="p">():</span>
         <span class="n">discussion_commencer</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">discussion_commencer</span>
         <span class="k">if</span> <span class="n">discussion_commencer</span> <span class="p">:</span>
             <span class="n">robot</span><span class="o">.</span><span class="n">demarrer_discussion</span><span class="p">()</span>
@@ -1223,7 +1224,7 @@ De plus, il manque toutes les parties (vu précédemment) nécessaires au foncti
             <span class="n">bouton_question</span><span class="o">.</span><span class="n">ajouter_texte</span><span class="p">(</span><span class="s2">&quot;Poser question&quot;</span><span class="p">)</span>
             <span class="n">robot</span><span class="o">.</span><span class="n">arreter_discussion</span><span class="p">()</span>
         <span class="n">mettre_a_jour_affichage</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="k">if</span> <span class="n">discussion_commencer</span> <span class="ow">and</span> <span class="n">text_area</span><span class="o">.</span><span class="n">verifier_contact</span><span class="p">()</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="n">discussion_commencer</span> <span class="ow">and</span> <span class="n">text_area</span><span class="o">.</span><span class="n">est_actif</span><span class="p">()</span> <span class="p">:</span>
         <span class="n">user_entry</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">ecrire</span><span class="p">(</span><span class="n">text_area</span><span class="p">)</span>
         <span class="n">robot</span><span class="o">.</span><span class="n">repondre_question</span><span class="p">(</span><span class="n">user_entry</span><span class="p">)</span>
 </code></pre></div>

@@ -573,9 +573,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#verifier-le-clique-sur-la-zone-de-texte" class="md-nav__link">
+  <a href="#verifier-le-clic-sur-la-zone-de-texte" class="md-nav__link">
     <span class="md-ellipsis">
-      Vérifier le clique sur la zone de texte
+      Vérifier le clic sur la zone de texte
     </span>
   </a>
   
@@ -1007,9 +1007,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#verifier-le-clique-sur-la-zone-de-texte" class="md-nav__link">
+  <a href="#verifier-le-clic-sur-la-zone-de-texte" class="md-nav__link">
     <span class="md-ellipsis">
-      Vérifier le clique sur la zone de texte
+      Vérifier le clic sur la zone de texte
     </span>
   </a>
   
@@ -1071,110 +1071,106 @@
 <h2 id="recuperer-les-entrees-utilisateur">Récupérer les entrées utilisateur</h2>
 <h3 id="zone-de-texte">Zone de texte</h3>
 <h4 id="creer-une-zone-de-texte">Créer une zone de texte</h4>
-<p>Créer et retourner une zone texte qui peut être affiché et vérifié plus tard</p>
+<p>Créer et retourner une zone texte qui peut être affichée et vérifiée plus tard</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<div class="highlight"><pre><span></span><code><span class="o">-</span> <span class="n">creer_zone_texte</span><span class="p">(</span><span class="n">longueur</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">,</span> <span class="n">position_x</span><span class="p">,</span> <span class="n">position_y</span><span class="p">,</span> <span class="n">couleur</span><span class="p">)</span>
-</code></pre></div>
 </div>
+<p><code>python
+    - creer_zone_texte(longueur, hauteur, position_x, position_y, couleur)</code></p>
 <p>Les paramètres attendus sont :<br />
-    * la longueur et la hauteur de la zone de texte.<br />
-    * la position x et y du de la zone de texte (son coin en haut à gauche).<br />
-    * la couleur du de la zone de texte.</p>
+ _ la longueur et la hauteur de la zone de texte.<br />
+ _ la position x et y de la zone de texte (son coin en haut à gauche).<br />
+ * la couleur de la zone de texte.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>La couleur est au format variable = (R, G, B), comme vu avec les boutons.</p>
 </div>
+<p>La couleur est au format (R, G, B), comme vu avec les boutons.</p>
 <div class="admonition warning">
-<p class="admonition-title">Les positions x et y sur l'écran</p>
-<p>Les coordonnées sur un écran informatique sont généralement définies à partir du coin supérieur gauche.<br />
-Le <strong>premier pixel</strong> qui se trouve en haut à gauche correspond aux coordonnées <strong>x = 0 et y = 0</strong>.<br />
-Alors que le dernier pixel en bas à droite correspond à la coordonnée x maximale et à la coordonnée y maximale.<br />
-Par exemple, si l'écran fait 300 pixels de long et 200 pixels de haut. Le <strong>dernier pixel</strong> a les coordonnées <strong>x = 299 et y = 199</strong>.</p>
+<p class="admonition-title">Les positions x et y dans la fenêtre</p>
 </div>
+<p>Les coordonnées sur un écran informatique sont généralement définies à partir du coin supérieur gauche.
+Le <strong>premier pixel</strong> qui se trouve en haut à gauche de la fenêtre correspond aux coordonnées <strong>x = 0 et y = 0</strong>.
+Alors que le dernier pixel en bas à droite correspond à la coordonnée <em>x</em> maximale et à la coordonnée <em>y</em> maximale.<br />
+ Par exemple, si la fenêtre fait 300 pixels de long et 200 pixels de haut : le <strong>dernier pixel</strong> a les coordonnées <strong>x = 299 et y = 199</strong>.</p>
 <p><img alt="Les coordonnées en informatique" src="../coordinates.jpg" /></p>
 <h4 id="afficher-la-zone-de-texte">Afficher la zone de texte</h4>
 <p>Pour afficher la zone de texte dans la fenêtre principale.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<div class="highlight"><pre><span></span><code><span class="n">zone_texte</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
-</code></pre></div>
 </div>
+<p><code>python
+    zone_texte.afficher()</code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+</div>
 <p>La méthode s'applique sur la zone de texte (et non le robot comme avec les boutons).</p>
-</div>
-<h4 id="verifier-le-clique-sur-la-zone-de-texte">Vérifier le clique sur la zone de texte</h4>
-<p>Pour vérifier que la zone de texte est cliqué ou non, une valeur vraie (True) ou fausse (False) est retournée, voir l'exemple.</p>
+<h4 id="verifier-le-clic-sur-la-zone-de-texte">Vérifier le clic sur la zone de texte</h4>
+<p>Pour vérifier que la zone de texte soit active ou non, une valeur vraie (True) ou fausse (False) est retournée, voir l'exemple.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<div class="highlight"><pre><span></span><code><span class="n">zone_texte</span><span class="o">.</span><span class="n">verifier_contact</span><span class="p">()</span>
-</code></pre></div>
 </div>
-<p>Cela fonctionne comme avec les boutons</p>
+<p><code>python
+    zone_texte.est_actif()</code></p>
+<p>Cela fonctionne comme avec les boutons.</p>
 <h4 id="ecrire-dans-la-zone-de-texte">Écrire dans la zone de texte</h4>
-<p>Une fois la zone de texte déclenchée, il faut faire appelle à la méthode <strong>ecrire()</strong> pour pouvoir écrire dans la zone de texte.</p>
+<p>Une fois la zone de texte active, il faut faire appel à la méthode <strong>ecrire()</strong> pour pouvoir écrire dans la zone de texte.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<div class="highlight"><pre><span></span><code>robot.ecrire(self, zone_texte)
-</code></pre></div>
 </div>
+<p><code>pyhton
+    robot.ecrire(self, zone_texte)</code></p>
 <p>Cette fonction renvoie le texte après que l'utilisateur ait quitté la zone de texte.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Lorsque l'utilisateur écrit, le reste du robot est mise en pause tant que l'utilisateur n'a pas quitté la zone d'écriture en cliquant en dehors de celle-ci ou alors en tapant sur Entrée.</p>
 </div>
+<p>Lorsque l'utilisateur écrit, le robot est mis en pause tant que l'utilisateur n'a pas quitté la zone d'écriture en cliquant en dehors de celle-ci ou alors en tapant sur la touche <em>entrée</em>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Cette méthode est un peu spéciale car elle s'applique sur le robot et elle prend en paramètre la zone de texte touchée.</p>
 </div>
+<p>Cette méthode est spéciale : elle s'applique sur le robot et elle prend en paramètre la zone de texte active.</p>
 <h3 id="recuperer-lentree-utilisateur">Récupérer l'entrée utilisateur</h3>
-<p>Une fois que l'utilisateur à fini d'entrer son texte, vous pouvez avoir envie de gérer cette entrée en la récupérant pour cela il y a les méthode <strong>renvoi_texte()</strong> ou <strong>effacer_texte()</strong>.</p>
+<p>Une fois que l'utilisateur a terminé d'entrer son texte, vous pouvez récupérer cette entrée grâce aux méthodes <strong>recuperer_texte()</strong> ou <strong>effacer_texte()</strong>.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<div class="highlight"><pre><span></span><code>zone_texte.renvoi_texte()
-</code></pre></div>
 </div>
-<p>Cette fonction renvoie le texte contenue de la zone de texte sans l'effacer.</p>
+<p><code>pyhton
+    zone_texte.recuperer_texte()</code></p>
+<p>Cette fonction renvoit le texte contenu dans la zone de texte sans l'effacer.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<div class="highlight"><pre><span></span><code>zone_texte.effacer_texte()
-</code></pre></div>
 </div>
-<p>Cette fonction renvoie le texte contenue de la zone de texte en l'effaçant.</p>
+<p><code>pyhton
+    zone_texte.effacer_texte()</code></p>
+<p>Cette fonction renvoit le texte contenu dans la zone de texte en l'effaçant.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
+</div>
 <p>Cette fonction efface le texte contenu dans la zone de texte, le texte n'est donc plus récupérable après.</p>
-</div>
 <h3 id="personnaliser-la-zone-de-texte">Personnaliser la zone de texte</h3>
-<p>Si vous voulez modifier la taille d'écriture du texte dans la zone de texte vous pouvez utiliser la méthode <strong>modifier_taille_ecriture(taille)</strong>.</p>
+<p>Si vous voulez modifier la taille d'écriture du texte dans la zone de texte vous pouvez utiliser la méthode <strong>modifier_taille_police(taille)</strong>.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<div class="highlight"><pre><span></span><code>zone_texte.modifier_taille_ecriture(taille)
-</code></pre></div>
 </div>
+<p><code>pyhton
+    zone_texte.modifier_taille_police(taille)</code></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
+</div>
 <p>Si vous ne mettez aucun paramètre, cela réinitialisera la taille d'écriture.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Il est mieux que la taille d'écriture reste petite.</p>
-</div>
-<p>Si vous voulez modifier la couleur du texte dans la zone de texte vous pouvez utiliser la méthode <strong>modifier_couleur_ecriture(couleur)</strong>.</p>
+<p>Si vous voulez modifier la couleur du texte dans la zone de texte vous pouvez utiliser la méthode <strong>modifier_couleur_police(couleur)</strong>.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<div class="highlight"><pre><span></span><code>zone_texte.modifier_couleur_ecriture(couleur)
-</code></pre></div>
 </div>
+<p><code>pyhton
+    zone_texte.modifier_couleur_police(couleur)</code></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Si vous ne mettez aucun paramètre, cela réinitialisera la couleur du texte.</p>
 </div>
+<p>Si vous ne mettez aucun paramètre, cela réinitialisera la couleur du texte.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>La couleur est au format variable = (R, G, B), comme vu avec les boutons.</p>
 </div>
+<p>La couleur est au format variable = (R, G, B), comme vu avec les boutons.</p>
 
 
 

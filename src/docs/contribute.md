@@ -2,13 +2,16 @@
 
 > L'objectif est de créer une bibliothèque logicielle qui permettra à des élèves de collège de niveau 3éme de réaliser un robot par eux même (Tout en s'initiant à la programmation Python).
 
-Il existe deux dépôts public sur github, l'un avec la [bibliothèque pybot](https://github.com/42Angouleme/pybot) et l'autre avec [la démo](https://github.com/42Angouleme/demo_pybot) qui a servi aux collègiens lors de la journée d'immersion à l'école de 42 Angoulême le *27 Novembre 2023*.
+Il existe trois dépôts *github* publics liés au projet :
+- La [bibliothèque pybot](https://github.com/42Angouleme/pybot) 
+- La [documentation du projet](https://github.com/42Angouleme/42Angouleme.github.io) (que tu lis actuellement) 
+- La [démo](https://github.com/42Angouleme/demo_pybot) (archive) qui a servi aux collégiens lors de la journée d'immersion à l'école de 42 Angoulême le *27 Novembre 2023*.
 
-La démo est archivée et sert seulement comme référence, le développement se déroule exclusivement sur le dépôt de la bibliothèque pybot et les [tickets sont tous rassemblés ici](https://github.com/42Angouleme/pybot/issues).
+La démo est archivée et sert seulement comme référence, le développement se déroule exclusivement sur le dépôt de la bibliothèque *pybot* et les [tickets sont rassemblés ici](https://github.com/42Angouleme/pybot/issues).
 
 ## Installation du projet
 
-La bibliothèque utilise le language Python avec un grand nombre de dépendances (pygame, flask, opencv...), pour l'installer en local il suffit de cloner le dépôt, installer un environnement virtuel python avec les dépendances.
+La bibliothèque utilise le language Python (>3.10) avec un grand nombre de dépendances (pygame, flask, opencv...). Pour l'installer en local il suffit de cloner le dépôt, installer un environnement virtuel python avec les dépendances.
 
 !!! success "Commandes :"
 
