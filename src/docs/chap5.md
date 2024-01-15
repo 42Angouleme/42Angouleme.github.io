@@ -1,10 +1,10 @@
-# Chapitre 5: Reconnaissance d'un élève avec sa carte.
+# Chapitre 5: Reconnaissance d'un élève par sa carte.
 
 ## 1. Détecter une carte
 
-La méthode **robot.detecter_carte()** permet de récupérer l'identité de la personne sous la forme d'une chaine de caractère: "`Nom Prénom`".
+La méthode **robot.detecter_carte()** permet de récupérer l'identité de la personne sous la forme d'une chaîne de caractères : "`Nom Prénom`".
 
-Si une carte invalide, n' appartenant à personne ou bien que aucune carte n' est visible pour la caméra, alors la méthode retournera une chaîne de caractères vide: "` `".
+Si une carte est invalide, n'appartient à personne ou bien qu'aucune carte n'est visible pour la caméra, alors la méthode retournera une chaîne de caractères vide: "` `".
 
 !!! warning
 	Si la fonction est appelée alors que l application web n' est pas lancée ou bien que la caméra n' est pas allumée alors la fonction retournera aussi une chaine vide: "` `".

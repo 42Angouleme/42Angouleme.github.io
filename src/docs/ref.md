@@ -1,65 +1,76 @@
 # Référence de la bibliothèque
 
-Pour en savoir plus, dans un éditeur tel que vscode, il suffit de passer la souris sur une fonction pour voir les commentaires la concernant.
+Pour en savoir plus, dans un éditeur tel que _visual studio code_, il suffit de passer la souris sur une fonction pour voir les commentaires la concernant.
 
 ![Commentaires](ref.png)
 
-## l'écran
+## La fenêtre
 
-* Importer et utiliser pybot
+- Importer et utiliser _pybot_
+
 ```python
 from pybot import Robot
 robot = Robot()
 ```
 
-* Démarrer webapp.
+- Démarrer la webapp.
+
 ```python
 robot.demarrer_webapp()
 ```
 
-* Allumer l'écran.
+- Ouvrir une fenêtre.
+
 ```python
-robot.allumer_ecran(longeur, hauteur)
+robot.creer_fenetre(longeur, hauteur)
 ```
 
-* Changer le titre.
+- Changer le titre.
+
 ```python
 robot.changer_titre(titre)
 ```
 
-* Mettre à jour l'affichage dans la fenêtre.
+- Mettre à jour l'affichage de la fenêtre.
+
 ```python
-robot.dessiner_ecran()
+robot.actualiser_affichage()
 ```
 
-* Entrer ou sortir du plein écran.
+- Entrer ou sortir du plein écran.
+
 ```python
 plein_ecran(changer)
 ```
 
-* Mettre en pause le robot.
+- Mettre en pause le robot.
+
 ```python
 robot.dort(secondes)
 ```
 
-* Vérifier si le robot est actif (Vrai ou Faux).
+- Vérifier si le robot est actif (Vrai ou Faux).
+
 ```python
 robot.est_actif()
 ```
 
-* Passer le robot en mode inactif.
+- Passer le robot en mode inactif.
+
 ```python
 robot.desactiver()
 ```
 
-* Passer le robot en mode inactif et fermer l'affichage.
+- Passer le robot en mode inactif et fermer l'affichage.
+
 ```python
-robot.eteindre_ecran()
+robot.fermer_fenetre()
 ```
 
 ## les évènements
 
 Liste des touches pour créer des évènements:
+
 ```
 * echap (touche Échap)
 * espace (touche Espace)
@@ -116,89 +127,99 @@ Liste des touches pour créer des évènements:
 * F15
 ```
 
-* Créer un nouvel évènement.
+- Créer un nouvel évènement.
+
 ```python
 robot.ajouter_evenement(touche, nom)
 ```
 
-* Vérifier les évènements.
+- Vérifier les évènements.
+
 ```python
 robot.verifier_evenements()
 ```
 
-* Supprimer un évènement.
+- Supprimer un évènement.
+
 ```python
 robot.supprimer_evenement(nom)
 ```
 
 ### fond d'écran
 
-* Changer la couleur du fond
+- Changer la couleur du fond
+
 ```python
 robot.couleur_fond(couleur)
 ```
 
-* Afficher la couleur du fond d'écran
+- Afficher la couleur du fond d'écran
+
 ```python
 robot.afficher_fond()
 ```
 
 ### les boutons
 
-* Créer un nouveau bouton.
+- Créer un nouveau bouton.
+
 ```python
 bouton = robot.creer_bouton(longueur, hauteur, position_x, position_y, couleur)
 ```
 
-* Ajouter un texte au bouton.
+- Ajouter un texte au bouton.
+
 ```python
 bouton.ajouter_texte(texte, position_x, position_y, taille, couleur)
 ```
 
-* Afficher le bouton.
+- Afficher le bouton.
+
 ```python
 bouton.afficher()
 ```
 
-* Vérifier le clique sur le bouton.
+- Vérifier le clique sur le bouton.
 
 ```python
-bouton.verifier_contact()
+bouton.est_actif()
 ```
 
 ### rectangle et texte
 
-* Afficher un rectangle.
+- Afficher un rectangle.
+
 ```
 robot.dessiner_rectangle(longueur, hauteur, position_x, position_y, couleur)
 ```
 
-* Afficher du texte.
+- Afficher du texte.
+
 ```
 robot.afficher_texte(texte, position_x, position_y, taille, couleur)
 ```
 
 ### la caméra
 
-* Afficher la caméra.
+- Afficher la caméra.
 
 ```python
 robot.afficher_camera(position_x, position_y)
 ```
 
-* Capturer une photo de la caméra.
+- Capturer une photo de la caméra.
 
 ```python
 robot.prendre_photo(self, nom_fichier)
 ```
 
-* Afficher une image.
+- Afficher une image.
 
 ```python
 robot.afficher_image(chemin_fichier, position_x, position_y)
 ```
 
-* Appliquer un filtre.
+- Appliquer un filtre.
 
 ```python
 robot.appliquer_filtre(chemin_fichier, nom_filtre)
@@ -207,6 +228,7 @@ robot.appliquer_filtre(chemin_fichier, nom_filtre)
 ## les filtres
 
 Liste des filtres que l'on peut appliquer sur une image
+
 ```
 * cartoon
 * ocean
@@ -220,9 +242,8 @@ Liste des filtres que l'on peut appliquer sur une image
 
 ### reconnaissance carte et session
 
-*
+-
 
 ### parler avec le robot
 
-*
-
+-

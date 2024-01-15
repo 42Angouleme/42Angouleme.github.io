@@ -1,6 +1,6 @@
-# The Pybot documentation
+# The *Pybot* documentation
 
-The pybot documentation use mkdocs https://www.mkdocs.org/ and the material theme https://squidfunk.github.io/mkdocs-material/.
+The *pybot* documentation use mkdocs https://www.mkdocs.org/ and the material theme https://squidfunk.github.io/mkdocs-material/.
 
 ## Install mkdocs
 

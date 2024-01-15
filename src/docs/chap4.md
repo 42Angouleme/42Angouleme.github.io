@@ -5,20 +5,20 @@
 Il est possible d'afficher la caméra dans la fenêtre.
 
 !!! success
-	```python
+`python
 	robot.afficher_camera(position_x, position_y)
-	```
+	`
 
-La caméra sera affiché aux coordonnées x et y passées en paramètres.
+La caméra sera affichée aux coordonnées x et y passées en paramètres.
 
 ### Pour enregistrer une photo :
 
 On peut capturer une photo de la caméra avec cette méthode:
 
 !!! success
-	```python
+`python
 	robot.prendre_photo(nom_fichier)
-	```
+	`
 
 La photo sera enregistré dans le dossier images au nom_fichier passé en paramètre.
 
@@ -27,32 +27,29 @@ La photo sera enregistré dans le dossier images au nom_fichier passé en param�
 On peut afficher une image avec la méthode:
 
 !!! success
-	```python
+`python
 	robot.afficher_image(chemin_fichier)
-	```
+	`
 
-Nous avons besoin du chemin et du nom du fichier. (ex: /images/photo.jpg) passé en paramètre, ainsi que les coordonnées x et y ou seront affiché l'image.
-
+Nous avons besoin du chemin et du nom du fichier (ex: /images/photo.jpg) passés en paramètres, ainsi que des coordonnées x et y ou seront affichées l'image.
 
 ### Pour appliquer un filtre sur une photo :
 
-Nous pouvons appliquer une filtre à une image avec la méthode:
+Nous pouvons appliquer un filtre à une image avec la méthode:
 
 !!! success
-	```python
+`python
 	robot.appliquer_filtre(chemin_fichier, nom_filtre)
-	```
+	`
 
-Les paramètres attendus sont le chemin et nom du fichier. (ex: /images/photo.jpg) ainsi que le nom du filtre. (ex: cartoon, alien, tourner...)  
+Les paramètres attendus sont le chemin et nom du fichier (ex: /images/photo.jpg) ainsi que le nom du filtre (ex: cartoon, alien, miroir...).
 
-* [voir documentation pour la liste complète des filtres](/ref#les-filtres)
-
+- [voir documentation pour la liste complète des filtres](/ref#les-filtres)
 
 ## Exemple 4 :
 
 !!! warning
-    Il est recommandé de ne pas copier l'exemple mais de chercher par vous même des utilisations possibles.
-
+Il est recommandé de ne pas copier l'exemple mais de chercher par vous-même des utilisations possibles.
 
 ```python
 from pybot import Robot
@@ -94,7 +91,7 @@ def preparer_programme():
     global bouton_camera, bouton_capture, bouton_photo, bouton_stop, \
     bouton_filter_1, bouton_filter_2, bouton_filter_3, bouton_filter_4, \
     bouton_filter_5, bouton_filter_6, bouton_filter_7, bouton_filter_8
-    robot.allumer_ecran(long, haut)
+    robot.creer_fenetre(long, haut)
     robot.changer_titre("Bonjour camera!")
     robot.couleur_fond(noir)
 
@@ -124,7 +121,7 @@ def preparer_programme():
     bouton_stop = robot.creer_bouton(180, 60, 10, 900, vert)
     bouton_stop.ajouter_texte("quitter", 10, 10, 20)
 
-def affichage_ecran():  
+def dessiner_fenetre():
     global mettre_a_jour_affichage
     if mettre_a_jour_affichage:
         robot.afficher_fond()
@@ -145,7 +142,7 @@ def affichage_ecran():
 
 def verifier_boutons():
     global mettre_a_jour_affichage, afficher_camera, afficher_photo
-    if bouton_camera.verifier_contact():
+    if bouton_camera.est_actif():
         afficher_camera = not afficher_camera
         if afficher_camera:
             bouton_camera.ajouter_texte("camera - eteindre")
@@ -157,35 +154,35 @@ def verifier_boutons():
             bouton_photo.ajouter_texte("afficher photo")
         mettre_a_jour_affichage = True
     if afficher_camera:
-        if bouton_capture.verifier_contact():
+        if bouton_capture.est_actif():
             robot.prendre_photo("photo")
-    if bouton_photo.verifier_contact():
+    if bouton_photo.est_actif():
         afficher_photo = not afficher_photo
         mettre_a_jour_affichage = True
-    if bouton_stop.verifier_contact():
+    if bouton_stop.est_actif():
         robot.desactiver()
-    if bouton_filter_1.verifier_contact():
+    if bouton_filter_1.est_actif():
         robot.appliquer_filtre("/images/photo.jpg", "ocean")
         mettre_a_jour_affichage = True
-    if bouton_filter_2.verifier_contact():
+    if bouton_filter_2.est_actif():
         robot.appliquer_filtre("/images/photo.jpg", "cartoon")
         mettre_a_jour_affichage = True
-    if bouton_filter_3.verifier_contact():
+    if bouton_filter_3.est_actif():
         robot.appliquer_filtre("/images/photo.jpg", "alien")
         mettre_a_jour_affichage = True
-    if bouton_filter_4.verifier_contact():
+    if bouton_filter_4.est_actif():
         robot.appliquer_filtre("/images/photo.jpg", "rose")
         mettre_a_jour_affichage = True
-    if bouton_filter_5.verifier_contact():
+    if bouton_filter_5.est_actif():
         robot.appliquer_filtre("/images/photo.jpg", "flou")
         mettre_a_jour_affichage = True
-    if bouton_filter_6.verifier_contact():
+    if bouton_filter_6.est_actif():
         robot.appliquer_filtre("/images/photo.jpg", "noir_et_blanc")
         mettre_a_jour_affichage = True
-    if bouton_filter_7.verifier_contact():
+    if bouton_filter_7.est_actif():
         robot.appliquer_filtre("/images/photo.jpg", "tourner")
         mettre_a_jour_affichage = True
-    if bouton_filter_8.verifier_contact():
+    if bouton_filter_8.est_actif():
         robot.appliquer_filtre("/images/photo.jpg", "vernis")
         mettre_a_jour_affichage = True
 
@@ -193,15 +190,15 @@ def boucle_programme():
     while robot.est_actif():
         events = robot.verifier_evenements()
         if "stop" in events:
-            robot.eteindre_ecran()
-        affichage_ecran()
+            robot.fermer_fenetre()
+        dessiner_fenetre()
         if afficher_camera:
             robot.afficher_camera(300, 10)
         if afficher_photo:
             robot.afficher_image("/images/photo.jpg", 300, 500)
             robot.afficher_image("/images/fier.png", 1000, 500)
         verifier_boutons()
-        robot.dessiner_ecran()
+        robot.actualiser_affichage()
 
 if __name__ == "__main__":
     preparer_programme()

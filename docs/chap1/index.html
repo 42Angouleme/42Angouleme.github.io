@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
     
     
       
@@ -427,9 +427,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-allumer-lecran-pour-demarrer-laffichage" class="md-nav__link">
+  <a href="#3-creer-fenetre-pour-demarrer-laffichage" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Allumer l'écran pour démarrer l'affichage.
+      3. Créer fenêtre pour démarrer l'affichage.
     </span>
   </a>
   
@@ -445,9 +445,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-mettre-a-jour-laffichage-de-lecran" class="md-nav__link">
+  <a href="#5-mettre-a-jour-laffichage-de-la-fenetre" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Mettre à jour l'affichage de l'écran.
+      5. Mettre à jour l'affichage de la fenêtre.
     </span>
   </a>
   
@@ -585,6 +585,27 @@
   
   <span class="md-ellipsis">
     chapitre 6 - Parler au robot.
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap6.5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapitre 6.5 - Zone de texte / Entrée Utilisateur
   </span>
   
 
@@ -954,9 +975,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-allumer-lecran-pour-demarrer-laffichage" class="md-nav__link">
+  <a href="#3-creer-fenetre-pour-demarrer-laffichage" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Allumer l'écran pour démarrer l'affichage.
+      3. Créer fenêtre pour démarrer l'affichage.
     </span>
   </a>
   
@@ -972,9 +993,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-mettre-a-jour-laffichage-de-lecran" class="md-nav__link">
+  <a href="#5-mettre-a-jour-laffichage-de-la-fenetre" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Mettre à jour l'affichage de l'écran.
+      5. Mettre à jour l'affichage de la fenêtre.
     </span>
   </a>
   
@@ -1027,111 +1048,111 @@
 <p>Le programme doit toujours commencer par ces deux lignes de code.</p>
 <div class="admonition success">
 <p class="admonition-title">Importer et activer le robot</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pybot</span> <span class="kn">import</span> <span class="n">Robot</span>
-<span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
-</code></pre></div>
 </div>
+<p><code>python
+    from pybot import Robot
+    robot = Robot()</code></p>
 <h2 id="2-lancer-lapplication-web-pour-faire-tourner-la-base-de-donnees">2. Lancer l'application web pour faire tourner la base de données.</h2>
-<p>Une des premières choses à faire est de lancer le serveur qui permettra d'accéder à l'application web et ainsi travailler avec la base de donnée, on utilise pour cela la méthode <strong>demarrer_webapp</strong>. 
+<p>Une des premières choses à faire est de lancer le serveur qui permettra d'accéder à l'application web et ainsi travailler avec la base de donnée, on utilise pour cela la méthode <strong>demarrer_webapp</strong>.
 Il est aussi possible de configurer le robot depuis un site web, par exemple pour ajouter des élèves à la base de données.</p>
 <div class="admonition success">
 <p class="admonition-title">demarrer_webapp()</p>
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">demarrer_webapp</span><span class="p">()</span>
-</code></pre></div>
 </div>
+<p><code>python
+    robot.demarrer_webapp()</code></p>
 <p>Le serveur web se lance et ne bloque pas le programme, on peut donc ensuite s'occuper de programmer le robot.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Le site sera accessible en local à l'adresse : http://127.0.0.1:5000</p>
 </div>
+<p>Le site sera accessible localement, à l'adresse : http://127.0.0.1:5000</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Il est possible de configurer le raspberry pi pour faire serveur et rendre le site accessible sur le réseau local pour ainsi se connecter à distance au robot.</p>
 </div>
+<p>Il est possible de configurer le raspberry pi pour faire serveur et rendre le site accessible sur le réseau local pour ainsi se connecter à distance au robot.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Pour terminer le serveur il faut taper dans le terminal la combinaison au clavier : <strong>CTRL+C</strong>.</p>
 </div>
-<h2 id="3-allumer-lecran-pour-demarrer-laffichage">3. Allumer l'écran pour démarrer l'affichage.</h2>
-<p>Il est ensuite important de démarrer l'affichage qui met en action le robot. La méthode <strong>allumer_ecran</strong> utilise deux paramètres, la <strong>longueur</strong> et la <strong>hauteur</strong> de la fenêtre qui correspond aux nombres de pixels horizontal et vertical. Ces deux paramètres sont optionnels, si aucun paramètre n'est donné (ou un seul), la fenetre aura pour taille 800 pixels de longueur et 600 pixels de hauteur.</p>
+<p>Pour arreter le serveur il faut taper dans le terminal la combinaison au clavier : <strong>CTRL+C</strong>.</p>
+<h2 id="3-creer-fenetre-pour-demarrer-laffichage">3. Créer fenêtre pour démarrer l'affichage.</h2>
+<p>Il est ensuite important d'ouvrir une fenêtre qui permet d'interagir avec le robot. La méthode <strong>creer_fenetre</strong> utilise deux paramètres, la <strong>longueur</strong> et la <strong>hauteur</strong> de la fenêtre qui correspondent aux nombres de pixels horizontaux et verticaux. Ces deux paramètres sont optionnels. Si aucun paramètre n'est donné (ou un seul), la fenêtre aura pour taille 800 pixels de longueur et 600 pixels de hauteur.</p>
 <div class="admonition success">
-<p class="admonition-title">allumer_ecran(longueur, hauteur)</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">allumer_ecran</span><span class="p">()</span>
-</code></pre></div>
-ou bien
-<div class="highlight"><pre><span></span><code><span class="n">l</span> <span class="o">=</span> <span class="mi">1000</span>
-<span class="n">h</span> <span class="o">=</span> <span class="mi">400</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">allumer_ecran</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
-</code></pre></div></p>
+<p class="admonition-title">creer_fenetre(longueur, hauteur)</p>
 </div>
+<p><code>python
+    robot.creer_fenetre()</code>
+ou bien
+<code>python
+    l = 1000
+    h = 400
+    robot.creer_fenetre(l, h)</code></p>
 <h2 id="4-changer-le-titre-de-la-fenetre">4. Changer le titre de la fenêtre.</h2>
 <p>La méthode <strong>changer_titre(titre)</strong> change le titre de la fenêtre avec le paramètre <strong>titre</strong>.</p>
 <div class="admonition success">
 <p class="admonition-title">changer_titre(titre)</p>
-<div class="highlight"><pre><span></span><code><span class="n">titre</span> <span class="o">=</span> <span class="s2">&quot;Mon Programme&quot;</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">changer_titre</span><span class="p">(</span><span class="n">titre</span><span class="p">)</span>
-</code></pre></div>
 </div>
+<p><code>python
+    titre = "Mon Programme"
+    robot.changer_titre(titre)</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Une message d'erreur</p>
-<p>Il est a noter qu'il important d'avoir allumé l'écran avant de pouvoir changer son titre. Des erreurs avec plusieurs méthodes peuvent survenir et il est utile de regarder dans le terminal le message d'erreur pour pouvoir ensuite réparer le programme.
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">changer_titre</span><span class="p">(</span><span class="s2">&quot;Mon super titre&quot;</span><span class="p">)</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">allumer_ecran</span><span class="p">()</span>
-</code></pre></div>
-Dans le terminal:
-<div class="highlight"><pre><span></span><code>Erreur: Le titre doit être défini aprés création de l&#39;écran.
-</code></pre></div></p>
 </div>
-<h2 id="5-mettre-a-jour-laffichage-de-lecran">5. Mettre à jour l'affichage de l'écran.</h2>
-<p>À chaque fois qu'une modification est faites (ex: un changement de titre, un nouveau bouton, un texte à afficher), il est important de mettre à jour l'affichage de l'écran. On utilise la méthode <strong>dessiner_ecran</strong>.</p>
+<p>Il est a noter qu'il est important d'avoir démarré la fenêtre avant de pouvoir changer son titre.
+Des erreurs avec plusieurs méthodes peuvent survenir et il est utile de regarder dans le terminal le message d'erreur pour pouvoir ensuite réparer le programme.
+<code>python
+    robot.changer_titre("Mon super titre")
+    robot.creer_fenetre()</code>
+Dans le terminal:
+<code>Erreur: Le titre doit être défini aprés création de la fenêtre.</code></p>
+<h2 id="5-mettre-a-jour-laffichage-de-la-fenetre">5. Mettre à jour l'affichage de la fenêtre.</h2>
+<p>À chaque fois qu'une modification est faite (ex: un changement de titre, un nouveau bouton, un texte à afficher), il est important de mettre à jour l'affichage de la fenêtre. On utilise la méthode <strong>actualiser_affichage</strong>.</p>
 <p>Idéalement, cette méthode est appelée dans une boucle afin de garder l'affichage à jour.</p>
 <div class="admonition success">
-<p class="admonition-title">dessiner_ecran()</p>
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">dessiner_ecran</span><span class="p">()</span>
-</code></pre></div>
+<p class="admonition-title">actualiser_affichage()</p>
 </div>
+<p><code>python
+    robot.actualiser_affichage()</code></p>
 <h2 id="6-passer-laffichage-en-plein-ecran">6. Passer l'affichage en plein écran.</h2>
-<p>Pour que l'affichage remplisse l'écran, on peut utiliser la méthode <strong>plein_ecran(changer)</strong> avec le paramètre changer ayant la valeur vrai (<strong>True</strong>) ou faux (<strong>False</strong>). </p>
+<p>Pour que l'affichage remplisse l'écran, on peut utiliser la méthode <strong>plein_ecran(changer)</strong> avec le paramètre changer ayant la valeur vrai (<strong>True</strong>) ou faux (<strong>False</strong>).</p>
 <div class="admonition success">
 <p class="admonition-title">plein_ecran(changer)</p>
-<p>pour passer en plein écran
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">plein_ecran</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-</code></pre></div>
-ou pour en sortir
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">plein_ecran</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-</code></pre></div></p>
 </div>
+<p>pour passer en plein écran
+<code>python
+    robot.plein_ecran(True)</code>
+ou pour en sortir
+<code>python
+    robot.plein_ecran(False)</code></p>
 <h2 id="7-faire-dormir-le-robot">7. Faire dormir le robot.</h2>
 <p>Il est parfois utile de ralentir l'exécution du programme en lui faisant faire des pauses. La méthode <strong>dort(secondes)</strong> le permet, il suffit de passer en paramètre le nombre de secondes à attendre.</p>
 <div class="admonition success">
 <p class="admonition-title">dort(secondes)</p>
-<div class="highlight"><pre><span></span><code><span class="n">secondes</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">dort</span><span class="p">(</span><span class="n">secondes</span><span class="p">)</span>
-</code></pre></div>
 </div>
+<p><code>python
+    secondes = 2
+    robot.dort(secondes)</code></p>
 <h2 id="exemple-1-un-premier-programme">Exemple 1: Un premier programme.</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Il est recommandé de ne pas copier l'exemple mais de chercher par vous même des utilisations possibles.</p>
 </div>
+<p>Il est recommandé de ne pas copier l'exemple mais de chercher par vous même des utilisations possibles.</p>
 <p>Nous verrons aprés comment maintenir le programme actif avec une boucle et des évènements. Mais pour le moment nous allons faire dormir le robot pour ralentir l'exécution du robot.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pybot</span> <span class="kn">import</span> <span class="n">Robot</span>
 <span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
 
 <span class="n">robot</span><span class="o">.</span><span class="n">changer_titre</span><span class="p">(</span><span class="s2">&quot;bonjour,pybot!&quot;</span><span class="p">)</span> <span class="c1"># Erreur</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">allumer_ecran</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">creer_fenetre</span><span class="p">()</span>
 <span class="n">robot</span><span class="o">.</span><span class="n">changer_titre</span><span class="p">(</span><span class="s2">&quot;bonjour,pybot!&quot;</span><span class="p">)</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">dessiner_ecran</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">actualiser_affichage</span><span class="p">()</span>
 <span class="n">robot</span><span class="o">.</span><span class="n">dort</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">robot</span><span class="o">.</span><span class="n">changer_titre</span><span class="p">(</span><span class="s2">&quot;plein écran dans une seconde&quot;</span><span class="p">)</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">dessiner_ecran</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">actualiser_affichage</span><span class="p">()</span>
 <span class="n">robot</span><span class="o">.</span><span class="n">dort</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">robot</span><span class="o">.</span><span class="n">plein_ecran</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">dessiner_ecran</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">actualiser_affichage</span><span class="p">()</span>
 <span class="n">robot</span><span class="o">.</span><span class="n">dort</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">robot</span><span class="o">.</span><span class="n">changer_titre</span><span class="p">(</span><span class="s2">&quot;fin du programme dans une seconde&quot;</span><span class="p">)</span>
 <span class="n">robot</span><span class="o">.</span><span class="n">plein_ecran</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">dessiner_ecran</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">actualiser_affichage</span><span class="p">()</span>
 <span class="n">robot</span><span class="o">.</span><span class="n">dort</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
 
@@ -1180,10 +1201,10 @@ ou pour en sortir
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.tabs"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.tabs"], "search": "../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.7389ff0e.min.js"></script>
       
     
   </body>

@@ -1,15 +1,15 @@
 # La bibliothèque Pybot
 
-!!! note "Ce qu'est Pybot"
-    Pybot est une bibliothèque logicielle permettant à des élèves de collége de programmer eux même un robot.
+!!! note "Ce qu'est *Pybot*"
+    *Pybot* est une bibliothèque logicielle permettant à des élèves de collège de programmer eux même un robot immobile.
 
-Vous trouverez ici les informations pour utiliser la bibliothèque pybot avec des exemples concret pour réaliser des programmes d'un simple affichage de caméra jusqu'à un robot conversationnel complet.
+Vous trouverez ici les informations pour utiliser la bibliothèque *pybot* avec des exemples concret pour réaliser des programmes d'un simple affichage de caméra jusqu'à un robot conversationnel complet.
 
 
 ## Les fonctionnalités du robot :
 
 !!! note "Le robot complet."
-    Le Robot a été pensé pour fonctionner sur un Raspberry Pi configuré avec Linux (Debian). Un écran pour le **visage**, une camera pour les **yeux**, un haut parleur pour la **bouche** et un micro pour les **oreilles**. La coquille entourant le raspberry pi est libre d'interprétation esthétique.
+    Le Robot a été pensé pour fonctionner sur un Raspberry Pi configuré avec Linux (Debian). Un écran pour le **visage**, une caméra pour les **yeux**, un haut-parleur pour la **bouche** et un microphone pour les **oreilles**. La coquille entourant le raspberry pi est libre d'interprétation esthétique.
 
 Avec la bibliothèque vous pouvez :
 
@@ -25,7 +25,7 @@ Avec la bibliothèque vous pouvez :
 print("bonjour, Pybot!")
 ```
 
-Pybot se présente comme un objet avec des méthodes que l'on peut utiliser ensemble pour faire le programme.
+*Pybot* se présente comme un objet avec des méthodes que l'on peut utiliser ensemble pour faire le programme.
 
 Les chapitres suivant vous présentent les différentes méthodes possibles et des exemples d'utilisation.
 

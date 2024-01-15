@@ -9,8 +9,10 @@
       
       
       
-        <link rel="prev" href="../roadmap/">
+        <link rel="prev" href="../chap6/">
       
+      
+        <link rel="next" href="../chap7/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -18,7 +20,7 @@
     
     
       
-        <title>Mettre à jour la documentation - Pybot</title>
+        <title>chapitre 6.5 - Zone de texte / Entrée Utilisateur - Pybot</title>
       
     
     
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-pybot-documentation" class="md-skip">
+        <a href="#chapitre-6-zone-de-texte-entree-utilisateur" class="md-skip">
           Aller au contenu
         </a>
       
@@ -112,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Mettre à jour la documentation
+              chapitre 6.5 - Zone de texte / Entrée Utilisateur
             
           </span>
         </div>
@@ -205,10 +207,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href=".." class="md-tabs__link">
           
   
@@ -241,12 +245,10 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../contribute/" class="md-tabs__link">
           
   
@@ -295,8 +297,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -305,14 +309,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
@@ -326,7 +328,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             La documentation de la bibliothèque
@@ -484,10 +486,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../chap6.5/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    chapitre 6.5 - Zone de texte / Entrée Utilisateur
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -496,6 +518,110 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recuperer-les-entrees-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Récupérer les entrées utilisateur
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Récupérer les entrées utilisateur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zone-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zone de texte
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zone de texte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creer-une-zone-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Créer une zone de texte
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#afficher-la-zone-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Afficher la zone de texte
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifier-le-clic-sur-la-zone-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vérifier le clic sur la zone de texte
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecrire-dans-la-zone-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Écrire dans la zone de texte
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recuperer-lentree-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Récupérer l'entrée utilisateur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#personnaliser-la-zone-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personnaliser la zone de texte
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -708,8 +834,6 @@
       
   
   
-    
-  
   
   
     
@@ -720,12 +844,14 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -739,7 +865,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Développer la bibliothèque
@@ -792,30 +918,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Mettre à jour la documentation
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../doc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -824,53 +930,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#install-mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install mkdocs
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run-the-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Run the server
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#build-and-set-the-site-folder-as-the-new-site-version" class="md-nav__link">
-    <span class="md-ellipsis">
-      Build and set the site folder as the new site version
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -910,29 +969,86 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-mkdocs" class="md-nav__link">
+  <a href="#recuperer-les-entrees-utilisateur" class="md-nav__link">
     <span class="md-ellipsis">
-      Install mkdocs
+      Récupérer les entrées utilisateur
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Récupérer les entrées utilisateur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zone-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zone de texte
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zone de texte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creer-une-zone-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Créer une zone de texte
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#run-the-server" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#afficher-la-zone-de-texte" class="md-nav__link">
     <span class="md-ellipsis">
-      Run the server
+      Afficher la zone de texte
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#build-and-set-the-site-folder-as-the-new-site-version" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#verifier-le-clic-sur-la-zone-de-texte" class="md-nav__link">
     <span class="md-ellipsis">
-      Build and set the site folder as the new site version
+      Vérifier le clic sur la zone de texte
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecrire-dans-la-zone-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Écrire dans la zone de texte
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recuperer-lentree-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Récupérer l'entrée utilisateur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#personnaliser-la-zone-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personnaliser la zone de texte
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -951,30 +1067,110 @@
                   
 
 
-<h1 id="the-pybot-documentation">The <em>Pybot</em> documentation</h1>
-<p>The <em>pybot</em> documentation use mkdocs https://www.mkdocs.org/ and the material theme https://squidfunk.github.io/mkdocs-material/.</p>
-<h2 id="install-mkdocs">Install mkdocs</h2>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:42Angouleme/42Angouleme.github.io.git
-<span class="nb">cd</span><span class="w"> </span>42Angouleme.github.io
-python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
-<span class="nb">source</span><span class="w"> </span>venv/bin/activate
-pip<span class="w"> </span>install<span class="w"> </span>mkdocs<span class="w"> </span>mkdocs-material
-mkdocs<span class="w"> </span>--help
-</code></pre></div>
-<h2 id="run-the-server">Run the server</h2>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>src
-mkdocs<span class="w"> </span>serve
-</code></pre></div>
-<h2 id="build-and-set-the-site-folder-as-the-new-site-version">Build and set the site folder as the new site version</h2>
-<div class="highlight"><pre><span></span><code>rm<span class="w"> </span>-rf<span class="w"> </span>docs
-<span class="nb">cd</span><span class="w"> </span>src
-mkdocs<span class="w"> </span>build
-mv<span class="w"> </span>site<span class="w"> </span>../docs
-<span class="nb">cd</span><span class="w"> </span>..
-rm<span class="w"> </span>docs/assets/images/favicon.png
-cp<span class="w"> </span>favicon.png<span class="w"> </span>docs/assets/images
-</code></pre></div>
-<p>Then commit push to get the new version, the new site should be online.</p>
+<h1 id="chapitre-6-zone-de-texte-entree-utilisateur">Chapitre 6: Zone de texte / Entrée Utilisateur</h1>
+<h2 id="recuperer-les-entrees-utilisateur">Récupérer les entrées utilisateur</h2>
+<h3 id="zone-de-texte">Zone de texte</h3>
+<h4 id="creer-une-zone-de-texte">Créer une zone de texte</h4>
+<p>Créer et retourner une zone texte qui peut être affichée et vérifiée plus tard</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+</div>
+<p><code>python
+    - creer_zone_texte(longueur, hauteur, position_x, position_y, couleur)</code></p>
+<p>Les paramètres attendus sont :<br />
+ _ la longueur et la hauteur de la zone de texte.<br />
+ _ la position x et y de la zone de texte (son coin en haut à gauche).<br />
+ * la couleur de la zone de texte.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>La couleur est au format (R, G, B), comme vu avec les boutons.</p>
+<div class="admonition warning">
+<p class="admonition-title">Les positions x et y dans la fenêtre</p>
+</div>
+<p>Les coordonnées sur un écran informatique sont généralement définies à partir du coin supérieur gauche.
+Le <strong>premier pixel</strong> qui se trouve en haut à gauche de la fenêtre correspond aux coordonnées <strong>x = 0 et y = 0</strong>.
+Alors que le dernier pixel en bas à droite correspond à la coordonnée <em>x</em> maximale et à la coordonnée <em>y</em> maximale.<br />
+ Par exemple, si la fenêtre fait 300 pixels de long et 200 pixels de haut : le <strong>dernier pixel</strong> a les coordonnées <strong>x = 299 et y = 199</strong>.</p>
+<p><img alt="Les coordonnées en informatique" src="../coordinates.jpg" /></p>
+<h4 id="afficher-la-zone-de-texte">Afficher la zone de texte</h4>
+<p>Pour afficher la zone de texte dans la fenêtre principale.</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+</div>
+<p><code>python
+    zone_texte.afficher()</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>La méthode s'applique sur la zone de texte (et non le robot comme avec les boutons).</p>
+<h4 id="verifier-le-clic-sur-la-zone-de-texte">Vérifier le clic sur la zone de texte</h4>
+<p>Pour vérifier que la zone de texte soit active ou non, une valeur vraie (True) ou fausse (False) est retournée, voir l'exemple.</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+</div>
+<p><code>python
+    zone_texte.est_actif()</code></p>
+<p>Cela fonctionne comme avec les boutons.</p>
+<h4 id="ecrire-dans-la-zone-de-texte">Écrire dans la zone de texte</h4>
+<p>Une fois la zone de texte active, il faut faire appel à la méthode <strong>ecrire()</strong> pour pouvoir écrire dans la zone de texte.</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+</div>
+<p><code>pyhton
+    robot.ecrire(self, zone_texte)</code></p>
+<p>Cette fonction renvoie le texte après que l'utilisateur ait quitté la zone de texte.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+</div>
+<p>Lorsque l'utilisateur écrit, le robot est mis en pause tant que l'utilisateur n'a pas quitté la zone d'écriture en cliquant en dehors de celle-ci ou alors en tapant sur la touche <em>entrée</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>Cette méthode est spéciale : elle s'applique sur le robot et elle prend en paramètre la zone de texte active.</p>
+<h3 id="recuperer-lentree-utilisateur">Récupérer l'entrée utilisateur</h3>
+<p>Une fois que l'utilisateur a terminé d'entrer son texte, vous pouvez récupérer cette entrée grâce aux méthodes <strong>recuperer_texte()</strong> ou <strong>effacer_texte()</strong>.</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+</div>
+<p><code>pyhton
+    zone_texte.recuperer_texte()</code></p>
+<p>Cette fonction renvoit le texte contenu dans la zone de texte sans l'effacer.</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+</div>
+<p><code>pyhton
+    zone_texte.effacer_texte()</code></p>
+<p>Cette fonction renvoit le texte contenu dans la zone de texte en l'effaçant.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+</div>
+<p>Cette fonction efface le texte contenu dans la zone de texte, le texte n'est donc plus récupérable après.</p>
+<h3 id="personnaliser-la-zone-de-texte">Personnaliser la zone de texte</h3>
+<p>Si vous voulez modifier la taille d'écriture du texte dans la zone de texte vous pouvez utiliser la méthode <strong>modifier_taille_police(taille)</strong>.</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+</div>
+<p><code>pyhton
+    zone_texte.modifier_taille_police(taille)</code></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+</div>
+<p>Si vous ne mettez aucun paramètre, cela réinitialisera la taille d'écriture.</p>
+<p>Si vous voulez modifier la couleur du texte dans la zone de texte vous pouvez utiliser la méthode <strong>modifier_couleur_police(couleur)</strong>.</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+</div>
+<p><code>pyhton
+    zone_texte.modifier_couleur_police(couleur)</code></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+</div>
+<p>Si vous ne mettez aucun paramètre, cela réinitialisera la couleur du texte.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>La couleur est au format variable = (R, G, B), comme vu avec les boutons.</p>
 
 
 
