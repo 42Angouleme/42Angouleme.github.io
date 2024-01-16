@@ -1149,13 +1149,12 @@ Dans notre cas, le seuil sera utilisé pour comparer des images:</p>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p>Le code de détection de carte ne donnera jamais 1.00, car même s'il sagit de la même image, l'ordinateur va prendre en compte: la lumière, la position, l'inclinaison de la carte par rapport à la caméra...</p>
 </div>
-<p>Le code de détection de carte ne donnera jamais 1.00, car même s' il s agit de la même image, l'ordinateur va prendre en compte:
-la lumière, la position, l'inclinaison de la carte par rapport à la caméra...</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-</div>
 <p>Plus on prend un score d' arrêt de recherche:<br> - bas: plus on a de chances de mal interpréter les cartes.<br> - haut: moins on detectera de carte.</p>
+</div>
 <h2 id="connexion-deconnexion">Connexion/ Deconnexion</h2>
 <h3 id="connaitre-le-statut-de-connexion">Connaitre le statut de connexion</h3>
 <p>Afin de savoir si une personne est connecté à l application on peut utiliser:</p>
@@ -1168,8 +1167,8 @@ la lumière, la position, l'inclinaison de la carte par rapport à la caméra...
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-</div>
 <p>Si la fonction est appelée alors que l application web n' est pas lancée ou bien que la caméra n' est pas allumée alors la fonction ne marchera pas.</p>
+</div>
 <p>... Et pour se déconnecter:</p>
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">deconnecter</span><span class="p">()</span>
 </code></pre></div>
@@ -1180,12 +1179,12 @@ la lumière, la position, l'inclinaison de la carte par rapport à la caméra...
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-</div>
 <p>La carte en paramètre de la méthode créer_utilisateur(prenom, nom, <strong>carte</strong>) doit être une image récupérée avec <a href="#recuperer-la-carte-detectee-a-lecran">robot.detecter_carte(...)</a></p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-</div>
 <p>La personne qui vient de créer son compte ne sera pas connecté, il faut appeler la méthode <strong>Robot.connecter()</strong></p>
+</div>
 <h3 id="supprimer-une-session">Supprimer une session</h3>
 <p>Pour supprimer un utilisateur, il faut qu' il se connecte, puis appeler la fonction:</p>
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">supprimer_utilisateur</span><span class="p">()</span>
@@ -1197,13 +1196,13 @@ la lumière, la position, l'inclinaison de la carte par rapport à la caméra...
 </code></pre></div>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">if</span> <span class="n">robot</span><span class="o">.</span><span class="n">verifier_session</span><span class="p">():</span>
+        <span class="n">utilisateur_connecte</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">recuperer_utilisateur_connecte</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le prenom de la personne connectée est:&quot;</span><span class="p">,</span> <span class="n">utilisateur_connecte</span><span class="o">.</span><span class="n">prenom</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le nom de la personne connectée est:&quot;</span><span class="p">,</span> <span class="n">utilisateur_connecte</span><span class="o">.</span><span class="n">nom</span><span class="p">)</span>
+</code></pre></div>
 </div>
-<p><code>python
-    if robot.verifier_session():
-        utilisateur_connecte = robot.recuperer_utilisateur_connecte()
-        print("Le prenom de la personne connectée est:", utilisateur_connecte.prenom)
-        print("Le nom de la personne connectée est:", utilisateur_connecte.nom)</code>
-Ce code permet d' afficher dans le terminal le prenom et le nom de l' utilisateur.</p>
+<p>Ce code permet d' afficher dans le terminal le prenom et le nom de l' utilisateur.</p>
 <h3 id="recuperer-la-carte-detectee-a-lecran">Récuperer la carte detectée à l'écran</h3>
 <p>Pour avoir l' image de la carte detectée à l' écran s'il y en a une, on peut utiliser cette fonction:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Ici les seuils sont optionnels</span>
@@ -1211,19 +1210,19 @@ Ce code permet d' afficher dans le terminal le prenom et le nom de l' utilisateu
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-</div>
 <p>Cette fonction retourne l'image qui n appartient pas selon le programme à un utilisateur déjà connu.</p>
+</div>
 <h3 id="afficher-la-carte-detectee">Afficher la carte detectée</h3>
-<p>Popur afficher à l' écran l'image de la carte détectée juste avant on doit utiliser:</p>
+<p>Pour afficher à l' écran l'image de la carte détectée juste avant on doit utiliser:</p>
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">afficher_carte_detectee</span><span class="p">(</span><span class="n">carte</span><span class="p">,</span> <span class="n">position_x</span><span class="p">,</span> <span class="n">position_y</span><span class="p">)</span>
 </code></pre></div>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
+<div class="highlight"><pre><span></span><code>    <span class="n">carte</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">detecter_carte</span><span class="p">()</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">afficher_carte_detectee</span><span class="p">(</span><span class="n">carte</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">42</span><span class="p">)</span>
+</code></pre></div>
 </div>
-<p><code>python
-    carte = robot.detecter_carte()
-    robot.afficher_carte_detectee(carte, 42, 42)</code>
-Cette simple implementation de la méthode <strong>afficher_carte_detectee()</strong> va mettre à l' écran à la position (42, 42) la carte détectée, si il en a trouvé à l' écran.</p>
+<p>Cette simple implementation de la méthode <strong>afficher_carte_detectee()</strong> va mettre à l' écran à la position (42, 42) la carte détectée, si il en a trouvé à l' écran.</p>
 
 
 
