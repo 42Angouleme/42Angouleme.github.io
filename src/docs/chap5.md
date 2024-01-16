@@ -15,11 +15,10 @@ Les deux seuils à manipuler :
 - **seuil_arret_recherche**: si une carte dépasse ce seuil, la recherche s'arrête : il s'agit de la bonne carte.
 
 !!! Note
-Le code de détection de carte ne donnera jamais 1.00, car même s' il s agit de la même image, l'ordinateur va prendre en compte:
-la lumière, la position, l'inclinaison de la carte par rapport à la caméra...
+    Le code de détection de carte ne donnera jamais 1.00, car même s'il sagit de la même image, l'ordinateur va prendre en compte: la lumière, la position, l'inclinaison de la carte par rapport à la caméra...
 
 !!! warning
-Plus on prend un score d' arrêt de recherche:<br> - bas: plus on a de chances de mal interpréter les cartes.<br> - haut: moins on detectera de carte.
+    Plus on prend un score d' arrêt de recherche:<br> - bas: plus on a de chances de mal interpréter les cartes.<br> - haut: moins on detectera de carte.
 
 ## Connexion/ Deconnexion
 
@@ -41,7 +40,7 @@ robot.connecter(seuil_minimal, seuil_arret_recherche)
 ```
 
 !!! warning
-Si la fonction est appelée alors que l application web n' est pas lancée ou bien que la caméra n' est pas allumée alors la fonction ne marchera pas.
+    Si la fonction est appelée alors que l application web n' est pas lancée ou bien que la caméra n' est pas allumée alors la fonction ne marchera pas.
 
 ... Et pour se déconnecter:
 
@@ -60,10 +59,10 @@ robot.creer_utilisateur(prenom, nom, carte)
 ```
 
 !!! Note
-La carte en paramètre de la méthode créer_utilisateur(prenom, nom, **carte**) doit être une image récupérée avec [robot.detecter_carte(...)](#recuperer-la-carte-detectee-a-lecran)
+    La carte en paramètre de la méthode créer_utilisateur(prenom, nom, **carte**) doit être une image récupérée avec [robot.detecter_carte(...)](#recuperer-la-carte-detectee-a-lecran)
 
 !!! Warning
-La personne qui vient de créer son compte ne sera pas connecté, il faut appeler la méthode **Robot.connecter()**
+    La personne qui vient de créer son compte ne sera pas connecté, il faut appeler la méthode **Robot.connecter()**
 
 ### Supprimer une session
 
@@ -84,12 +83,13 @@ robot.recuperer_utilisateur_connecte()
 ```
 
 !!! Success
-`python
-    if robot.verifier_session():
-        utilisateur_connecte = robot.recuperer_utilisateur_connecte()
-        print("Le prenom de la personne connectée est:", utilisateur_connecte.prenom)
-        print("Le nom de la personne connectée est:", utilisateur_connecte.nom)
-    `
+    ```python
+        if robot.verifier_session():
+            utilisateur_connecte = robot.recuperer_utilisateur_connecte()
+            print("Le prenom de la personne connectée est:", utilisateur_connecte.prenom)
+            print("Le nom de la personne connectée est:", utilisateur_connecte.nom)
+    ```
+
 Ce code permet d' afficher dans le terminal le prenom et le nom de l' utilisateur.
 
 ### Récuperer la carte detectée à l'écran
@@ -102,19 +102,20 @@ robot.detecter_carte(seuil_minimal, seuil_arret_recherche)
 ```
 
 !!! Warning
-Cette fonction retourne l'image qui n appartient pas selon le programme à un utilisateur déjà connu.
+    Cette fonction retourne l'image qui n appartient pas selon le programme à un utilisateur déjà connu.
 
 ### Afficher la carte detectée
 
-Popur afficher à l' écran l'image de la carte détectée juste avant on doit utiliser:
+Pour afficher à l' écran l'image de la carte détectée juste avant on doit utiliser:
 
 ```python
 robot.afficher_carte_detectee(carte, position_x, position_y)
 ```
 
 !!! Success
-`python
-    carte = robot.detecter_carte()
-    robot.afficher_carte_detectee(carte, 42, 42)
-    `
+    ```python
+        carte = robot.detecter_carte()
+        robot.afficher_carte_detectee(carte, 42, 42)
+    ```
+
 Cette simple implementation de la méthode **afficher_carte_detectee()** va mettre à l' écran à la position (42, 42) la carte détectée, si il en a trouvé à l' écran.
