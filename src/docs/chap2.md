@@ -5,82 +5,82 @@
 À l'initiation du robot, il est possible de vérifier ce status avec la méthode **robot.est_actif()** qui peut alors servir de vérification dans une boucle **while** et ainsi maintenir le programme en cours d'exécution.
 
 !!! note
-Au lancement du programme **robot.est_actif()** retourn vrai (True).
-Il est possible de rendre le robot inactif avec la méthode **robot.desactiver()** qui fera simplement retourner Faux (False) à la méthode **robot.est_actif()**.
+    Au lancement du programme **robot.est_actif()** retourn vrai (True).
+    Il est possible de rendre le robot inactif avec la méthode **robot.desactiver()** qui fera simplement retourner Faux (False) à la méthode **robot.est_actif()**.
 
 !!! Success "Activité du robot"
-`python
+    ```python
     while robot.est_actif():
         robot.dort(2)
         robot.desactiver()
-    `
+    ```
 
 ## 2. Fermer la fenêtre et terminer le programme.
 
 La méthode **robot.fermer_fenetre** permet de détruire la fenêtre précédemment ouverte.
 
 !!! note
-Le status du robot devient inactif, la méthode **robot.est_actif()** retournera alors False.
+    Le status du robot devient inactif, la méthode **robot.est_actif()** retournera alors False.
 
 !!! Success "Fermer fenêtre"
-`python
+    ```python
     while robot.est_actif():
         robot.dort(2)
         robot.fermer_fenetre()
-    `
+    ```
 
 !!! note
-En général, il est préférable d'utiliser **robot.fermer_fenetre** car le programme s'arrêtera plus proprement qu'en sortant simplement de la boucle avec **robot.desactiver**.
+    En général, il est préférable d'utiliser **robot.fermer_fenetre** car le programme s'arrêtera plus proprement qu'en sortant simplement de la boucle avec **robot.desactiver**.
 
 ## 3. Créer un évènement.
 
 !!! note
-Un évènement est une action sur le clavier associée à un nom d'évènement. Nous créons un nouvel évènement avec la méthode **ajouter_evenement(touche, nom)**.
+    Un évènement est une action sur le clavier associée à un nom d'évènement. Nous créons un nouvel évènement avec la méthode **ajouter_evenement(touche, nom)**.
 
 !!! Success "Ajouter un évènement"
-`python
-    robot.ajouter_evenement("echap", "stop")
-    `
+    ```python
+        robot.ajouter_evenement("echap", "stop")
+    ```
 
 !!! info
-Voir la référence pour voir une liste des touches possible, par exemple la touche du clavier **a** s'appelera **"a"**. À noter, les touches qui se nomment **"espace"** et **"echap"** pour la barre d'espace et la touche d'échappement.
+    Voir la référence pour voir une liste des touches possible, par exemple la touche du clavier **a** s'appelera **"a"**. À noter, les touches qui se nomment **"espace"** et **"echap"** pour la barre d'espace et la touche d'échappement.
 
 ## 4. Vérifier un évènement.
 
 Nous pouvons récupérer les évènements dans une boucle en faisant appel à la méthode **robot.verifier_evenements()**.
 
 !!! info
-La méthode retourne une liste avec les évènements qui viennent d'être executés. Il est possible ensuite d'utiliser une vérification avec if ... in ...: comme dans l'exemple si dessous.
+    La méthode retourne une liste avec les évènements qui viennent d'être executés. Il est possible ensuite d'utiliser une vérification avec if ... in ...: comme dans l'exemple si dessous.
 
 !!! Success "Vérifier les évènements."
-`python
+    ```python
         evenements = robot.verifier_evenements("echap", "stop")
         if "stop" in evenements:
             print("stop")
-    `
+    ```
 
 ## 5. Supprimer un évènement.
 
 Il est ensuite possible de supprimer un évènement avec la méthode **robot.supprimer_evenement(nom)**.
 
 !!! Success "Supprimer un évènement."
-`python
+    ```python
         robot.supprimer_evenement("stop")
-    `
+    ```
 
 !!! warning
-Si plusieurs touches sont attribuées au même évènement, elles seront toutes supprimées de la liste des évènements.
+    Si plusieurs touches sont attribuées au même évènement, elles seront toutes supprimées de la liste des évènements.
 
 ## Exemple 2: Utiliser des évènements.
 
 !!! warning
-Il est recommandé de ne pas copier l'exemple mais de chercher par vous même des utilisations possibles.
+    Il est recommandé de ne pas copier l'exemple mais de chercher par vous même des utilisations possibles.
 
 !!! info
-Le robot final n'utilisera pas de clavier mais simplement une intéraction par la voix et par le touché sur écran. Ces évènements par clavier servent principalement à l'apprentissage du code python. Il s'agit d'une période de transition.
+    Le robot final n'utilisera pas de clavier mais simplement une intéraction par la voix et par le touché sur écran. Ces évènements par clavier servent principalement à l'apprentissage du code python. Il s'agit d'une période de transition.
 
 !!! warning
-Pour travailler avec cet exemple, pensez à garder un oeil sur le terminal pour voir l'affichage des fonctions print.
+    Pour travailler avec cet exemple, pensez à garder un oeil sur le terminal pour voir l'affichage des fonctions print.
 
 ```python
 from pybot import Robot

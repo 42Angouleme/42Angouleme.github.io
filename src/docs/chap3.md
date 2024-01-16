@@ -3,55 +3,55 @@
 ## 1. Les couleurs en informatique.
 
 !!! note
-En informatique, nous utilisons les couleurs de base dites RGB en anglais **(Rouge (Red), Vert (Green), Bleu (Blue))**.  
-Pour représenter une couleur, il faut combiner les différentes intensités de ces trois couleurs de base.
+    En informatique, nous utilisons les couleurs de base dites RGB en anglais **(Rouge (Red), Vert (Green), Bleu (Blue))**.
+    Pour représenter une couleur, il faut combiner les différentes intensités de ces trois couleurs de base.
 
 ![Couleurs RGB](couleurs.jpg)
 
 !!! info
-La valeur numérique d'une composante de base (R, G et B) est une valeur numérique entre 0 et 255.  
- 0 signifie aucune intensité de couleur, et 255 signifie une intensité maximale.  
- Pour obtenir une couleur spécifique il faut combiner les trois valeurs de rouge, vert et bleu.  
- Par exemple, le **blanc** pur est obtenu en ayant les trois composantes à 255 **(255, 255, 255)**, tandis que le **noir** pur est obtenu en ayant toutes les composantes à 0 **(0, 0, 0)**.
+    La valeur numérique d'une composante de base (R, G et B) est une valeur numérique entre 0 et 255.
+    0 signifie aucune intensité de couleur, et 255 signifie une intensité maximale.
+    Pour obtenir une couleur spécifique il faut combiner les trois valeurs de rouge, vert et bleu.
+    Par exemple, le **blanc** pur est obtenu en ayant les trois composantes à 255 **(255, 255, 255)**, tandis que le **noir** pur est obtenu en ayant toutes les composantes à 0 **(0, 0, 0)**.
 
 !!! success
-Dans Pybot, nous associons les trois valeurs RGB dans une variable selon l'exemple ci-dessous:  
- **variable = (R, G, B)**
+    Dans Pybot, nous associons les trois valeurs RGB dans une variable selon l'exemple ci-dessous:
+    **variable = (R, G, B)**
 
-    ```python
-    couleur_violette = (128, 0, 128)
-    couleur_noir = (0, 0, 0)
-    couleur_blanc = (128, 0, 128)
-    couleur_orange = (255, 127, 0)
-    ```
+        ```python
+        couleur_violette = (128, 0, 128)
+        couleur_noir = (0, 0, 0)
+        couleur_blanc = (128, 0, 128)
+        couleur_orange = (255, 127, 0)
+        ```
 
 !!! note
-Vous pouvez utiliser un sélecteur de couleur pour trouver une couleur spécifique. Par exemple via [ce site](https://colorpicker.me/).
+    Vous pouvez utiliser un sélecteur de couleur pour trouver une couleur spécifique. Par exemple via [ce site](https://colorpicker.me/).
 
 ## 2. Afficher la couleur du fond d'écran et la changer.
 
 Pour changer la couleur du fond d'écran on utilise la méthode **robot.couleur_fond(couleur)** ou couleur est au format **variable = (R, G, B)**.
 
 !!! success
-`python
+    ```python
     robot.couleur_fond(couleur)
-    `
+    ```
 
 Pour afficher cette couleur il faut utiliser une autre méthode **robot.afficher_fond()**.
 
 !!! success
-`python
+`   ```python
     robot.afficher_fond() 
-    `
+    ```
 
 ## 3. Créer un bouton.
 
 Créer et retourner un bouton qui peut être affiché et vérifié plus tard :
 
 !!! success
-`python
+    ```python
     robot.creer_bouton(longueur, hauteur, position_x, position_y, couleur)
-    `
+    ```
 
 Les paramètres attendus sont :  
  _ la longueur et la hauteur du bouton.  
@@ -59,9 +59,9 @@ Les paramètres attendus sont :
  \* la couleur du bouton.
 
 !!! warning "Les positions x et y de la fenêtre"
-Les coordonnées dans une fenêtre informatique sont généralement définies à partir du coin supérieur gauche.  
- Le **premier pixel** qui se trouve en haut à gauche correspond aux coordonnées **x = 0 et y = 0**.  
- Alors que le dernier pixel en bas à droite correspond à la coordonnée x maximale et à la coordonnée y maximale.  
+    Les coordonnées dans une fenêtre informatique sont généralement définies à partir du coin supérieur gauche.
+    Le **premier pixel** qui se trouve en haut à gauche correspond aux coordonnées **x = 0 et y = 0**.
+    Alors que le dernier pixel en bas à droite correspond à la coordonnée x maximale et à la coordonnée y maximale.
  Par exemple, si la fenêtre fait 300 pixels de long et 200 pixels de haut. Le **dernier pixel** a les coordonnées **x = 299 et y = 199**.
 
 ![Les coordonnées en informatique](coordinates.jpg)
@@ -69,32 +69,34 @@ Les coordonnées dans une fenêtre informatique sont généralement définies à
 ## 4. Ajouter un texte au bouton.
 
 !!! success
-`python
+    ```python
 	bouton.ajouter_texte(self, texte, position_x, position_y, taille, couleur)
-	`
+	```
+
 La méthode qui s'applique sur le bouton (et non le robot comme les méthodes précédentes) permet d'ajouter un texte dans le bouton.
 
 Est attendu dans la méthode, le texte, la position x et y, la taille et la couleur.
 !!! note "Les positions x et y sur le bouton"
-x, y sont les coordonées par rapport au coin gauche et haut du bouton et non celles de la fenêtre.
+    x, y sont les coordonées par rapport au coin gauche et haut du bouton et non celles de la fenêtre.
 
 ## 5. Afficher le bouton.
 
 Pour afficher le bouton dans la fenêtre principale.
 
 !!! success
-`python
+    ```python
 	bouton.afficher()
-	`
+	```
 
 ## 6. Vérifier le clique sur le bouton.
 
 Pour vérifier que le bouton est cliqué ou non, une valeur vrai (True) ou faux (False) est retournée, voir l'exemple.
 
 !!! success
-`python
+    ```python
 	bouton.est_actif()
-	`
+	```
+
 Exemple de création et utilisation d'un bouton:
 
 ```python
@@ -132,9 +134,10 @@ while robot.est_actif():
 Afficher un rectangle pouvant servir, par exemple, de fond pour afficher du texte.
 
 !!! success
-`python
+    ```python
 	robot.dessiner_rectangle(longueur, hauteur, position_x, position_y, couleur)
-	`
+	```
+
 Les paramètres attendus sont :  
 la longueur et la hauteur du rectangle.  
 la position x et y du rectangle (son coin en haut à gauche) par rapport à la fenêtre.  
@@ -145,9 +148,10 @@ la couleur du rectangle.
 Afficher une ligne de texte.
 
 !!! success
-`python
+    ```python
 	robot.afficher_texte(texte, position_x, position_y, taille, couleur)
-	`
+	```
+
 Les paramètres attendus sont:  
 le texte à afficher.  
 la position x et y du texte (son coin en haut à gauche) par rapport à la fenêtre.  
@@ -157,7 +161,7 @@ la couleur du texte.
 ## 9. Exemple 3 :
 
 !!! warning
-Il est recommandé de ne pas copier l'exemple mais de chercher par vous même des utilisations possibles.
+    Il est recommandé de ne pas copier l'exemple mais de chercher par vous même des utilisations possibles.
 
 ```python
 from pybot import Robot
@@ -261,4 +265,4 @@ if __name__ == "__main__":
 ```
 
 !!! info
-D'autres fonctionnalités liées à l'interface utilisateur (zones de texte) sont présentées au chapitre 6.5.
+    D'autres fonctionnalités liées à l'interface utilisateur (zones de texte) sont présentées au chapitre 6.5.

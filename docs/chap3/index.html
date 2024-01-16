@@ -1065,21 +1065,20 @@
 <h2 id="1-les-couleurs-en-informatique">1. Les couleurs en informatique.</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-</div>
-<p>En informatique, nous utilisons les couleurs de base dites RGB en anglais <strong>(Rouge (Red), Vert (Green), Bleu (Blue))</strong>.<br />
+<p>En informatique, nous utilisons les couleurs de base dites RGB en anglais <strong>(Rouge (Red), Vert (Green), Bleu (Blue))</strong>.
 Pour représenter une couleur, il faut combiner les différentes intensités de ces trois couleurs de base.</p>
+</div>
 <p><img alt="Couleurs RGB" src="../couleurs.jpg" /></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
+<p>La valeur numérique d'une composante de base (R, G et B) est une valeur numérique entre 0 et 255.
+0 signifie aucune intensité de couleur, et 255 signifie une intensité maximale.
+Pour obtenir une couleur spécifique il faut combiner les trois valeurs de rouge, vert et bleu.
+Par exemple, le <strong>blanc</strong> pur est obtenu en ayant les trois composantes à 255 <strong>(255, 255, 255)</strong>, tandis que le <strong>noir</strong> pur est obtenu en ayant toutes les composantes à 0 <strong>(0, 0, 0)</strong>.</p>
 </div>
-<p>La valeur numérique d'une composante de base (R, G et B) est une valeur numérique entre 0 et 255.<br />
- 0 signifie aucune intensité de couleur, et 255 signifie une intensité maximale.<br />
- Pour obtenir une couleur spécifique il faut combiner les trois valeurs de rouge, vert et bleu.<br />
- Par exemple, le <strong>blanc</strong> pur est obtenu en ayant les trois composantes à 255 <strong>(255, 255, 255)</strong>, tandis que le <strong>noir</strong> pur est obtenu en ayant toutes les composantes à 0 <strong>(0, 0, 0)</strong>.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-</div>
-<p>Dans Pybot, nous associons les trois valeurs RGB dans une variable selon l'exemple ci-dessous:<br />
+<p>Dans Pybot, nous associons les trois valeurs RGB dans une variable selon l'exemple ci-dessous:
 <strong>variable = (R, G, B)</strong></p>
 <div class="highlight"><pre><span></span><code>```python
 couleur_violette = (128, 0, 128)
@@ -1088,69 +1087,70 @@ couleur_blanc = (128, 0, 128)
 couleur_orange = (255, 127, 0)
 ```
 </code></pre></div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-</div>
 <p>Vous pouvez utiliser un sélecteur de couleur pour trouver une couleur spécifique. Par exemple via <a href="https://colorpicker.me/">ce site</a>.</p>
+</div>
 <h2 id="2-afficher-la-couleur-du-fond-decran-et-la-changer">2. Afficher la couleur du fond d'écran et la changer.</h2>
 <p>Pour changer la couleur du fond d'écran on utilise la méthode <strong>robot.couleur_fond(couleur)</strong> ou couleur est au format <strong>variable = (R, G, B)</strong>.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">couleur_fond</span><span class="p">(</span><span class="n">couleur</span><span class="p">)</span>
+</code></pre></div>
 </div>
-<p><code>python
-    robot.couleur_fond(couleur)</code></p>
 <p>Pour afficher cette couleur il faut utiliser une autre méthode <strong>robot.afficher_fond()</strong>.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
 </div>
-<p><code>python
+<p>`   <code>python
     robot.afficher_fond()</code></p>
 <h2 id="3-creer-un-bouton">3. Créer un bouton.</h2>
 <p>Créer et retourner un bouton qui peut être affiché et vérifié plus tard :</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">creer_bouton</span><span class="p">(</span><span class="n">longueur</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">,</span> <span class="n">position_x</span><span class="p">,</span> <span class="n">position_y</span><span class="p">,</span> <span class="n">couleur</span><span class="p">)</span>
+</code></pre></div>
 </div>
-<p><code>python
-    robot.creer_bouton(longueur, hauteur, position_x, position_y, couleur)</code></p>
 <p>Les paramètres attendus sont :<br />
  _ la longueur et la hauteur du bouton.<br />
  _ la position x et y du bouton (son coin en haut à gauche).<br />
  * la couleur du bouton.</p>
 <div class="admonition warning">
 <p class="admonition-title">Les positions x et y de la fenêtre</p>
+<p>Les coordonnées dans une fenêtre informatique sont généralement définies à partir du coin supérieur gauche.
+Le <strong>premier pixel</strong> qui se trouve en haut à gauche correspond aux coordonnées <strong>x = 0 et y = 0</strong>.
+Alors que le dernier pixel en bas à droite correspond à la coordonnée x maximale et à la coordonnée y maximale.</p>
 </div>
-<p>Les coordonnées dans une fenêtre informatique sont généralement définies à partir du coin supérieur gauche.<br />
- Le <strong>premier pixel</strong> qui se trouve en haut à gauche correspond aux coordonnées <strong>x = 0 et y = 0</strong>.<br />
- Alors que le dernier pixel en bas à droite correspond à la coordonnée x maximale et à la coordonnée y maximale.<br />
- Par exemple, si la fenêtre fait 300 pixels de long et 200 pixels de haut. Le <strong>dernier pixel</strong> a les coordonnées <strong>x = 299 et y = 199</strong>.</p>
+<p>Par exemple, si la fenêtre fait 300 pixels de long et 200 pixels de haut. Le <strong>dernier pixel</strong> a les coordonnées <strong>x = 299 et y = 199</strong>.</p>
 <p><img alt="Les coordonnées en informatique" src="../coordinates.jpg" /></p>
 <h2 id="4-ajouter-un-texte-au-bouton">4. Ajouter un texte au bouton.</h2>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
+<div class="highlight"><pre><span></span><code><span class="n">bouton</span><span class="o">.</span><span class="n">ajouter_texte</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">texte</span><span class="p">,</span> <span class="n">position_x</span><span class="p">,</span> <span class="n">position_y</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">couleur</span><span class="p">)</span>
+</code></pre></div>
 </div>
-<p><code>python
-    bouton.ajouter_texte(self, texte, position_x, position_y, taille, couleur)</code>
-La méthode qui s'applique sur le bouton (et non le robot comme les méthodes précédentes) permet d'ajouter un texte dans le bouton.</p>
+<p>La méthode qui s'applique sur le bouton (et non le robot comme les méthodes précédentes) permet d'ajouter un texte dans le bouton.</p>
 <p>Est attendu dans la méthode, le texte, la position x et y, la taille et la couleur.</p>
 <div class="admonition note">
 <p class="admonition-title">Les positions x et y sur le bouton</p>
-</div>
 <p>x, y sont les coordonées par rapport au coin gauche et haut du bouton et non celles de la fenêtre.</p>
+</div>
 <h2 id="5-afficher-le-bouton">5. Afficher le bouton.</h2>
 <p>Pour afficher le bouton dans la fenêtre principale.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
+<div class="highlight"><pre><span></span><code><span class="n">bouton</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+</code></pre></div>
 </div>
-<p><code>python
-    bouton.afficher()</code></p>
 <h2 id="6-verifier-le-clique-sur-le-bouton">6. Vérifier le clique sur le bouton.</h2>
 <p>Pour vérifier que le bouton est cliqué ou non, une valeur vrai (True) ou faux (False) est retournée, voir l'exemple.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
+<div class="highlight"><pre><span></span><code><span class="n">bouton</span><span class="o">.</span><span class="n">est_actif</span><span class="p">()</span>
+</code></pre></div>
 </div>
-<p><code>python
-    bouton.est_actif()</code>
-Exemple de création et utilisation d'un bouton:</p>
+<p>Exemple de création et utilisation d'un bouton:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pybot</span> <span class="kn">import</span> <span class="n">Robot</span>
 <span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
 
@@ -1183,10 +1183,10 @@ Exemple de création et utilisation d'un bouton:</p>
 <p>Afficher un rectangle pouvant servir, par exemple, de fond pour afficher du texte.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">dessiner_rectangle</span><span class="p">(</span><span class="n">longueur</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">,</span> <span class="n">position_x</span><span class="p">,</span> <span class="n">position_y</span><span class="p">,</span> <span class="n">couleur</span><span class="p">)</span>
+</code></pre></div>
 </div>
-<p><code>python
-    robot.dessiner_rectangle(longueur, hauteur, position_x, position_y, couleur)</code>
-Les paramètres attendus sont :<br />
+<p>Les paramètres attendus sont :<br />
 la longueur et la hauteur du rectangle.<br />
 la position x et y du rectangle (son coin en haut à gauche) par rapport à la fenêtre.<br />
 la couleur du rectangle.</p>
@@ -1194,10 +1194,10 @@ la couleur du rectangle.</p>
 <p>Afficher une ligne de texte.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">afficher_texte</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">position_x</span><span class="p">,</span> <span class="n">position_y</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">couleur</span><span class="p">)</span>
+</code></pre></div>
 </div>
-<p><code>python
-    robot.afficher_texte(texte, position_x, position_y, taille, couleur)</code>
-Les paramètres attendus sont:<br />
+<p>Les paramètres attendus sont:<br />
 le texte à afficher.<br />
 la position x et y du texte (son coin en haut à gauche) par rapport à la fenêtre.<br />
 la taille du texte.<br />
@@ -1205,8 +1205,8 @@ la couleur du texte.</p>
 <h2 id="9-exemple-3">9. Exemple 3 :</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-</div>
 <p>Il est recommandé de ne pas copier l'exemple mais de chercher par vous même des utilisations possibles.</p>
+</div>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pybot</span> <span class="kn">import</span> <span class="n">Robot</span>
 <span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
 
@@ -1308,8 +1308,8 @@ la couleur du texte.</p>
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-</div>
 <p>D'autres fonctionnalités liées à l'interface utilisateur (zones de texte) sont présentées au chapitre 6.5.</p>
+</div>
 
 
 
