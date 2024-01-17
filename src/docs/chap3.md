@@ -40,7 +40,7 @@ Pour changer la couleur du fond d'écran on utilise la méthode **robot.couleur_
 Pour afficher cette couleur il faut utiliser une autre méthode **robot.afficher_fond()**.
 
 !!! success
-`   ```python
+    ```python
     robot.afficher_fond() 
     ```
 
