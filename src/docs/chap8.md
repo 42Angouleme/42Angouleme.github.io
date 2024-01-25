@@ -65,4 +65,4 @@ Cette méthode renvoit un chemin vers l'image correspondant à l'émotion
 
 ## Pour afficher un visage, si les émotions correspondent à une image.
 
-[voir documentation pour afficher une image](/chap4)
+[voir documentation pour afficher une image](chap4.md)
