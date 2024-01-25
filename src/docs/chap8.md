@@ -30,6 +30,7 @@ Si aucune émotion enregistrée ne correspond au texte, il reste Neutre.
         - Suprise
         - Neutre
         - Réflexion
+        - Incomprehension
         - Fatigue
         - Inquiétude
         - Contrariété
