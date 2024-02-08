@@ -201,6 +201,9 @@ Pour cela, on a la méthode `verifier_evenements() (fr) - check_events() (en)` .
         print("stop")
     ```
 
+!!!Note
+    Sans l'appel de cette méthode, la croix de fermeture de la fenêtre ne fonctionnera pas.
+
 ### Supprimer un évènement
 
 Si on ne veut plus qu’un évènement soit vérifié, il faudra le supprimer.

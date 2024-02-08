@@ -356,7 +356,7 @@ Voici où trouver la documentation sur la méthode [`detecter_carte() (fr) - det
 
 ## Obtenir l'image de l'émotion
 
-Le module [IA - AI](module_ai.md) permet de donner des "émotions" au robot.  
+Le module [IA - AI](module_ai.md#les-émotions-du-robot) permet de donner des "émotions" au robot.  
 Pour afficher l'image de l'émotion, il faut appeler la méthode `obtenir_image_emotion(emotion : str) (fr) - get_emotion_image(emotion : str) (en)`.
 
 Et ensuite, afficher l'image avec la méthode [`afficher_image(chemin : str, position_x: int, position_y: int) (fr) - display_image(path : str, position_x: int, position_y: int) (en)`](#afficher-une-image)
@@ -378,5 +378,12 @@ Et ensuite, afficher l'image avec la méthode [`afficher_image(chemin : str, pos
     robot.window.display_image(path, x, y)
     ```
 
+!!!Info
+    Les images des emotions sont stockées dans le dossier `images/emotions`.  
+    Elles peuvent être remplacées par des images personnalisées.  
+    Les images de bases font du 108x108 pixels.  
+    La taille de l'image peut changer si vous la remplacez.  
+    Mais essayez de garder la meme taille entre toute les images pour un meilleur rendu.
+
 !!!Note
-    Voir la documentation sur les émotions pour plus d'informations. [IA - AI](module_ai.md)
+    Voir la documentation sur les émotions pour plus d'informations. [IA - AI](module_ai.md#les-émotions-du-robot)
