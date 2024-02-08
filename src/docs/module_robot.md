@@ -249,3 +249,34 @@ while robot.est_actif():
         robot.desactiver()
     robot.fenetre.actualiser_affichage()
 ```
+
+## La webapp
+
+Avant de lancer les modules, il est faut lancer la webapp.
+Surtout pour le module utilisateur, car il permet de créer, modifier, supprimer des utilisateurs du robot.
+C'est le serveur qui permettra d'accéder à l'application web et ainsi travailler avec la base de donnée, on utilise pour cela la méthode demarrer_webapp.  
+Il est aussi possible de configurer le robot depuis un site web, par exemple pour ajouter des élèves à la base de données.
+
+Pour lancer la webapp, il suffit d'appeler la méthode `demarrer_webapp() (fr) - start_webapp() (en)`.
+
+!!!Success "demarrer_webapp()"
+    ```python
+    robot.demarrer_webapp()
+
+    ou alors
+
+    robot.start_webapp()
+    ```
+
+Le serveur web se lance et ne bloque pas le programme, on peut donc ensuite s'occuper de programmer le robot.
+
+!!!Info
+    Le site sera accessible localement, à l'adresse : http://127.0.0.1:5000
+
+!!!Note
+    Il est possible de configurer le raspberry pi pour faire serveur et rendre le site accessible sur le réseau local pour ainsi se connecter à distance au robot.
+
+!!!Warning
+    Pour arreter le serveur il faut taper dans le terminal la combinaison au clavier : **CTRL+C**.
+    Il est important de lancer la webapp avant de lancer tout autre module.
+    Il est possible de lancer les modules sans avoir lancé la webapp, la webapp n'est utile que pour la gestion des utilisateurs avec le module [utilisateur](module_user.md).

@@ -12,6 +12,16 @@ Les int sont des entiers (nombre). Ils peuvent être positifs ou négatifs.
     c = 10 + 17
 ```
 
+### Les float (floating point | flottants)
+
+Les float sont des nombres à virgule (nombre décimal). Ils peuvent être positifs ou négatifs.
+
+```python
+    a = 5.0
+    b = -3.5
+    c = 10.5 + 17.0
+```
+
 ### Les str (strings | chaînes de caractères)
 
 Les str sont des chaînes de caractères (texte). Ils sont délimités par des guillemets simples ou doubles.
