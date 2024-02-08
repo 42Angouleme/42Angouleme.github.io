@@ -107,4 +107,3 @@ def main():
     robot.donner_la_parole()
     robot.dire_bonjour()
 ```
-

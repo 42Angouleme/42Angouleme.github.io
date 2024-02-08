@@ -5,19 +5,28 @@
 
 Vous trouverez ici les informations pour utiliser la bibliothèque *pybot* avec des exemples concret pour réaliser des programmes d'un simple affichage de caméra jusqu'à un robot conversationnel complet.
 
-
-## Les fonctionnalités du robot :
+## Les fonctionnalités du robot
 
 !!! note "Le robot complet."
     Le Robot a été pensé pour fonctionner sur un Raspberry Pi configuré avec Linux (Debian). Un écran pour le **visage**, une caméra pour les **yeux**, un haut-parleur pour la **bouche** et un microphone pour les **oreilles**. La coquille entourant le raspberry pi est libre d'interprétation esthétique.
 
-Avec la bibliothèque vous pouvez :
+Avec la bibliothèque, vous avez accès aux modules :
 
-> :one: :arrow_right: Construire une interface graphique pour intéragir avec le robot.  
-:two: :arrow_right: Utiliser une reconnaissance visuelle par caméra (pas biométrique comme le visage mais des dessins sur cartes).  
-:three: :arrow_right: Des fonctionnalités de communication avec une IA utilisant une transformation de l'audio en texte (microphone) et de texte en audio (haut parleur) qui interagisse avec une IA conversationnelle de type chatGPT.  
-:four: :arrow_right: Une base de donnée et une administration web pour configurer le robot, par exemple: enregistrer les cartes d'identification des élèves, préparer des questions qui seront posé aux élèves et dont les réponses seront enregistré en base de donnée pour consultation.
+> **Robot :** Module principal regroupant tous les autres modules et servant de corps au code du robot.  
+**Fenêtre - Window:** Module permettant de construire une interface graphique pour interagir avec le robot.  
+**Caméra - Camera :** Module permettant de prendre des photos, d’y appliquer des filtres, reconnaissance par caméra (pas biométrique comme le visage, mais des dessins sur cartes).  
+**IA - AI :** Module permettant de discuter avec le robot grâce à une IA conversationnelle de type ChatGPT et permettant aussi de donner des "émotions" au robot.  
+**Utilisateur - User :** Module permettant de créer et de gérer la connexion/déconnexion des utilisateurs à l'aide des cartes.  
+**Audio (Non fonctionnel) :** Module permettant à l’utilisateur de parler directement au robot.  
+**Microphone (Non fonctionnel) :** Module permettant au robot de parler à l’utilisateur.
 
+!!!Warning "Avant d'utiliser un module"
+    Avant d’utiliser un module, il faudra toujours le lancer sinon il vous sera impossible d’utiliser le module et les méthodes lier à celui-ci.
+
+!!!Note "Important"
+    Les exemples d'utilisation des méthodes sont en français et en anglais.  
+    Et il suppose pour la plus part d'avoir déjà un code de base fonctionnel pour le robot.  
+    Seul les exemples complet de programme sont en français et ne suppose pas d'avoir un code de base.
 
 ## Utilisation de la bibliothèque
 
@@ -25,8 +34,19 @@ Avec la bibliothèque vous pouvez :
 print("bonjour, Pybot!")
 ```
 
-*Pybot* se présente comme un objet avec des méthodes que l'on peut utiliser ensemble pour faire le programme.
+*Pybot* se présente comme un objet avec des méthodes et des sous-objets (modules présentés ci-dessus) que l’on peut utiliser ensemble pour faire le programme et ainsi créer le robot.  
+Les chapitres suivants vont vous présenter les différentes méthodes et modules possibles avec des exemples d'utilisation.
 
-Les chapitres suivant vous présentent les différentes méthodes possibles et des exemples d'utilisation.
+Avant de suivre ce tutoriel, vous souhaitez peut-être savoir [comment configurer et utiliser pybot](https://42angouleme.github.io/config/).
 
-Avant de suivre ce tutoriel, vous souhaitez peut-être savoir [comment configurer et utiliser pybot](config.md).
+Ensuite, pour démarrer à programmer le robot, il faudra toujours commencer par ces deux lignes de code.
+
+```python
+from pybot import Robot
+
+robot = Robot()
+```
+
+Ce robot est utilisable en français et en anglais.  
+En effet, toutes les méthodes et les modules présentés dans la suite de la documentation sont disponibles en français comme en anglais (avec les commentaires des fonctions traduits aussi).  
+Le mélange des langues et d’ailleurs possible même si fortement déconseiller pour des questions de lisibilité et de compréhension du code.

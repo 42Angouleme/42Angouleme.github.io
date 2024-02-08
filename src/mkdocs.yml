@@ -1,7 +1,16 @@
 site_name: Pybot
 nav:
   - La documentation de la bibliothèque:
-    - introduction: index.md
+    - Introduction: index.md
+    - Informations générales sur le Python: general.md
+    - Module Robot: module_robot.md
+    - Module Fenêtre - Window : module_window.md
+    - Les Boutons - Buttons : button.md
+    - Les Zones de texte - Text_area : text_area.md
+    - Module Caméra - Camera : module_camera.md
+    - Module IA - AI : module_ai.md
+    - Module Utilisateur - User : module_user.md
+    - Module Audio - Audio : module_audio.md
     - chapitre 1 - Un premier programme: chap1.md
     - chapitre 2 - Une boucle et des évènements: chap2.md
     - chapitre 3 - Des boutons et des couleurs.: chap3.md
