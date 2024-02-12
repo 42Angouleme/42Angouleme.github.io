@@ -60,7 +60,8 @@ Pour fermer la fenêtre, il suffit d’appeler la méthode `fermer_fenetre() (fr
 
 ## Actualiser l’affichage
 
-À chaque fois qu'une modification est faite (ex: un changement de titre, un nouveau bouton, un texte à afficher), il est important de mettre à jour l'affichage de la fenêtre. On utilise la méthode actualiser_affichage.
+À chaque fois qu'une modification est faite (ex: un changement de titre, un nouveau bouton, un texte à afficher), il est important de mettre à jour l'affichage de la fenêtre.  
+On utilise la méthode `actualiser_affichage() (fr) - refresh_display() (en)`.
 
 Idéalement, cette méthode est appelée dans une boucle afin de garder l'affichage à jour.
 
@@ -387,26 +388,3 @@ Et ensuite, afficher l'image avec la méthode [`afficher_image(chemin : str, pos
 
 !!!Note
     Voir la documentation sur les émotions pour plus d'informations. [IA - AI](module_ai.md#les-émotions-du-robot)
-
-### Afficher la carte detectée
-
-Pour afficher la carte détectée, il suffit d’appeler la méthode `afficher_carte_detectee(carte : MatLike, position_x: int, position_y: int) (fr) -`
-`display_detected_card(card : MatLike, position_x: int, position_y: int) (en)`.
-
-!!!Warning
-    La position (x, y) est le coin en haut à gauche de l'image.
-
-!!!Success "Afficher la carte détectée"
-    ```python
-    carte = robot.utilisateur.detecter_carte()
-    x = 100
-    y = 100
-    robot.fenetre.afficher_carte_detectee(carte, x, y)
-
-    ou alors
-
-    card = robot.user.detect_card()
-    x = 100
-    y = 100
-    robot.window.display_detected_card(card, x, y)
-    ```

@@ -83,8 +83,7 @@ Il est parfois utile de ralentir l'exécution du programme en lui faisant faire 
 
 Le robot possède un moyen de contenir les boutons et les zones de texte que l’on peut créer avec le module Fenêtre.
 
-Voir la documentation du module [fenêtre](module_window.md) pour plus d'informations.  
-Avec celle des [boutons](button.md) et des [zones de texte](text_area.md) aussi.
+Voir la documentation du module [fenêtre](module_window.md) avec celle des [boutons](button.md) et des [zones de texte](text_area.md) pour plus d'informations.
 
 ### Ajouter un bouton aux attributs du robot
 
@@ -214,7 +213,7 @@ Pour cela, on a la méthode `supprimer_evenement(nom : str) (fr) — delete_even
     ```python
     robot.supprimer_evenement("stop")
 
-    ou alors
+    ou alorsdelete_event(nom : str)
 
     robot.delete_event("stop")
     ```
@@ -222,7 +221,6 @@ Pour cela, on a la méthode `supprimer_evenement(nom : str) (fr) — delete_even
 !!!Warning
     Si plusieurs touches sont attribuées au même évènement, elles seront toutes supprimées de la liste des évènements.
 
-from pybot import Robot
 
 ## Exemple 2: Utiliser des évènements
 
@@ -233,6 +231,7 @@ from pybot import Robot
     Le robot final n'utilisera pas de clavier mais simplement une intéraction par la voix et par le touché sur écran. Ces évènements par clavier servent principalement à l'apprentissage du code python. Il s'agit d'une période de transition.
 
 ```python
+from pybot import Robot
 
 robot = Robot()
 
