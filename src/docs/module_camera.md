@@ -77,7 +77,7 @@ La photo sera enregistrée dans le dossier `images` du robot.
 
 ## Appliquer un filtre
 
-Pour appliquer un filtre à une photo, il suffit d'utiliser la méthode `appliquer_filtre(chemin_fichier: str, nom_filtre: str) (fr) - apply_filter(file_name : str, filter_name : str) (en)`.
+Pour appliquer un filtre à une photo, il suffit d'utiliser la méthode `appliquer_filtre_a(chemin_fichier: str, nom_filtre: str) (fr) - apply_filter_to(file_name : str, filter_name : str) (en)`.
 
 Voir la réference pour la liste complète des [filtres](/ref.md#les-filtres)
 
@@ -87,11 +87,11 @@ Voir la réference pour la liste complète des [filtres](/ref.md#les-filtres)
 !!!Success "Appliquer un filtre"
     ```python
 
-    robot.appliquer_filtre("/images/photo1.jpg", "cartoon")
+    robot.appliquer_filtre_a("/images/photo1.jpg", "cartoon")
 
     ou alors
 
-    robot.apply_filter("/images/photo1.jpg", "cartoon")
+    robot.apply_filter_to("/images/photo1.jpg", "cartoon")
     ```
 
 ## Exemple complet
@@ -122,7 +122,7 @@ while robot.est_actif():
     if boutons.bouton_photo.est_actif():
         robot.camera.prendre_photo("photo1")
         robot.fenetre.afficher_image("/images/photo1.jpg",  10, 500)
-        robot.camera.appliquer_filtre("/images/photo1.jpg", "cartoon")
+        robot.camera.appliquer_filtre_a("/images/photo1.jpg", "cartoon")
         robot.fenetre.afficher_image("/images/photo1.jpg",  655, 500)
     if boutons.quitter.est_actif():
         robot.desactiver()
