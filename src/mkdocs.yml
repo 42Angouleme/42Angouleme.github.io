@@ -1,16 +1,16 @@
 site_name: Pybot
 nav:
   - La documentation de la bibliothèque:
-    - introduction: index.md
-    - chapitre 1 - Un premier programme: chap1.md
-    - chapitre 2 - Une boucle et des évènements: chap2.md
-    - chapitre 3 - Des boutons et des couleurs.: chap3.md
-    - chapitre 4 - Prendre une photo avec une caméra et appliquer des filtres.: chap4.md
-    - chapitre 5 - Reconnaissance d'un élève avec sa carte.: chap5.md
-    - chapitre 6 - Parler au robot.: chap6.md
-    - chapitre 6.5 - Zone de texte / Entrée Utilisateur : chap6.5.md
-    - chapitre 7 - Écouter le robot.: chap7.md
-    - chapitre 8 - Le visage et les émotions du robot.: chap8.md
+    - Introduction: index.md
+    - Informations générales sur le Python: general.md
+    - Module Robot: module_robot.md
+    - Module Fenêtre - Window : module_window.md
+    - Les Boutons - Buttons : button.md
+    - Les Zones de texte - Text_area : text_area.md
+    - Module Caméra - Camera : module_camera.md
+    - Module IA - AI : module_ai.md
+    - Module Utilisateur - User : module_user.md
+    - Module Audio - Audio : module_audio.md
     - Utiliser l'administration web: admin.md
     - Référence complète: ref.md
   - Utiliser la bibliothèque:

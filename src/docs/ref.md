@@ -4,70 +4,7 @@ Pour en savoir plus, dans un éditeur tel que _visual studio code_, il suffit de
 
 ![Commentaires](ref.png)
 
-## La fenêtre
-
-- Importer et utiliser _pybot_
-
-```python
-from pybot import Robot
-robot = Robot()
-```
-
-- Démarrer la webapp.
-
-```python
-robot.demarrer_webapp()
-```
-
-- Ouvrir une fenêtre.
-
-```python
-robot.creer_fenetre(longeur, hauteur)
-```
-
-- Changer le titre.
-
-```python
-robot.changer_titre(titre)
-```
-
-- Mettre à jour l'affichage de la fenêtre.
-
-```python
-robot.actualiser_affichage()
-```
-
-- Entrer ou sortir du plein écran.
-
-```python
-plein_ecran(changer)
-```
-
-- Mettre en pause le robot.
-
-```python
-robot.dort(secondes)
-```
-
-- Vérifier si le robot est actif (Vrai ou Faux).
-
-```python
-robot.est_actif()
-```
-
-- Passer le robot en mode inactif.
-
-```python
-robot.desactiver()
-```
-
-- Passer le robot en mode inactif et fermer l'affichage.
-
-```python
-robot.fermer_fenetre()
-```
-
-## les évènements
+## Les évènements
 
 Liste des touches pour créer des évènements:
 
@@ -127,105 +64,7 @@ Liste des touches pour créer des évènements:
 * F15
 ```
 
-- Créer un nouvel évènement.
-
-```python
-robot.ajouter_evenement(touche, nom)
-```
-
-- Vérifier les évènements.
-
-```python
-robot.verifier_evenements()
-```
-
-- Supprimer un évènement.
-
-```python
-robot.supprimer_evenement(nom)
-```
-
-### fond d'écran
-
-- Changer la couleur du fond
-
-```python
-robot.couleur_fond(couleur)
-```
-
-- Afficher la couleur du fond d'écran
-
-```python
-robot.afficher_fond()
-```
-
-### les boutons
-
-- Créer un nouveau bouton.
-
-```python
-bouton = robot.creer_bouton(longueur, hauteur, position_x, position_y, couleur)
-```
-
-- Ajouter un texte au bouton.
-
-```python
-bouton.ajouter_texte(texte, position_x, position_y, taille, couleur)
-```
-
-- Afficher le bouton.
-
-```python
-bouton.afficher()
-```
-
-- Vérifier le clique sur le bouton.
-
-```python
-bouton.est_actif()
-```
-
-### rectangle et texte
-
-- Afficher un rectangle.
-
-```
-robot.dessiner_rectangle(longueur, hauteur, position_x, position_y, couleur)
-```
-
-- Afficher du texte.
-
-```
-robot.afficher_texte(texte, position_x, position_y, taille, couleur)
-```
-
-### la caméra
-
-- Afficher la caméra.
-
-```python
-robot.afficher_camera(position_x, position_y)
-```
-
-- Capturer une photo de la caméra.
-
-```python
-robot.prendre_photo(self, nom_fichier)
-```
-
-- Afficher une image.
-
-```python
-robot.afficher_image(chemin_fichier, position_x, position_y)
-```
-
-- Appliquer un filtre.
-
-```python
-robot.appliquer_filtre(chemin_fichier, nom_filtre)
-```
-
-## les filtres
+## Les filtres
 
 Liste des filtres que l'on peut appliquer sur une image
 
@@ -240,10 +79,315 @@ Liste des filtres que l'on peut appliquer sur une image
 * vernis
 ```
 
-### reconnaissance carte et session
+## Liste des méthodes disponible par modules
 
--
+### Module Robot
 
-### parler avec le robot
+```python
+robot = Robot()
+```
 
--
+```python
+robot.nom_de_la_methode(argument_de_la_methode)
+```
+
+```python
+desactiver()
+deactivate()
+```
+
+```python
+est_actif()
+is_active()
+```
+
+```python
+dort(secondes : int)
+sleep(secondes : int)
+```
+
+```python
+ajouter_evenement(touche : str, nom : str)
+add_event(key : str, name : str)
+```
+
+```python
+verifier_evenements()
+check_events()
+```
+
+```python
+supprimer_evenement(nom : str)
+delete_event(nom : str)
+```
+
+```python
+demarrer_webapp()
+start_webapp()
+```
+
+### Module Fenetre - Window
+
+```python
+robot.demarrer_module_fenetre()
+robot.start_window_module()
+```
+
+```python
+robot.fenetre.nom_de_la_methode(argument_de_la_methode)
+robot.window.method_name(method_argument)
+```
+
+```python
+ouvrir_fenetre(longueur: int, hauteur: int)
+open_window(width : int, height : int)
+```
+
+```python
+fermer_fenetre()
+close_window()
+```
+
+```python
+actualiser_affichage()
+refresh_display()
+```
+
+```python
+plein_ecran(changer : bool)
+full_screen(change : bool)
+```
+
+```python
+changer_titre(titre : str)
+change_title(title : str)
+```
+
+```python
+changer_couleur_fond(couleur : str)
+change_background_color(color : str)
+```
+
+```python
+afficher_fond()
+display_background()
+```
+
+```python
+dessiner_rectangle(longueur: int, hauteur: int, position_x: int, position_y: int, couleur: Couleur)
+draw_rectangle(width: int, height: int, position_x: int, position_y: int, color: Couleur)
+```
+
+```python
+afficher_texte(texte : str, position_x: int, position_y: int, taille: int, couleur: Couleur)
+display_text(text : str, position_x: int, position_y: int, size: int, color: Couleur)
+```
+
+```python
+afficher_image(chemin_fichier : str, position_x: int, position_y: int)
+display_image(file_path : str, position_x: int, position_y: int)
+```
+
+```python
+creer_bouton(longueur: int, hauteur: int, position_x: int, position_y: int, couleur: Couleur)
+create_button(width: int, height: int, position_x: int, position_y: int, color: Couleur)
+```
+
+```python
+creer_zone_texte(longueur: int, hauteur: int, position_x: int, position_y: int, couleur: Couleur)
+create_text_area(width: int, height: int, position_x: int, position_y: int, color: Couleur)
+```
+
+```python
+afficher_carte_detectee(self, detected_card: MatLike, position_x: int, position_y: int)
+display_detected_card(self, detected_card: MatLike, position_x: int, position_y: int)
+```
+
+```python
+obtenir_image_emotion(emotion : str)
+get_emotion_image(emotion : str)
+```
+
+### Module Camera
+
+```python
+robot.demarrer_module_camera()
+robot.start_camera_module()
+```
+
+```python
+robot.camera.nom_de_la_methode(argument_de_la_methode)
+robot.camera.method_name(method_argument)
+```
+
+```python
+afficher_camera(position_x: int, position_y: int)
+display_camera(position_x : int, position_y : int)
+```
+
+```python
+prendre_photo(nom_fichier: str)
+take_picture(file_name : str)
+```
+
+```python
+appliquer_filtre(chemin_fichier: str, nom_filtre: str)
+apply_filter(file_name : str, filter_name : str)
+```
+
+### Module IA - AI
+
+```python
+robot.demarrer_module_IA()
+robot.start_AI_module()
+```
+
+```python
+robot.IA.nom_de_la_m(argument_de_la_methode)
+robot.AI.method_name(method_argument)
+```
+
+```python
+demarrer_discussion()
+start_conversation()
+```
+
+```python
+arreter_discussion()
+stop_conversation()
+```
+
+```python
+poser_question(question : str)
+ask_question(question : str)
+```
+
+```python
+creer_historique_conversation()
+create_conversation_history()
+```
+
+```python
+charger_historique(historique_de_conversation : ConversationSummaryBufferMemory)
+load_history(conversation_history : ConversationSummaryBufferMemory)
+```
+
+```python
+supprimer_historique()
+delete_history()
+```
+
+```python
+obtenir_historique_conversation()
+get_current_conversation_history()
+```
+
+```python
+obtenir_emotion(phrase : str)
+get_emotion(sentence : str)
+```
+
+### Module Utilisateur - User
+
+```python
+robot.demarrer_module_utilisateur()
+robot.start_user_module()
+```
+
+```python
+robot.utilisateur.nom_de_la_methode(argument_de_la_methode)
+robot.user.method_name(method_argument)
+```
+
+```python
+verifier_session()
+check_session()
+```
+
+```python
+connecter(seuil_minimal : float, seuil_arret_recherche : float)
+logging(self, minimum_threshold: float, search_stop_threshold: float)
+```
+
+```python
+deconnecter()
+logout()
+```
+
+```python
+creer_utilisateur(prenom, nom, carte)
+create_user(firstname, lastname, card)
+```
+
+```python
+supprimer_utilisateur()
+delete_user()
+```
+
+```python
+obtenir_utilisateur_connecte()
+get_logged_in_user()
+```
+
+```python
+detecter_carte(seuil_minimal : float, seuil_arret_recherche : float)
+detect_card(minimum_threshold: float, search_stop_threshold: float)
+```
+
+### Module Audio
+
+Aucune Actuellement
+
+## Les boutons
+
+```python
+ajouter_texte(texte : str, position_x : int, position_y : int, taille : int, couleur : Couleur)
+add_text(text : str, position_x : int, position_y : int, size : int, color : Couleur)
+```
+
+```python
+afficher()
+display()
+```
+
+```python
+est_actif()
+is_active()
+```
+
+## Les zones de texte
+
+```python
+afficher()
+display()
+```
+
+```python
+est_actif()
+is_active()
+```
+
+```python
+ecrire(robot : Robot)
+write(robot : Robot)
+```
+
+```python
+obtenir_texte()
+get_text()
+```
+
+```python
+effacer_texte()
+erase_text()
+```
+
+```python
+modifier_taille_police(taille : int)
+change_font_size(size : int)
+```
+
+```python
+modifier_couleur_police(couleur : Couleur)
+change_font_color(color : Couleur)
+```
