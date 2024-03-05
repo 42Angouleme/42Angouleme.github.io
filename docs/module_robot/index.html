@@ -1,0 +1,1500 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../general/">
+      
+      
+        <link rel="next" href="../module_window/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Module Robot - Pybot</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 14h-1c0-3.87-3.13-7-7-7h-1V5.73A2 2 0 1 0 10 4c0 .74.4 1.39 1 1.73V7h-1c-3.87 0-7 3.13-7 7H2c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h1v1a2 2 0 0 0 2 2h14c1.11 0 2-.89 2-2v-1h1c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1m-1 3h-2v3H5v-3H3v-1h2v-2c0-2.76 2.24-5 5-5h4c2.76 0 5 2.24 5 5v2h2v1m-10.3-3c.4.39.4 1.05 0 1.45l-.73.73-1.47 1.47-2.2-2.2c-.4-.4-.4-1.06 0-1.45.41-.42 1.06-.42 1.47 0l.73.72.73-.72c.41-.42 1.06-.42 1.47 0m7 0c.4.39.4 1.05 0 1.45l-.73.73-1.47 1.47-2.2-2.2c-.4-.4-.4-1.06 0-1.45.41-.42 1.06-.42 1.47 0l.73.72.73-.72c.41-.42 1.06-.42 1.47 0Z"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#module-robot" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href=".." title="Pybot" class="md-header__button md-logo" aria-label="Pybot" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 14h-1c0-3.87-3.13-7-7-7h-1V5.73A2 2 0 1 0 10 4c0 .74.4 1.39 1 1.73V7h-1c-3.87 0-7 3.13-7 7H2c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h1v1a2 2 0 0 0 2 2h14c1.11 0 2-.89 2-2v-1h1c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1m-1 3h-2v3H5v-3H3v-1h2v-2c0-2.76 2.24-5 5-5h4c2.76 0 5 2.24 5 5v2h2v1m-10.3-3c.4.39.4 1.05 0 1.45l-.73.73-1.47 1.47-2.2-2.2c-.4-.4-.4-1.06 0-1.45.41-.42 1.06-.42 1.47 0l.73.72.73-.72c.41-.42 1.06-.42 1.47 0m7 0c.4.39.4 1.05 0 1.45l-.73.73-1.47 1.47-2.2-2.2c-.4-.4-.4-1.06 0-1.45.41-.42 1.06-.42 1.47 0l.73.72.73-.72c.41-.42 1.06-.42 1.47 0Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pybot
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Module Robot
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="indigo"  aria-label="Passer au mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer au mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="amber" data-md-color-accent="indigo"  aria-label="Passer au mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer au mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href=".." class="md-tabs__link">
+          
+  
+  La documentation de la bibliothèque
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../python/" class="md-tabs__link">
+          
+  
+  Utiliser la bibliothèque
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../contribute/" class="md-tabs__link">
+          
+  
+  Développer la bibliothèque
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Pybot" class="md-nav__button md-logo" aria-label="Pybot" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 14h-1c0-3.87-3.13-7-7-7h-1V5.73A2 2 0 1 0 10 4c0 .74.4 1.39 1 1.73V7h-1c-3.87 0-7 3.13-7 7H2c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h1v1a2 2 0 0 0 2 2h14c1.11 0 2-.89 2-2v-1h1c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1m-1 3h-2v3H5v-3H3v-1h2v-2c0-2.76 2.24-5 5-5h4c2.76 0 5 2.24 5 5v2h2v1m-10.3-3c.4.39.4 1.05 0 1.45l-.73.73-1.47 1.47-2.2-2.2c-.4-.4-.4-1.06 0-1.45.41-.42 1.06-.42 1.47 0l.73.72.73-.72c.41-.42 1.06-.42 1.47 0m7 0c.4.39.4 1.05 0 1.45l-.73.73-1.47 1.47-2.2-2.2c-.4-.4-.4-1.06 0-1.45.41-.42 1.06-.42 1.47 0l.73.72.73-.72c.41-.42 1.06-.42 1.47 0Z"/></svg>
+
+    </a>
+    Pybot
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    La documentation de la bibliothèque
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            La documentation de la bibliothèque
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../general/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Informations générales sur le Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Module Robot
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Module Robot
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#demarrer-le-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Démarrer le robot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eteindre-le-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Éteindre le robot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifier-letat-du-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vérifier l’état du robot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faire-dormir-le-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Faire dormir le robot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-attributs-du-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les attributs du robot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les attributs du robot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ajouter-un-bouton-aux-attributs-du-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ajouter un bouton aux attributs du robot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acceder-a-un-bouton-depuis-les-attributs-du-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accéder à un bouton depuis les attributs du robot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ajouter-une-zone-de-texte-aux-attributs-du-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ajouter une zone de texte aux attributs du robot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acceder-a-une-zone-de-texte-depuis-les-attributs-du-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accéder à une zone de texte depuis les attributs du robot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autre" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autre
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interaction-avec-lutilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interaction avec l’utilisateur
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interaction avec l’utilisateur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creer-un-evenement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Créer un évènement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifier-un-evenement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vérifier un évènement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supprimer-un-evenement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supprimer un évènement
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-2-utiliser-des-evenements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple 2: Utiliser des évènements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-webapp" class="md-nav__link">
+    <span class="md-ellipsis">
+      La webapp
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_window/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Fenêtre - Window
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../button/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les Boutons - Buttons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text_area/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les Zones de texte - Text_area
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_camera/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Caméra - Camera
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_ai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module IA - AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_user/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Utilisateur - User
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_audio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Audio - Audio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utiliser l'administration web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Référence complète
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Utiliser la bibliothèque
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Utiliser la bibliothèque
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apprendre le Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installer et utiliser Pybot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rpi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configurer le raspberry pi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Développer la bibliothèque
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Développer la bibliothèque
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribuer au projet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../roadmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Progression du projet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../doc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mettre à jour la documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#demarrer-le-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Démarrer le robot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eteindre-le-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Éteindre le robot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifier-letat-du-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vérifier l’état du robot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faire-dormir-le-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Faire dormir le robot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-attributs-du-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les attributs du robot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les attributs du robot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ajouter-un-bouton-aux-attributs-du-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ajouter un bouton aux attributs du robot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acceder-a-un-bouton-depuis-les-attributs-du-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accéder à un bouton depuis les attributs du robot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ajouter-une-zone-de-texte-aux-attributs-du-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ajouter une zone de texte aux attributs du robot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acceder-a-une-zone-de-texte-depuis-les-attributs-du-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accéder à une zone de texte depuis les attributs du robot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autre" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autre
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interaction-avec-lutilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interaction avec l’utilisateur
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interaction avec l’utilisateur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creer-un-evenement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Créer un évènement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifier-un-evenement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vérifier un évènement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supprimer-un-evenement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supprimer un évènement
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-2-utiliser-des-evenements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple 2: Utiliser des évènements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-webapp" class="md-nav__link">
+    <span class="md-ellipsis">
+      La webapp
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="module-robot">Module Robot</h1>
+<p>Et oui, le robot peut être considéré comme un module à part entière vu qu’il a ses propres méthodes qui lui sont attachées, même si vous verrez qu’il est impossible de les utiliser à proprement parler sans utiliser le module Fenêtre.</p>
+<p>Pour utiliser le module Robot on vas directement utiliser l’objet Robot que l’on crée au début</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
+    <span class="o">^</span> <span class="n">celui</span><span class="o">-</span><span class="n">ci</span>
+</code></pre></div>
+<p>Ce module vous donne accès à des méthodes permettant la gestion globale du programme (début du programme, sortie du programme), mais aussi à une première manière de gérer les événements (interaction utilisateur -&gt; robot).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Il est fortement conseillé d’avoir au moins ouvert la fenêtre “voir module fenêtre — window” avant de continuer à lire cette section.</p>
+</div>
+<h2 id="demarrer-le-robot">Démarrer le robot</h2>
+<p>Une fois le robot créé (démarré), il passe dans l’état actif ; dans cet état, le robot peut être utilisé lui et tous ses modules.</p>
+<div class="admonition success">
+<p class="admonition-title">Robot()</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pybot</span> <span class="kn">import</span> <span class="n">Robot</span>
+<span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
+</code></pre></div>
+</div>
+<h2 id="eteindre-le-robot">Éteindre le robot</h2>
+<p>Si l'on veut passer le robot dans l’état inactif (ce qui équivaut à éteindre le robot), on utilise la méthode <code>desactiver() (fr) - deactivate() (en).</code></p>
+<div class="admonition success">
+<p class="admonition-title">desactiver() - deactivate()</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">desactiver</span><span class="p">()</span>
+
+<span class="n">ou</span> <span class="n">alors</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">deactivate</span><span class="p">()</span>
+</code></pre></div>
+</div>
+<p>Après l’appel de cette méthode, le robot change son état en inactif (il deviendra donc inutilisable).</p>
+<h2 id="verifier-letat-du-robot">Vérifier l’état du robot</h2>
+<p>On peut obtenir l’état du robot grâce à la méthode <code>est_actif() (fr) - is_active() (en)</code>.</p>
+<div class="admonition success">
+<p class="admonition-title">est_actif() - is_active()</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">est_actif</span><span class="p">()</span>
+
+<span class="n">ou</span> <span class="n">alors</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">is_active</span><span class="p">()</span>
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>est_actif</strong> renvoi True si le robot est actif sinon il renvoie False.</p>
+</div>
+<p>Cette méthode peut être utile à l’élaboration d’une boucle <strong>While</strong> qui déclencherait des actions tant que le robot est actif.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Exemple</span> <span class="p">:</span>
+
+<span class="k">while</span> <span class="n">robot</span><span class="o">.</span><span class="n">est_actif</span><span class="p">()</span> <span class="p">:</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">actualise_affichage</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="faire-dormir-le-robot">Faire dormir le robot</h2>
+<p>Il est parfois utile de ralentir l'exécution du programme en lui faisant faire des pauses. La méthode <code>dort(secondes : int) (fr) - sleep(secondes : int) (en)</code> le permet, il suffit de passer en paramètre le nombre de secondes à attendre.</p>
+<div class="admonition success">
+<p class="admonition-title">dort(int) - sleep(secondes)</p>
+<div class="highlight"><pre><span></span><code><span class="n">secondes</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">dort</span><span class="p">(</span><span class="n">secondes</span><span class="p">)</span>
+
+<span class="n">ou</span> <span class="n">alors</span>
+
+<span class="n">secondes</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">secondes</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<h2 id="les-attributs-du-robot">Les attributs du robot</h2>
+<p>Le robot possède un moyen de contenir les boutons et les zones de texte que l’on peut créer avec le module Fenêtre.</p>
+<p>Voir la documentation du module <a href="../module_window/">fenêtre</a> avec celle des <a href="../button/">boutons</a> et des <a href="../text_area/">zones de texte</a> pour plus d'informations.</p>
+<h3 id="ajouter-un-bouton-aux-attributs-du-robot">Ajouter un bouton aux attributs du robot</h3>
+<p>Pour ajouter un bouton aux attributs du robot il faut suivre les étapes suivantes :</p>
+<div class="highlight"><pre><span></span><code><span class="n">boutons</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">attributs</span><span class="o">.</span><span class="n">boutons</span> <span class="c1"># On récupère l&#39;endroit où sont stockés les boutons dans le robot</span>
+<span class="n">boutons</span><span class="o">.</span><span class="n">nom_du_bouton</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">creer_bouton</span><span class="p">(</span><span class="s2">&quot;nom_du_bouton&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="c1"># On crée un bouton et on l&#39;ajoute aux attributs du robot.</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>nom_du_bouton est le nom que l’on veut donner au bouton.<br />
+C’est ce nom qui sera utilisé pour accéder au bouton depuis les attributs du robot.
+Veillez à ne pas mettre d’espace dans le nom du bouton et gardez le nom simple.</p>
+</div>
+<h3 id="acceder-a-un-bouton-depuis-les-attributs-du-robot">Accéder à un bouton depuis les attributs du robot</h3>
+<p>Pour accéder à un bouton depuis les attributs du robot il faut suivre les étapes suivantes :</p>
+<div class="highlight"><pre><span></span><code><span class="n">boutons</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">attributs</span><span class="o">.</span><span class="n">boutons</span> <span class="c1"># On récupère l&#39;endroit où sont stockés les boutons dans le robot.</span>
+<span class="n">boutons</span><span class="o">.</span><span class="n">nom_du_bouton</span> <span class="c1"># On accède au bouton grace à son nom.</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>nom_du_bouton est le nom que l’on a donné au bouton lors de sa création.
+boutons.nom_du_bouton est un objet de type bouton sur lequel on peut appliquer les méthodes liées au <a href="../button/">bouton</a>.</p>
+</div>
+<h3 id="ajouter-une-zone-de-texte-aux-attributs-du-robot">Ajouter une zone de texte aux attributs du robot</h3>
+<p>Pour ajouter une zone de texte aux attributs du robot il faut suivre les étapes suivantes :</p>
+<div class="highlight"><pre><span></span><code><span class="n">zones_de_texte</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">attributs</span><span class="o">.</span><span class="n">zones_de_texte</span> <span class="c1"># On récupère l&#39;endroit où sont stockées les zones de texte dans le robot.</span>
+<span class="n">zones_de_texte</span><span class="o">.</span><span class="n">nom_de_la_zone_de_texte</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">creer_zone_de_texte</span><span class="p">(</span><span class="s2">&quot;nom_de_la_zone_de_texte&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="c1"># On crée une zone de texte et on l&#39;ajoute aux attributs du robot.</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>nom_de_la_zone_de_texte est le nom que l’on veut donner à la zone de texte.<br />
+C’est ce nom qui sera utilisé pour accéder à la zone de texte depuis les attributs du robot.
+Veillez à ne pas mettre d’espace dans le nom de la zone de texte et gardez le nom simple.</p>
+</div>
+<h3 id="acceder-a-une-zone-de-texte-depuis-les-attributs-du-robot">Accéder à une zone de texte depuis les attributs du robot</h3>
+<p>Pour accéder à une zone de texte depuis les attributs du robot il faut suivre les étapes suivantes :</p>
+<div class="highlight"><pre><span></span><code><span class="n">zones_de_texte</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">attributs</span><span class="o">.</span><span class="n">zones_de_texte</span> <span class="c1"># On récupère l&#39;endroit où sont stockées les zones de texte dans le robot.</span>
+<span class="n">zones_de_texte</span><span class="o">.</span><span class="n">nom_de_la_zone_de_texte</span> <span class="c1"># On accède à la zone de texte grace à son nom.</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>nom_de_la_zone_de_texte est le nom que l’on a donné à la zone de texte lors de sa création.
+zones_de_texte.nom_de_la_zone_de_texte est un objet de type zone de texte sur lequel on peut appliquer les méthodes liées à la <a href="../text_area/">zone de texte</a>.</p>
+</div>
+<h3 id="autre">Autre</h3>
+<p>Ces attributs sont utiles pour stocker les boutons et les zones de texte que l’on crée avec le module Fenêtre.
+Mais ils peuvent aussi être utilisés pour stocker d’autres objets, variables, etc.</p>
+<p>Pour cela, il suffit de créer un attribut dans l’objet attributs du robot.</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">attributs</span><span class="o">.</span><span class="n">nom_de_l_attribut</span> <span class="o">=</span> <span class="s2">&quot;valeur de l&#39;attribut&quot;</span>
+</code></pre></div>
+<p>pour ensuite y accéder avec</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">attributs</span><span class="o">.</span><span class="n">nom_de_l_attribut</span>
+</code></pre></div>
+<h2 id="interaction-avec-lutilisateur">Interaction avec l’utilisateur</h2>
+<p>En plus de tout cela, le robot offre une première manière assez rudimentaire pour gérer les interactions avec l’utilisateur.</p>
+<p>On appelle cela <strong>les événements</strong>.</p>
+<h3 id="creer-un-evenement">Créer un évènement</h3>
+<p>Un évènement est une action sur le clavier associée à un nom d'évènement. Nous créons un nouvel évènement avec la méthode <code>ajouter_evenement(touche : str, nom : str) (fr) - add_event(key : str, name : str) (en)</code> en lui passant en paramètre la touche à laquelle on veut associer l’événement et le nom que l’on veut donner à celui-ci.</p>
+<div class="admonition success">
+<p class="admonition-title">Ajouter un évènement</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">ajouter_evenement</span><span class="p">(</span><span class="s2">&quot;echap&quot;</span><span class="p">,</span> <span class="s2">&quot;stop&quot;</span><span class="p">)</span>
+
+<span class="n">ou</span> <span class="n">alors</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">add_event</span><span class="p">(</span><span class="s2">&quot;echap&quot;</span><span class="p">,</span> <span class="s2">&quot;stop&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Voir la <a href="../ref/">référence</a> pour voir une liste des touches possible, par exemple la touche du clavier <strong>a</strong> s'appelera <strong>"a"</strong>. À noter, les touches qui se nomment <strong>"espace"</strong> et <strong>"echap"</strong> pour la barre d'espace et la touche d'échappement.</p>
+</div>
+<h3 id="verifier-un-evenement">Vérifier un évènement</h3>
+<p>Une fois un évènement enregistré, il faut vérifier si l’événement se produit ou non.</p>
+<p>Pour cela, on a la méthode <code>verifier_evenements() (fr) - check_events() (en)</code> .</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>La méthode retourne une liste avec les évènements qui viennent d'être exécutés. Il est possible ensuite d'utiliser une vérification avec if… in ... : comme dans l'exemple ci-dessous.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Vérifier les évènements</p>
+<div class="highlight"><pre><span></span><code><span class="n">evenements</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">verifier_evenements</span><span class="p">(</span><span class="s2">&quot;echap&quot;</span><span class="p">,</span> <span class="s2">&quot;stop&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="s2">&quot;stop&quot;</span> <span class="ow">in</span> <span class="n">evenements</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;stop&quot;</span><span class="p">)</span>
+
+<span class="n">ou</span> <span class="n">alors</span>
+
+<span class="n">evenements</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">check_events</span><span class="p">(</span><span class="s2">&quot;echap&quot;</span><span class="p">,</span> <span class="s2">&quot;stop&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="s2">&quot;stop&quot;</span> <span class="ow">in</span> <span class="n">evenements</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;stop&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Sans l'appel de cette méthode, la croix de fermeture de la fenêtre ne fonctionnera pas.</p>
+</div>
+<h3 id="supprimer-un-evenement">Supprimer un évènement</h3>
+<p>Si on ne veut plus qu’un évènement soit vérifié, il faudra le supprimer.</p>
+<p>Pour cela, on a la méthode <code>supprimer_evenement(nom : str) (fr) — delete_event(nom : str) (en)</code> en lui passant le nom de l’événement que l’on veut supprimer..</p>
+<div class="admonition success">
+<p class="admonition-title">Supprimer un évènement</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">supprimer_evenement</span><span class="p">(</span><span class="s2">&quot;stop&quot;</span><span class="p">)</span>
+
+<span class="n">ou</span> <span class="n">alorsdelete_event</span><span class="p">(</span><span class="n">nom</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">delete_event</span><span class="p">(</span><span class="s2">&quot;stop&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Si plusieurs touches sont attribuées au même évènement, elles seront toutes supprimées de la liste des évènements.</p>
+</div>
+<h2 id="exemple-2-utiliser-des-evenements">Exemple 2: Utiliser des évènements</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Il est recommandé de ne pas copier l'exemple mais de chercher par vous même des utilisations possibles.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Le robot final n'utilisera pas de clavier mais simplement une intéraction par la voix et par le touché sur écran. Ces évènements par clavier servent principalement à l'apprentissage du code python. Il s'agit d'une période de transition.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pybot</span> <span class="kn">import</span> <span class="n">Robot</span>
+
+<span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
+
+<span class="n">long</span> <span class="o">=</span> <span class="mi">1024</span>
+<span class="n">haut</span> <span class="o">=</span> <span class="mi">800</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">demarrer_module_fenetre</span><span class="p">(</span><span class="n">long</span><span class="p">,</span> <span class="n">haut</span><span class="p">)</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">ouvrir_fenetre</span><span class="p">()</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">ajouter_evenement</span><span class="p">(</span><span class="s2">&quot;echap&quot;</span><span class="p">,</span> <span class="s2">&quot;stop&quot;</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">robot</span><span class="o">.</span><span class="n">est_actif</span><span class="p">():</span>
+    <span class="n">evenements</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">verifier_evenements</span><span class="p">()</span>
+    <span class="k">if</span> <span class="s2">&quot;stop&quot;</span> <span class="ow">in</span> <span class="n">evenements</span><span class="p">:</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">desactiver</span><span class="p">()</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">actualiser_affichage</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="la-webapp">La webapp</h2>
+<p>Avant de lancer les modules, il est faut lancer la webapp.
+Surtout pour le module utilisateur, car il permet de créer, modifier, supprimer des utilisateurs du robot.
+C'est le serveur qui permettra d'accéder à l'application web et ainsi travailler avec la base de donnée, on utilise pour cela la méthode demarrer_webapp.<br />
+Il est aussi possible de configurer le robot depuis un site web, par exemple pour ajouter des élèves à la base de données.</p>
+<p>Pour lancer la webapp, il suffit d'appeler la méthode <code>demarrer_webapp() (fr) - start_webapp() (en)</code>.</p>
+<div class="admonition success">
+<p class="admonition-title">demarrer_webapp()</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">demarrer_webapp</span><span class="p">()</span>
+
+<span class="n">ou</span> <span class="n">alors</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">start_webapp</span><span class="p">()</span>
+</code></pre></div>
+</div>
+<p>Le serveur web se lance et ne bloque pas le programme, on peut donc ensuite s'occuper de programmer le robot.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Le site sera accessible localement, à l'adresse : http://127.0.0.1:5000</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Il est possible de configurer le raspberry pi pour faire serveur et rendre le site accessible sur le réseau local pour ainsi se connecter à distance au robot.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Pour arreter le serveur il faut taper dans le terminal la combinaison au clavier : <strong>CTRL+C</strong>.
+Il est important de lancer la webapp avant de lancer tout autre module.
+Il est possible de lancer les modules sans avoir lancé la webapp, la webapp n'est utile que pour la gestion des utilisateurs avec le module <a href="../module_user/">utilisateur</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.tabs"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

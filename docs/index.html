@@ -10,7 +10,7 @@
       
       
       
-        <link rel="next" href="chap1/">
+        <link rel="next" href="general/">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -18,7 +18,7 @@
     
     
       
-        <title>introduction - Pybot</title>
+        <title>Introduction - Pybot</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              introduction
+              Introduction
             
           </span>
         </div>
@@ -353,7 +353,7 @@
           
   
   <span class="md-ellipsis">
-    introduction
+    Introduction
   </span>
   
 
@@ -364,7 +364,7 @@
         
   
   <span class="md-ellipsis">
-    introduction
+    Introduction
   </span>
   
 
@@ -388,7 +388,7 @@
         <li class="md-nav__item">
   <a href="#les-fonctionnalites-du-robot" class="md-nav__link">
     <span class="md-ellipsis">
-      Les fonctionnalités du robot :
+      Les fonctionnalités du robot
     </span>
   </a>
   
@@ -419,11 +419,11 @@
   
   
     <li class="md-nav__item">
-      <a href="chap1/" class="md-nav__link">
+      <a href="general/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    chapitre 1 - Un premier programme
+    Informations générales sur le Python
   </span>
   
 
@@ -440,11 +440,11 @@
   
   
     <li class="md-nav__item">
-      <a href="chap2/" class="md-nav__link">
+      <a href="module_robot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    chapitre 2 - Une boucle et des évènements
+    Module Robot
   </span>
   
 
@@ -461,11 +461,11 @@
   
   
     <li class="md-nav__item">
-      <a href="chap3/" class="md-nav__link">
+      <a href="module_window/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    chapitre 3 - Des boutons et des couleurs.
+    Module Fenêtre - Window
   </span>
   
 
@@ -482,11 +482,11 @@
   
   
     <li class="md-nav__item">
-      <a href="chap4/" class="md-nav__link">
+      <a href="button/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    chapitre 4 - Prendre une photo avec une caméra et appliquer des filtres.
+    Les Boutons - Buttons
   </span>
   
 
@@ -503,11 +503,11 @@
   
   
     <li class="md-nav__item">
-      <a href="chap5/" class="md-nav__link">
+      <a href="text_area/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    chapitre 5 - Reconnaissance d'un élève avec sa carte.
+    Les Zones de texte - Text_area
   </span>
   
 
@@ -524,11 +524,11 @@
   
   
     <li class="md-nav__item">
-      <a href="chap6/" class="md-nav__link">
+      <a href="module_camera/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    chapitre 6 - Parler au robot.
+    Module Caméra - Camera
   </span>
   
 
@@ -545,11 +545,11 @@
   
   
     <li class="md-nav__item">
-      <a href="chap6.5/" class="md-nav__link">
+      <a href="module_ai/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    chapitre 6.5 - Zone de texte / Entrée Utilisateur
+    Module IA - AI
   </span>
   
 
@@ -566,11 +566,11 @@
   
   
     <li class="md-nav__item">
-      <a href="chap7/" class="md-nav__link">
+      <a href="module_user/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    chapitre 7 - Écouter le robot.
+    Module Utilisateur - User
   </span>
   
 
@@ -587,11 +587,11 @@
   
   
     <li class="md-nav__item">
-      <a href="chap8/" class="md-nav__link">
+      <a href="module_audio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    chapitre 8 - Le visage et les émotions du robot.
+    Module Audio - Audio
   </span>
   
 
@@ -903,7 +903,7 @@
         <li class="md-nav__item">
   <a href="#les-fonctionnalites-du-robot" class="md-nav__link">
     <span class="md-ellipsis">
-      Les fonctionnalités du robot :
+      Les fonctionnalités du robot
     </span>
   </a>
   
@@ -939,24 +939,45 @@
 <p><em>Pybot</em> est une bibliothèque logicielle permettant à des élèves de collège de programmer eux même un robot immobile.</p>
 </div>
 <p>Vous trouverez ici les informations pour utiliser la bibliothèque <em>pybot</em> avec des exemples concret pour réaliser des programmes d'un simple affichage de caméra jusqu'à un robot conversationnel complet.</p>
-<h2 id="les-fonctionnalites-du-robot">Les fonctionnalités du robot :</h2>
+<h2 id="les-fonctionnalites-du-robot">Les fonctionnalités du robot</h2>
 <div class="admonition note">
 <p class="admonition-title">Le robot complet.</p>
 <p>Le Robot a été pensé pour fonctionner sur un Raspberry Pi configuré avec Linux (Debian). Un écran pour le <strong>visage</strong>, une caméra pour les <strong>yeux</strong>, un haut-parleur pour la <strong>bouche</strong> et un microphone pour les <strong>oreilles</strong>. La coquille entourant le raspberry pi est libre d'interprétation esthétique.</p>
 </div>
-<p>Avec la bibliothèque vous pouvez :</p>
+<p>Avec la bibliothèque, vous avez accès aux modules :</p>
 <blockquote>
-<p><img alt="1⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/31-20e3.svg" title=":one:" /> <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> Construire une interface graphique pour intéragir avec le robot.<br />
-<img alt="2⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/32-20e3.svg" title=":two:" /> <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> Utiliser une reconnaissance visuelle par caméra (pas biométrique comme le visage mais des dessins sur cartes).<br />
-<img alt="3⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/33-20e3.svg" title=":three:" /> <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> Des fonctionnalités de communication avec une IA utilisant une transformation de l'audio en texte (microphone) et de texte en audio (haut parleur) qui interagisse avec une IA conversationnelle de type chatGPT.<br />
-<img alt="4⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/34-20e3.svg" title=":four:" /> <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> Une base de donnée et une administration web pour configurer le robot, par exemple: enregistrer les cartes d'identification des élèves, préparer des questions qui seront posé aux élèves et dont les réponses seront enregistré en base de donnée pour consultation.</p>
+<p><strong>Robot :</strong> Module principal regroupant tous les autres modules et servant de corps au code du robot.<br />
+<strong>Fenêtre - Window:</strong> Module permettant de construire une interface graphique pour interagir avec le robot.<br />
+<strong>Caméra - Camera :</strong> Module permettant de prendre des photos, d’y appliquer des filtres, reconnaissance par caméra (pas biométrique comme le visage, mais des dessins sur cartes).<br />
+<strong>IA - AI :</strong> Module permettant de discuter avec le robot grâce à une IA conversationnelle de type ChatGPT et permettant aussi de donner des "émotions" au robot.<br />
+<strong>Utilisateur - User :</strong> Module permettant de créer et de gérer la connexion/déconnexion des utilisateurs à l'aide des cartes.<br />
+<strong>Audio (Non fonctionnel) :</strong> Module permettant à l’utilisateur de parler directement au robot.<br />
+<strong>Microphone (Non fonctionnel) :</strong> Module permettant au robot de parler à l’utilisateur.</p>
 </blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Avant d'utiliser un module</p>
+<p>Avant d’utiliser un module, il faudra toujours le lancer sinon il vous sera impossible d’utiliser le module et les méthodes lier à celui-ci.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<p>Les exemples d'utilisation des méthodes sont en français et en anglais.<br />
+Et il suppose pour la plus part d'avoir déjà un code de base fonctionnel pour le robot.<br />
+Seul les exemples complet de programme sont en français et ne suppose pas d'avoir un code de base.</p>
+</div>
 <h2 id="utilisation-de-la-bibliotheque">Utilisation de la bibliothèque</h2>
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bonjour, Pybot!&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p><em>Pybot</em> se présente comme un objet avec des méthodes que l'on peut utiliser ensemble pour faire le programme.</p>
-<p>Les chapitres suivant vous présentent les différentes méthodes possibles et des exemples d'utilisation.</p>
-<p>Avant de suivre ce tutoriel, vous souhaitez peut-être savoir <a href="config/">comment configurer et utiliser pybot</a>.</p>
+<p><em>Pybot</em> se présente comme un objet avec des méthodes et des sous-objets (modules présentés ci-dessus) que l’on peut utiliser ensemble pour faire le programme et ainsi créer le robot.<br />
+Les chapitres suivants vont vous présenter les différentes méthodes et modules possibles avec des exemples d'utilisation.</p>
+<p>Avant de suivre ce tutoriel, vous souhaitez peut-être savoir <a href="https://42angouleme.github.io/config/">comment configurer et utiliser pybot</a>.</p>
+<p>Ensuite, pour démarrer à programmer le robot, il faudra toujours commencer par ces deux lignes de code.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pybot</span> <span class="kn">import</span> <span class="n">Robot</span>
+
+<span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
+</code></pre></div>
+<p>Ce robot est utilisable en français et en anglais.<br />
+En effet, toutes les méthodes et les modules présentés dans la suite de la documentation sont disponibles en français comme en anglais (avec les commentaires des fonctions traduits aussi).<br />
+Le mélange des langues et d’ailleurs possible même si fortement déconseiller pour des questions de lisibilité et de compréhension du code.</p>
 
 
 

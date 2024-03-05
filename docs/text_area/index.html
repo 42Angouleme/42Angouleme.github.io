@@ -1,0 +1,1375 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../button/">
+      
+      
+        <link rel="next" href="../module_camera/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Les Zones de texte - Text_area - Pybot</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 14h-1c0-3.87-3.13-7-7-7h-1V5.73A2 2 0 1 0 10 4c0 .74.4 1.39 1 1.73V7h-1c-3.87 0-7 3.13-7 7H2c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h1v1a2 2 0 0 0 2 2h14c1.11 0 2-.89 2-2v-1h1c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1m-1 3h-2v3H5v-3H3v-1h2v-2c0-2.76 2.24-5 5-5h4c2.76 0 5 2.24 5 5v2h2v1m-10.3-3c.4.39.4 1.05 0 1.45l-.73.73-1.47 1.47-2.2-2.2c-.4-.4-.4-1.06 0-1.45.41-.42 1.06-.42 1.47 0l.73.72.73-.72c.41-.42 1.06-.42 1.47 0m7 0c.4.39.4 1.05 0 1.45l-.73.73-1.47 1.47-2.2-2.2c-.4-.4-.4-1.06 0-1.45.41-.42 1.06-.42 1.47 0l.73.72.73-.72c.41-.42 1.06-.42 1.47 0Z"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#les-zones-de-texte-text_area" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href=".." title="Pybot" class="md-header__button md-logo" aria-label="Pybot" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 14h-1c0-3.87-3.13-7-7-7h-1V5.73A2 2 0 1 0 10 4c0 .74.4 1.39 1 1.73V7h-1c-3.87 0-7 3.13-7 7H2c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h1v1a2 2 0 0 0 2 2h14c1.11 0 2-.89 2-2v-1h1c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1m-1 3h-2v3H5v-3H3v-1h2v-2c0-2.76 2.24-5 5-5h4c2.76 0 5 2.24 5 5v2h2v1m-10.3-3c.4.39.4 1.05 0 1.45l-.73.73-1.47 1.47-2.2-2.2c-.4-.4-.4-1.06 0-1.45.41-.42 1.06-.42 1.47 0l.73.72.73-.72c.41-.42 1.06-.42 1.47 0m7 0c.4.39.4 1.05 0 1.45l-.73.73-1.47 1.47-2.2-2.2c-.4-.4-.4-1.06 0-1.45.41-.42 1.06-.42 1.47 0l.73.72.73-.72c.41-.42 1.06-.42 1.47 0Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pybot
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Les Zones de texte - Text_area
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="indigo"  aria-label="Passer au mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer au mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="amber" data-md-color-accent="indigo"  aria-label="Passer au mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer au mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href=".." class="md-tabs__link">
+          
+  
+  La documentation de la bibliothèque
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../python/" class="md-tabs__link">
+          
+  
+  Utiliser la bibliothèque
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../contribute/" class="md-tabs__link">
+          
+  
+  Développer la bibliothèque
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Pybot" class="md-nav__button md-logo" aria-label="Pybot" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 14h-1c0-3.87-3.13-7-7-7h-1V5.73A2 2 0 1 0 10 4c0 .74.4 1.39 1 1.73V7h-1c-3.87 0-7 3.13-7 7H2c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h1v1a2 2 0 0 0 2 2h14c1.11 0 2-.89 2-2v-1h1c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1m-1 3h-2v3H5v-3H3v-1h2v-2c0-2.76 2.24-5 5-5h4c2.76 0 5 2.24 5 5v2h2v1m-10.3-3c.4.39.4 1.05 0 1.45l-.73.73-1.47 1.47-2.2-2.2c-.4-.4-.4-1.06 0-1.45.41-.42 1.06-.42 1.47 0l.73.72.73-.72c.41-.42 1.06-.42 1.47 0m7 0c.4.39.4 1.05 0 1.45l-.73.73-1.47 1.47-2.2-2.2c-.4-.4-.4-1.06 0-1.45.41-.42 1.06-.42 1.47 0l.73.72.73-.72c.41-.42 1.06-.42 1.47 0Z"/></svg>
+
+    </a>
+    Pybot
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    La documentation de la bibliothèque
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            La documentation de la bibliothèque
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../general/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Informations générales sur le Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_robot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Robot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_window/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Fenêtre - Window
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../button/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les Boutons - Buttons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Les Zones de texte - Text_area
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Les Zones de texte - Text_area
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creer-une-zone-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Créer une zone de texte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#afficher-la-zone-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Afficher la zone de texte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifier-si-la-zone-de-texte-est-cliquee" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verifier si la zone de texte est cliquée
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ecrire-dans-la-zone-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ecrire dans la zone de texte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recuperer-le-texte-de-la-zone-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Récupérer le texte de la zone de texte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#effacer-le-texte-de-la-zone-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Effacer le texte de la zone de texte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-complet-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple complet 1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personnaliser-la-zone-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personnaliser la zone de texte
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Personnaliser la zone de texte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modifier-la-taille-de-la-police" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifier la taille de la police
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifier-la-couleur-de-la-police" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifier la couleur de la police
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-complet-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple complet 2
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_camera/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Caméra - Camera
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_ai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module IA - AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_user/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Utilisateur - User
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_audio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Audio - Audio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utiliser l'administration web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Référence complète
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Utiliser la bibliothèque
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Utiliser la bibliothèque
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apprendre le Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installer et utiliser Pybot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rpi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configurer le raspberry pi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Développer la bibliothèque
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Développer la bibliothèque
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribuer au projet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../roadmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Progression du projet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../doc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mettre à jour la documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creer-une-zone-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Créer une zone de texte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#afficher-la-zone-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Afficher la zone de texte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifier-si-la-zone-de-texte-est-cliquee" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verifier si la zone de texte est cliquée
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ecrire-dans-la-zone-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ecrire dans la zone de texte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recuperer-le-texte-de-la-zone-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Récupérer le texte de la zone de texte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#effacer-le-texte-de-la-zone-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Effacer le texte de la zone de texte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-complet-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple complet 1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personnaliser-la-zone-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personnaliser la zone de texte
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Personnaliser la zone de texte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modifier-la-taille-de-la-police" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifier la taille de la police
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifier-la-couleur-de-la-police" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifier la couleur de la police
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-complet-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple complet 2
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="les-zones-de-texte-text_area">Les zones de texte - text_area</h1>
+<p>Les zones de texte sont des éléments graphiques permettant de récupérer des informations de l'utilisateur.<br />
+Elles sont utilisées pour permettre à l'utilisateur de saisir des informations dans le robot.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Le robot à la fin n'est pas censé utiliser le clavier pour saisir des informations.<br />
+Ceci est une fonctionnalité qui sert d'entre deux avant l'ajout du module audio.</p>
+</div>
+<h2 id="creer-une-zone-de-texte">Créer une zone de texte</h2>
+<p>Voir <a href="../module_window/#creer-une-zone-de-texte">la documentation de la fenêtre</a>.</p>
+<p>Après avoir créé une zone de texte, vous obtenez un objet (la zone de texte) qui vous permet de manipuler et personnaliser la zone de texte.<br />
+Pour cela, vous pouvez utiliser les méthodes qui vont vous être présentées ci-dessous.</p>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Les méthodes présentées ci-dessous sont utilisables uniquement sur un objet créé par la méthode <code>creer_zone_texte() (fr) - create_text_area() (en)</code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pensé à donner une taille assez grande à la zone de texte pour que l'utilisateur puisse saisir des informations, sans que cela sorte de la zone de texte, créant un effet de "dépassement" de la zone de texte.</p>
+</div>
+<h2 id="afficher-la-zone-de-texte">Afficher la zone de texte</h2>
+<p>Quand vous créez une zone de texte, elle n'est pas affichée dans la fenêtre.<br />
+Pour l'afficher, il suffit d’appeler la méthode <code>afficher() (fr) - display() (en)</code>.</p>
+<div class="admonition success">
+<p class="admonition-title">Afficher la zone de texte</p>
+<div class="highlight"><pre><span></span><code><span class="n">zone_texte</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">creer_zone_texte</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>
+<span class="n">zone_texte</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+
+<span class="n">ou</span> <span class="n">alors</span>
+
+<span class="n">text_area</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">create_text_area</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>
+<span class="n">text_area</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</code></pre></div>
+</div>
+<h2 id="verifier-si-la-zone-de-texte-est-cliquee">Verifier si la zone de texte est cliquée</h2>
+<p>Pour verifier si la zone de texte est cliquée, il suffit d’appeler la méthode <code>est_actif() (fr) - is_active() (en)</code>.<br />
+Cela permet de savoir si la zone de texte a été cliquée ou non pour ainsi déclencher l'ecriture.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Il faut absolument que la fonction verifier_evenements() soit appelée pour que la méthode est_actif() fonctionne.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Vérifier si la zone de texte est cliquée</p>
+<div class="highlight"><pre><span></span><code><span class="n">zone_texte</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">creer_zone_texte</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>
+<span class="n">zone_texte</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">zone_texte</span><span class="o">.</span><span class="n">est_actif</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La zone de texte a été cliquée&quot;</span><span class="p">)</span>
+
+<span class="n">ou</span> <span class="n">alors</span>
+
+<span class="n">text_area</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">create_text_area</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>
+<span class="n">text_area</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">text_area</span><span class="o">.</span><span class="n">is_active</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The text area has been clicked&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<h2 id="ecrire-dans-la-zone-de-texte">Ecrire dans la zone de texte</h2>
+<p>Pour écrire dans la zone de texte, il suffit d’appeler la méthode <code>ecrire(robot : Robot) (fr) - write(robot : Robot) (en)</code>.<br />
+Utilisez cette méthode en combinaison avec la méthode <code>est_actif() (fr) - is_active() (en)</code> pour vérifier si la zone de texte est cliquée.
+Sinon, vous vous exposez à des erreurs.</p>
+<div class="admonition success">
+<p class="admonition-title">Écrire dans la zone de texte</p>
+<div class="highlight"><pre><span></span><code><span class="n">zone_texte</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">creer_zone_texte</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>
+<span class="n">zone_texte</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">zone_texte</span><span class="o">.</span><span class="n">est_actif</span><span class="p">():</span>
+    <span class="n">zone_texte</span><span class="o">.</span><span class="n">ecrire</span><span class="p">(</span><span class="n">robot</span><span class="p">)</span>
+
+<span class="n">ou</span> <span class="n">alors</span>
+
+<span class="n">text_area</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">create_text_area</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>
+<span class="n">text_area</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">text_area</span><span class="o">.</span><span class="n">is_active</span><span class="p">():</span>
+    <span class="n">text_area</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">robot</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<p>Cette méthode renvoie le texte après que l'utilisateur a quitté la zone de texte.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Lorsque l'utilisateur écrit, le robot est mis en pause tant que l'utilisateur n'a pas quitté la zone d'écriture en cliquant en dehors de celle-ci ou alors en tapant sur la touche entrée.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Cette méthode est spéciale, elle prend en paramètre le robot pour pouvoir récupérer les informations saisies par l'utilisateur.</p>
+</div>
+<h2 id="recuperer-le-texte-de-la-zone-de-texte">Récupérer le texte de la zone de texte</h2>
+<p>Pour récupérer le texte de la zone de texte, il suffit d’appeler la méthode <code>obtenir_texte() (fr) - get_text() (en)</code>.</p>
+<div class="admonition success">
+<p class="admonition-title">Récupérer le texte de la zone de texte</p>
+<div class="highlight"><pre><span></span><code><span class="n">zone_texte</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">creer_zone_texte</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>
+<span class="n">zone_texte</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">zone_texte</span><span class="o">.</span><span class="n">est_actif</span><span class="p">():</span>
+    <span class="n">zone_texte</span><span class="o">.</span><span class="n">ecrire</span><span class="p">(</span><span class="n">robot</span><span class="p">)</span>
+<span class="n">texte</span> <span class="o">=</span> <span class="n">zone_texte</span><span class="o">.</span><span class="n">obtenir_texte</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span>
+
+<span class="n">ou</span> <span class="n">alors</span>
+
+<span class="n">text_area</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">create_text_area</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>
+<span class="n">text_area</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">text_area</span><span class="o">.</span><span class="n">is_active</span><span class="p">():</span>
+    <span class="n">text_area</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">robot</span><span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">text_area</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<h2 id="effacer-le-texte-de-la-zone-de-texte">Effacer le texte de la zone de texte</h2>
+<p>Pour effacer le texte de la zone de texte, il suffit d’appeler la méthode <code>effacer_texte() (fr) - erase_text() (en)</code>.
+Cela permet de vider la zone de texte pour une nouvelle saisie.
+Renvoi le texte effacé.</p>
+<div class="admonition success">
+<p class="admonition-title">Effacer le texte de la zone de texte</p>
+<div class="highlight"><pre><span></span><code><span class="n">zone_texte</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">creer_zone_texte</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>
+<span class="n">zone_texte</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">zone_texte</span><span class="o">.</span><span class="n">est_actif</span><span class="p">():</span>
+    <span class="n">zone_texte</span><span class="o">.</span><span class="n">ecrire</span><span class="p">(</span><span class="n">robot</span><span class="p">)</span>
+<span class="n">texte</span> <span class="o">=</span> <span class="n">zone_texte</span><span class="o">.</span><span class="n">effacer_texte</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span>
+
+<span class="n">ou</span> <span class="n">alors</span>
+
+<span class="n">text_area</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">create_text_area</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>
+<span class="n">text_area</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">text_area</span><span class="o">.</span><span class="n">is_active</span><span class="p">():</span>
+    <span class="n">text_area</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">robot</span><span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">text_area</span><span class="o">.</span><span class="n">erase_text</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<h2 id="exemple-complet-1">Exemple complet 1</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pybot</span> <span class="kn">import</span> <span class="n">Robot</span><span class="p">,</span> <span class="n">Couleur</span>
+
+<span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">demarrer_module_fenetre</span><span class="p">()</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">ouvrir_fenetre</span><span class="p">(</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">900</span><span class="p">)</span>
+
+<span class="n">zones_de_texte</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">attributs</span><span class="o">.</span><span class="n">zones_de_texte</span>
+<span class="n">zones_de_texte</span><span class="o">.</span><span class="n">zone_texte_quitter</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">creer_zone_texte</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="n">robot</span><span class="o">.</span><span class="n">est_actif</span><span class="p">()</span> <span class="p">:</span>
+    <span class="n">zones_de_texte</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">attributs</span><span class="o">.</span><span class="n">zones_de_texte</span>
+    <span class="n">evenement</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">verifier_evenements</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">zones_de_texte</span><span class="o">.</span><span class="n">zone_texte_quitter</span><span class="o">.</span><span class="n">est_actif</span><span class="p">():</span>
+        <span class="n">zones_de_texte</span><span class="o">.</span><span class="n">zone_texte_quitter</span><span class="o">.</span><span class="n">ecrire</span><span class="p">(</span><span class="n">robot</span><span class="p">)</span>
+        <span class="n">texte</span> <span class="o">=</span> <span class="n">zones_de_texte</span><span class="o">.</span><span class="n">zone_texte_quitter</span><span class="o">.</span><span class="n">obtenir_texte</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">texte</span> <span class="o">==</span> <span class="s2">&quot;Quitter&quot;</span><span class="p">:</span>
+            <span class="n">robot</span><span class="o">.</span><span class="n">desactiver</span><span class="p">()</span>
+            <span class="k">break</span>
+    <span class="n">zones_de_texte</span><span class="o">.</span><span class="n">zone_texte_quitter</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">actualiser_affichage</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="personnaliser-la-zone-de-texte">Personnaliser la zone de texte</h2>
+<h3 id="modifier-la-taille-de-la-police">Modifier la taille de la police</h3>
+<p>Pour modifier la taille de la police, il suffit d’appeler la méthode <code>modifier_taille_police(taille : int) (fr) - change_font_size(size : int) (en)</code>.
+Par defaut, la taille de la police est de 16.</p>
+<div class="admonition success">
+<p class="admonition-title">Modifier la taille de la police</p>
+<div class="highlight"><pre><span></span><code><span class="n">zone_texte</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">creer_zone_texte</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>
+<span class="n">zone_texte</span><span class="o">.</span><span class="n">modifier_taille_police</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">zone_texte</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+
+<span class="n">ou</span> <span class="n">alors</span>
+
+<span class="n">text_area</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">create_text_area</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>
+<span class="n">text_area</span><span class="o">.</span><span class="n">change_font_size</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">text_area</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</code></pre></div>
+</div>
+<h3 id="modifier-la-couleur-de-la-police">Modifier la couleur de la police</h3>
+<p>Pour modifier la couleur de la police, il suffit d’appeler la méthode <code>modifier_couleur_police(couleur : Couleur) (fr) - change_font_color(color : Couleur) (en)</code>.</p>
+<div class="admonition success">
+<p class="admonition-title">Modifier la couleur de la police</p>
+<div class="highlight"><pre><span></span><code><span class="n">zone_texte</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">creer_zone_texte</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>
+<span class="n">zone_texte</span><span class="o">.</span><span class="n">modifier_couleur_police</span><span class="p">(</span><span class="n">Couleur</span><span class="o">.</span><span class="n">ROUGE</span><span class="p">)</span>
+<span class="n">zone_texte</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+
+<span class="n">ou</span> <span class="n">alors</span>
+
+<span class="n">text_area</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">create_text_area</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>
+<span class="n">text_area</span><span class="o">.</span><span class="n">change_font_color</span><span class="p">(</span><span class="n">Couleur</span><span class="o">.</span><span class="n">ROUGE</span><span class="p">)</span>
+<span class="n">text_area</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</code></pre></div>
+</div>
+<h2 id="exemple-complet-2">Exemple complet 2</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pybot</span> <span class="kn">import</span> <span class="n">Robot</span><span class="p">,</span> <span class="n">Couleur</span>
+
+<span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">demarrer_module_fenetre</span><span class="p">()</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">ouvrir_fenetre</span><span class="p">(</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">900</span><span class="p">)</span>
+
+<span class="n">zones_de_texte</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">attributs</span><span class="o">.</span><span class="n">zones_de_texte</span>
+<span class="n">zones_de_texte</span><span class="o">.</span><span class="n">zone_texte</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">creer_zone_texte</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="n">robot</span><span class="o">.</span><span class="n">est_actif</span><span class="p">()</span> <span class="p">:</span>
+    <span class="n">zones_de_texte</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">attributs</span><span class="o">.</span><span class="n">zones_de_texte</span>
+    <span class="n">evenement</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">verifier_evenements</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">zones_de_texte</span><span class="o">.</span><span class="n">zone_texte</span><span class="o">.</span><span class="n">est_actif</span><span class="p">():</span>
+        <span class="n">zones_de_texte</span><span class="o">.</span><span class="n">zone_texte</span><span class="o">.</span><span class="n">ecrire</span><span class="p">(</span><span class="n">robot</span><span class="p">)</span>
+        <span class="n">texte</span> <span class="o">=</span> <span class="n">zones_de_texte</span><span class="o">.</span><span class="n">zone_texte</span><span class="o">.</span><span class="n">effacer_texte</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">texte</span> <span class="o">==</span> <span class="s2">&quot;Quitter&quot;</span><span class="p">:</span>
+            <span class="n">robot</span><span class="o">.</span><span class="n">desactiver</span><span class="p">()</span>
+            <span class="k">break</span>
+        <span class="k">elif</span> <span class="n">texte</span> <span class="o">==</span> <span class="s2">&quot;Rouge&quot;</span><span class="p">:</span>
+            <span class="n">zones_de_texte</span><span class="o">.</span><span class="n">zone_texte</span><span class="o">.</span><span class="n">modifier_couleur_police</span><span class="p">(</span><span class="n">Couleur</span><span class="o">.</span><span class="n">ROUGE</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">texte</span> <span class="o">==</span> <span class="s2">&quot;20&quot;</span><span class="p">:</span>
+            <span class="n">zones_de_texte</span><span class="o">.</span><span class="n">zone_texte</span><span class="o">.</span><span class="n">modifier_taille_police</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+    <span class="n">zones_de_texte</span><span class="o">.</span><span class="n">zone_texte</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">actualiser_affichage</span><span class="p">()</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.tabs"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
