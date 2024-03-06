@@ -47,7 +47,7 @@ Pour afficher la caméra, il suffit d'utiliser la méthode `afficher_camera(posi
     ```
 
 !!!Note
-    La caméra afficher fait 640 pixels de long et 480 pixels de haut. Le **dernier pixel** a les coordonnées **x = 299 et y = 199**.
+    La caméra afficher fait 640 pixels de long et 480 pixels de haut.
 
 ## Prendre une photo
 

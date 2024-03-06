@@ -226,3 +226,46 @@ while robot.est_actif():
     robot.camera.afficher_camera(300, 10)
     robot.fenetre.actualiser_affichage()
 ```
+
+## Historique de conversation
+
+### Sauvegarder l'historique de conversation
+
+Un fois que vous avez recuperer l'historique de conversation, grace à la méthode `obtenir_historique_conversation() (fr) - get_current_conversation_history() (en)` du module [IA](module_ai.md#recuperer-la-memoire-du-robot), vous pouvez la sauvegarder dans la base de données.
+
+Pour cela, vous pouvez utiliser la méthode `sauvegarder_historique_conversation(historique) (fr) - save_conversation_history(history) (en)`.
+
+!!!Success "Sauvegarder l'historique de conversation"
+    ```python
+    historique = robot.IA.obtenir_historique_conversation()
+    robot.utilisateur.sauvegarder_historique_conversation(historique)
+
+    ou alors
+
+    history = robot.AI.get_current_conversation_history()
+    robot.user.save_conversation_history(history)
+    ```
+
+!!!Note
+    Un utilisateur doit etre connecté pour pouvoir sauvegarder un historique de conversation.
+
+!!!Warning
+    L'ancien historique de conversation sera ecrasé par le nouveau.
+
+### Recuperer l'historique de conversation
+
+Pour recuperer l'historique de conversation, vous pouvez utiliser la méthode `obtenir_historique_conversation_utilisateur() (fr) - get_user_conversation_history() (en)`.
+
+!!!Success "Recuperer l'historique de conversation"
+    ```python
+    historique = robot.utilisateur.obtenir_historique_conversation_utilisateur()
+    robot.IA.charger_historique_conversation(historique)
+
+    ou alors
+
+    history = robot.user.get_user_conversation_history()
+    robot.AI.load_conversation_history(history)
+    ```
+
+!!!Warning
+    Si un historique de conversation est déjà chargé et qu'un autre historique vient à être chargé l'ancien historique sera écrasé.
