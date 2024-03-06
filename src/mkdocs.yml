@@ -10,7 +10,7 @@ nav:
     - Module Caméra - Camera : module_camera.md
     - Module IA - AI : module_ai.md
     - Module Utilisateur - User : module_user.md
-    - Module Audio - Audio : module_audio.md
+    - Module Lecteur - Reader : module_reader.md
     - Utiliser l'administration web: admin.md
     - Référence complète: ref.md
   - Utiliser la bibliothèque:

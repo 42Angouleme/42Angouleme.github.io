@@ -79,7 +79,7 @@ La photo sera enregistrée dans le dossier `images` du robot.
 
 Pour appliquer un filtre à une photo, il suffit d'utiliser la méthode `appliquer_filtre(chemin_fichier: str, nom_filtre: str) (fr) - apply_filter(file_name : str, filter_name : str) (en)`.
 
-Voir la réference pour la liste complète des [filtres](/ref.md#les-filtres)
+Voir la réference pour la liste complète des [filtres](ref.md#les-filtres)
 
 !!!Warning
     Le fichier sera écrasé par la photo avec le filtre appliqué.
