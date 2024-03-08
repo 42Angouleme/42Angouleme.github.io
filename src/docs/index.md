@@ -17,7 +17,7 @@ Avec la bibliothèque, vous avez accès aux modules :
 **Caméra - Camera :** Module permettant de prendre des photos, d’y appliquer des filtres, reconnaissance par caméra (pas biométrique comme le visage, mais des dessins sur cartes).  
 **IA - AI :** Module permettant de discuter avec le robot grâce à une IA conversationnelle de type ChatGPT et permettant aussi de donner des "émotions" au robot.  
 **Utilisateur - User :** Module permettant de créer et de gérer la connexion/déconnexion des utilisateurs à l'aide des cartes.  
-**Lecteur - Reader (Non fonctionnel) :** Module permettant au robot de parler à l’utilisateur.
+**Lecteur - Reader :** Module permettant au robot de parler à l’utilisateur.  
 **Audio (Non fonctionnel) :** Module permettant à l’utilisateur de parler directement au robot.  
 
 !!!Warning "Avant d'utiliser un module"
