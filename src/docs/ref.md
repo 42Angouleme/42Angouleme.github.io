@@ -283,7 +283,7 @@ get_current_conversation_history()
 ```
 
 ```python
-obtenir_emotion(phrase : str)
+donner_emotion(phrase : str)
 get_emotion(sentence : str)
 ```
 

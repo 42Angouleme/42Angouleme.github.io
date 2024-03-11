@@ -83,44 +83,35 @@ Cette fonction retourne la réponse du robot.
     Il suffit simplement d'attendre sa réponse pour qu'il ne soit plus en pause (utilisable).
 
 !!!Warning
-    Tant qu'aucun historique n'est chargé le robot ne fera pas un suivit de la conversation et ne pourra pas se souvenir de la conversation précédente.
-    Car tout sera oublié à la fin de la discussion.
+    Tant qu'aucun historique de conversation n'est chargé, le robot ne pourra pas se souvenir de la conversation précédente.
+    Le robot ne se souviendra pas des interactions qu'il a pu avoir avec l'utilisateur tant que l'historique de conversation n'est pas chargé.
 
-## La mémoire du robot
+## L'historique de conversation du robot
 
-Comme dit précédemment si on ne donne pas de mémoire au robot, il ne pourra pas se souvenir de la conversation précédente.
-
-La méthode `creer_historique_conversation() (fr) - create_conversation_history() (en)` permet au robot de lui demander créer un historique de conversation.
-
-!!!Success "Créer un historique de conversation"
-    ```python
-    robot.IA.creer_historique_conversation()
-
-    ou alors
-
-    robot.AI.create_conversation_history()
-    ```
-
-!!!Note
-    Il est préférable d'avoir un historique de conversation par utilisateur et aussi de sauvegarder l'historique de conversation dans les données de l'utilisateur correspondant.
-    L'enregistrement de l'historique de conversation dans les données de l'utilisateur n'est pas encore implémenté.
+Comme dit précédemment si on ne donne pas d'historique de conversation au robot, il ne pourra pas se souvenir de la conversation précédente.
 
 ### Gérer l'historique de conversation
 
 #### Se souvenir
 
-Une fois l'historique de conversation créé il faut le charger dans le robot avec la méthode `charger_historique(historique_de_conversation : ConversationSummaryBufferMemory) (fr) - load_history(conversation_history : ConversationSummaryBufferMemory) (en)`.  
-Ici, vous donnez donc au robot la capacité de se souvenir des interactions qu'il a eu avec l'utilisateur.
+!!!Warning
+    Avant cette étape, il faut avoir récupéré l'historique de conversation de l'utilisateur.  
+    Note : voir la documentation du module [utilisateur](module_user.md#historique-de-conversation) pour récupérer l'historique de conversation.
+
+Pour que le robot se souvienne des échanges qu'il a eu avec l'utilisateur, il faut charger un historique de conversation.  
+On peut charger l'historique dans le robot avec la méthode `charger_historique_conversation(historique_de_conversation : str) (fr) - load_conversation_history(conversation_history : str) (en)`.  
+
+Ici, vous donnez donc au robot la capacité de se souvenir des interactions qu'il a eues avec l'utilisateur, ainsi il pourra reprendre la discussion là où elle s'était arrêtée la dernière fois.
 
 !!!Success "Charger un historique de conversation"
     ```python
-    historique = robot.IA.cree_historique_conversation()
-    robot.IA.charger_historique(historique)
+    historique = robot.utilisateur.obtenir_historique_conversation_utilisateur()
+    robot.IA.charger_historique_conversation(historique)
 
     ou alors
 
-    history = robot.AI.create_conversation_history()
-    robot.AI.load_history(history)
+    history = robot.user.get_user_conversation_history()
+    robot.AI.load_conversation_history(history)
     ```
 
 !!!Warning
@@ -131,21 +122,24 @@ Ici, vous donnez donc au robot la capacité de se souvenir des interactions qu'i
 
 #### Effacer la mémoire
 
-Si vous voulez changer de discussion ou bien effacer l'historique de la conversation vous pouvez utilisez la méthode `supprimer_historique() (fr) - delete_history() (en)`.
+Si vous voulez changer de discussion ou bien effacer l'historique de la conversation vous pouvez utilisez la méthode `effacer_historique_conversation() (fr) - clear_conversation_history() (en)`.
+
+!!!Note
+    Pensez à effacer l'historique quand l'utilisateur se déconnecte.
 
 !!!Success "Supprimer l'historique de conversation"
     ```python
-    robot.IA.supprimer_historique()
+    robot.IA.effacer_historique_conversation()
 
     ou alors
 
-    robot.AI.delete_history()
+    robot.AI.clear_conversation_history()
     ```
 
-A partir de ce moment là le robot n'aura plus de mémoire de conversation.
+A partir de ce moment le robot oubliera tout des échanges précédents avec l'utilisateur.
 
 !!!Warning
-    Pensez à recuperer et sauvegarder l'historique avant de le supprimer
+    Pensez à récupérer et sauvegarder l'historique avant de le supprimer
 
 #### Récupérer la mémoire du robot
 
@@ -162,6 +156,9 @@ Pour pouvoir sauvegarder l'historique de conversation (mémoire du robot), il fa
 
 Cette méthode renvoit la mémoire du robot permettant ainsi la sauvegarde de celle-ci.
 
+!!!Note
+    Voir la documentation du module [utilisateur](module_user.md#historique-de-conversation) pour voir comment sauvegarder l'historique de conversation.
+
 ## Exemple complet 1
 
 ```python
@@ -175,38 +172,28 @@ robot.IA.demarrer_discussion()
 
 while True:
     question = input("Vous : ")
-    if question == "stop":
-        robot.IA.arreter_discussion()
-        break
-    if question == "recommencer":
-        robot.IA.supprimer_historique()
-        continue # Permet de revenir au début de la boucle sans poser de question
-    if question == "sauvegarder":
-        historique = robot.IA.create_conversation_history()
-        robot.IA.charger_historique(historique)
-        continue # Permet de revenir au début de la boucle sans poser de question
     reponse = robot.IA.poser_question(question)
     print("Pybot : ", reponse)
 ```
 
 !!!Warning
     L'appel à la fonction `input()` devra etre remplacé par la méthode permettant de récupérer les questions posées par l'utilisateur.  
-    On pourra le remplacer par une zone de texte dans la fenêtre ou alors l'audio du micro.  
+    On pourra le remplacer par une zone de texte dans la fenêtre.  
 
-    De meme le print devra etre remplacé par la méthode permettant d'afficher les réponses du robot.
-    On pourra le remplacer par un appel à la méthode afficher_texte() de la fenêtre ou autre.
+    De même le print devra être remplacé par la méthode permettant d'afficher les réponses du robot.  
+    On pourra le remplacer par exemple via un appel à la méthode afficher_texte() du module *Fenetre*.
 
 ## Les émotions du robot
 
-Le robot peut avoir des émotions et des réactions.
-Pour cela il faut utiliser la méthode `obtenir_emotion(phrase : str) (fr) - get_emotion(sentence : str) (en)`.
-Cette méthode prend en paramètre une phrase (chaîne de caractère) et renvoit l'émotion que le robot exprime en fonction de celle-ci.
-Si aucune émotion enregistrée ne correspond a la phrase, il reste Neutre.
+Le robot peut avoir des émotions et des réactions.  
+Pour lui donner des émotions, il faut utiliser la méthode `donner_emotion(phrase : str) (fr) - get_emotion(sentence : str) (en)`.
+Cette méthode prend en paramètre une phrase (chaîne de caractère) et renvoie l'émotion que le robot exprime en fonction de celle-ci.  
+Si aucune émotion enregistrée ne correspond a la phrase, il reste *Neutre*.  
 
 !!!Success "Obtenir l'émotion du robot"
     ```python
     phrase = "Je suis content"
-    emotion = robot.IA.obtenir_emotion(phrase)
+    emotion = robot.IA.donner_emotion(phrase)
 
     ou alors
 
@@ -286,7 +273,7 @@ while i < 15 :
         robot.desactiver()
         break
 
-    emotion = robot.IA.obtenir_emotion(phrase)
+    emotion = robot.IA.donner_emotion(phrase)
     print(phrase, " : ", emotion)
     chemin_image_emotion = robot.fenetre.obtenir_image_emotion(emotion)
     robot.fenetre.afficher_fond()

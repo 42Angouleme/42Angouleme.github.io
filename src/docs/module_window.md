@@ -300,7 +300,7 @@ Pour créer un bouton, il suffit d’appeler la méthode `creer_bouton(longueur:
 
 ## Creer une zone de texte
 
-Pour créer une zone de texte, il suffit d’appeler la méthode `creer_zone_texte(longueur: int, hauteur: int, position_x: int, position_y: int, couleur: Couleur) (fr) -`
+Pour créer une zone de texte, il suffit d’appeler la méthode `creer_zone_de_texte(longueur: int, hauteur: int, position_x: int, position_y: int, couleur: Couleur) (fr) -`
 `create_text_area(width: int, height: int, position_x: int, position_y: int, color: Couleur) (en)`.
 
 !!!Warning
@@ -313,7 +313,7 @@ Pour créer une zone de texte, il suffit d’appeler la méthode `creer_zone_tex
     x = 100
     y = 100
     couleur = Couleur.BLEU
-    zone_texte = robot.fenetre.creer_zone_texte(l, h, x, y, couleur)
+    zone_texte = robot.fenetre.creer_zone_de_texte(l, h, x, y, couleur)
 
     ou alors
 
