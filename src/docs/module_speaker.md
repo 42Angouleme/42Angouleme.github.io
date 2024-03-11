@@ -1,25 +1,25 @@
-# Module Lecteur - Reader
+# Module HautParleur - Speaker
 
-Vous êtes ici dans la documentation du module Lecteur (audio) du robot.
+Vous êtes ici dans la documentation du module HautParleur (audio) du robot.
 
 Ce module permet au robot de lire des phrases avec différentes voix.
 
 !!!Warning
     Avant d’utiliser un module, il faut systématiquement l'initialiser, sans quoi il vous sera impossible d’utiliser ce module et ses méthodes.
 
-!!!Success "Démarrer le module *lecteur*"
+!!!Success "Démarrer le module *speaker*"
     ```python
-    robot.demarrer_module_lecteur()
+    robot.demarrer_module_haut_parleur()
 
     ou alors
 
-    robot.start_reader_module()
+    robot.start_speaker_module()
     ```
 
-À partir de ce moment, les objets lecteur/reader sont initialisés dans le robot.
+À partir de ce moment, les objets haut-parleur / speaker sont initialisés dans le robot.
 
 !!!Note
-    La methode `demarrer_module_lecteur()` (ou `start_reader_module()`) initialise les objets lecteur et reader dans le robot.
+    La methode `demarrer_module_haut_parleur()` (ou `start_speaker_module()`) initialise les objets haut-parleur / speaker dans le robot.
 
 ## Charger une voix
 
@@ -31,11 +31,11 @@ Avant de lire une phrase, il faut charger une voix. Pour cela, il suffit d'utili
 
 !!!Success "charger une voix"
     ```python
-    robot.lecteur.charger_voix("homme")
+    robot.haut_parleur.charger_voix("homme")
 
     ou alors
 
-    robot.reader.load_voice("homme")
+    robot.speaker.load_voice("homme")
     ```
     Après avoir chargé une voix, le robot peut utiliser cette voix pour lire des phrases.
 
@@ -52,11 +52,11 @@ Pour choisir une voix parmi les voix chargées, il suffit d'utiliser la méthode
 
 !!!Success "Choisir une voix"
     ```python
-    robot.lecteur.utiliser_voix("homme")
+    robot.haut_parleur.utiliser_voix("homme")
 
     ou alors
 
-    robot.reader.use_voice("homme")
+    robot.speaker.use_voice("homme")
     ```
 
 Après avoir choisi une voix, le robot utilisera cette voix pour lire des phrases.
@@ -74,11 +74,11 @@ Pour lire une phrase, il suffit d'utiliser la méthode `dire(phrase: str) (fr) -
 
 !!!Success "Lire une phrase"
     ```python
-    robot.lecteur.dire("Bonjour, je suis un robot")
+    robot.haut_parleur.dire("Bonjour, je suis un robot")
 
     ou alors
 
-    robot.reader.say("Hello, I am a robot")"
+    robot.speaker.say("Hello, I am a robot")"
     ```
 
 !!!Warning
@@ -91,14 +91,14 @@ Pour attendre que le robot finisse de lire une phrase, il suffit d'utiliser la p
 !!!Success "Attendre que le robot finisse de lire une phrase"
     ```python
 
-    robot.lecteur.dire("Bonjour, je suis un robot")
-    while robot.lecteur.lecture_en_cours :
+    robot.haut_parleur.dire("Bonjour, je suis un robot")
+    while robot.haut_parleur.lecture_en_cours :
         robot.dort(0.1)
 
     ou alors
 
-    robot.reader.say("Hello, I am a robot")"
-    while robot.reader.is_currently_reading :
+    robot.speaker.say("Hello, I am a robot")"
+    while robot.speaker.is_currently_reading :
         robot.sleep(0.1)
     ```
 
@@ -107,18 +107,18 @@ Pour attendre que le robot finisse de lire une phrase, il suffit d'utiliser la p
 
 ## Enregistrer une phrase dans un fichier audio
 
-Pour enregistrer une phrase dans un fichier audio, il suffit d'utiliser la méthode `parler_dans_fichier(voix: VoiceKey, texte: str, chemin: str) (fr) - speak_in_file(voice: VoiceKey, text: str, path: str) (en)`.
+Pour enregistrer une phrase dans un fichier audio, il suffit d'utiliser la méthode `enregistrer_audio_dans_fichier(voix: VoiceKey, texte: str, chemin: str) (fr) - record_audio_to_file(voice: VoiceKey, text: str, path: str) (en)`.
 
 !!!Warning
     Avant d'enregistrer une phrase dans un fichier audio, il faut charger une voix avec la méthode `charger_voix(voix: VoiceKey) (fr) - load_voice(voice: VoiceKey) (en)`.
 
 !!!Success "Enregistrer une phrase dans un fichier audio"
     ```python
-    robot.lecteur.parler_dans_fichier("homme", "Bonjour, je suis un robot", "chemin/vers/le/fichier/audio")
+    robot.haut_parleur.enregistrer_audio_dans_fichier("homme", "Bonjour, je suis un robot", "chemin/vers/le/fichier/audio")
 
     ou alors
 
-    robot.reader.speak_in_file("homme", "Hello, I am a robot", "path/to/audio/file")
+    robot.speaker.record_audio_to_file("homme", "Hello, I am a robot", "path/to/audio/file")
     ```
 
 Après avoir enregistré une phrase dans un fichier audio, le robot pourra lire le fichier audio avec la méthode `lire_fichier_audio(chemin: str) (fr) - play_audio_file(path: str) (en)`.
@@ -129,11 +129,11 @@ Pour lire un fichier audio, il suffit d'utiliser la méthode `lire_fichier_audio
 
 !!!Success "Lire un fichier audio"
     ```python
-    robot.lecteur.lire_fichier_audio("chemin/vers/le/fichier/audio")
+    robot.haut_parleur.lire_fichier_audio("chemin/vers/le/fichier/audio")
 
     ou alors
 
-    robot.reader.play_audio_file("path/to/audio/file")
+    robot.speaker.play_audio_file("path/to/audio/file")
     ```
 
 !!!Note
@@ -146,23 +146,23 @@ from robot import Robot
 
 robot = Robot()
 
-robot.demarrer_module_lecteur()
+robot.demarrer_module_speaker()
 
-robot.lecteur.charger_voix("homme")
-robot.lecteur.charger_voix("femme")
-robot.lecteur.utiliser_voix("homme")
+robot.haut_parleur.charger_voix("homme")
+robot.haut_parleur.charger_voix("femme")
+robot.haut_parleur.utiliser_voix("homme")
 
-robot.lecteur.dire("Bonjour, je suis un robot")
+robot.haut_parleur.dire("Bonjour, je suis un robot")
 
-while robot.lecteur.lecture_en_cours :
+while robot.haut_parleur.lecture_en_cours :
     robot.dort(0.1)
 
-robot.lecteur.charger_voix("femme")
+robot.haut_parleur.charger_voix("femme")
 
-robot.lecteur.parler_dans_fichier("homme", "Bonjour, je suis un robot", "chemin/vers/le/fichier/audio")
+robot.haut_parleur.enregistrer_audio_dans_fichier("homme", "Bonjour, je suis un robot", "chemin/vers/le/fichier/audio")
 
-while robot.lecteur.lecture_en_cours :
+while robot.haut_parleur.lecture_en_cours :
     robot.dort(0.1)
 
-robot.lecteur.lire_fichier_audio("chemin/vers/le/fichier/audio")
+robot.haut_parleur.lire_fichier_audio("chemin/vers/le/fichier/audio")
 ```

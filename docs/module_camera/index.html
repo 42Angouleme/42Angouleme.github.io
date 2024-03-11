@@ -12,11 +12,11 @@
         <link rel="prev" href="../text_area/">
       
       
-        <link rel="next" href="../module_ai/">
+        <link rel="next" href="../module_user/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
     
     
       
@@ -565,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_ai/" class="md-nav__link">
+      <a href="../module_ai.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -607,11 +607,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_audio/" class="md-nav__link">
+      <a href="../module_speaker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Module Audio - Audio
+    Module HautParleur - Speaker
   </span>
   
 
@@ -992,10 +992,10 @@ Voir la documentation du module <a href="../module_window/">fenêtre</a> pour pl
 <span class="n">robot</span><span class="o">.</span><span class="n">start_camera_module</span><span class="p">()</span>
 </code></pre></div>
 </div>
-<p>À partir de ce moment, l'objet camera est initialisé dans le robot il est donc utilisable.</p>
+<p>À partir de ce moment, l'objet <em>camera</em> est initialisé dans le robot, et est donc utilisable.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>La méthode <code>demarrer_module_camera()</code> initialise l'objet camera dans le robot et c'est pareil pour <code>start_camera_module()</code>.</p>
+<p>La méthode <code>demarrer_module_camera()</code> (ou <code>start_camera_module()</code>) initialise l'objet <em>camera</em> dans le robot.</p>
 </div>
 <h2 id="afficher-la-camera">Afficher la caméra</h2>
 <p>Pour afficher la caméra, il suffit d'utiliser la méthode <code>afficher_camera(position_x: int, position_y: int) (fr) - display_camera(position_x : int, position_y : int) (en)</code>.</p>
@@ -1018,7 +1018,7 @@ Voir la documentation du module <a href="../module_window/">fenêtre</a> pour pl
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>La caméra afficher fait 640 pixels de long et 480 pixels de haut. Le <strong>dernier pixel</strong> a les coordonnées <strong>x = 299 et y = 199</strong>.</p>
+<p>La caméra affichée fait 640 pixels de long et 480 pixels de haut.</p>
 </div>
 <h2 id="prendre-une-photo">Prendre une photo</h2>
 <p>Pour prendre une photo, il suffit d'utiliser la méthode <code>prendre_photo(nom_fichier: str) (fr) - take_picture(file_name : str) (en)</code>.<br />
@@ -1048,7 +1048,7 @@ L'image sera de la même taille que la caméra soit 640 pixels de long et 480 pi
 </div>
 <h2 id="appliquer-un-filtre">Appliquer un filtre</h2>
 <p>Pour appliquer un filtre à une photo, il suffit d'utiliser la méthode <code>appliquer_filtre(chemin_fichier: str, nom_filtre: str) (fr) - apply_filter(file_name : str, filter_name : str) (en)</code>.</p>
-<p>Voir la réference pour la liste complète des <a href="/ref.md#les-filtres">filtres</a></p>
+<p>Voir la réference pour la liste complète des <a href="../ref/#les-filtres">filtres</a></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Le fichier sera écrasé par la photo avec le filtre appliqué.</p>
@@ -1142,10 +1142,10 @@ L'image sera de la même taille que la caméra soit 640 pixels de long et 480 pi
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.tabs"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.tabs"], "search": "../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.7389ff0e.min.js"></script>
       
     
   </body>

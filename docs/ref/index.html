@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
     
     
       
@@ -489,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_ai/" class="md-nav__link">
+      <a href="../module_ai.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -531,11 +531,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_audio/" class="md-nav__link">
+      <a href="../module_speaker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Module Audio - Audio
+    Module HautParleur - Speaker
   </span>
   
 
@@ -692,9 +692,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#module-audio" class="md-nav__link">
+  <a href="#module-hautparleur-speaker" class="md-nav__link">
     <span class="md-ellipsis">
-      Module Audio
+      Module HautParleur - Speaker
     </span>
   </a>
   
@@ -1063,9 +1063,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#module-audio" class="md-nav__link">
+  <a href="#module-hautparleur-speaker" class="md-nav__link">
     <span class="md-ellipsis">
-      Module Audio
+      Module HautParleur - Speaker
     </span>
   </a>
   
@@ -1299,7 +1299,7 @@
 <div class="highlight"><pre><span></span><code><span class="n">obtenir_historique_conversation</span><span class="p">()</span>
 <span class="n">get_current_conversation_history</span><span class="p">()</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">obtenir_emotion</span><span class="p">(</span><span class="n">phrase</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">donner_emotion</span><span class="p">(</span><span class="n">phrase</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
 <span class="n">get_emotion</span><span class="p">(</span><span class="n">sentence</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="module-utilisateur-user">Module Utilisateur - User</h3>
@@ -1330,8 +1330,25 @@
 <div class="highlight"><pre><span></span><code><span class="n">detecter_carte</span><span class="p">(</span><span class="n">seuil_minimal</span> <span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">seuil_arret_recherche</span> <span class="p">:</span> <span class="nb">float</span><span class="p">)</span>
 <span class="n">detect_card</span><span class="p">(</span><span class="n">minimum_threshold</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">search_stop_threshold</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="module-audio">Module Audio</h3>
-<p>Aucune Actuellement</p>
+<h3 id="module-hautparleur-speaker">Module HautParleur - Speaker</h3>
+<div class="highlight"><pre><span></span><code><span class="n">demarrer_module_haut_parleur</span><span class="p">()</span>
+<span class="n">start_speaker_module</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">charger_voix</span><span class="p">(</span><span class="n">voix</span><span class="p">:</span> <span class="n">VoiceKey</span><span class="p">)</span>
+<span class="n">load_voice</span><span class="p">(</span><span class="n">voice</span><span class="p">:</span> <span class="n">VoiceKey</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">utiliser_voix</span><span class="p">(</span><span class="n">voix</span><span class="p">:</span> <span class="n">VoiceKey</span><span class="p">)</span>
+<span class="n">use_voice</span><span class="p">(</span><span class="n">voice</span><span class="p">:</span> <span class="n">VoiceKey</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">dire</span><span class="p">(</span><span class="n">phrase</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
+<span class="n">say</span><span class="p">(</span><span class="n">sentence</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">lecture_en_cours</span><span class="p">()</span>
+<span class="n">is_currently_reading</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">enregistrer_audio_dans_fichier</span><span class="p">(</span><span class="n">voix</span><span class="p">:</span> <span class="n">VoiceKey</span><span class="p">,</span> <span class="n">texte</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">chemin</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
+<span class="n">record_audio_to_file</span><span class="p">(</span><span class="n">voice</span><span class="p">:</span> <span class="n">VoiceKey</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
+</code></pre></div>
 <h2 id="les-boutons">Les boutons</h2>
 <div class="highlight"><pre><span></span><code><span class="n">ajouter_texte</span><span class="p">(</span><span class="n">texte</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">position_x</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">position_y</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">taille</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">couleur</span> <span class="p">:</span> <span class="n">Couleur</span><span class="p">)</span>
 <span class="n">add_text</span><span class="p">(</span><span class="n">text</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">position_x</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">position_y</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">size</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">color</span> <span class="p">:</span> <span class="n">Couleur</span><span class="p">)</span>
@@ -1410,10 +1427,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.tabs"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.tabs"], "search": "../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.7389ff0e.min.js"></script>
       
     
   </body>

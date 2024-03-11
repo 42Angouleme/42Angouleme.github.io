@@ -16,11 +16,11 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
     
     
       
-        <title>Module Audio - Audio - Pybot</title>
+        <title>Module HautParleur - Speaker - Pybot</title>
       
     
     
@@ -79,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#module-hautparleur-speaker" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Module Audio - Audio
+              Module HautParleur - Speaker
             
           </span>
         </div>
@@ -484,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_ai/" class="md-nav__link">
+      <a href="../module_ai.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -532,16 +537,111 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Module HautParleur - Speaker
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Module Audio - Audio
+    Module HautParleur - Speaker
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#charger-une-voix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charger une voix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choisir-une-voix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choisir une voix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lire-une-phrase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lire une phrase
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attendre-que-le-robot-finisse-de-lire-une-phrase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attendre que le robot finisse de lire une phrase
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enregistrer-une-phrase-dans-un-fichier-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enregistrer une phrase dans un fichier audio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lire-un-fichier-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lire un fichier audio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple Complet
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -838,6 +938,79 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#charger-une-voix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charger une voix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choisir-une-voix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choisir une voix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lire-une-phrase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lire une phrase
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attendre-que-le-robot-finisse-de-lire-une-phrase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attendre que le robot finisse de lire une phrase
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enregistrer-une-phrase-dans-un-fichier-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enregistrer une phrase dans un fichier audio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lire-un-fichier-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lire un fichier audio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple Complet
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -852,9 +1025,164 @@
                   
 
 
-  <h1>Module Audio - Audio</h1>
+<h1 id="module-hautparleur-speaker">Module HautParleur - Speaker</h1>
+<p>Vous êtes ici dans la documentation du module HautParleur (audio) du robot.</p>
+<p>Ce module permet au robot de lire des phrases avec différentes voix.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Avant d’utiliser un module, il faut systématiquement l'initialiser, sans quoi il vous sera impossible d’utiliser ce module et ses méthodes.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Démarrer le module <em>speaker</em></p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">demarrer_module_haut_parleur</span><span class="p">()</span>
 
+<span class="n">ou</span> <span class="n">alors</span>
 
+<span class="n">robot</span><span class="o">.</span><span class="n">start_speaker_module</span><span class="p">()</span>
+</code></pre></div>
+</div>
+<p>À partir de ce moment, les objets haut-parleur / speaker sont initialisés dans le robot.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La methode <code>demarrer_module_haut_parleur()</code> (ou <code>start_speaker_module()</code>) initialise les objets haut-parleur / speaker dans le robot.</p>
+</div>
+<h2 id="charger-une-voix">Charger une voix</h2>
+<p>Avant de lire une phrase, il faut charger une voix. Pour cela, il suffit d'utiliser la méthode <code>charger_voix(voix: VoiceKey) (fr) - load_voice(voice: VoiceKey) (en)</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La méthode <code>charger_voix(voix: VoiceKey) (fr) - load_voice(voice: VoiceKey) (en)</code> prend en paramètre une voix de type <code>VoiceKey</code>.
+Les valeurs possibles pour <code>VoiceKey</code> sont: "homme", "femme" et "homme_quebec".</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">charger une voix</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">haut_parleur</span><span class="o">.</span><span class="n">charger_voix</span><span class="p">(</span><span class="s2">&quot;homme&quot;</span><span class="p">)</span>
+
+<span class="n">ou</span> <span class="n">alors</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">speaker</span><span class="o">.</span><span class="n">load_voice</span><span class="p">(</span><span class="s2">&quot;homme&quot;</span><span class="p">)</span>
+</code></pre></div>
+Après avoir chargé une voix, le robot peut utiliser cette voix pour lire des phrases.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La méthode ne doit être appelée qu'une seule fois pour charger une voix.
+Plusieurs voix peuvent être chargées dans le robot.</p>
+</div>
+<h2 id="choisir-une-voix">Choisir une voix</h2>
+<p>Pour choisir une voix parmi les voix chargées, il suffit d'utiliser la méthode <code>utiliser_voix(voix: VoiceKey) (fr) - use_voice(voice: VoiceKey) (en)</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Avant d'utiliser une voix, il faut la charger avec la méthode <code>charger_voix(voix: VoiceKey) (fr) - load_voice(voice: VoiceKey) (en)</code>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Choisir une voix</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">haut_parleur</span><span class="o">.</span><span class="n">utiliser_voix</span><span class="p">(</span><span class="s2">&quot;homme&quot;</span><span class="p">)</span>
+
+<span class="n">ou</span> <span class="n">alors</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">speaker</span><span class="o">.</span><span class="n">use_voice</span><span class="p">(</span><span class="s2">&quot;homme&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<p>Après avoir choisi une voix, le robot utilisera cette voix pour lire des phrases.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La méthode ne doit être appelée qu'une seule fois pour choisir une voix.<br />
+Pour changer de voix, il suffit d'utiliser la méthode <code>utiliser_voix(voix: VoiceKey) (fr) - use_voice(voice: VoiceKey) (en)</code> avec une autre voix chargée au préalable.</p>
+</div>
+<h2 id="lire-une-phrase">Lire une phrase</h2>
+<p>Pour lire une phrase, il suffit d'utiliser la méthode <code>dire(phrase: str) (fr) - say(sentence: str) (en)</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Avant de lire une phrase, il faut charger une voix avec la méthode <code>charger_voix(voix: VoiceKey) (fr) - load_voice(voice: VoiceKey) (en)</code> et choisir une voix avec la méthode <code>utiliser_voix(voix: VoiceKey) (fr) - use_voice(voice: VoiceKey) (en)</code>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Lire une phrase</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">haut_parleur</span><span class="o">.</span><span class="n">dire</span><span class="p">(</span><span class="s2">&quot;Bonjour, je suis un robot&quot;</span><span class="p">)</span>
+
+<span class="n">ou</span> <span class="n">alors</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">speaker</span><span class="o">.</span><span class="n">say</span><span class="p">(</span><span class="s2">&quot;Hello, I am a robot&quot;</span><span class="p">)</span><span class="s2">&quot;</span>
+</code></pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Il faut attendre que le robot finisse de lire une phrase avant de lui demander de lire une autre phrase.</p>
+</div>
+<h2 id="attendre-que-le-robot-finisse-de-lire-une-phrase">Attendre que le robot finisse de lire une phrase</h2>
+<p>Pour attendre que le robot finisse de lire une phrase, il suffit d'utiliser la propriété <code>lecture_en_cours</code> (fr) - <code>is_currently_reading</code> (en).</p>
+<div class="admonition success">
+<p class="admonition-title">Attendre que le robot finisse de lire une phrase</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">haut_parleur</span><span class="o">.</span><span class="n">dire</span><span class="p">(</span><span class="s2">&quot;Bonjour, je suis un robot&quot;</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">robot</span><span class="o">.</span><span class="n">haut_parleur</span><span class="o">.</span><span class="n">lecture_en_cours</span> <span class="p">:</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">dort</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+
+<span class="n">ou</span> <span class="n">alors</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">speaker</span><span class="o">.</span><span class="n">say</span><span class="p">(</span><span class="s2">&quot;Hello, I am a robot&quot;</span><span class="p">)</span><span class="s2">&quot;</span>
+<span class="k">while</span> <span class="n">robot</span><span class="o">.</span><span class="n">speaker</span><span class="o">.</span><span class="n">is_currently_reading</span> <span class="p">:</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La propriété <code>lecture_en_cours</code> (fr) - <code>is_currently_reading</code> (en) est un booléen qui est <code>True</code> si le robot est en train de lire une phrase et <code>False</code> sinon.</p>
+</div>
+<h2 id="enregistrer-une-phrase-dans-un-fichier-audio">Enregistrer une phrase dans un fichier audio</h2>
+<p>Pour enregistrer une phrase dans un fichier audio, il suffit d'utiliser la méthode <code>enregistrer_audio_dans_fichier(voix: VoiceKey, texte: str, chemin: str) (fr) - record_audio_to_file(voice: VoiceKey, text: str, path: str) (en)</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Avant d'enregistrer une phrase dans un fichier audio, il faut charger une voix avec la méthode <code>charger_voix(voix: VoiceKey) (fr) - load_voice(voice: VoiceKey) (en)</code>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Enregistrer une phrase dans un fichier audio</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">haut_parleur</span><span class="o">.</span><span class="n">enregistrer_audio_dans_fichier</span><span class="p">(</span><span class="s2">&quot;homme&quot;</span><span class="p">,</span> <span class="s2">&quot;Bonjour, je suis un robot&quot;</span><span class="p">,</span> <span class="s2">&quot;chemin/vers/le/fichier/audio&quot;</span><span class="p">)</span>
+
+<span class="n">ou</span> <span class="n">alors</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">speaker</span><span class="o">.</span><span class="n">record_audio_to_file</span><span class="p">(</span><span class="s2">&quot;homme&quot;</span><span class="p">,</span> <span class="s2">&quot;Hello, I am a robot&quot;</span><span class="p">,</span> <span class="s2">&quot;path/to/audio/file&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<p>Après avoir enregistré une phrase dans un fichier audio, le robot pourra lire le fichier audio avec la méthode <code>lire_fichier_audio(chemin: str) (fr) - play_audio_file(path: str) (en)</code>.</p>
+<h2 id="lire-un-fichier-audio">Lire un fichier audio</h2>
+<p>Pour lire un fichier audio, il suffit d'utiliser la méthode <code>lire_fichier_audio(chemin: str) (fr) - play_audio_file(path: str) (en)</code>.</p>
+<div class="admonition success">
+<p class="admonition-title">Lire un fichier audio</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">haut_parleur</span><span class="o">.</span><span class="n">lire_fichier_audio</span><span class="p">(</span><span class="s2">&quot;chemin/vers/le/fichier/audio&quot;</span><span class="p">)</span>
+
+<span class="n">ou</span> <span class="n">alors</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">speaker</span><span class="o">.</span><span class="n">play_audio_file</span><span class="p">(</span><span class="s2">&quot;path/to/audio/file&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Il faut attendre que le robot finisse de lire un fichier audio avant de lui demander de lire un autre fichier audio.</p>
+</div>
+<h2 id="exemple-complet">Exemple Complet</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">robot</span> <span class="kn">import</span> <span class="n">Robot</span>
+
+<span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">demarrer_module_speaker</span><span class="p">()</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">haut_parleur</span><span class="o">.</span><span class="n">charger_voix</span><span class="p">(</span><span class="s2">&quot;homme&quot;</span><span class="p">)</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">haut_parleur</span><span class="o">.</span><span class="n">charger_voix</span><span class="p">(</span><span class="s2">&quot;femme&quot;</span><span class="p">)</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">haut_parleur</span><span class="o">.</span><span class="n">utiliser_voix</span><span class="p">(</span><span class="s2">&quot;homme&quot;</span><span class="p">)</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">haut_parleur</span><span class="o">.</span><span class="n">dire</span><span class="p">(</span><span class="s2">&quot;Bonjour, je suis un robot&quot;</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="n">robot</span><span class="o">.</span><span class="n">haut_parleur</span><span class="o">.</span><span class="n">lecture_en_cours</span> <span class="p">:</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">dort</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">haut_parleur</span><span class="o">.</span><span class="n">charger_voix</span><span class="p">(</span><span class="s2">&quot;femme&quot;</span><span class="p">)</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">haut_parleur</span><span class="o">.</span><span class="n">enregistrer_audio_dans_fichier</span><span class="p">(</span><span class="s2">&quot;homme&quot;</span><span class="p">,</span> <span class="s2">&quot;Bonjour, je suis un robot&quot;</span><span class="p">,</span> <span class="s2">&quot;chemin/vers/le/fichier/audio&quot;</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="n">robot</span><span class="o">.</span><span class="n">haut_parleur</span><span class="o">.</span><span class="n">lecture_en_cours</span> <span class="p">:</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">dort</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">haut_parleur</span><span class="o">.</span><span class="n">lire_fichier_audio</span><span class="p">(</span><span class="s2">&quot;chemin/vers/le/fichier/audio&quot;</span><span class="p">)</span>
+</code></pre></div>
 
 
 
@@ -901,10 +1229,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.tabs"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.tabs"], "search": "../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.7389ff0e.min.js"></script>
       
     
   </body>

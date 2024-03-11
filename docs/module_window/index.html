@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
     
     
       
@@ -673,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_ai/" class="md-nav__link">
+      <a href="../module_ai.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -715,11 +715,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_audio/" class="md-nav__link">
+      <a href="../module_speaker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Module Audio - Audio
+    Module HautParleur - Speaker
   </span>
   
 
@@ -1465,7 +1465,7 @@ On utilise la méthode <code>actualiser_affichage() (fr) - refresh_display() (en
 Regarder la documentation sur les <a href="../module_robot/#les-attributs-du-robot">attributs du robot</a> pour plus d'informations.</p>
 </div>
 <h2 id="creer-une-zone-de-texte">Creer une zone de texte</h2>
-<p>Pour créer une zone de texte, il suffit d’appeler la méthode <code>creer_zone_texte(longueur: int, hauteur: int, position_x: int, position_y: int, couleur: Couleur) (fr) -</code>
+<p>Pour créer une zone de texte, il suffit d’appeler la méthode <code>creer_zone_de_texte(longueur: int, hauteur: int, position_x: int, position_y: int, couleur: Couleur) (fr) -</code>
 <code>create_text_area(width: int, height: int, position_x: int, position_y: int, color: Couleur) (en)</code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1478,7 +1478,7 @@ Regarder la documentation sur les <a href="../module_robot/#les-attributs-du-rob
 <span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">couleur</span> <span class="o">=</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLEU</span>
-<span class="n">zone_texte</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">creer_zone_texte</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">couleur</span><span class="p">)</span>
+<span class="n">zone_texte</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">creer_zone_de_texte</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">couleur</span><span class="p">)</span>
 
 <span class="n">ou</span> <span class="n">alors</span>
 
@@ -1520,7 +1520,7 @@ Pour afficher une carte détectée, il suffit d’appeler la méthode <code>affi
 </div>
 <p>Voici où trouver la documentation sur la méthode <a href="../module_user/#detecter-une-carte"><code>detecter_carte() (fr) - detect_card() (en)</code></a>.</p>
 <h2 id="obtenir-limage-de-lemotion">Obtenir l'image de l'émotion</h2>
-<p>Le module <a href="../module_ai/#les-émotions-du-robot">IA - AI</a> permet de donner des "émotions" au robot.<br />
+<p>Le module <a href="module_ai.md#les-émotions-du-robot">IA - AI</a> permet de donner des "émotions" au robot.<br />
 Pour afficher l'image de l'émotion, il faut appeler la méthode <code>obtenir_image_emotion(emotion : str) (fr) - get_emotion_image(emotion : str) (en)</code>.</p>
 <p>Et ensuite, afficher l'image avec la méthode <a href="#afficher-une-image"><code>afficher_image(chemin : str, position_x: int, position_y: int) (fr) - display_image(path : str, position_x: int, position_y: int) (en)</code></a></p>
 <div class="admonition success">
@@ -1550,7 +1550,7 @@ Mais essayez de garder la meme taille entre toute les images pour un meilleur re
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Voir la documentation sur les émotions pour plus d'informations. <a href="../module_ai/#les-émotions-du-robot">IA - AI</a></p>
+<p>Voir la documentation sur les émotions pour plus d'informations. <a href="module_ai.md#les-émotions-du-robot">IA - AI</a></p>
 </div>
 
 
@@ -1598,10 +1598,10 @@ Mais essayez de garder la meme taille entre toute les images pour un meilleur re
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.tabs"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.tabs"], "search": "../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.7389ff0e.min.js"></script>
       
     
   </body>

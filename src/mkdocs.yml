@@ -1,34 +1,34 @@
 site_name: Pybot
 nav:
   - La documentation de la bibliothèque:
-    - Introduction: index.md
-    - Informations générales sur le Python: general.md
-    - Module Robot: module_robot.md
-    - Module Fenêtre - Window : module_window.md
-    - Les Boutons - Buttons : button.md
-    - Les Zones de texte - Text_area : text_area.md
-    - Module Caméra - Camera : module_camera.md
-    - Module IA - AI : module_ai.md
-    - Module Utilisateur - User : module_user.md
-    - Module Lecteur - Reader : module_reader.md
-    - Utiliser l'administration web: admin.md
-    - Référence complète: ref.md
+      - Introduction: index.md
+      - Informations générales sur le Python: general.md
+      - Module Robot: module_robot.md
+      - Module Fenêtre - Window: module_window.md
+      - Les Boutons - Buttons: button.md
+      - Les Zones de texte - Text_area: text_area.md
+      - Module Caméra - Camera: module_camera.md
+      - Module IA - AI: module_ai.md
+      - Module Utilisateur - User: module_user.md
+      - Module HautParleur - Speaker: module_speaker.md
+      - Utiliser l'administration web: admin.md
+      - Référence complète: ref.md
   - Utiliser la bibliothèque:
-    - Apprendre le Python: python.md
-    - Installer et utiliser Pybot: config.md
-    - Configurer le raspberry pi: rpi.md
+      - Apprendre le Python: python.md
+      - Installer et utiliser Pybot: config.md
+      - Configurer le raspberry pi: rpi.md
   - Développer la bibliothèque:
-    - Contribuer au projet: contribute.md
-    - Progression du projet: roadmap.md
-    - Mettre à jour la documentation: doc.md
+      - Contribuer au projet: contribute.md
+      - Progression du projet: roadmap.md
+      - Mettre à jour la documentation: doc.md
 
-theme: 
+theme:
   icon:
     logo: material/robot-love-outline
     favicon: images/favicon.png
     admonition:
       note: material/robot-love-outline
-  name: material 
+  name: material
   language: fr
   palette:
     - media: "(prefers-color-scheme: light)"
@@ -58,4 +58,3 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-  

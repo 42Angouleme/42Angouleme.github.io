@@ -334,9 +334,37 @@ detecter_carte(seuil_minimal : float, seuil_arret_recherche : float)
 detect_card(minimum_threshold: float, search_stop_threshold: float)
 ```
 
-### Module Audio
+### Module HautParleur - Speaker
 
-Aucune Actuellement
+```python
+demarrer_module_haut_parleur()
+start_speaker_module()
+```
+
+```python
+charger_voix(voix: VoiceKey)
+load_voice(voice: VoiceKey)
+```
+
+```python
+utiliser_voix(voix: VoiceKey)
+use_voice(voice: VoiceKey)
+```
+
+```python
+dire(phrase: str)
+say(sentence: str)
+```
+
+```python
+lecture_en_cours()
+is_currently_reading()
+```
+
+```python
+enregistrer_audio_dans_fichier(voix: VoiceKey, texte: str, chemin: str)
+record_audio_to_file(voice: VoiceKey, text: str, path: str)
+```
 
 ## Les boutons
 
