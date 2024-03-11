@@ -95,13 +95,13 @@ Comme dit précédemment si on ne donne pas d'historique de conversation au robo
 #### Se souvenir
 
 !!!Warning
-    Avant cette etape, il faut avoir recuperer l'historique de conversation de l'utilisateur.  
-    Voir la documentation du module [utilisateur](module_user.md#historique-de-conversation) pour voir comment recuperer l'historique de conversation.
+    Avant cette étape, il faut avoir récupéré l'historique de conversation de l'utilisateur.  
+    Note : voir la documentation du module [utilisateur](module_user.md#historique-de-conversation) pour récupérer l'historique de conversation.
 
-Pour que le robot se souvienne des echanges qu'il a eu avec l'utilisateur, il faut charger un historique de conversation.  
+Pour que le robot se souvienne des échanges qu'il a eu avec l'utilisateur, il faut charger un historique de conversation.  
 On peut charger l'historique dans le robot avec la méthode `charger_historique_conversation(historique_de_conversation : str) (fr) - load_conversation_history(conversation_history : str) (en)`.  
 
-Ici, vous donnez donc au robot la capacité de se souvenir des interactions qu'il a eu avec l'utilisateur, ainsi il pourra reprendre la discussion là où elle s'était arrêtée la dernière fois.
+Ici, vous donnez donc au robot la capacité de se souvenir des interactions qu'il a eues avec l'utilisateur, ainsi il pourra reprendre la discussion là où elle s'était arrêtée la dernière fois.
 
 !!!Success "Charger un historique de conversation"
     ```python
@@ -125,7 +125,7 @@ Ici, vous donnez donc au robot la capacité de se souvenir des interactions qu'i
 Si vous voulez changer de discussion ou bien effacer l'historique de la conversation vous pouvez utilisez la méthode `effacer_historique_conversation() (fr) - clear_conversation_history() (en)`.
 
 !!!Note
-    Pensez a effacer l'historique quand l'utilisateur se deconnecte.
+    Pensez à effacer l'historique quand l'utilisateur se déconnecte.
 
 !!!Success "Supprimer l'historique de conversation"
     ```python
@@ -136,10 +136,10 @@ Si vous voulez changer de discussion ou bien effacer l'historique de la conversa
     robot.AI.clear_conversation_history()
     ```
 
-A partir de ce moment là le robot ne se souviendra plus de la discussion avec l'utilisateur.
+A partir de ce moment le robot oubliera tout des échanges précédents avec l'utilisateur.
 
 !!!Warning
-    Pensez à recuperer et sauvegarder l'historique avant de le supprimer
+    Pensez à récupérer et sauvegarder l'historique avant de le supprimer
 
 #### Récupérer la mémoire du robot
 
@@ -180,20 +180,20 @@ while True:
     L'appel à la fonction `input()` devra etre remplacé par la méthode permettant de récupérer les questions posées par l'utilisateur.  
     On pourra le remplacer par une zone de texte dans la fenêtre.  
 
-    De meme le print devra etre remplacé par la méthode permettant d'afficher les réponses du robot.  
-    On pourra le remplacer par un appel à la méthode afficher_texte() de la fenêtre ou autre.
+    De même le print devra être remplacé par la méthode permettant d'afficher les réponses du robot.  
+    On pourra le remplacer par exemple via un appel à la méthode afficher_texte() du module *Fenetre*.
 
 ## Les émotions du robot
 
 Le robot peut avoir des émotions et des réactions.  
-Pour cela il faut utiliser la méthode `obtenir_emotion(phrase : str) (fr) - get_emotion(sentence : str) (en)`.  
-Cette méthode prend en paramètre une phrase (chaîne de caractère) et renvoit l'émotion que le robot exprime en fonction de celle-ci.  
-Si aucune émotion enregistrée ne correspond a la phrase, il reste Neutre.  
+Pour lui donner des émotions, il faut utiliser la méthode `donner_emotion(phrase : str) (fr) - get_emotion(sentence : str) (en)`.
+Cette méthode prend en paramètre une phrase (chaîne de caractère) et renvoie l'émotion que le robot exprime en fonction de celle-ci.  
+Si aucune émotion enregistrée ne correspond a la phrase, il reste *Neutre*.  
 
 !!!Success "Obtenir l'émotion du robot"
     ```python
     phrase = "Je suis content"
-    emotion = robot.IA.obtenir_emotion(phrase)
+    emotion = robot.IA.donner_emotion(phrase)
 
     ou alors
 
@@ -273,7 +273,7 @@ while i < 15 :
         robot.desactiver()
         break
 
-    emotion = robot.IA.obtenir_emotion(phrase)
+    emotion = robot.IA.donner_emotion(phrase)
     print(phrase, " : ", emotion)
     chemin_image_emotion = robot.fenetre.obtenir_image_emotion(emotion)
     robot.fenetre.afficher_fond()

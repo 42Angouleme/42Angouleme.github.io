@@ -1,13 +1,13 @@
 # Module Lecteur - Reader
 
-Vous êtes ici dans la documentation du module Lecteur du robot.
+Vous êtes ici dans la documentation du module Lecteur (audio) du robot.
 
 Ce module permet au robot de lire des phrases avec différentes voix.
 
 !!!Warning
-    Avant d’utiliser un module, il faudra toujours le lancer sinon il vous sera impossible d’utiliser le module et les méthodes lier à celui-ci.
+    Avant d’utiliser un module, il faut systématiquement l'initialiser, sans quoi il vous sera impossible d’utiliser ce module et ses méthodes.
 
-!!!Success "Demmarer le module fenetre"
+!!!Success "Démarrer le module *lecteur*"
     ```python
     robot.demarrer_module_lecteur()
 
@@ -16,20 +16,20 @@ Ce module permet au robot de lire des phrases avec différentes voix.
     robot.start_reader_module()
     ```
 
-À partir de ce moment, les objets lecteur et reader sont initialisés dans le robot.
+À partir de ce moment, les objets lecteur/reader sont initialisés dans le robot.
 
 !!!Note
-    La methode `demarrer_module_lecteur()` initialise les objets lecteur et reader dans le robot et c'est pareil pour `start_reader_module()`.
+    La methode `demarrer_module_lecteur()` (ou `start_reader_module()`) initialise les objets lecteur et reader dans le robot.
 
 ## Charger une voix
 
 Avant de lire une phrase, il faut charger une voix. Pour cela, il suffit d'utiliser la méthode `charger_voix(voix: VoiceKey) (fr) - load_voice(voice: VoiceKey) (en)`.
 
 !!!Note
-    La méthode `charger_voix(voix: VoiceKey) (fr) - load_voice(voice: VoiceKey) (en)` prend en paramètre une voix de type `VoiceKey`.  
+    La méthode `charger_voix(voix: VoiceKey) (fr) - load_voice(voice: VoiceKey) (en)` prend en paramètre une voix de type `VoiceKey`.
     Les valeurs possibles pour `VoiceKey` sont: "homme", "femme" et "homme_quebec".
 
-!!!Success "Charger une voix"
+!!!Success "charger une voix"
     ```python
     robot.lecteur.charger_voix("homme")
 
@@ -40,15 +40,15 @@ Avant de lire une phrase, il faut charger une voix. Pour cela, il suffit d'utili
     Après avoir chargé une voix, le robot peut utiliser cette voix pour lire des phrases.
 
 !!!Note
-    La méthode ne doit être appelée qu'une seule fois pour charger une voix.  
-    On peut charger plusieurs voix dans le robot.
+    La méthode ne doit être appelée qu'une seule fois pour charger une voix.
+    Plusieurs voix peuvent être chargées dans le robot.
 
 ## Choisir une voix
 
 Pour choisir une voix parmi les voix chargées, il suffit d'utiliser la méthode `utiliser_voix(voix: VoiceKey) (fr) - use_voice(voice: VoiceKey) (en)`.
 
 !!!Warning
-    Avaant d'utiliser une voix, il faut la charger avec la méthode `charger_voix(voix: VoiceKey) (fr) - load_voice(voice: VoiceKey) (en)`.
+    Avant d'utiliser une voix, il faut la charger avec la méthode `charger_voix(voix: VoiceKey) (fr) - load_voice(voice: VoiceKey) (en)`.
 
 !!!Success "Choisir une voix"
     ```python
@@ -86,7 +86,7 @@ Pour lire une phrase, il suffit d'utiliser la méthode `dire(phrase: str) (fr) -
 
 ## Attendre que le robot finisse de lire une phrase
 
-Pour attendre que le robot finisse de lire une phrase, il suffit d'utiliser la propriété `lecture_en_cours` (fr) - `currently_reading` (en).
+Pour attendre que le robot finisse de lire une phrase, il suffit d'utiliser la propriété `lecture_en_cours` (fr) - `is_currently_reading` (en).
 
 !!!Success "Attendre que le robot finisse de lire une phrase"
     ```python
@@ -98,12 +98,12 @@ Pour attendre que le robot finisse de lire une phrase, il suffit d'utiliser la p
     ou alors
 
     robot.reader.say("Hello, I am a robot")"
-    while robot.reader.currently_reading :
+    while robot.reader.is_currently_reading :
         robot.sleep(0.1)
     ```
 
 !!!Note
-    La propriété `lecture_en_cours` (fr) - `currently_reading` (en) est un booléen qui est `True` si le robot est en train de lire une phrase et `False` sinon.
+    La propriété `lecture_en_cours` (fr) - `is_currently_reading` (en) est un booléen qui est `True` si le robot est en train de lire une phrase et `False` sinon.
 
 ## Enregistrer une phrase dans un fichier audio
 

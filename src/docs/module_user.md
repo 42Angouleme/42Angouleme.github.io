@@ -247,16 +247,16 @@ Pour cela, vous pouvez utiliser la méthode `sauvegarder_historique_conversation
     ```
 
 !!!Note
-    Un utilisateur doit etre connecté pour pouvoir sauvegarder un historique de conversation.
+    Un utilisateur doit être connecté pour pouvoir sauvegarder un historique de conversation.
 
 !!!Warning
     L'ancien historique de conversation sera ecrasé par le nouveau.
 
-### Recuperer l'historique de conversation
+### Récupérer l'historique de conversation
 
-Pour recuperer l'historique de conversation, vous pouvez utiliser la méthode `obtenir_historique_conversation_utilisateur() (fr) - get_user_conversation_history() (en)`.
+Pour récupérer l'historique de conversation, vous pouvez utiliser la méthode `obtenir_historique_conversation_utilisateur() (fr) - get_user_conversation_history() (en)`.
 
-!!!Success "Recuperer l'historique de conversation"
+!!!Success "Récupérer l'historique de conversation"
     ```python
     historique = robot.utilisateur.obtenir_historique_conversation_utilisateur()
     robot.IA.charger_historique_conversation(historique)

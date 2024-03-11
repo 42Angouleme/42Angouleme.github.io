@@ -20,10 +20,10 @@ Ce module permet de prendre des photos, d’y appliquer des filtres, reconnaissa
     robot.start_camera_module()
     ```
 
-À partir de ce moment, l'objet camera est initialisé dans le robot il est donc utilisable.
+À partir de ce moment, l'objet *camera* est initialisé dans le robot, et est donc utilisable.
 
 !!!Note
-    La méthode `demarrer_module_camera()` initialise l'objet camera dans le robot et c'est pareil pour `start_camera_module()`.
+    La méthode `demarrer_module_camera()` (ou `start_camera_module()`) initialise l'objet *camera* dans le robot.
 
 ## Afficher la caméra
 
@@ -47,7 +47,7 @@ Pour afficher la caméra, il suffit d'utiliser la méthode `afficher_camera(posi
     ```
 
 !!!Note
-    La caméra afficher fait 640 pixels de long et 480 pixels de haut.
+    La caméra affichée fait 640 pixels de long et 480 pixels de haut.
 
 ## Prendre une photo
 
