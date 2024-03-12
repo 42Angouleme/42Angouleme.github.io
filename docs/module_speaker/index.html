@@ -489,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_ai.md" class="md-nav__link">
+      <a href="../module_ai/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1034,23 +1034,23 @@
 </div>
 <div class="admonition success">
 <p class="admonition-title">Démarrer le module <em>speaker</em></p>
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">demarrer_module_haut_parleur</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">initialiser_module_haut_parleur</span><span class="p">()</span>
 
 <span class="n">ou</span> <span class="n">alors</span>
 
-<span class="n">robot</span><span class="o">.</span><span class="n">start_speaker_module</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">init_speaker_module</span><span class="p">()</span>
 </code></pre></div>
 </div>
 <p>À partir de ce moment, les objets haut-parleur / speaker sont initialisés dans le robot.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>La methode <code>demarrer_module_haut_parleur()</code> (ou <code>start_speaker_module()</code>) initialise les objets haut-parleur / speaker dans le robot.</p>
+<p>La methode <code>initialiser_module_haut_parleur()</code> (ou <code>init_speaker_module()</code>) initialise les objets haut-parleur / speaker dans le robot.</p>
 </div>
 <h2 id="charger-une-voix">Charger une voix</h2>
-<p>Avant de lire une phrase, il faut charger une voix. Pour cela, il suffit d'utiliser la méthode <code>charger_voix(voix: VoiceKey) (fr) - load_voice(voice: VoiceKey) (en)</code>.</p>
+<p>Avant de lire une phrase, il faut charger une voix. Pour cela, il suffit d'utiliser la méthode <code>charger_voix(voix: VoiceKey)</code> (fr) - <code>load_voice(voice: VoiceKey)</code> (en).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>La méthode <code>charger_voix(voix: VoiceKey) (fr) - load_voice(voice: VoiceKey) (en)</code> prend en paramètre une voix de type <code>VoiceKey</code>.
+<p>La méthode <code>charger_voix(voix: VoiceKey)</code> (fr) - <code>load_voice(voice: VoiceKey)</code> (en) prend en paramètre une voix de type <code>VoiceKey</code>.
 Les valeurs possibles pour <code>VoiceKey</code> sont: "homme", "femme" et "homme_quebec".</p>
 </div>
 <div class="admonition success">
@@ -1069,10 +1069,10 @@ Après avoir chargé une voix, le robot peut utiliser cette voix pour lire des p
 Plusieurs voix peuvent être chargées dans le robot.</p>
 </div>
 <h2 id="choisir-une-voix">Choisir une voix</h2>
-<p>Pour choisir une voix parmi les voix chargées, il suffit d'utiliser la méthode <code>utiliser_voix(voix: VoiceKey) (fr) - use_voice(voice: VoiceKey) (en)</code>.</p>
+<p>Pour choisir une voix parmi les voix chargées, il suffit d'utiliser la méthode <code>utiliser_voix(voix: VoiceKey)</code> (fr) - <code>use_voice(voice: VoiceKey)</code> (en).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Avant d'utiliser une voix, il faut la charger avec la méthode <code>charger_voix(voix: VoiceKey) (fr) - load_voice(voice: VoiceKey) (en)</code>.</p>
+<p>Avant d'utiliser une voix, il faut la charger avec la méthode <code>charger_voix(voix: VoiceKey)</code> (fr) - <code>load_voice(voice: VoiceKey)</code> (en).</p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Choisir une voix</p>
@@ -1087,13 +1087,13 @@ Plusieurs voix peuvent être chargées dans le robot.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>La méthode ne doit être appelée qu'une seule fois pour choisir une voix.<br />
-Pour changer de voix, il suffit d'utiliser la méthode <code>utiliser_voix(voix: VoiceKey) (fr) - use_voice(voice: VoiceKey) (en)</code> avec une autre voix chargée au préalable.</p>
+Pour changer de voix, il suffit d'utiliser la méthode <code>utiliser_voix(voix: VoiceKey)</code> (fr) - <code>use_voice(voice: VoiceKey)</code> (en) avec une autre voix chargée au préalable.</p>
 </div>
 <h2 id="lire-une-phrase">Lire une phrase</h2>
-<p>Pour lire une phrase, il suffit d'utiliser la méthode <code>dire(phrase: str) (fr) - say(sentence: str) (en)</code>.</p>
+<p>Pour lire une phrase, il suffit d'utiliser la méthode <code>dire(phrase: str)</code> (fr) - <code>say(sentence: str)</code> (en).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Avant de lire une phrase, il faut charger une voix avec la méthode <code>charger_voix(voix: VoiceKey) (fr) - load_voice(voice: VoiceKey) (en)</code> et choisir une voix avec la méthode <code>utiliser_voix(voix: VoiceKey) (fr) - use_voice(voice: VoiceKey) (en)</code>.</p>
+<p>Avant de lire une phrase, il faut charger une voix avec la méthode <code>charger_voix(voix: VoiceKey)</code> (fr) - <code>load_voice(voice: VoiceKey)</code> (en) et choisir une voix avec la méthode <code>utiliser_voix(voix: VoiceKey)</code> (fr) - <code>use_voice(voice: VoiceKey)</code> (en).</p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Lire une phrase</p>
@@ -1128,10 +1128,10 @@ Pour changer de voix, il suffit d'utiliser la méthode <code>utiliser_voix(voix:
 <p>La propriété <code>lecture_en_cours</code> (fr) - <code>is_currently_reading</code> (en) est un booléen qui est <code>True</code> si le robot est en train de lire une phrase et <code>False</code> sinon.</p>
 </div>
 <h2 id="enregistrer-une-phrase-dans-un-fichier-audio">Enregistrer une phrase dans un fichier audio</h2>
-<p>Pour enregistrer une phrase dans un fichier audio, il suffit d'utiliser la méthode <code>enregistrer_audio_dans_fichier(voix: VoiceKey, texte: str, chemin: str) (fr) - record_audio_to_file(voice: VoiceKey, text: str, path: str) (en)</code>.</p>
+<p>Pour enregistrer une phrase dans un fichier audio, il suffit d'utiliser la méthode <code>enregistrer_audio_dans_fichier(voix: VoiceKey, texte: str, chemin: str)</code> (fr) - <code>record_audio_to_file(voice: VoiceKey, text: str, path: str)</code> (en).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Avant d'enregistrer une phrase dans un fichier audio, il faut charger une voix avec la méthode <code>charger_voix(voix: VoiceKey) (fr) - load_voice(voice: VoiceKey) (en)</code>.</p>
+<p>Avant d'enregistrer une phrase dans un fichier audio, il faut charger une voix avec la méthode <code>charger_voix(voix: VoiceKey)</code> (fr) - <code>load_voice(voice: VoiceKey)</code> (en).</p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Enregistrer une phrase dans un fichier audio</p>
@@ -1142,9 +1142,9 @@ Pour changer de voix, il suffit d'utiliser la méthode <code>utiliser_voix(voix:
 <span class="n">robot</span><span class="o">.</span><span class="n">speaker</span><span class="o">.</span><span class="n">record_audio_to_file</span><span class="p">(</span><span class="s2">&quot;homme&quot;</span><span class="p">,</span> <span class="s2">&quot;Hello, I am a robot&quot;</span><span class="p">,</span> <span class="s2">&quot;path/to/audio/file&quot;</span><span class="p">)</span>
 </code></pre></div>
 </div>
-<p>Après avoir enregistré une phrase dans un fichier audio, le robot pourra lire le fichier audio avec la méthode <code>lire_fichier_audio(chemin: str) (fr) - play_audio_file(path: str) (en)</code>.</p>
+<p>Après avoir enregistré une phrase dans un fichier audio, le robot pourra lire le fichier audio avec la méthode <code>lire_fichier_audio(chemin: str)</code> (fr) - <code>play_audio_file(path: str)</code> (en).</p>
 <h2 id="lire-un-fichier-audio">Lire un fichier audio</h2>
-<p>Pour lire un fichier audio, il suffit d'utiliser la méthode <code>lire_fichier_audio(chemin: str) (fr) - play_audio_file(path: str) (en)</code>.</p>
+<p>Pour lire un fichier audio, il suffit d'utiliser la méthode <code>lire_fichier_audio(chemin: str)</code> (fr) - <code>play_audio_file(path: str)</code> (en).</p>
 <div class="admonition success">
 <p class="admonition-title">Lire un fichier audio</p>
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">haut_parleur</span><span class="o">.</span><span class="n">lire_fichier_audio</span><span class="p">(</span><span class="s2">&quot;chemin/vers/le/fichier/audio&quot;</span><span class="p">)</span>
@@ -1163,7 +1163,7 @@ Pour changer de voix, il suffit d'utiliser la méthode <code>utiliser_voix(voix:
 
 <span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
 
-<span class="n">robot</span><span class="o">.</span><span class="n">demarrer_module_speaker</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">initialiser_module_speaker</span><span class="p">()</span>
 
 <span class="n">robot</span><span class="o">.</span><span class="n">haut_parleur</span><span class="o">.</span><span class="n">charger_voix</span><span class="p">(</span><span class="s2">&quot;homme&quot;</span><span class="p">)</span>
 <span class="n">robot</span><span class="o">.</span><span class="n">haut_parleur</span><span class="o">.</span><span class="n">charger_voix</span><span class="p">(</span><span class="s2">&quot;femme&quot;</span><span class="p">)</span>

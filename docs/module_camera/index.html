@@ -12,7 +12,7 @@
         <link rel="prev" href="../text_area/">
       
       
-        <link rel="next" href="../module_user/">
+        <link rel="next" href="../module_ai/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -565,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_ai.md" class="md-nav__link">
+      <a href="../module_ai/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -980,25 +980,25 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Il faut avoir demarrer le module fenêtre et l'avoir ouverte pour pouvoir utliser la méthode <code>demarrer_module_camera</code> ou <code>start_camera_module</code>.<br />
+<p>Il faut avoir demarrer le module fenêtre et l'avoir ouverte pour pouvoir utliser la méthode <code>initialiser_module_camera</code> ou <code>init_camera_module</code>.<br />
 Voir la documentation du module <a href="../module_window/">fenêtre</a> pour plus d'informations.</p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Demmarer le module Camera</p>
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">demarrer_module_camera</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">initialiser_module_camera</span><span class="p">()</span>
 
 <span class="n">ou</span> <span class="n">alors</span>
 
-<span class="n">robot</span><span class="o">.</span><span class="n">start_camera_module</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">init_camera_module</span><span class="p">()</span>
 </code></pre></div>
 </div>
 <p>À partir de ce moment, l'objet <em>camera</em> est initialisé dans le robot, et est donc utilisable.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>La méthode <code>demarrer_module_camera()</code> (ou <code>start_camera_module()</code>) initialise l'objet <em>camera</em> dans le robot.</p>
+<p>La méthode <code>initialiser_module_camera()</code> (ou <code>init_camera_module()</code>) initialise l'objet <em>camera</em> dans le robot.</p>
 </div>
 <h2 id="afficher-la-camera">Afficher la caméra</h2>
-<p>Pour afficher la caméra, il suffit d'utiliser la méthode <code>afficher_camera(position_x: int, position_y: int) (fr) - display_camera(position_x : int, position_y : int) (en)</code>.</p>
+<p>Pour afficher la caméra, il suffit d'utiliser la méthode <code>afficher_camera(position_x: int, position_y: int)</code> (fr) - <code>display_camera(position_x : int, position_y : int)</code> (en).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Mettez cette méthode dans une boucle pour que l'image de la caméra soit actualisée et reste fluide.</p>
@@ -1021,7 +1021,7 @@ Voir la documentation du module <a href="../module_window/">fenêtre</a> pour pl
 <p>La caméra affichée fait 640 pixels de long et 480 pixels de haut.</p>
 </div>
 <h2 id="prendre-une-photo">Prendre une photo</h2>
-<p>Pour prendre une photo, il suffit d'utiliser la méthode <code>prendre_photo(nom_fichier: str) (fr) - take_picture(file_name : str) (en)</code>.<br />
+<p>Pour prendre une photo, il suffit d'utiliser la méthode <code>prendre_photo(nom_fichier: str)</code> (fr) - <code>take_picture(file_name : str)</code> (en).<br />
 La photo sera enregistrée dans le dossier <code>images</code> du robot.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1047,7 +1047,7 @@ Declenché cette méthode par un bouton dans l'interface graphique.</p>
 L'image sera de la même taille que la caméra soit 640 pixels de long et 480 pixels de haut.</p>
 </div>
 <h2 id="appliquer-un-filtre">Appliquer un filtre</h2>
-<p>Pour appliquer un filtre à une photo, il suffit d'utiliser la méthode <code>appliquer_filtre(chemin_fichier: str, nom_filtre: str) (fr) - apply_filter(file_name : str, filter_name : str) (en)</code>.</p>
+<p>Pour appliquer un filtre à une photo, il suffit d'utiliser la méthode <code>appliquer_filtre(chemin_fichier: str, nom_filtre: str)</code> (fr) - <code>apply_filter(file_name : str, filter_name : str)</code> (en).</p>
 <p>Voir la réference pour la liste complète des <a href="../ref/#les-filtres">filtres</a></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1067,10 +1067,10 @@ L'image sera de la même taille que la caméra soit 640 pixels de long et 480 pi
 
 <span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
 
-<span class="n">robot</span><span class="o">.</span><span class="n">demarrer_module_fenetre</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">initialiser_module_fenetre</span><span class="p">()</span>
 <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">ouvrir_fenetre</span><span class="p">(</span><span class="mi">1500</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
 
-<span class="n">robot</span><span class="o">.</span><span class="n">demarrer_module_camera</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">initialiser_module_camera</span><span class="p">()</span>
 
 <span class="n">boutons</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">attributs</span><span class="o">.</span><span class="n">boutons</span>
 <span class="n">boutons</span><span class="o">.</span><span class="n">bouton_photo</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">creer_bouton</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>

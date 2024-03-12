@@ -10,11 +10,11 @@ Après avoir créé un bouton, vous obtenez un objet (le bouton) qui vous permet
 Pour cela, vous pouvez utiliser les méthodes qui vont vous être présentées ci-dessous.
 
 !!!Warning "Attention"
-    Les méthodes présentées ci-dessous sont utilisables uniquement sur un objet créé par la méthode `creer_bouton() (fr) - create_button() (en)`.
+    Les méthodes présentées ci-dessous sont utilisables uniquement sur un objet créé par la méthode `creer_bouton()` (fr) - `create_button()` (en).
 
 ## Ajouter un texte au bouton
 
-Pour afficher le fond de la fenêtre, il suffit d’appeler la méthode `ajouter_texte(texte : str, position_x : int, position_y : int, taille : int, couleur : Couleur) (fr) - add_text(text : str, position_x : int, position_y : int, size : int, color : Couleur) (en)`.
+Pour afficher le fond de la fenêtre, il suffit d’appeler la méthode `ajouter_texte(texte : str, position_x : int, position_y : int, taille : int, couleur : Couleur)` (fr) - `add_text(text : str, position_x : int, position_y : int, size : int, color : Couleur)` (en).
 
 !!!Success "Ajouter un texte au bouton"
     ```python
@@ -31,7 +31,7 @@ Pour afficher le fond de la fenêtre, il suffit d’appeler la méthode `ajouter
 ## Afficher le bouton
 
 Quand vous créez un bouton, il n'est pas affiché dans la fenêtre.  
-Pour l'afficher, il suffit d’appeler la méthode `afficher() (fr) - display() (en)`.
+Pour l'afficher, il suffit d’appeler la méthode `afficher()` (fr) - `display()` (en).
 
 !!!Success "Afficher le bouton"
     ```python
@@ -47,7 +47,7 @@ Pour l'afficher, il suffit d’appeler la méthode `afficher() (fr) - display() 
 
 ## Vérifier si le bouton est cliqué
 
-Pour vérifier si le bouton est cliqué, il suffit d’appeler la méthode `est_actif() (fr) - is_active() (en)`.
+Pour vérifier si le bouton est cliqué, il suffit d’appeler la méthode `est_actif()` (fr) - `is_active()` (en).
 Cela permet de savoir si le bouton a été cliqué ou non pour ainsi déclencher une action.
 
 !!!Warning
@@ -75,7 +75,7 @@ Cela permet de savoir si le bouton a été cliqué ou non pour ainsi déclencher
 from pybot import Robot, Couleur
 
 robot = Robot()
-robot.demarrer_module_fenetre()
+robot.initialiser_module_fenetre()
 
 robot.fenetre.ouvrir_fenetre(1200, 900)
 

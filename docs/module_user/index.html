@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../module_camera/">
+        <link rel="prev" href="../module_ai/">
       
       
         <link rel="next" href="../module_speaker/">
@@ -489,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_ai.md" class="md-nav__link">
+      <a href="../module_ai/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1257,7 +1257,7 @@ Dans notre cas, le seuil sera utilisé pour comparer des images:</p>
 <h2 id="connexion-deconnexion">Connexion/ Deconnexion</h2>
 <h3 id="connaitre-le-statut-de-connexion">Connaitre le statut de connexion</h3>
 <p>Avant de connecter ou de déconnecter une personne, il est important de savoir si une personne est déjà connectée à l'application.
-Pour cela, on peut utiliser la méthode <code>verifier_session() (fr) - check_session() (en)</code>.</p>
+Pour cela, on peut utiliser la méthode <code>verifier_session()</code> (fr) - <code>check_session()</code> (en).</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
 <div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">robot</span><span class="o">.</span><span class="n">utilisateur</span><span class="o">.</span><span class="n">verifier_session</span><span class="p">():</span>
@@ -1274,14 +1274,14 @@ Pour cela, on peut utiliser la méthode <code>verifier_session() (fr) - check_se
 </code></pre></div>
 </div>
 <h3 id="se-connecter">Se connecter</h3>
-<p>Si on veut se connecter, on peut utiliser la méthode <code>connecter(seuil_minimal : float, seuil_arret_recherche : float) (fr) - logging(self, minimum_threshold: float, search_stop_threshold: float) : (en)</code>.</p>
+<p>Si on veut se connecter, on peut utiliser la méthode <code>connecter(seuil_minimal : float, seuil_arret_recherche : float)</code> (fr) - <code>login(self, minimum_threshold: float, search_stop_threshold: float) : (en)</code>.</p>
 <div class="admonition success">
 <p class="admonition-title">Connexion</p>
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">utilisateur</span><span class="o">.</span><span class="n">connecter</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">)</span>
 
 <span class="n">ou</span> <span class="n">alors</span>
 
-<span class="n">robot</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">logging</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">)</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="admonition note">
@@ -1293,7 +1293,7 @@ Pour cela, on peut utiliser la méthode <code>verifier_session() (fr) - check_se
 <p>Si la fonction est appelée alors que l application web n' est pas lancée ou bien que la caméra n' est pas allumée alors la fonction ne marchera pas.</p>
 </div>
 <h3 id="se-deconnecter">Se déconnecter</h3>
-<p>Pour se déconnecter, on peut utiliser la méthode <code>deconnecter() (fr) - logout() (en)</code>.</p>
+<p>Pour se déconnecter, on peut utiliser la méthode <code>deconnecter()</code> (fr) - <code>logout()</code> (en).</p>
 <div class="admonition success">
 <p class="admonition-title">Déconnexion</p>
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">utilisateur</span><span class="o">.</span><span class="n">deconnecter</span><span class="p">()</span>
@@ -1306,33 +1306,33 @@ Pour cela, on peut utiliser la méthode <code>verifier_session() (fr) - check_se
 <h2 id="creer-supprimer-un-compte-utilisateur">Créer/ Supprimer un compte utilisateur</h2>
 <h3 id="creer-une-session">Créer une session</h3>
 <p>Pour pouvoir se connecter, il faut avoir un compte utilisateur, pour avoir un compte utilisateur, il faut le créer.
-Pour créer un utilisateur il faut utiliser la méthode <code>creer_utilisateur(prenom, nom, carte) (fr) - create_user(firstname, lastname, card) (en)</code>.</p>
+Pour créer un utilisateur il faut utiliser la méthode <code>creer_utilisateur(prenom, nom, carte)</code> (fr) - <code>create(firstname, lastname, card)</code> (en).</p>
 <div class="admonition success">
 <p class="admonition-title">Création d'un utilisateur</p>
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">utilisateur</span><span class="o">.</span><span class="n">creer_utilisateur</span><span class="p">(</span><span class="s2">&quot;Jean&quot;</span><span class="p">,</span> <span class="s2">&quot;Dupont&quot;</span><span class="p">,</span> <span class="n">carte</span><span class="p">)</span>
 
 <span class="n">ou</span> <span class="n">alors</span>
 
-<span class="n">robot</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span><span class="s2">&quot;Jean&quot;</span><span class="p">,</span> <span class="s2">&quot;Dupont&quot;</span><span class="p">,</span> <span class="n">card</span><span class="p">)</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;Jean&quot;</span><span class="p">,</span> <span class="s2">&quot;Dupont&quot;</span><span class="p">,</span> <span class="n">card</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>La carte en paramètre de la méthode créer_utilisateur(prenom, nom, <strong>carte</strong>) doit être une image récupérée avec la méthode <a href="./#récuperer-la-carte-detectée-àlécran">detecter_carte() (fr) - detect_card() (en)</a>.</p>
+<p>La carte en paramètre de la méthode créer_utilisateur(prenom, nom, <strong>carte</strong>) doit être une image récupérée avec la méthode <a href="./#récuperer-la-carte-detectée-àlécran">detecter_carte()<code>(fr) -</code>detect_card() (en)</a>.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>La personne qui vient de créer son compte ne sera pas connecté, il faut appeler la méthode <a href="./#se-connecter"><code>connecter() (fr) - logging() (en)</code></a> pour se connecter.</p>
+<p>La personne qui vient de créer son compte ne sera pas connecté, il faut appeler la méthode <a href="./#se-connecter"><code>connecter()</code> (fr) - <code>login()</code> (en)</a> pour se connecter.</p>
 </div>
 <h3 id="supprimer-une-session">Supprimer une session</h3>
-<p>Pour supprimer un utilisateur, il faut faire appel à la méthode <code>supprimer_utilisateur() (fr) - delete_user() (en)</code>.</p>
+<p>Pour supprimer un utilisateur, il faut faire appel à la méthode <code>supprimer_utilisateur()</code> (fr) - <code>delete()</code> (en).</p>
 <div class="admonition success">
 <p class="admonition-title">Suppression d'un utilisateur</p>
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">utilisateur</span><span class="o">.</span><span class="n">supprimer_utilisateur</span><span class="p">()</span>
 
 <span class="n">ou</span> <span class="n">alors</span>
 
-<span class="n">robot</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">delete_user</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
 </code></pre></div>
 </div>
 <div class="admonition warning">
@@ -1342,7 +1342,7 @@ Cette méthode supprime définitivement <strong>l'utilisateur connecté</strong>
 </div>
 <h2 id="methodes-utiles-liees-aux-cartes-et-sessions">Methodes utiles liées aux cartes et sessions</h2>
 <h3 id="recuperer-les-informations-de-la-personne-connectee">Récupérer les informations de la personne connectée</h3>
-<p>Pour récupérer les informations de la personne connectée, on peut utiliser la méthode <code>obtenir_utilisateur_connecte() (fr) - get_logged_in_user() (en)</code>.</p>
+<p>Pour récupérer les informations de la personne connectée, on peut utiliser la méthode <code>obtenir_utilisateur_connecte()</code> (fr) - <code>get_logged_in_user()</code> (en).</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
 <div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">robot</span><span class="o">.</span><span class="n">verifier_session</span><span class="p">():</span>
@@ -1361,7 +1361,7 @@ Cette méthode supprime définitivement <strong>l'utilisateur connecté</strong>
 <p>Ce code permet d' afficher dans le terminal le prenom et le nom de l' utilisateur.
 Voir <a href="../general/#user">User</a> pour plus d'informations sur la structure de données utilisateur.</p>
 <h3 id="recuperer-la-carte-detectee-a-lecran">Récuperer la carte detectée à l'écran</h3>
-<p>Pour récupérer la carte détectée à l'écran, on peut utiliser la méthode <code>detecter_carte(seuil_minimal : float, seuil_arret_recherche : float) (fr) - detect_card(minimum_threshold: float, search_stop_threshold: float) (en)</code>.
+<p>Pour récupérer la carte détectée à l'écran, on peut utiliser la méthode <code>detecter_carte(seuil_minimal : float, seuil_arret_recherche : float)</code> (fr) - <code>detect_card(minimum_threshold: float, search_stop_threshold: float)</code> (en).
 Cette méthode retourne l'image detectée à l'écran.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1387,12 +1387,12 @@ Cette méthode retourne l'image detectée à l'écran.</p>
 
 <span class="n">robot</span><span class="o">.</span><span class="n">demarrer_webapp</span><span class="p">()</span>
 
-<span class="n">robot</span><span class="o">.</span><span class="n">demarrer_module_fenetre</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">initialiser_module_fenetre</span><span class="p">()</span>
 
 <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">ouvrir_fenetre</span><span class="p">(</span><span class="mi">1500</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">demarrer_module_camera</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">initialiser_module_camera</span><span class="p">()</span>
 
-<span class="n">robot</span><span class="o">.</span><span class="n">demarrer_module_utilisateur</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">initialiser_module_utilisateur</span><span class="p">()</span>
 
 <span class="n">boutons</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">attributs</span><span class="o">.</span><span class="n">boutons</span>
 <span class="n">boutons</span><span class="o">.</span><span class="n">quitter</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">creer_bouton</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>
@@ -1434,8 +1434,8 @@ Cette méthode retourne l'image detectée à l'écran.</p>
 </code></pre></div>
 <h2 id="historique-de-conversation">Historique de conversation</h2>
 <h3 id="sauvegarder-lhistorique-de-conversation">Sauvegarder l'historique de conversation</h3>
-<p>Un fois que vous avez recuperer l'historique de conversation, grace à la méthode <code>obtenir_historique_conversation() (fr) - get_current_conversation_history() (en)</code> du module <a href="module_ai.md#recuperer-la-memoire-du-robot">IA</a>, vous pouvez la sauvegarder dans la base de données.</p>
-<p>Pour cela, vous pouvez utiliser la méthode <code>sauvegarder_historique_conversation(historique) (fr) - save_conversation_history(history) (en)</code>.</p>
+<p>Un fois que vous avez recuperer l'historique de conversation, grace à la méthode <code>obtenir_historique_conversation()</code> (fr) - <code>get_current_conversation_history()</code> (en) du module <a href="../module_ai/#recuperer-la-memoire-du-robot">IA</a>, vous pouvez la sauvegarder dans la base de données.</p>
+<p>Pour cela, vous pouvez utiliser la méthode <code>sauvegarder_historique_conversation(historique)</code> (fr) - <code>save_conversation_history(history)</code> (en).</p>
 <div class="admonition success">
 <p class="admonition-title">Sauvegarder l'historique de conversation</p>
 <div class="highlight"><pre><span></span><code><span class="n">historique</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">IA</span><span class="o">.</span><span class="n">obtenir_historique_conversation</span><span class="p">()</span>
@@ -1456,7 +1456,7 @@ Cette méthode retourne l'image detectée à l'écran.</p>
 <p>L'ancien historique de conversation sera ecrasé par le nouveau.</p>
 </div>
 <h3 id="recuperer-lhistorique-de-conversation">Récupérer l'historique de conversation</h3>
-<p>Pour récupérer l'historique de conversation, vous pouvez utiliser la méthode <code>obtenir_historique_conversation_utilisateur() (fr) - get_user_conversation_history() (en)</code>.</p>
+<p>Pour récupérer l'historique de conversation, vous pouvez utiliser la méthode <code>obtenir_historique_conversation_utilisateur()</code> (fr) - <code>get_user_conversation_history()</code> (en).</p>
 <div class="admonition success">
 <p class="admonition-title">Récupérer l'historique de conversation</p>
 <div class="highlight"><pre><span></span><code><span class="n">historique</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">utilisateur</span><span class="o">.</span><span class="n">obtenir_historique_conversation_utilisateur</span><span class="p">()</span>

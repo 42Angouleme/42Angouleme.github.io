@@ -13,23 +13,23 @@ Il peut aussi avoir des emotions et des réactions.
 
 !!!Success "Demmarer le module IA"
     ```python
-    robot.demarrer_module_IA()
+    robot.initialiser_module_IA()
 
     ou alors
 
-    robot.start_AI_module()
+    robot.init_AI_module()
     ```
 
 À partir de ce moment, l'objet IA est initialisé dans le robot il est donc utilisable.
 
 !!!Note
-    La méthode `demarrer_module_IA()` initialise l'objet IA et AI dans le robot et c'est pareil pour `start_AI_module()`.
+    La méthode `initialiser_module_IA()` (fr) - `init_AI_module()` (en).
 
 ## Discuter avec le robot
 
 ### Commencer à discuter avec le robot
 
-Pour commencer une discussion avec le robot, il faut utiliser la méthode `demarrer_discussion() (fr) - start_conversation() (en)`.
+Pour commencer une discussion avec le robot, il faut utiliser la méthode `demarrer_discussion()` (fr) - `init_conversation()` (en).
 
 !!!Success "Demarrer une discussion"
     ```python
@@ -37,7 +37,7 @@ Pour commencer une discussion avec le robot, il faut utiliser la méthode `demar
 
     ou alors
 
-    robot.AI.start_conversation()
+    robot.AI.init_conversation()
     ```
 
 !!!Warning
@@ -45,7 +45,7 @@ Pour commencer une discussion avec le robot, il faut utiliser la méthode `demar
 
 ### Arrêter de discuter avec le robot
 
-Pour arrêter la discussion avec le robot, il faut utiliser la méthode `arreter_discussion() (fr) - stop_conversation() (en)`.
+Pour arrêter la discussion avec le robot, il faut utiliser la méthode `arreter_discussion()` (fr) - `stop_conversation()` (en).
 
 !!!Success "Arreter une discussion"
     ```python
@@ -61,7 +61,7 @@ Pour arrêter la discussion avec le robot, il faut utiliser la méthode `arreter
 
 ### Poser une question / parler au robot
 
-Pour pouvoir parler au robot (poser des questions, donner des informations, ...), il faut utiliser la méthode `poser_question(question : str) (fr) - ask_question(question : str) (en)`.
+Pour pouvoir parler au robot (poser des questions, donner des informations, ...), il faut utiliser la méthode `poser_question(question : str)` (fr) - `ask_question(question : str)` (en).
 
 !!!Success "Poser une question"
     ```python
@@ -99,7 +99,7 @@ Comme dit précédemment si on ne donne pas d'historique de conversation au robo
     Note : voir la documentation du module [utilisateur](module_user.md#historique-de-conversation) pour récupérer l'historique de conversation.
 
 Pour que le robot se souvienne des échanges qu'il a eu avec l'utilisateur, il faut charger un historique de conversation.  
-On peut charger l'historique dans le robot avec la méthode `charger_historique_conversation(historique_de_conversation : str) (fr) - load_conversation_history(conversation_history : str) (en)`.  
+On peut charger l'historique dans le robot avec la méthode `charger_historique_conversation(historique_de_conversation : str)` (fr) - `load_conversation_history(conversation_history : str)` (en).  
 
 Ici, vous donnez donc au robot la capacité de se souvenir des interactions qu'il a eues avec l'utilisateur, ainsi il pourra reprendre la discussion là où elle s'était arrêtée la dernière fois.
 
@@ -122,7 +122,7 @@ Ici, vous donnez donc au robot la capacité de se souvenir des interactions qu'i
 
 #### Effacer la mémoire
 
-Si vous voulez changer de discussion ou bien effacer l'historique de la conversation vous pouvez utilisez la méthode `effacer_historique_conversation() (fr) - clear_conversation_history() (en)`.
+Si vous voulez changer de discussion ou bien effacer l'historique de la conversation vous pouvez utilisez la méthode `effacer_historique_conversation()` (fr) - `clear_conversation_history()` (en).
 
 !!!Note
     Pensez à effacer l'historique quand l'utilisateur se déconnecte.
@@ -143,7 +143,7 @@ A partir de ce moment le robot oubliera tout des échanges précédents avec l'u
 
 #### Récupérer la mémoire du robot
 
-Pour pouvoir sauvegarder l'historique de conversation (mémoire du robot), il faut pouvoir récupérer l'historique de conversation pour cela il faut utiliser la méthode `obtenir_historique_conversation() (fr) - get_current_conversation_history() (en)`.
+Pour pouvoir sauvegarder l'historique de conversation (mémoire du robot), il faut pouvoir récupérer l'historique de conversation pour cela il faut utiliser la méthode `obtenir_historique_conversation()` (fr) - `get_current_conversation_history()` (en).
 
 !!!Success "Récupérer l'historique de conversation"
     ```python
@@ -166,7 +166,7 @@ from pybot import Robot
 
 robot = Robot()
 
-robot.demarrer_module_IA()
+robot.initialiser_module_IA()
 
 robot.IA.demarrer_discussion()
 
@@ -186,7 +186,7 @@ while True:
 ## Les émotions du robot
 
 Le robot peut avoir des émotions et des réactions.  
-Pour lui donner des émotions, il faut utiliser la méthode `donner_emotion(phrase : str) (fr) - get_emotion(sentence : str) (en)`.
+Pour lui donner des émotions, il faut utiliser la méthode `donner_emotion(phrase : str)` (fr) - `get_emotion(sentence : str)` (en).
 Cette méthode prend en paramètre une phrase (chaîne de caractère) et renvoie l'émotion que le robot exprime en fonction de celle-ci.  
 Si aucune émotion enregistrée ne correspond a la phrase, il reste *Neutre*.  
 
@@ -227,8 +227,8 @@ from pybot import Robot
 
 robot = Robot()
 
-robot.demarrer_module_fenetre()
-robot.demarrer_module_IA()
+robot.initialiser_module_fenetre()
+robot.initialiser_module_IA()
 
 robot.fenetre.ouvrir_fenetre()
 robot.ajouter_evenement("echap", "stop")

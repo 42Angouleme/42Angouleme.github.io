@@ -40,7 +40,7 @@ Les deux seuils à manipuler :
 ### Connaitre le statut de connexion
 
 Avant de connecter ou de déconnecter une personne, il est important de savoir si une personne est déjà connectée à l'application.
-Pour cela, on peut utiliser la méthode `verifier_session() (fr) - check_session() (en)`.
+Pour cela, on peut utiliser la méthode `verifier_session()` (fr) - `check_session()` (en).
 
 !!!Success
     ```python
@@ -59,7 +59,7 @@ Pour cela, on peut utiliser la méthode `verifier_session() (fr) - check_session
 
 ### Se connecter
 
-Si on veut se connecter, on peut utiliser la méthode `connecter(seuil_minimal : float, seuil_arret_recherche : float) (fr) - logging(self, minimum_threshold: float, search_stop_threshold: float) : (en)`.
+Si on veut se connecter, on peut utiliser la méthode `connecter(seuil_minimal : float, seuil_arret_recherche : float)` (fr) - `login(self, minimum_threshold: float, search_stop_threshold: float) : (en)`.
 
 !!!Success "Connexion"
     ```python
@@ -67,7 +67,7 @@ Si on veut se connecter, on peut utiliser la méthode `connecter(seuil_minimal :
 
     ou alors
 
-    robot.user.logging(0.5, 0.7)
+    robot.user.login(0.5, 0.7)
     ```
 
 !!!Note
@@ -78,7 +78,7 @@ Si on veut se connecter, on peut utiliser la méthode `connecter(seuil_minimal :
 
 ### Se déconnecter
 
-Pour se déconnecter, on peut utiliser la méthode `deconnecter() (fr) - logout() (en)`.
+Pour se déconnecter, on peut utiliser la méthode `deconnecter()` (fr) - `logout()` (en).
 
 !!!Success "Déconnexion"
     ```python
@@ -94,7 +94,7 @@ Pour se déconnecter, on peut utiliser la méthode `deconnecter() (fr) - logout(
 ### Créer une session
 
 Pour pouvoir se connecter, il faut avoir un compte utilisateur, pour avoir un compte utilisateur, il faut le créer.
-Pour créer un utilisateur il faut utiliser la méthode `creer_utilisateur(prenom, nom, carte) (fr) - create_user(firstname, lastname, card) (en)`.
+Pour créer un utilisateur il faut utiliser la méthode `creer_utilisateur(prenom, nom, carte)` (fr) - `create(firstname, lastname, card)` (en).
 
 !!!Success "Création d'un utilisateur"
     ```python
@@ -102,18 +102,18 @@ Pour créer un utilisateur il faut utiliser la méthode `creer_utilisateur(preno
 
     ou alors
 
-    robot.user.create_user("Jean", "Dupont", card)
+    robot.user.create("Jean", "Dupont", card)
     ```
 
 !!! Note
-    La carte en paramètre de la méthode créer_utilisateur(prenom, nom, **carte**) doit être une image récupérée avec la méthode [detecter_carte() (fr) - detect_card() (en)](module_user.md#récuperer-la-carte-detectée-àlécran).
+    La carte en paramètre de la méthode créer_utilisateur(prenom, nom, **carte**) doit être une image récupérée avec la méthode [detecter_carte()` (fr) - `detect_card() (en)](module_user.md#récuperer-la-carte-detectée-àlécran).
 
 !!! Warning
-    La personne qui vient de créer son compte ne sera pas connecté, il faut appeler la méthode [`connecter() (fr) - logging() (en)`](module_user.md#se-connecter) pour se connecter.
+    La personne qui vient de créer son compte ne sera pas connecté, il faut appeler la méthode [`connecter()` (fr) - `login()` (en)](module_user.md#se-connecter) pour se connecter.
 
 ### Supprimer une session
 
-Pour supprimer un utilisateur, il faut faire appel à la méthode `supprimer_utilisateur() (fr) - delete_user() (en)`.
+Pour supprimer un utilisateur, il faut faire appel à la méthode `supprimer_utilisateur()` (fr) - `delete()` (en).
 
 !!!Success "Suppression d'un utilisateur"
     ```python
@@ -121,7 +121,7 @@ Pour supprimer un utilisateur, il faut faire appel à la méthode `supprimer_uti
 
     ou alors
 
-    robot.user.delete_user()
+    robot.user.delete()
     ```
 
 !!! Warning
@@ -132,7 +132,7 @@ Pour supprimer un utilisateur, il faut faire appel à la méthode `supprimer_uti
 
 ### Récupérer les informations de la personne connectée
 
-Pour récupérer les informations de la personne connectée, on peut utiliser la méthode `obtenir_utilisateur_connecte() (fr) - get_logged_in_user() (en)`.
+Pour récupérer les informations de la personne connectée, on peut utiliser la méthode `obtenir_utilisateur_connecte()` (fr) - `get_logged_in_user()` (en).
 
 !!!Success
     ```python
@@ -154,7 +154,7 @@ Voir [User](general.md#user) pour plus d'informations sur la structure de donné
 
 ### Récuperer la carte detectée à l'écran
 
-Pour récupérer la carte détectée à l'écran, on peut utiliser la méthode `detecter_carte(seuil_minimal : float, seuil_arret_recherche : float) (fr) - detect_card(minimum_threshold: float, search_stop_threshold: float) (en)`.
+Pour récupérer la carte détectée à l'écran, on peut utiliser la méthode `detecter_carte(seuil_minimal : float, seuil_arret_recherche : float)` (fr) - `detect_card(minimum_threshold: float, search_stop_threshold: float)` (en).
 Cette méthode retourne l'image detectée à l'écran.
 
 !!!Note
@@ -181,12 +181,12 @@ robot = Robot()
 
 robot.demarrer_webapp()
 
-robot.demarrer_module_fenetre()
+robot.initialiser_module_fenetre()
 
 robot.fenetre.ouvrir_fenetre(1500, 1000)
-robot.demarrer_module_camera()
+robot.initialiser_module_camera()
 
-robot.demarrer_module_utilisateur()
+robot.initialiser_module_utilisateur()
 
 boutons = robot.attributs.boutons
 boutons.quitter = robot.fenetre.creer_bouton(100, 50, 10, 80, Couleur.BLANC)
@@ -231,9 +231,9 @@ while robot.est_actif():
 
 ### Sauvegarder l'historique de conversation
 
-Un fois que vous avez recuperer l'historique de conversation, grace à la méthode `obtenir_historique_conversation() (fr) - get_current_conversation_history() (en)` du module [IA](module_ai.md#recuperer-la-memoire-du-robot), vous pouvez la sauvegarder dans la base de données.
+Un fois que vous avez recuperer l'historique de conversation, grace à la méthode `obtenir_historique_conversation()` (fr) - `get_current_conversation_history()` (en) du module [IA](module_ai.md#recuperer-la-memoire-du-robot), vous pouvez la sauvegarder dans la base de données.
 
-Pour cela, vous pouvez utiliser la méthode `sauvegarder_historique_conversation(historique) (fr) - save_conversation_history(history) (en)`.
+Pour cela, vous pouvez utiliser la méthode `sauvegarder_historique_conversation(historique)` (fr) - `save_conversation_history(history)` (en).
 
 !!!Success "Sauvegarder l'historique de conversation"
     ```python
@@ -254,7 +254,7 @@ Pour cela, vous pouvez utiliser la méthode `sauvegarder_historique_conversation
 
 ### Récupérer l'historique de conversation
 
-Pour récupérer l'historique de conversation, vous pouvez utiliser la méthode `obtenir_historique_conversation_utilisateur() (fr) - get_user_conversation_history() (en)`.
+Pour récupérer l'historique de conversation, vous pouvez utiliser la méthode `obtenir_historique_conversation_utilisateur()` (fr) - `get_user_conversation_history()` (en).
 
 !!!Success "Récupérer l'historique de conversation"
     ```python

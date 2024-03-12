@@ -9,96 +9,44 @@ Le projet se découpe en deux niveaux : la classe générale **Robot** qui doit 
 
 Les **modules**, avec leurs fonctionnalités plus bas niveau doivent aussi être documentés pour que les étudiants de 42 puissent s'intégrer plus facilement et participer au développement.
 
-## Liste des fonctionnalités de la classe Robot et leur avancement:
+## Liste des fonctionnalités de la classe Robot
 
-## Fonctionnalités à créer, commenter et documenter
+## Liste des différent modules
 
-- :zero: fonction fonctionnelle et stable
-- :one: fonction proprement commentée
-- :two: fonction documentée (documentation externe)
+### Module Fenêtre (window)
 
-### part 1 - screen basics
+Note : utilise pygame et pygame_gui
 
-- robot.demarrer_webapp() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.creer_fenetre(...) : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.changer_titre() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.actualiser_affichage() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.plein_ecran(changer) : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.dort() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
+Affiche une fenêtre sur un écran et gère le contenu affiché :
+- Gère une fenêtre et les options suivantes :
+  - titre
+  - taille
+  - couleur
+- Gère le contenu affiché :
+  - Texte
+  - Zones d'entrée utilisateur
+  - Boutons
+  - Images
 
-### part 2 - loop and events
+Note : le flux camera est affiché par le biais du module camera. 
 
-- robot.est_actif() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.desactiver() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.fermer_fenetre() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.ajouter_evenement(...) : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.verifier_evenements() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.supprimer_evenement(...) : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-
-### part 3 - buttons and layout
-
-- robot.couleur_fond(couleur) : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.afficher_fond() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.creer_bouton(...) : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-  - bouton.ajouter_texte(...) : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-  - bouton.afficher() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-  - bouton.est_actif() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.dessiner_rectangle(...) : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.afficher_texte(...) : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-
-### part 4 - camera and photos
-
-- robot.afficher_camera() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.prendre_photo(...) : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.afficher_image(...) : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.appliquer_filtre(...) : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-
-### part 5 - card detection and user session
-
-- robot.detecter_carte() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.creer_utilisateur(...)  : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.supprimer_utilisateur() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.robot.recuperer_utilisateur_connecte() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.connexion() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.deconnexion() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-- robot.verifier_session() : :zero::white_check_mark:, :one::white_check_mark: , :two::white_check_mark:
-
-### part 6 - talk to robot
-
-- robot.entrainer(...) : :zero::x:, :one::x: , :two::x:
-- robot.repondre_question(...) : :zero::x:, :one::x: , :two::x:
-
-### part 7 - robot is talking
-
-- robot.parler(...) : :zero::x:, :one::x: , :two::x:
-
-### part 8 - robot emotions
-
-- robot.choisir_emotion(...) : :zero::x:, :one::x: , :two::x:
-
-### extra
-
-- robot.message_erreur() : :zero::white_check_mark:, :one::x: , :two::x:
-
-## Liste des différent modules et leur avancement:
-
-### Module fenêtre
-
-- Wrapper pygame et pygame_gui
+Exemples d'usages :
 - Visage minimaliste avec expressions. S’anime en cas de connexion ou réagit aux erreurs.
-- Possibilité d'affichage de texte défilant des interactions, pouvant remplacer le speaker.
-- Un application graphique (pygame GUI) client pour afficher le stream camera, des boutons, du texte ou des images depuis la base de données.
+- Possibilité d'affichage de texte défilant des interactions, pouvant remplacer le haut-parleur.
+- Un application graphique (pygame GUI) client pour afficher le flux camera, des boutons, du texte ou des images depuis la base de données.
 
 - Dès l’identification :
 - saluer, variable
 - déclencher les questions pré-enregistrées actives de la DB
 - échange libre
 
-### Module caméra
+### Module Camera
 
-- Reconnaissance (identification) via la caméra d’un élève grâce à son motif.
+- Reconnaissance (identification) via la caméra d’un élève grâce au motif unique de son badge.
+- Prise de photo (pas de cas d'usage prévu actuellement, mais pré-requis à l'identification)
+- Application de filtres
 
-### Module webapp
+### Module Webapp
 
 - Permet de faire le backend pour travailler avec la base de donnée, propose aussi un interface client web pour aider à l'administration du robot.
 - Un serveur web flask local avec base de données dans laquelle se
@@ -130,11 +78,16 @@ Les **modules**, avec leurs fonctionnalités plus bas niveau doivent aussi être
 - Liste des réponses à une question + nombre d’occurences de chaque
   réponse
 
-### Module IA
+### Module IA (AI)
 
-- Communiquer avec chatgpt
+- Communiquer avec chatgpt :
+  - entraîner (NOT IMPLEMENTED YET)
+  - définir un cadre (prompt)
+  - poser des questions
+  - entretenir un historique de conversation
+  - deviner des émotions
 
-### Module Audio (Speaker)
+### Module Haut-parleur (Speaker)
 
 - Text to speech. Le texte est l’output de l’IA vers speaker.
 - Capable de réagir de manière adaptee au public, répondre à des questions. Réponses courtes.

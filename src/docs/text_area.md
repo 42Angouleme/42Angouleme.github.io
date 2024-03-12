@@ -15,7 +15,7 @@ Après avoir créé une zone de texte, vous obtenez un objet (la zone de texte) 
 Pour cela, vous pouvez utiliser les méthodes qui vont vous être présentées ci-dessous.
 
 !!!Warning "Attention"
-    Les méthodes présentées ci-dessous sont utilisables uniquement sur un objet créé par la méthode `creer_zone_texte() (fr) - create_text_area() (en)`.
+    Les méthodes présentées ci-dessous sont utilisables uniquement sur un objet créé par la méthode `creer_zone_texte()` (fr) - `create_text_area()` (en).
 
 !!!Note
     Pensé à donner une taille assez grande à la zone de texte pour que l'utilisateur puisse saisir des informations, sans que cela sorte de la zone de texte, créant un effet de "dépassement" de la zone de texte.
@@ -23,7 +23,7 @@ Pour cela, vous pouvez utiliser les méthodes qui vont vous être présentées c
 ## Afficher la zone de texte
 
 Quand vous créez une zone de texte, elle n'est pas affichée dans la fenêtre.  
-Pour l'afficher, il suffit d’appeler la méthode `afficher() (fr) - display() (en)`.
+Pour l'afficher, il suffit d’appeler la méthode `afficher()` (fr) - `display()` (en).
 
 !!!Success "Afficher la zone de texte"
     ```python
@@ -39,7 +39,7 @@ Pour l'afficher, il suffit d’appeler la méthode `afficher() (fr) - display() 
 
 ## Verifier si la zone de texte est cliquée
 
-Pour verifier si la zone de texte est cliquée, il suffit d’appeler la méthode `est_actif() (fr) - is_active() (en)`.  
+Pour verifier si la zone de texte est cliquée, il suffit d’appeler la méthode `est_actif()` (fr) - `is_active()` (en).  
 Cela permet de savoir si la zone de texte a été cliquée ou non pour ainsi déclencher l'ecriture.
 
 !!!Warning
@@ -63,8 +63,8 @@ Cela permet de savoir si la zone de texte a été cliquée ou non pour ainsi dé
 
 ## Ecrire dans la zone de texte
 
-Pour écrire dans la zone de texte, il suffit d’appeler la méthode `ecrire(robot : Robot) (fr) - write(robot : Robot) (en)`.  
-Utilisez cette méthode en combinaison avec la méthode `est_actif() (fr) - is_active() (en)` pour vérifier si la zone de texte est cliquée.
+Pour écrire dans la zone de texte, il suffit d’appeler la méthode `ecrire(robot : Robot)` (fr) - `write(robot : Robot)` (en).  
+Utilisez cette méthode en combinaison avec la méthode `est_actif()` (fr) - `is_active()` (en) pour vérifier si la zone de texte est cliquée.
 Sinon, vous vous exposez à des erreurs.
 
 !!!Success "Écrire dans la zone de texte"
@@ -93,7 +93,7 @@ Cette méthode renvoie le texte après que l'utilisateur a quitté la zone de te
 
 ## Récupérer le texte de la zone de texte
 
-Pour récupérer le texte de la zone de texte, il suffit d’appeler la méthode `obtenir_texte() (fr) - get_text() (en)`.
+Pour récupérer le texte de la zone de texte, il suffit d’appeler la méthode `obtenir_texte()` (fr) - `get_text()` (en).
 
 !!!Success "Récupérer le texte de la zone de texte"
     ```python
@@ -117,7 +117,7 @@ Pour récupérer le texte de la zone de texte, il suffit d’appeler la méthode
 
 ## Effacer le texte de la zone de texte
 
-Pour effacer le texte de la zone de texte, il suffit d’appeler la méthode `effacer_texte() (fr) - erase_text() (en)`.
+Pour effacer le texte de la zone de texte, il suffit d’appeler la méthode `effacer_texte()` (fr) - `erase_text()` (en).
 Cela permet de vider la zone de texte pour une nouvelle saisie.
 Renvoi le texte effacé.
 
@@ -147,7 +147,7 @@ Renvoi le texte effacé.
 from pybot import Robot, Couleur
 
 robot = Robot()
-robot.demarrer_module_fenetre()
+robot.initialiser_module_fenetre()
 
 robot.fenetre.ouvrir_fenetre(1200, 900)
 
@@ -171,7 +171,7 @@ while robot.est_actif() :
 
 ### Modifier la taille de la police
 
-Pour modifier la taille de la police, il suffit d’appeler la méthode `modifier_taille_police(taille : int) (fr) - change_font_size(size : int) (en)`.
+Pour modifier la taille de la police, il suffit d’appeler la méthode `modifier_taille_police(taille : int)` (fr) - `change_font_size(size : int)` (en).
 Par defaut, la taille de la police est de 16.
 
 !!!Success "Modifier la taille de la police"
@@ -190,7 +190,7 @@ Par defaut, la taille de la police est de 16.
 
 ### Modifier la couleur de la police
 
-Pour modifier la couleur de la police, il suffit d’appeler la méthode `modifier_couleur_police(couleur : Couleur) (fr) - change_font_color(color : Couleur) (en)`.
+Pour modifier la couleur de la police, il suffit d’appeler la méthode `modifier_couleur_police(couleur : Couleur)` (fr) - `change_font_color(color : Couleur)` (en).
 
 !!!Success "Modifier la couleur de la police"
     ```python
@@ -212,7 +212,7 @@ Pour modifier la couleur de la police, il suffit d’appeler la méthode `modifi
 from pybot import Robot, Couleur
 
 robot = Robot()
-robot.demarrer_module_fenetre()
+robot.initialiser_module_fenetre()
 
 robot.fenetre.ouvrir_fenetre(1200, 900)
 

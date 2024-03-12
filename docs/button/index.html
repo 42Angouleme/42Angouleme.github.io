@@ -574,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_ai.md" class="md-nav__link">
+      <a href="../module_ai/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -997,10 +997,10 @@
 Pour cela, vous pouvez utiliser les méthodes qui vont vous être présentées ci-dessous.</p>
 <div class="admonition warning">
 <p class="admonition-title">Attention</p>
-<p>Les méthodes présentées ci-dessous sont utilisables uniquement sur un objet créé par la méthode <code>creer_bouton() (fr) - create_button() (en)</code>.</p>
+<p>Les méthodes présentées ci-dessous sont utilisables uniquement sur un objet créé par la méthode <code>creer_bouton()</code> (fr) - <code>create_button()</code> (en).</p>
 </div>
 <h2 id="ajouter-un-texte-au-bouton">Ajouter un texte au bouton</h2>
-<p>Pour afficher le fond de la fenêtre, il suffit d’appeler la méthode <code>ajouter_texte(texte : str, position_x : int, position_y : int, taille : int, couleur : Couleur) (fr) - add_text(text : str, position_x : int, position_y : int, size : int, color : Couleur) (en)</code>.</p>
+<p>Pour afficher le fond de la fenêtre, il suffit d’appeler la méthode <code>ajouter_texte(texte : str, position_x : int, position_y : int, taille : int, couleur : Couleur)</code> (fr) - <code>add_text(text : str, position_x : int, position_y : int, size : int, color : Couleur)</code> (en).</p>
 <div class="admonition success">
 <p class="admonition-title">Ajouter un texte au bouton</p>
 <div class="highlight"><pre><span></span><code><span class="n">bouton</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">creer_bouton</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>
@@ -1014,7 +1014,7 @@ Pour cela, vous pouvez utiliser les méthodes qui vont vous être présentées c
 </div>
 <h2 id="afficher-le-bouton">Afficher le bouton</h2>
 <p>Quand vous créez un bouton, il n'est pas affiché dans la fenêtre.<br />
-Pour l'afficher, il suffit d’appeler la méthode <code>afficher() (fr) - display() (en)</code>.</p>
+Pour l'afficher, il suffit d’appeler la méthode <code>afficher()</code> (fr) - <code>display()</code> (en).</p>
 <div class="admonition success">
 <p class="admonition-title">Afficher le bouton</p>
 <div class="highlight"><pre><span></span><code><span class="n">bouton</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">creer_bouton</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>
@@ -1027,7 +1027,7 @@ Pour l'afficher, il suffit d’appeler la méthode <code>afficher() (fr) - displ
 </code></pre></div>
 </div>
 <h2 id="verifier-si-le-bouton-est-clique">Vérifier si le bouton est cliqué</h2>
-<p>Pour vérifier si le bouton est cliqué, il suffit d’appeler la méthode <code>est_actif() (fr) - is_active() (en)</code>.
+<p>Pour vérifier si le bouton est cliqué, il suffit d’appeler la méthode <code>est_actif()</code> (fr) - <code>is_active()</code> (en).
 Cela permet de savoir si le bouton a été cliqué ou non pour ainsi déclencher une action.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1052,7 +1052,7 @@ Cela permet de savoir si le bouton a été cliqué ou non pour ainsi déclencher
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pybot</span> <span class="kn">import</span> <span class="n">Robot</span><span class="p">,</span> <span class="n">Couleur</span>
 
 <span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">demarrer_module_fenetre</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">initialiser_module_fenetre</span><span class="p">()</span>
 
 <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">ouvrir_fenetre</span><span class="p">(</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">900</span><span class="p">)</span>
 

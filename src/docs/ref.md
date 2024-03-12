@@ -88,282 +88,258 @@ robot = Robot()
 ```
 
 ```python
-robot.nom_de_la_methode(argument_de_la_methode)
+robot.desactiver()
+robot.deactivate()
 ```
 
 ```python
-desactiver()
-deactivate()
+robot.est_actif()
+robot.is_active()
 ```
 
 ```python
-est_actif()
-is_active()
+robot.dort(secondes : int)
+robot.sleep(secondes : int)
 ```
 
 ```python
-dort(secondes : int)
-sleep(secondes : int)
+robot.ajouter_evenement(touche : str, nom : str)
+robot.add_event(key : str, name : str)
 ```
 
 ```python
-ajouter_evenement(touche : str, nom : str)
-add_event(key : str, name : str)
+robot.verifier_evenements()
+robot.check_events()
 ```
 
 ```python
-verifier_evenements()
-check_events()
+robot.supprimer_evenement(nom : str)
+robot.delete_event(nom : str)
 ```
 
 ```python
-supprimer_evenement(nom : str)
-delete_event(nom : str)
-```
-
-```python
-demarrer_webapp()
-start_webapp()
+robot.demarrer_webapp()
+robot.init_webapp()
 ```
 
 ### Module Fenetre - Window
 
 ```python
-robot.demarrer_module_fenetre()
-robot.start_window_module()
+robot.initialiser_module_fenetre()
+robot.init_window_module()
 ```
 
 ```python
-robot.fenetre.nom_de_la_methode(argument_de_la_methode)
-robot.window.method_name(method_argument)
+robot.fenetre.ouvrir_fenetre(longueur: int, hauteur: int)
+robot.window.open_window(width : int, height : int)
 ```
 
 ```python
-ouvrir_fenetre(longueur: int, hauteur: int)
-open_window(width : int, height : int)
+robot.fenetre.fermer_fenetre()
+robot.window.close_window()
 ```
 
 ```python
-fermer_fenetre()
-close_window()
+robot.fenetre.actualiser_affichage()
+robot.window.refresh_display()
 ```
 
 ```python
-actualiser_affichage()
-refresh_display()
+robot.fenetre.plein_ecran(changer : bool)
+robot.window.full_screen(change : bool)
 ```
 
 ```python
-plein_ecran(changer : bool)
-full_screen(change : bool)
+robot.fenetre.changer_titre(titre : str)
+robot.window.change_title(title : str)
 ```
 
 ```python
-changer_titre(titre : str)
-change_title(title : str)
+robot.fenetre.changer_couleur_fond(couleur : str)
+robot.window.change_background_color(color : str)
 ```
 
 ```python
-changer_couleur_fond(couleur : str)
-change_background_color(color : str)
+robot.fenetre.afficher_fond()
+robot.window.display_background()
 ```
 
 ```python
-afficher_fond()
-display_background()
+robot.fenetre.dessiner_rectangle(longueur: int, hauteur: int, position_x: int, position_y: int, couleur: Couleur)
+robot.window.draw_rectangle(width: int, height: int, position_x: int, position_y: int, color: Couleur)
 ```
 
 ```python
-dessiner_rectangle(longueur: int, hauteur: int, position_x: int, position_y: int, couleur: Couleur)
-draw_rectangle(width: int, height: int, position_x: int, position_y: int, color: Couleur)
+robot.fenetre.afficher_texte(texte : str, position_x: int, position_y: int, taille: int, couleur: Couleur)
+robot.window.display_text(text : str, position_x: int, position_y: int, size: int, color: Couleur)
 ```
 
 ```python
-afficher_texte(texte : str, position_x: int, position_y: int, taille: int, couleur: Couleur)
-display_text(text : str, position_x: int, position_y: int, size: int, color: Couleur)
+robot.fenetre.afficher_image(chemin_fichier : str, position_x: int, position_y: int)
+robot.window.display_image(file_path : str, position_x: int, position_y: int)
 ```
 
 ```python
-afficher_image(chemin_fichier : str, position_x: int, position_y: int)
-display_image(file_path : str, position_x: int, position_y: int)
+robot.fenetre.creer_bouton(longueur: int, hauteur: int, position_x: int, position_y: int, couleur: Couleur)
+robot.window.create_button(width: int, height: int, position_x: int, position_y: int, color: Couleur)
 ```
 
 ```python
-creer_bouton(longueur: int, hauteur: int, position_x: int, position_y: int, couleur: Couleur)
-create_button(width: int, height: int, position_x: int, position_y: int, color: Couleur)
+robot.fenetre.creer_zone_texte(longueur: int, hauteur: int, position_x: int, position_y: int, couleur: Couleur)
+robot.window.create_text_area(width: int, height: int, position_x: int, position_y: int, color: Couleur)
 ```
 
 ```python
-creer_zone_texte(longueur: int, hauteur: int, position_x: int, position_y: int, couleur: Couleur)
-create_text_area(width: int, height: int, position_x: int, position_y: int, color: Couleur)
+robot.fenetre.afficher_carte_detectee(self, detected_card: MatLike, position_x: int, position_y: int)
+robot.window.display_detected_card(self, detected_card: MatLike, position_x: int, position_y: int)
 ```
 
 ```python
-afficher_carte_detectee(self, detected_card: MatLike, position_x: int, position_y: int)
-display_detected_card(self, detected_card: MatLike, position_x: int, position_y: int)
-```
-
-```python
-obtenir_image_emotion(emotion : str)
-get_emotion_image(emotion : str)
+robot.fenetre.obtenir_image_emotion(emotion : str)
+robot.window.get_emotion_image(emotion : str)
 ```
 
 ### Module Camera
 
 ```python
-robot.demarrer_module_camera()
-robot.start_camera_module()
+robot.initialiser_module_camera()
+robot.init_camera_module()
 ```
 
 ```python
-robot.camera.nom_de_la_methode(argument_de_la_methode)
-robot.camera.method_name(method_argument)
+robot.camera.afficher_camera(position_x: int, position_y: int)
+robot.camera.display_camera(position_x : int, position_y : int)
 ```
 
 ```python
-afficher_camera(position_x: int, position_y: int)
-display_camera(position_x : int, position_y : int)
+robot.camera.prendre_photo(nom_fichier: str)
+robot.camera.take_picture(file_name : str)
 ```
 
 ```python
-prendre_photo(nom_fichier: str)
-take_picture(file_name : str)
-```
-
-```python
-appliquer_filtre(chemin_fichier: str, nom_filtre: str)
-apply_filter(file_name : str, filter_name : str)
+robot.camera.appliquer_filtre(chemin_fichier: str, nom_filtre: str)
+robot.camera.apply_filter(file_name : str, filter_name : str)
 ```
 
 ### Module IA - AI
 
 ```python
-robot.demarrer_module_IA()
-robot.start_AI_module()
+robot.initialiser_module_IA()
+robot.init_AI_module()
 ```
 
 ```python
-robot.IA.nom_de_la_m(argument_de_la_methode)
-robot.AI.method_name(method_argument)
+robot.IA.demarrer_discussion()
+robot.AI.init_conversation()
 ```
 
 ```python
-demarrer_discussion()
-start_conversation()
+robot.IA.arreter_discussion()
+robot.AI.stop_conversation()
 ```
 
 ```python
-arreter_discussion()
-stop_conversation()
+robot.IA.poser_question(question : str)
+robot.AI.ask_question(question : str)
 ```
 
 ```python
-poser_question(question : str)
-ask_question(question : str)
+robot.IA.creer_historique_conversation()
+robot.AI.create_conversation_history()
 ```
 
 ```python
-creer_historique_conversation()
-create_conversation_history()
+robot.IA.charger_historique(historique_de_conversation : ConversationSummaryBufferMemory)
+robot.AI.load_history(conversation_history : ConversationSummaryBufferMemory)
 ```
 
 ```python
-charger_historique(historique_de_conversation : ConversationSummaryBufferMemory)
-load_history(conversation_history : ConversationSummaryBufferMemory)
+robot.IA.supprimer_historique()
+robot.AI.delete_history()
 ```
 
 ```python
-supprimer_historique()
-delete_history()
+robot.IA.obtenir_historique_conversation()
+robot.AI.get_current_conversation_history()
 ```
 
 ```python
-obtenir_historique_conversation()
-get_current_conversation_history()
-```
-
-```python
-donner_emotion(phrase : str)
-get_emotion(sentence : str)
+robot.IA.donner_emotion(phrase : str)
+robot.AI.get_emotion(sentence : str)
 ```
 
 ### Module Utilisateur - User
 
 ```python
-robot.demarrer_module_utilisateur()
-robot.start_user_module()
+robot.initialiser_module_utilisateur()
+robot.init_user_module()
 ```
 
 ```python
-robot.utilisateur.nom_de_la_methode(argument_de_la_methode)
-robot.user.method_name(method_argument)
+robot.utilisateur.verifier_session()
+robot.user.check_session()
 ```
 
 ```python
-verifier_session()
-check_session()
+robot.utilisateur.connecter(seuil_minimal : float, seuil_arret_recherche : float)
+robot.user.login(self, minimum_threshold: float, search_stop_threshold: float)
 ```
 
 ```python
-connecter(seuil_minimal : float, seuil_arret_recherche : float)
-logging(self, minimum_threshold: float, search_stop_threshold: float)
+robot.utilisateur.deconnecter()
+robot.user.logout()
 ```
 
 ```python
-deconnecter()
-logout()
+robot.utilisateur.creer_utilisateur(prenom, nom, carte)
+robot.user.create(firstname, lastname, card)
 ```
 
 ```python
-creer_utilisateur(prenom, nom, carte)
-create_user(firstname, lastname, card)
+robot.utilisateur.supprimer_utilisateur()
+robot.user.delete()
 ```
 
 ```python
-supprimer_utilisateur()
-delete_user()
+robot.utilisateur.obtenir_utilisateur_connecte()
+robot.user.get_logged_in_user()
 ```
 
 ```python
-obtenir_utilisateur_connecte()
-get_logged_in_user()
-```
-
-```python
-detecter_carte(seuil_minimal : float, seuil_arret_recherche : float)
-detect_card(minimum_threshold: float, search_stop_threshold: float)
+robot.utilisateur.detecter_carte(seuil_minimal : float, seuil_arret_recherche : float)
+robot.user.detect_card(minimum_threshold: float, search_stop_threshold: float)
 ```
 
 ### Module HautParleur - Speaker
 
 ```python
-demarrer_module_haut_parleur()
-start_speaker_module()
+robot.initialiser_module_haut_parleur()
+robot.init_speaker_module()
 ```
 
 ```python
-charger_voix(voix: VoiceKey)
-load_voice(voice: VoiceKey)
+robot.haut_parleur.charger_voix(voix: VoiceKey)
+robot.speaker.load_voice(voice: VoiceKey)
 ```
 
 ```python
-utiliser_voix(voix: VoiceKey)
-use_voice(voice: VoiceKey)
+robot.haut_parleur.utiliser_voix(voix: VoiceKey)
+robot.speaker.use_voice(voice: VoiceKey)
 ```
 
 ```python
-dire(phrase: str)
-say(sentence: str)
+robot.haut_parleur.dire(phrase: str)
+robot.speaker.say(sentence: str)
 ```
 
 ```python
-lecture_en_cours()
-is_currently_reading()
+robot.haut_parleur.lecture_en_cours()
+robot.speaker.is_currently_reading()
 ```
 
 ```python
-enregistrer_audio_dans_fichier(voix: VoiceKey, texte: str, chemin: str)
-record_audio_to_file(voice: VoiceKey, text: str, path: str)
+robot.haut_parleur.enregistrer_audio_dans_fichier(voix: VoiceKey, texte: str, chemin: str)
+robot.speaker.record_audio_to_file(voice: VoiceKey, text: str, path: str)
 ```
 
 ## Les boutons

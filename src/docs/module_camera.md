@@ -8,26 +8,26 @@ Ce module permet de prendre des photos, d’y appliquer des filtres, reconnaissa
     Avant d’utiliser un module, il faudra toujours le lancer sinon il vous sera impossible d’utiliser le module et les méthodes lier à celui-ci.
 
 !!!Note
-    Il faut avoir demarrer le module fenêtre et l'avoir ouverte pour pouvoir utliser la méthode `demarrer_module_camera` ou `start_camera_module`.  
+    Il faut avoir demarrer le module fenêtre et l'avoir ouverte pour pouvoir utliser la méthode `initialiser_module_camera` ou `init_camera_module`.  
     Voir la documentation du module [fenêtre](module_window.md) pour plus d'informations.
 
 !!!Success "Demmarer le module Camera"
     ```python
-    robot.demarrer_module_camera()
+    robot.initialiser_module_camera()
 
     ou alors
 
-    robot.start_camera_module()
+    robot.init_camera_module()
     ```
 
 À partir de ce moment, l'objet *camera* est initialisé dans le robot, et est donc utilisable.
 
 !!!Note
-    La méthode `demarrer_module_camera()` (ou `start_camera_module()`) initialise l'objet *camera* dans le robot.
+    La méthode `initialiser_module_camera()` (ou `init_camera_module()`) initialise l'objet *camera* dans le robot.
 
 ## Afficher la caméra
 
-Pour afficher la caméra, il suffit d'utiliser la méthode `afficher_camera(position_x: int, position_y: int) (fr) - display_camera(position_x : int, position_y : int) (en)`.
+Pour afficher la caméra, il suffit d'utiliser la méthode `afficher_camera(position_x: int, position_y: int)` (fr) - `display_camera(position_x : int, position_y : int)` (en).
 
 !!!Warning
     Mettez cette méthode dans une boucle pour que l'image de la caméra soit actualisée et reste fluide.
@@ -51,7 +51,7 @@ Pour afficher la caméra, il suffit d'utiliser la méthode `afficher_camera(posi
 
 ## Prendre une photo
 
-Pour prendre une photo, il suffit d'utiliser la méthode `prendre_photo(nom_fichier: str) (fr) - take_picture(file_name : str) (en)`.  
+Pour prendre une photo, il suffit d'utiliser la méthode `prendre_photo(nom_fichier: str)` (fr) - `take_picture(file_name : str)` (en).  
 La photo sera enregistrée dans le dossier `images` du robot.
 
 !!!Warning
@@ -77,7 +77,7 @@ La photo sera enregistrée dans le dossier `images` du robot.
 
 ## Appliquer un filtre
 
-Pour appliquer un filtre à une photo, il suffit d'utiliser la méthode `appliquer_filtre(chemin_fichier: str, nom_filtre: str) (fr) - apply_filter(file_name : str, filter_name : str) (en)`.
+Pour appliquer un filtre à une photo, il suffit d'utiliser la méthode `appliquer_filtre(chemin_fichier: str, nom_filtre: str)` (fr) - `apply_filter(file_name : str, filter_name : str)` (en).
 
 Voir la réference pour la liste complète des [filtres](ref.md#les-filtres)
 
@@ -101,10 +101,10 @@ from pybot import Robot, Couleur
 
 robot = Robot()
 
-robot.demarrer_module_fenetre()
+robot.initialiser_module_fenetre()
 robot.fenetre.ouvrir_fenetre(1500, 1000)
 
-robot.demarrer_module_camera()
+robot.initialiser_module_camera()
 
 boutons = robot.attributs.boutons
 boutons.bouton_photo = robot.fenetre.creer_bouton(200, 50, 10, 10, Couleur.BLANC)

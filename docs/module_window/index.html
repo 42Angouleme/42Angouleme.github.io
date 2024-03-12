@@ -673,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_ai.md" class="md-nav__link">
+      <a href="../module_ai/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1197,21 +1197,21 @@
 </div>
 <div class="admonition success">
 <p class="admonition-title">Demmarer le module fenetre</p>
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">demarrer_module_fenetre</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">initialiser_module_fenetre</span><span class="p">()</span>
 
 <span class="n">ou</span> <span class="n">alors</span>
 
-<span class="n">robot</span><span class="o">.</span><span class="n">start_window_module</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">init_window_module</span><span class="p">()</span>
 </code></pre></div>
 </div>
 <p>À partir de ce moment, les objets fenetre et window sont initialisés dans le robot, ils sont donc utilisables.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>La methode <code>demarrer_module_fenetre()</code> initialise les objets fenetre et window dans le robot et c'est pareil pour <code>start_window_module()</code>.</p>
+<p>La methode <code>initialiser_module_fenetre()</code> (fr) - <code>init_window_module()</code> (en) initialise les objets fenetre et window dans le robot.</p>
 </div>
 <h2 id="ouvrir-une-fenetre">Ouvrir une fenêtre</h2>
 <p>La première chose que vous allez vouloir faire avec la fenêtre, c'est de l’ouvrir, en effet tant que vous n’ouvrez pas la fenêtre, celle-ci est inutilisable.</p>
-<p>Pour cela, on va donc faire appelle à la méthode <code>ouvrir_fenetre(longueur: int, hauteur: int) (fr) - open_window(width : int, height : int) (en)</code> en lui passant en paramètre la longueur et la largeur de la fenêtre.</p>
+<p>Pour cela, on va donc faire appelle à la méthode <code>ouvrir_fenetre(longueur: int, hauteur: int)</code> (fr) - <code>open_window(width : int, height : int)</code> (en) en lui passant en paramètre la longueur et la largeur de la fenêtre.</p>
 <div class="admonition success">
 <p class="admonition-title">Ouvrir la fenetre</p>
 <div class="highlight"><pre><span></span><code><span class="n">l</span> <span class="o">=</span> <span class="mi">1200</span>
@@ -1230,7 +1230,7 @@
 <p>Si vous ne donnez pas de paramètre à la méthode, alors la fenêtre s’ouvrira avec une taille de 800 sur 600.</p>
 </div>
 <h2 id="fermer-la-fenetre">Fermer la fenêtre</h2>
-<p>Pour fermer la fenêtre, il suffit d’appeler la méthode <code>fermer_fenetre() (fr) - close_window() (en)</code>.</p>
+<p>Pour fermer la fenêtre, il suffit d’appeler la méthode <code>fermer_fenetre()</code> (fr) - <code>close_window()</code> (en).</p>
 <div class="admonition success">
 <p class="admonition-title">Fermer la fenetre</p>
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">fermer_fenetre</span><span class="p">()</span>
@@ -1242,7 +1242,7 @@
 </div>
 <h2 id="actualiser-laffichage">Actualiser l’affichage</h2>
 <p>À chaque fois qu'une modification est faite (ex: un changement de titre, un nouveau bouton, un texte à afficher), il est important de mettre à jour l'affichage de la fenêtre.<br />
-On utilise la méthode <code>actualiser_affichage() (fr) - refresh_display() (en)</code>.</p>
+On utilise la méthode <code>actualiser_affichage()</code> (fr) - <code>refresh_display()</code> (en).</p>
 <p>Idéalement, cette méthode est appelée dans une boucle afin de garder l'affichage à jour.</p>
 <div class="admonition success">
 <p class="admonition-title">Actualiser l'affichage</p>
@@ -1254,7 +1254,7 @@ On utilise la méthode <code>actualiser_affichage() (fr) - refresh_display() (en
 </code></pre></div>
 </div>
 <h2 id="passer-la-fenetre-en-plein-ecran">Passer la fenêtre en plein écran</h2>
-<p>Pour passer la fenêtre en plein écran, il suffit d’appeler la méthode <code>plein_ecran(changer : bool) (fr) - full_screen(change : bool) (en)</code>.</p>
+<p>Pour passer la fenêtre en plein écran, il suffit d’appeler la méthode <code>plein_ecran(changer : bool)</code> (fr) - <code>full_screen(change : bool)</code> (en).</p>
 <div class="admonition success">
 <p class="admonition-title">Plein écran</p>
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">plein_ecran</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># pour passer en plein écran</span>
@@ -1267,7 +1267,7 @@ On utilise la méthode <code>actualiser_affichage() (fr) - refresh_display() (en
 </code></pre></div>
 </div>
 <h2 id="modifier-le-titre-de-la-fenetre">Modifier le titre de la fenêtre</h2>
-<p>Pour modifier le titre de la fenêtre, il suffit d’appeler la méthode <code>changer_titre(titre : str) (fr) - change_title(title : str) (en)</code>.</p>
+<p>Pour modifier le titre de la fenêtre, il suffit d’appeler la méthode <code>changer_titre(titre : str)</code> (fr) - <code>change_title(title : str)</code> (en).</p>
 <div class="admonition success">
 <p class="admonition-title">Modifier le titre</p>
 <div class="highlight"><pre><span></span><code><span class="n">titre</span> <span class="o">=</span> <span class="s2">&quot;Nouveau titre&quot;</span>
@@ -1280,7 +1280,7 @@ On utilise la méthode <code>actualiser_affichage() (fr) - refresh_display() (en
 </code></pre></div>
 </div>
 <h2 id="changer-la-couleur-de-fond-de-la-fenetre">Changer la couleur de fond de la fenêtre</h2>
-<p>Pour changer la couleur de fond de la fenêtre, il suffit d’appeler la méthode <code>changer_couleur_fond(couleur : str) (fr) - change_background_color(color : str) (en)</code>.</p>
+<p>Pour changer la couleur de fond de la fenêtre, il suffit d’appeler la méthode <code>changer_couleur_fond(couleur : str)</code> (fr) - <code>change_background_color(color : str)</code> (en).</p>
 <div class="admonition success">
 <p class="admonition-title">Changer la couleur de fond</p>
 <div class="highlight"><pre><span></span><code><span class="n">couleur</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span> <span class="c1"># blanc</span>
@@ -1297,7 +1297,7 @@ On utilise la méthode <code>actualiser_affichage() (fr) - refresh_display() (en
 <p>Voir la documentation sur <a href="../general/#les-couleurs">les couleurs</a> pour plus d'informations.</p>
 </div>
 <h2 id="afficher-le-fond-de-la-fenetre">Afficher le fond de la fenêtre</h2>
-<p>Pour afficher le fond de la fenêtre, il suffit d’appeler la méthode <code>afficher_fond() (fr) - display_background() (en)</code>.</p>
+<p>Pour afficher le fond de la fenêtre, il suffit d’appeler la méthode <code>afficher_fond()</code> (fr) - <code>display_background()</code> (en).</p>
 <div class="admonition success">
 <p class="admonition-title">Afficher le fond</p>
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">afficher_fond</span><span class="p">()</span>
@@ -1315,7 +1315,7 @@ On utilise la méthode <code>actualiser_affichage() (fr) - refresh_display() (en
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pybot</span> <span class="kn">import</span> <span class="n">Robot</span><span class="p">,</span> <span class="n">Couleur</span>
 
 <span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">demarrer_module_fenetre</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">initialiser_module_fenetre</span><span class="p">()</span>
 
 <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">ouvrir_fenetre</span><span class="p">(</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">900</span><span class="p">)</span>
 <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">changer_titre</span><span class="p">(</span><span class="s2">&quot;Nouveau titre&quot;</span><span class="p">)</span>
@@ -1331,7 +1331,7 @@ On utilise la méthode <code>actualiser_affichage() (fr) - refresh_display() (en
     <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">actualiser_affichage</span><span class="p">()</span>
 </code></pre></div>
 <h2 id="dessiner-un-rectangle">Dessiner un rectangle</h2>
-<p>Pour dessiner un rectangle, il suffit d’appeler la méthode <code>dessiner_rectangle(longueur: int, hauteur: int, position_x: int, position_y: int, couleur: Couleur) (fr) - draw_rectangle(width: int, height: int, position_x: int, position_y: int, color: Couleur)  (en)</code>.</p>
+<p>Pour dessiner un rectangle, il suffit d’appeler la méthode <code>dessiner_rectangle(longueur: int, hauteur: int, position_x: int, position_y: int, couleur: Couleur)</code> (fr) - <code>draw_rectangle(width: int, height: int, position_x: int, position_y: int, color: Couleur)  (en)</code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>La position (x, y) est le coin en haut à gauche du rectangle.</p>
@@ -1361,7 +1361,7 @@ On utilise la méthode <code>actualiser_affichage() (fr) - refresh_display() (en
 </div>
 <h2 id="afficher-un-texte">Afficher un texte</h2>
 <p>Pour afficher une ligne de texte, il suffit d’appeler la méthode <code>afficher_texte(texte : str, position_x: int, position_y: int, taille: int, couleur: Couleur) (fr) -</code><br />
-<code>display_text(text : str, position_x: int, position_y: int, size: int, color: Couleur) (en)</code>.</p>
+<code>display_text(text : str, position_x: int, position_y: int, size: int, color: Couleur)</code> (en).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>La position (x, y) est le coin en haut à gauche du texte.</p>
@@ -1387,7 +1387,7 @@ On utilise la méthode <code>actualiser_affichage() (fr) - refresh_display() (en
 </div>
 <h2 id="afficher-une-image">Afficher une image</h2>
 <p>Pour afficher une image, il suffit d’appeler la méthode <code>afficher_image(chemin_fichier : str, position_x: int, position_y: int) (fr) -</code><br />
-<code>display_image(file_path : str, position_x: int, position_y: int) (en)</code>.</p>
+<code>display_image(file_path : str, position_x: int, position_y: int)</code> (en).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>La position (x, y) est le coin en haut à gauche de l'image.</p>
@@ -1415,7 +1415,7 @@ On utilise la méthode <code>actualiser_affichage() (fr) - refresh_display() (en
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pybot</span> <span class="kn">import</span> <span class="n">Robot</span><span class="p">,</span> <span class="n">Couleur</span>
 
 <span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">demarrer_module_fenetre</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">initialiser_module_fenetre</span><span class="p">()</span>
 
 <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">ouvrir_fenetre</span><span class="p">(</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">900</span><span class="p">)</span>
 <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">changer_titre</span><span class="p">(</span><span class="s2">&quot;Nouveau titre&quot;</span><span class="p">)</span>
@@ -1435,7 +1435,7 @@ On utilise la méthode <code>actualiser_affichage() (fr) - refresh_display() (en
 </code></pre></div>
 <h2 id="creer-un-bouton">Creer un bouton</h2>
 <p>Pour créer un bouton, il suffit d’appeler la méthode <code>creer_bouton(longueur: int, hauteur: int, position_x: int, position_y: int, couleur: Couleur) (fr) -</code><br />
-<code>create_button(width: int, height: int, position_x: int, position_y: int, color: Couleur) (en)</code>.</p>
+<code>create_button(width: int, height: int, position_x: int, position_y: int, color: Couleur)</code> (en).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>La position (x, y) est le coin en haut à gauche du bouton.</p>
@@ -1466,7 +1466,7 @@ Regarder la documentation sur les <a href="../module_robot/#les-attributs-du-rob
 </div>
 <h2 id="creer-une-zone-de-texte">Creer une zone de texte</h2>
 <p>Pour créer une zone de texte, il suffit d’appeler la méthode <code>creer_zone_de_texte(longueur: int, hauteur: int, position_x: int, position_y: int, couleur: Couleur) (fr) -</code>
-<code>create_text_area(width: int, height: int, position_x: int, position_y: int, color: Couleur) (en)</code>.</p>
+<code>create_text_area(width: int, height: int, position_x: int, position_y: int, color: Couleur)</code> (en).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>La position (x, y) est le coin en haut à gauche de la zone de texte.</p>
@@ -1498,7 +1498,7 @@ Regarder la documentation sur les <a href="../module_robot/#les-attributs-du-rob
 <h2 id="afficher-carte-detectee">Afficher carte détectée</h2>
 <p>Une fois une carte détectée, il est possible de l'afficher sur la fenêtre.
 Pour afficher une carte détectée, il suffit d’appeler la méthode <code>afficher_carte_detectee(self, detected_card: MatLike, position_x: int, position_y: int) (fr)</code><br />
-<code>- display_detected_card(self, detected_card: MatLike, position_x: int, position_y: int) (en)</code>.</p>
+<code>- display_detected_card(self, detected_card: MatLike, position_x: int, position_y: int)</code> (en).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>La position (x, y) est le coin en haut à gauche de l'image.</p>
@@ -1518,11 +1518,11 @@ Pour afficher une carte détectée, il suffit d’appeler la méthode <code>affi
 <span class="n">robot</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">display_detected_card</span><span class="p">(</span><span class="n">card</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </code></pre></div>
 </div>
-<p>Voici où trouver la documentation sur la méthode <a href="../module_user/#detecter-une-carte"><code>detecter_carte() (fr) - detect_card() (en)</code></a>.</p>
+<p>Voici où trouver la documentation sur la méthode <a href="../module_user/#detecter-une-carte"><code>detecter_carte()</code> (fr) - <code>detect_card()</code> (en)</a>.</p>
 <h2 id="obtenir-limage-de-lemotion">Obtenir l'image de l'émotion</h2>
-<p>Le module <a href="module_ai.md#les-émotions-du-robot">IA - AI</a> permet de donner des "émotions" au robot.<br />
-Pour afficher l'image de l'émotion, il faut appeler la méthode <code>obtenir_image_emotion(emotion : str) (fr) - get_emotion_image(emotion : str) (en)</code>.</p>
-<p>Et ensuite, afficher l'image avec la méthode <a href="#afficher-une-image"><code>afficher_image(chemin : str, position_x: int, position_y: int) (fr) - display_image(path : str, position_x: int, position_y: int) (en)</code></a></p>
+<p>Le module <a href="../module_ai/#les-émotions-du-robot">IA - AI</a> permet de donner des "émotions" au robot.<br />
+Pour afficher l'image de l'émotion, il faut appeler la méthode <code>obtenir_image_emotion(emotion : str)</code> (fr) - <code>get_emotion_image(emotion : str)</code> (en).</p>
+<p>Et ensuite, afficher l'image avec la méthode <a href="#afficher-une-image"><code>afficher_image(chemin : str, position_x: int, position_y: int)</code> (fr) - <code>display_image(path : str, position_x: int, position_y: int)</code> (en)</a></p>
 <div class="admonition success">
 <p class="admonition-title">Obtenir l'image de l'émotion</p>
 <div class="highlight"><pre><span></span><code><span class="n">emotion</span> <span class="o">=</span> <span class="s2">&quot;heureux&quot;</span>
@@ -1550,7 +1550,7 @@ Mais essayez de garder la meme taille entre toute les images pour un meilleur re
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Voir la documentation sur les émotions pour plus d'informations. <a href="module_ai.md#les-émotions-du-robot">IA - AI</a></p>
+<p>Voir la documentation sur les émotions pour plus d'informations. <a href="../module_ai/#les-émotions-du-robot">IA - AI</a></p>
 </div>
 
 

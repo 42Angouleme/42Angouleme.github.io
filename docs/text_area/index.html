@@ -634,7 +634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_ai.md" class="md-nav__link">
+      <a href="../module_ai/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1123,7 +1123,7 @@ Ceci est une fonctionnalité qui sert d'entre deux avant l'ajout du module audio
 Pour cela, vous pouvez utiliser les méthodes qui vont vous être présentées ci-dessous.</p>
 <div class="admonition warning">
 <p class="admonition-title">Attention</p>
-<p>Les méthodes présentées ci-dessous sont utilisables uniquement sur un objet créé par la méthode <code>creer_zone_texte() (fr) - create_text_area() (en)</code>.</p>
+<p>Les méthodes présentées ci-dessous sont utilisables uniquement sur un objet créé par la méthode <code>creer_zone_texte()</code> (fr) - <code>create_text_area()</code> (en).</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1131,7 +1131,7 @@ Pour cela, vous pouvez utiliser les méthodes qui vont vous être présentées c
 </div>
 <h2 id="afficher-la-zone-de-texte">Afficher la zone de texte</h2>
 <p>Quand vous créez une zone de texte, elle n'est pas affichée dans la fenêtre.<br />
-Pour l'afficher, il suffit d’appeler la méthode <code>afficher() (fr) - display() (en)</code>.</p>
+Pour l'afficher, il suffit d’appeler la méthode <code>afficher()</code> (fr) - <code>display()</code> (en).</p>
 <div class="admonition success">
 <p class="admonition-title">Afficher la zone de texte</p>
 <div class="highlight"><pre><span></span><code><span class="n">zone_texte</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">creer_zone_texte</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>
@@ -1144,7 +1144,7 @@ Pour l'afficher, il suffit d’appeler la méthode <code>afficher() (fr) - displ
 </code></pre></div>
 </div>
 <h2 id="verifier-si-la-zone-de-texte-est-cliquee">Verifier si la zone de texte est cliquée</h2>
-<p>Pour verifier si la zone de texte est cliquée, il suffit d’appeler la méthode <code>est_actif() (fr) - is_active() (en)</code>.<br />
+<p>Pour verifier si la zone de texte est cliquée, il suffit d’appeler la méthode <code>est_actif()</code> (fr) - <code>is_active()</code> (en).<br />
 Cela permet de savoir si la zone de texte a été cliquée ou non pour ainsi déclencher l'ecriture.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1166,8 +1166,8 @@ Cela permet de savoir si la zone de texte a été cliquée ou non pour ainsi dé
 </code></pre></div>
 </div>
 <h2 id="ecrire-dans-la-zone-de-texte">Ecrire dans la zone de texte</h2>
-<p>Pour écrire dans la zone de texte, il suffit d’appeler la méthode <code>ecrire(robot : Robot) (fr) - write(robot : Robot) (en)</code>.<br />
-Utilisez cette méthode en combinaison avec la méthode <code>est_actif() (fr) - is_active() (en)</code> pour vérifier si la zone de texte est cliquée.
+<p>Pour écrire dans la zone de texte, il suffit d’appeler la méthode <code>ecrire(robot : Robot)</code> (fr) - <code>write(robot : Robot)</code> (en).<br />
+Utilisez cette méthode en combinaison avec la méthode <code>est_actif()</code> (fr) - <code>is_active()</code> (en) pour vérifier si la zone de texte est cliquée.
 Sinon, vous vous exposez à des erreurs.</p>
 <div class="admonition success">
 <p class="admonition-title">Écrire dans la zone de texte</p>
@@ -1194,7 +1194,7 @@ Sinon, vous vous exposez à des erreurs.</p>
 <p>Cette méthode est spéciale, elle prend en paramètre le robot pour pouvoir récupérer les informations saisies par l'utilisateur.</p>
 </div>
 <h2 id="recuperer-le-texte-de-la-zone-de-texte">Récupérer le texte de la zone de texte</h2>
-<p>Pour récupérer le texte de la zone de texte, il suffit d’appeler la méthode <code>obtenir_texte() (fr) - get_text() (en)</code>.</p>
+<p>Pour récupérer le texte de la zone de texte, il suffit d’appeler la méthode <code>obtenir_texte()</code> (fr) - <code>get_text()</code> (en).</p>
 <div class="admonition success">
 <p class="admonition-title">Récupérer le texte de la zone de texte</p>
 <div class="highlight"><pre><span></span><code><span class="n">zone_texte</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">creer_zone_texte</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>
@@ -1215,7 +1215,7 @@ Sinon, vous vous exposez à des erreurs.</p>
 </code></pre></div>
 </div>
 <h2 id="effacer-le-texte-de-la-zone-de-texte">Effacer le texte de la zone de texte</h2>
-<p>Pour effacer le texte de la zone de texte, il suffit d’appeler la méthode <code>effacer_texte() (fr) - erase_text() (en)</code>.
+<p>Pour effacer le texte de la zone de texte, il suffit d’appeler la méthode <code>effacer_texte()</code> (fr) - <code>erase_text()</code> (en).
 Cela permet de vider la zone de texte pour une nouvelle saisie.
 Renvoi le texte effacé.</p>
 <div class="admonition success">
@@ -1241,7 +1241,7 @@ Renvoi le texte effacé.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pybot</span> <span class="kn">import</span> <span class="n">Robot</span><span class="p">,</span> <span class="n">Couleur</span>
 
 <span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">demarrer_module_fenetre</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">initialiser_module_fenetre</span><span class="p">()</span>
 
 <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">ouvrir_fenetre</span><span class="p">(</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">900</span><span class="p">)</span>
 
@@ -1262,7 +1262,7 @@ Renvoi le texte effacé.</p>
 </code></pre></div>
 <h2 id="personnaliser-la-zone-de-texte">Personnaliser la zone de texte</h2>
 <h3 id="modifier-la-taille-de-la-police">Modifier la taille de la police</h3>
-<p>Pour modifier la taille de la police, il suffit d’appeler la méthode <code>modifier_taille_police(taille : int) (fr) - change_font_size(size : int) (en)</code>.
+<p>Pour modifier la taille de la police, il suffit d’appeler la méthode <code>modifier_taille_police(taille : int)</code> (fr) - <code>change_font_size(size : int)</code> (en).
 Par defaut, la taille de la police est de 16.</p>
 <div class="admonition success">
 <p class="admonition-title">Modifier la taille de la police</p>
@@ -1278,7 +1278,7 @@ Par defaut, la taille de la police est de 16.</p>
 </code></pre></div>
 </div>
 <h3 id="modifier-la-couleur-de-la-police">Modifier la couleur de la police</h3>
-<p>Pour modifier la couleur de la police, il suffit d’appeler la méthode <code>modifier_couleur_police(couleur : Couleur) (fr) - change_font_color(color : Couleur) (en)</code>.</p>
+<p>Pour modifier la couleur de la police, il suffit d’appeler la méthode <code>modifier_couleur_police(couleur : Couleur)</code> (fr) - <code>change_font_color(color : Couleur)</code> (en).</p>
 <div class="admonition success">
 <p class="admonition-title">Modifier la couleur de la police</p>
 <div class="highlight"><pre><span></span><code><span class="n">zone_texte</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">creer_zone_texte</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Couleur</span><span class="o">.</span><span class="n">BLANC</span><span class="p">)</span>
@@ -1296,7 +1296,7 @@ Par defaut, la taille de la police est de 16.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pybot</span> <span class="kn">import</span> <span class="n">Robot</span><span class="p">,</span> <span class="n">Couleur</span>
 
 <span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">demarrer_module_fenetre</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">initialiser_module_fenetre</span><span class="p">()</span>
 
 <span class="n">robot</span><span class="o">.</span><span class="n">fenetre</span><span class="o">.</span><span class="n">ouvrir_fenetre</span><span class="p">(</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">900</span><span class="p">)</span>
 

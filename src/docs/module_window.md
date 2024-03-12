@@ -11,23 +11,23 @@ En effet, ce module est le module le plus important, car c’est lui qui vous pe
 
 !!!Success "Demmarer le module fenetre"
     ```python
-    robot.demarrer_module_fenetre()
+    robot.initialiser_module_fenetre()
 
     ou alors
 
-    robot.start_window_module()
+    robot.init_window_module()
     ```
 
 À partir de ce moment, les objets fenetre et window sont initialisés dans le robot, ils sont donc utilisables.
 
 !!!Note
-    La methode `demarrer_module_fenetre()` initialise les objets fenetre et window dans le robot et c'est pareil pour `start_window_module()`.
+    La methode `initialiser_module_fenetre()` (fr) - `init_window_module()` (en) initialise les objets fenetre et window dans le robot.
 
 ## Ouvrir une fenêtre
 
 La première chose que vous allez vouloir faire avec la fenêtre, c'est de l’ouvrir, en effet tant que vous n’ouvrez pas la fenêtre, celle-ci est inutilisable.
 
-Pour cela, on va donc faire appelle à la méthode `ouvrir_fenetre(longueur: int, hauteur: int) (fr) - open_window(width : int, height : int) (en)` en lui passant en paramètre la longueur et la largeur de la fenêtre.
+Pour cela, on va donc faire appelle à la méthode `ouvrir_fenetre(longueur: int, hauteur: int)` (fr) - `open_window(width : int, height : int)` (en) en lui passant en paramètre la longueur et la largeur de la fenêtre.
 
 !!!Success "Ouvrir la fenetre"
     ```python
@@ -47,7 +47,7 @@ Pour cela, on va donc faire appelle à la méthode `ouvrir_fenetre(longueur: int
 
 ## Fermer la fenêtre
 
-Pour fermer la fenêtre, il suffit d’appeler la méthode `fermer_fenetre() (fr) - close_window() (en)`.
+Pour fermer la fenêtre, il suffit d’appeler la méthode `fermer_fenetre()` (fr) - `close_window()` (en).
 
 !!!Success "Fermer la fenetre"
     ```python
@@ -61,7 +61,7 @@ Pour fermer la fenêtre, il suffit d’appeler la méthode `fermer_fenetre() (fr
 ## Actualiser l’affichage
 
 À chaque fois qu'une modification est faite (ex: un changement de titre, un nouveau bouton, un texte à afficher), il est important de mettre à jour l'affichage de la fenêtre.  
-On utilise la méthode `actualiser_affichage() (fr) - refresh_display() (en)`.
+On utilise la méthode `actualiser_affichage()` (fr) - `refresh_display()` (en).
 
 Idéalement, cette méthode est appelée dans une boucle afin de garder l'affichage à jour.
 
@@ -76,7 +76,7 @@ Idéalement, cette méthode est appelée dans une boucle afin de garder l'affich
 
 ## Passer la fenêtre en plein écran
 
-Pour passer la fenêtre en plein écran, il suffit d’appeler la méthode `plein_ecran(changer : bool) (fr) - full_screen(change : bool) (en)`.
+Pour passer la fenêtre en plein écran, il suffit d’appeler la méthode `plein_ecran(changer : bool)` (fr) - `full_screen(change : bool)` (en).
 
 !!!Success "Plein écran"
     ```python
@@ -91,7 +91,7 @@ Pour passer la fenêtre en plein écran, il suffit d’appeler la méthode `plei
 
 ## Modifier le titre de la fenêtre
 
-Pour modifier le titre de la fenêtre, il suffit d’appeler la méthode `changer_titre(titre : str) (fr) - change_title(title : str) (en)`.
+Pour modifier le titre de la fenêtre, il suffit d’appeler la méthode `changer_titre(titre : str)` (fr) - `change_title(title : str)` (en).
 
 !!!Success "Modifier le titre"
     ```python
@@ -106,7 +106,7 @@ Pour modifier le titre de la fenêtre, il suffit d’appeler la méthode `change
 
 ## Changer la couleur de fond de la fenêtre
 
-Pour changer la couleur de fond de la fenêtre, il suffit d’appeler la méthode `changer_couleur_fond(couleur : str) (fr) - change_background_color(color : str) (en)`.
+Pour changer la couleur de fond de la fenêtre, il suffit d’appeler la méthode `changer_couleur_fond(couleur : str)` (fr) - `change_background_color(color : str)` (en).
 
 !!!Success "Changer la couleur de fond"
     ```python
@@ -124,7 +124,7 @@ Pour changer la couleur de fond de la fenêtre, il suffit d’appeler la méthod
 
 ## Afficher le fond de la fenêtre
 
-Pour afficher le fond de la fenêtre, il suffit d’appeler la méthode `afficher_fond() (fr) - display_background() (en)`.
+Pour afficher le fond de la fenêtre, il suffit d’appeler la méthode `afficher_fond()` (fr) - `display_background()` (en).
 
 !!!Success "Afficher le fond"
     ```python
@@ -144,7 +144,7 @@ Pour afficher le fond de la fenêtre, il suffit d’appeler la méthode `affiche
 from pybot import Robot, Couleur
 
 robot = Robot()
-robot.demarrer_module_fenetre()
+robot.initialiser_module_fenetre()
 
 robot.fenetre.ouvrir_fenetre(1200, 900)
 robot.fenetre.changer_titre("Nouveau titre")
@@ -162,7 +162,7 @@ while robot.est_actif() :
 
 ## Dessiner un rectangle
 
-Pour dessiner un rectangle, il suffit d’appeler la méthode `dessiner_rectangle(longueur: int, hauteur: int, position_x: int, position_y: int, couleur: Couleur) (fr) - draw_rectangle(width: int, height: int, position_x: int, position_y: int, color: Couleur)  (en)`.
+Pour dessiner un rectangle, il suffit d’appeler la méthode `dessiner_rectangle(longueur: int, hauteur: int, position_x: int, position_y: int, couleur: Couleur)` (fr) - `draw_rectangle(width: int, height: int, position_x: int, position_y: int, color: Couleur)  (en)`.
 
 !!!Warning
     La position (x, y) est le coin en haut à gauche du rectangle.
@@ -192,7 +192,7 @@ Pour dessiner un rectangle, il suffit d’appeler la méthode `dessiner_rectangl
 ## Afficher un texte
 
 Pour afficher une ligne de texte, il suffit d’appeler la méthode `afficher_texte(texte : str, position_x: int, position_y: int, taille: int, couleur: Couleur) (fr) -`  
-`display_text(text : str, position_x: int, position_y: int, size: int, color: Couleur) (en)`.
+`display_text(text : str, position_x: int, position_y: int, size: int, color: Couleur)` (en).
 
 !!!Warning
     La position (x, y) est le coin en haut à gauche du texte.
@@ -219,7 +219,7 @@ Pour afficher une ligne de texte, il suffit d’appeler la méthode `afficher_te
 ## Afficher une image
 
 Pour afficher une image, il suffit d’appeler la méthode `afficher_image(chemin_fichier : str, position_x: int, position_y: int) (fr) -`  
-`display_image(file_path : str, position_x: int, position_y: int) (en)`.
+`display_image(file_path : str, position_x: int, position_y: int)` (en).
 
 !!!Warning
     La position (x, y) est le coin en haut à gauche de l'image.
@@ -248,7 +248,7 @@ Pour afficher une image, il suffit d’appeler la méthode `afficher_image(chemi
 from pybot import Robot, Couleur
 
 robot = Robot()
-robot.demarrer_module_fenetre()
+robot.initialiser_module_fenetre()
 
 robot.fenetre.ouvrir_fenetre(1200, 900)
 robot.fenetre.changer_titre("Nouveau titre")
@@ -270,7 +270,7 @@ while robot.est_actif() :
 ## Creer un bouton
 
 Pour créer un bouton, il suffit d’appeler la méthode `creer_bouton(longueur: int, hauteur: int, position_x: int, position_y: int, couleur: Couleur) (fr) -`  
-`create_button(width: int, height: int, position_x: int, position_y: int, color: Couleur) (en)`.
+`create_button(width: int, height: int, position_x: int, position_y: int, color: Couleur)` (en).
 
 !!!Warning
     La position (x, y) est le coin en haut à gauche du bouton.
@@ -301,7 +301,7 @@ Pour créer un bouton, il suffit d’appeler la méthode `creer_bouton(longueur:
 ## Creer une zone de texte
 
 Pour créer une zone de texte, il suffit d’appeler la méthode `creer_zone_de_texte(longueur: int, hauteur: int, position_x: int, position_y: int, couleur: Couleur) (fr) -`
-`create_text_area(width: int, height: int, position_x: int, position_y: int, color: Couleur) (en)`.
+`create_text_area(width: int, height: int, position_x: int, position_y: int, color: Couleur)` (en).
 
 !!!Warning
     La position (x, y) est le coin en haut à gauche de la zone de texte.
@@ -333,7 +333,7 @@ Pour créer une zone de texte, il suffit d’appeler la méthode `creer_zone_de_
 
 Une fois une carte détectée, il est possible de l'afficher sur la fenêtre.
 Pour afficher une carte détectée, il suffit d’appeler la méthode `afficher_carte_detectee(self, detected_card: MatLike, position_x: int, position_y: int) (fr)`  
-`- display_detected_card(self, detected_card: MatLike, position_x: int, position_y: int) (en)`.
+`- display_detected_card(self, detected_card: MatLike, position_x: int, position_y: int)` (en).
 
 !!!Warning
     La position (x, y) est le coin en haut à gauche de l'image.
@@ -353,14 +353,14 @@ Pour afficher une carte détectée, il suffit d’appeler la méthode `afficher_
     robot.window.display_detected_card(card, x, y)
     ```
 
-Voici où trouver la documentation sur la méthode [`detecter_carte() (fr) - detect_card() (en)`](module_user.md#detecter-une-carte).
+Voici où trouver la documentation sur la méthode [`detecter_carte()` (fr) - `detect_card()` (en)](module_user.md#detecter-une-carte).
 
 ## Obtenir l'image de l'émotion
 
 Le module [IA - AI](module_ai.md#les-émotions-du-robot) permet de donner des "émotions" au robot.  
-Pour afficher l'image de l'émotion, il faut appeler la méthode `obtenir_image_emotion(emotion : str) (fr) - get_emotion_image(emotion : str) (en)`.
+Pour afficher l'image de l'émotion, il faut appeler la méthode `obtenir_image_emotion(emotion : str)` (fr) - `get_emotion_image(emotion : str)` (en).
 
-Et ensuite, afficher l'image avec la méthode [`afficher_image(chemin : str, position_x: int, position_y: int) (fr) - display_image(path : str, position_x: int, position_y: int) (en)`](#afficher-une-image)
+Et ensuite, afficher l'image avec la méthode [`afficher_image(chemin : str, position_x: int, position_y: int)` (fr) - `display_image(path : str, position_x: int, position_y: int)` (en)](#afficher-une-image)
 
 !!!Success "Obtenir l'image de l'émotion"
     ```python

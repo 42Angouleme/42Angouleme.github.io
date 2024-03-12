@@ -26,7 +26,7 @@ Une fois le robot créé (démarré), il passe dans l’état actif ; dans cet �
 
 ## Éteindre le robot
 
-Si l'on veut passer le robot dans l’état inactif (ce qui équivaut à éteindre le robot), on utilise la méthode `desactiver() (fr) - deactivate() (en).`
+Si l'on veut passer le robot dans l’état inactif (ce qui équivaut à éteindre le robot), on utilise la méthode `desactiver()` (fr) - `deactivate() (en).`
 
 !!!Success "desactiver() - deactivate()"
     ``` python
@@ -41,7 +41,7 @@ Après l’appel de cette méthode, le robot change son état en inactif (il dev
 
 ## Vérifier l’état du robot
 
-On peut obtenir l’état du robot grâce à la méthode `est_actif() (fr) - is_active() (en)`.
+On peut obtenir l’état du robot grâce à la méthode `est_actif()` (fr) - `is_active()` (en).
 
 !!!Success "est_actif() - is_active()"
     ```python
@@ -66,7 +66,7 @@ while robot.est_actif() :
 
 ## Faire dormir le robot
 
-Il est parfois utile de ralentir l'exécution du programme en lui faisant faire des pauses. La méthode `dort(secondes : int) (fr) - sleep(secondes : int) (en)` le permet, il suffit de passer en paramètre le nombre de secondes à attendre.
+Il est parfois utile de ralentir l'exécution du programme en lui faisant faire des pauses. La méthode `dort(secondes : int)` (fr) - `sleep(secondes : int)` (en) le permet, il suffit de passer en paramètre le nombre de secondes à attendre.
 
 !!!Success "dort(int) - sleep(secondes)"
     ```python
@@ -164,7 +164,7 @@ On appelle cela **les événements**.
 
 ### Créer un évènement
 
-Un évènement est une action sur le clavier associée à un nom d'évènement. Nous créons un nouvel évènement avec la méthode `ajouter_evenement(touche : str, nom : str) (fr) - add_event(key : str, name : str) (en)` en lui passant en paramètre la touche à laquelle on veut associer l’événement et le nom que l’on veut donner à celui-ci.
+Un évènement est une action sur le clavier associée à un nom d'évènement. Nous créons un nouvel évènement avec la méthode `ajouter_evenement(touche : str, nom : str)` (fr) - `add_event(key : str, name : str)` (en) en lui passant en paramètre la touche à laquelle on veut associer l’événement et le nom que l’on veut donner à celui-ci.
 
 !!!Success "Ajouter un évènement"
     ```python
@@ -182,7 +182,7 @@ Un évènement est une action sur le clavier associée à un nom d'évènement. 
 
 Une fois un évènement enregistré, il faut vérifier si l’événement se produit ou non.
 
-Pour cela, on a la méthode `verifier_evenements() (fr) - check_events() (en)` .
+Pour cela, on a la méthode `verifier_evenements()` (fr) - `check_events()` (en) .
 
 !!!info
     La méthode retourne une liste avec les évènements qui viennent d'être exécutés. Il est possible ensuite d'utiliser une vérification avec if… in ... : comme dans l'exemple ci-dessous.
@@ -207,7 +207,7 @@ Pour cela, on a la méthode `verifier_evenements() (fr) - check_events() (en)` .
 
 Si on ne veut plus qu’un évènement soit vérifié, il faudra le supprimer.
 
-Pour cela, on a la méthode `supprimer_evenement(nom : str) (fr) — delete_event(nom : str) (en)` en lui passant le nom de l’événement que l’on veut supprimer..
+Pour cela, on a la méthode `supprimer_evenement(nom : str) (fr) — delete_event(nom : str)` (en) en lui passant le nom de l’événement que l’on veut supprimer..
 
 !!!Success "Supprimer un évènement"
     ```python
@@ -238,7 +238,7 @@ robot = Robot()
 long = 1024
 haut = 800
 
-robot.demarrer_module_fenetre(long, haut)
+robot.initialiser_module_fenetre(long, haut)
 robot.fenetre.ouvrir_fenetre()
 
 robot.ajouter_evenement("echap", "stop")
@@ -256,7 +256,7 @@ Surtout pour le module utilisateur, car il permet de créer, modifier, supprimer
 C'est le serveur qui permettra d'accéder à l'application web et ainsi travailler avec la base de donnée, on utilise pour cela la méthode demarrer_webapp.  
 Il est aussi possible de configurer le robot depuis un site web, par exemple pour ajouter des élèves à la base de données.
 
-Pour lancer la webapp, il suffit d'appeler la méthode `demarrer_webapp() (fr) - start_webapp() (en)`.
+Pour lancer la webapp, il suffit d'appeler la méthode `demarrer_webapp()` (fr) - `init_webapp()` (en).
 
 !!!Success "demarrer_webapp()"
     ```python
@@ -264,7 +264,7 @@ Pour lancer la webapp, il suffit d'appeler la méthode `demarrer_webapp() (fr) -
 
     ou alors
 
-    robot.start_webapp()
+    robot.init_webapp()
     ```
 
 Le serveur web se lance et ne bloque pas le programme, on peut donc ensuite s'occuper de programmer le robot.
