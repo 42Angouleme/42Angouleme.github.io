@@ -341,11 +341,27 @@ robot.speaker.is_currently_reading()
 robot.haut_parleur.enregistrer_audio_dans_fichier(voix: VoiceKey, texte: str, chemin: str)
 robot.speaker.record_audio_to_file(voice: VoiceKey, text: str, path: str)
 ```
+
 ### Module Microphone
 
 ```python
 robot.initialiser_module_microphone()
 robot.init_microphone_module()
+```
+
+```python
+robot.microphone.une_phrase()
+robot.microphone.one_sentence()
+```
+
+```python
+robot.microphone.pour_chaque_phrase(callback: Callable[[TraitementAudio], None])
+robot.microphone.for_each_sentence(callback: Callable[[TraitementAudio], None])
+```
+
+```python
+robot.microphone.pendant(duree: str | float, delai: str | float | None = None)
+robot.microphone.during(duree: str | float, delai: str | float | None = None)
 ```
 
 ## Les boutons
