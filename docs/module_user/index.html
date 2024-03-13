@@ -1456,15 +1456,15 @@ Cette méthode retourne l'image detectée à l'écran.</p>
 <p>L'ancien historique de conversation sera ecrasé par le nouveau.</p>
 </div>
 <h3 id="recuperer-lhistorique-de-conversation">Récupérer l'historique de conversation</h3>
-<p>Pour récupérer l'historique de conversation, vous pouvez utiliser la méthode <code>obtenir_historique_conversation_utilisateur()</code> (fr) - <code>get_user_conversation_history()</code> (en).</p>
+<p>Pour récupérer l'historique de conversation, vous pouvez utiliser la méthode <code>obtenir_historique_conversation()</code> (fr) - <code>get_conversation_history()</code> (en).</p>
 <div class="admonition success">
 <p class="admonition-title">Récupérer l'historique de conversation</p>
-<div class="highlight"><pre><span></span><code><span class="n">historique</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">utilisateur</span><span class="o">.</span><span class="n">obtenir_historique_conversation_utilisateur</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">historique</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">utilisateur</span><span class="o">.</span><span class="n">obtenir_historique_conversation</span><span class="p">()</span>
 <span class="n">robot</span><span class="o">.</span><span class="n">IA</span><span class="o">.</span><span class="n">charger_historique_conversation</span><span class="p">(</span><span class="n">historique</span><span class="p">)</span>
 
 <span class="n">ou</span> <span class="n">alors</span>
 
-<span class="n">history</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">get_user_conversation_history</span><span class="p">()</span>
+<span class="n">history</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">get_conversation_history</span><span class="p">()</span>
 <span class="n">robot</span><span class="o">.</span><span class="n">AI</span><span class="o">.</span><span class="n">load_conversation_history</span><span class="p">(</span><span class="n">history</span><span class="p">)</span>
 </code></pre></div>
 </div>

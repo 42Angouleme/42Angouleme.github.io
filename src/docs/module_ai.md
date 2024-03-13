@@ -110,7 +110,7 @@ Ici, vous donnez donc au robot la capacité de se souvenir des interactions qu'i
 
     ou alors
 
-    history = robot.user.get_user_conversation_history()
+    history = robot.user.get_conversation_history()
     robot.AI.load_conversation_history(history)
     ```
 

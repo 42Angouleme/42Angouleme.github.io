@@ -341,6 +341,12 @@ robot.speaker.is_currently_reading()
 robot.haut_parleur.enregistrer_audio_dans_fichier(voix: VoiceKey, texte: str, chemin: str)
 robot.speaker.record_audio_to_file(voice: VoiceKey, text: str, path: str)
 ```
+### Module Microphone
+
+```python
+robot.initialiser_module_microphone()
+robot.init_microphone_module()
+```
 
 ## Les boutons
 

@@ -16,7 +16,7 @@
     
     
       
-        <title>Module microphone - Pybot</title>
+        <title>Module Microphone - Microphone - Pybot</title>
       
     
     
@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#module-microphone-microphone" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -105,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Module microphone
+              Module Microphone - Microphone
             
           </span>
         </div>
@@ -824,6 +829,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -838,9 +845,27 @@
                   
 
 
-  <h1>Module microphone</h1>
+<h1 id="module-microphone-microphone">Module Microphone - Microphone</h1>
+<p>Vous êtes ici dans la documentation du module Microphone (enregistrement audio) du robot.</p>
+<p>Ce module permet au robot d'enregistrer votre voix dans le but de la convertir en texte.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Avant d’utiliser un module, il faut systématiquement l'initialiser, sans quoi il vous sera impossible d’utiliser ce module et ses méthodes.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Démarrer le module <em>microphone</em></p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">initialiser_module_microphone</span><span class="p">()</span>
 
+<span class="n">ou</span> <span class="n">alors</span>
 
+<span class="n">robot</span><span class="o">.</span><span class="n">init_microphone_module</span><span class="p">()</span>
+</code></pre></div>
+</div>
+<p>À partir de ce moment, l'objet microphone est initialisé dans le robot.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La méthode <code>initialiser_module_microphone()</code> (ou <code>init_microphone_module()</code>) initialise l'objet microphone dans le robot.</p>
+</div>
 
 
 
