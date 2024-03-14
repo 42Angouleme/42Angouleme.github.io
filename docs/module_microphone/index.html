@@ -561,6 +561,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Module Microphone - Microphone
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -570,6 +581,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enregistrer-une-phrase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enregistrer une phrase
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enregistrer-plusieurs-phrase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enregistrer plusieurs phrase
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enregistrer-pendant-une-duree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enregistrer pendant une durée
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple Complet
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -869,6 +935,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enregistrer-une-phrase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enregistrer une phrase
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enregistrer-plusieurs-phrase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enregistrer plusieurs phrase
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enregistrer-pendant-une-duree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enregistrer pendant une durée
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple Complet
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -893,86 +1003,66 @@
 <p class="admonition-title">Démarrer le module <em>microphone</em></p>
 </div>
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">initialiser_module_microphone</span><span class="p">()</span>
-
-    <span class="n">ou</span> <span class="n">alors</span>
-
-    <span class="n">robot</span><span class="o">.</span><span class="n">init_microphone_module</span><span class="p">()</span>
-    <span class="err">```</span>
-
-<span class="n">À</span> <span class="n">partir</span> <span class="n">de</span> <span class="n">ce</span> <span class="n">moment</span><span class="p">,</span> <span class="n">l</span><span class="s1">&#39;objet microphone est initialisé dans le robot.</span>
-
-<span class="err">!!!</span><span class="n">Note</span>
-<span class="n">La</span> <span class="n">méthode</span> <span class="err">`</span><span class="n">initialiser_module_microphone</span><span class="p">()</span><span class="err">`</span> <span class="p">(</span><span class="n">ou</span> <span class="err">`</span><span class="n">init_microphone_module</span><span class="p">()</span><span class="err">`</span><span class="p">)</span> <span class="n">initialise</span> <span class="n">l</span><span class="s1">&#39;objet microphone dans le robot.</span>
-
-<span class="c1">## Enregistrer une phrase</span>
-
-<span class="n">Pour</span> <span class="n">enregistrer</span> <span class="n">une</span> <span class="n">phrase</span><span class="p">,</span> <span class="n">il</span> <span class="n">suffit</span> <span class="n">d</span><span class="s1">&#39;utiliser la méthode `une_phrase()` (fr) - `one_sentence()` (en).</span>
-
-<span class="err">!!!</span><span class="n">Note</span>
-<span class="n">La</span> <span class="n">méthode</span> <span class="err">`</span><span class="n">une_phrase</span><span class="p">()</span><span class="err">`</span> <span class="p">(</span><span class="n">fr</span><span class="p">)</span> <span class="o">-</span> <span class="err">`</span><span class="n">one_sentence</span><span class="p">()</span><span class="err">`</span> <span class="p">(</span><span class="n">en</span><span class="p">)</span> <span class="n">ne</span> <span class="n">prend</span> <span class="n">pas</span> <span class="n">de</span>
-<span class="n">paramètre</span><span class="o">.</span>
-
-<span class="err">!!!</span><span class="n">Success</span> <span class="s2">&quot;Enregistrer une phrase&quot;</span>
-
-<span class="err">`````</span><span class="n">python</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">microphone</span><span class="o">.</span><span class="n">une_phrase</span><span class="p">()</span>
-
-    <span class="n">ou</span> <span class="n">alors</span>
-
-    <span class="n">robot</span><span class="o">.</span><span class="n">microphone</span><span class="o">.</span><span class="n">one_sentence</span><span class="p">()</span>
-    <span class="err">```</span>
-
-<span class="c1">## Enregistrer plusieurs phrase</span>
-
-<span class="n">Pour</span> <span class="n">enregistrer</span> <span class="n">plusieurs</span> <span class="n">phrases</span> <span class="n">d</span><span class="s1">&#39;un seul coup, il suffit d&#39;</span><span class="n">utiliser</span> <span class="n">la</span>
-<span class="n">méthode</span> <span class="err">`</span><span class="n">pour_chaque_phrase</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">TraitementAudio</span><span class="p">],</span> <span class="kc">None</span><span class="p">])</span><span class="err">`</span> <span class="p">(</span><span class="n">fr</span><span class="p">)</span> <span class="o">-</span> <span class="err">`</span><span class="n">for_each_sentence</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">TraitementAudio</span><span class="p">],</span> <span class="kc">None</span><span class="p">])</span><span class="err">`</span> <span class="p">(</span><span class="n">en</span><span class="p">)</span><span class="o">.</span>
-
-<span class="err">!!!</span><span class="n">Note</span>
-<span class="n">La</span> <span class="n">méthode</span> <span class="err">`</span><span class="n">pour_chaque_phrase</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">TraitementAudio</span><span class="p">],</span> <span class="kc">None</span><span class="p">])</span><span class="err">`</span> <span class="p">(</span><span class="n">fr</span><span class="p">)</span> <span class="o">-</span> <span class="err">`</span><span class="n">for_each_sentence</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">TraitementAudio</span><span class="p">],</span> <span class="kc">None</span><span class="p">])</span><span class="err">`</span> <span class="p">(</span><span class="n">en</span><span class="p">)</span>
-<span class="n">prend</span> <span class="n">en</span> <span class="n">paramètre</span> <span class="n">une</span> <span class="n">fonction</span> <span class="n">qui</span> <span class="n">prend</span> <span class="n">elle</span> <span class="n">même</span> <span class="n">en</span> <span class="n">paramètre</span> <span class="n">un</span> <span class="err">`</span><span class="n">TraitementAudio</span><span class="err">`</span> <span class="n">et</span> <span class="n">renvoie</span> <span class="kc">None</span><span class="o">.</span>
-
-<span class="err">!!!</span><span class="n">Success</span> <span class="s2">&quot;Enregistrer plusieurs phrases&quot;</span>
-
-<span class="err">````</span><span class="n">python</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">microphone</span><span class="o">.</span><span class="n">pour_chaque_phrase</span><span class="p">()</span>
-
-    <span class="n">ou</span> <span class="n">alors</span>
-
-    <span class="n">robot</span><span class="o">.</span><span class="n">microphone</span><span class="o">.</span><span class="n">for_each_sentence</span><span class="p">()</span>
-    <span class="err">```</span>
-
-<span class="c1">## Enregistrer pendant une durée</span>
-
-<span class="n">Pour</span> <span class="n">enregistrer</span> <span class="n">pendant</span> <span class="n">une</span> <span class="n">durée</span> <span class="n">spécifiée</span><span class="p">,</span> <span class="n">il</span> <span class="n">suffit</span> <span class="n">d</span><span class="s1">&#39;utiliser la</span>
-<span class="n">méthode</span> <span class="err">`</span><span class="n">pendant</span><span class="p">(</span><span class="n">duree</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">float</span><span class="p">,</span> <span class="n">delai</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span><span class="err">`</span> <span class="p">(</span><span class="n">fr</span><span class="p">)</span> <span class="o">-</span> <span class="err">`</span><span class="n">during</span><span class="p">(</span><span class="n">duree</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">float</span><span class="p">,</span> <span class="n">delai</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span><span class="err">`</span> <span class="p">(</span><span class="n">en</span><span class="p">)</span><span class="o">.</span>
-
-<span class="err">!!!</span><span class="n">Note</span>
-<span class="n">La</span> <span class="n">méthode</span> <span class="err">`</span><span class="n">pendant</span><span class="p">(</span><span class="n">duree</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">float</span><span class="p">,</span> <span class="n">delai</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span><span class="err">`</span> <span class="p">(</span><span class="n">fr</span><span class="p">)</span> <span class="o">-</span> <span class="err">`</span><span class="n">during</span><span class="p">(</span><span class="n">duree</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">float</span><span class="p">,</span> <span class="n">delai</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span><span class="err">`</span> <span class="p">(</span><span class="n">en</span><span class="p">)</span>
-<span class="n">prend</span> <span class="n">en</span> <span class="n">paramètre</span> <span class="n">une</span> <span class="n">durée</span> <span class="n">en</span> <span class="err">`</span><span class="nb">str</span><span class="err">`</span> <span class="n">ou</span> <span class="n">en</span> <span class="err">`</span><span class="nb">float</span><span class="err">`</span><span class="p">,</span> <span class="n">et</span> <span class="n">un</span> <span class="n">delai</span> <span class="n">en</span> <span class="err">`</span><span class="nb">str</span><span class="err">`</span><span class="p">,</span> <span class="n">en</span>
-<span class="err">`</span><span class="nb">float</span><span class="err">`</span> <span class="n">ou</span> <span class="err">`</span><span class="kc">None</span><span class="err">`</span><span class="o">.</span>
-
-<span class="err">!!!</span><span class="n">Success</span> <span class="s2">&quot;Enregistrer pendant une durée&quot;</span>
-<span class="err">```</span><span class="n">python</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">microphone</span><span class="o">.</span><span class="n">pendant</span><span class="p">(</span><span class="s2">&quot;5 secondes&quot;</span><span class="p">)</span>
-
-    <span class="n">ou</span> <span class="n">alors</span>
-
-    <span class="n">robot</span><span class="o">.</span><span class="n">microphone</span><span class="o">.</span><span class="n">during</span><span class="p">(</span><span class="s2">&quot;5 secondes&quot;</span><span class="p">)</span>
-    <span class="err">```</span>
-
-<span class="c1">## Exemple Complet</span>
-
-<span class="err">```</span><span class="n">python</span>
-<span class="kn">from</span> <span class="nn">robot</span> <span class="kn">import</span> <span class="n">Robot</span>
+<span class="n">ou</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">init_microphone_module</span><span class="p">()</span>
+</code></pre></div>
+<p>À partir de ce moment, l'objet microphone est initialisé dans le robot.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>La méthode <code>initialiser_module_microphone()</code> (ou <code>init_microphone_module()</code>) initialise l'objet microphone dans le robot.</p>
+<h2 id="enregistrer-une-phrase">Enregistrer une phrase</h2>
+<p>Pour enregistrer une phrase, il suffit d'utiliser la méthode <code>une_phrase()</code> (fr) - <code>one_sentence()</code> (en).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>La méthode <code>une_phrase()</code> (fr) - <code>one_sentence()</code> (en) ne prend pas de
+paramètre.</p>
+<div class="admonition success">
+<p class="admonition-title">Enregistrer une phrase</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">microphone</span><span class="o">.</span><span class="n">une_phrase</span><span class="p">()</span>
+<span class="n">ou</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">microphone</span><span class="o">.</span><span class="n">one_sentence</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="enregistrer-plusieurs-phrase">Enregistrer plusieurs phrase</h2>
+<p>Pour enregistrer plusieurs phrases d'un seul coup, il suffit d'utiliser la
+méthode <code>pour_chaque_phrase(callback: Callable[[TraitementAudio], None])</code> (fr) - <code>for_each_sentence(callback: Callable[[TraitementAudio], None])</code> (en).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>La méthode <code>pour_chaque_phrase(callback: Callable[[TraitementAudio], None])</code> (fr) - <code>for_each_sentence(callback: Callable[[TraitementAudio], None])</code> (en)
+prend en paramètre une fonction qui prend elle même en paramètre un <code>TraitementAudio</code> et renvoie None.</p>
+<div class="admonition success">
+<p class="admonition-title">Enregistrer plusieurs phrases</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">microphone</span><span class="o">.</span><span class="n">pour_chaque_phrase</span><span class="p">()</span>
+<span class="n">ou</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">microphone</span><span class="o">.</span><span class="n">for_each_sentence</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="enregistrer-pendant-une-duree">Enregistrer pendant une durée</h2>
+<p>Pour enregistrer pendant une durée spécifiée, il suffit d'utiliser la
+méthode <code>pendant(duree: str | float, delai: str | float | None = None)</code> (fr) - <code>during(duree: str | float, delai: str | float | None = None)</code> (en).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>La méthode <code>pendant(duree: str | float, delai: str | float | None = None)</code> (fr) - <code>during(duree: str | float, delai: str | float | None = None)</code> (en)
+prend en paramètre une durée en <code>str</code> ou en <code>float</code>, et un delai en <code>str</code>, en
+<code>float</code> ou <code>None</code>.</p>
+<div class="admonition success">
+<p class="admonition-title">Enregistrer pendant une durée</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">microphone</span><span class="o">.</span><span class="n">pendant</span><span class="p">(</span><span class="s2">&quot;5 secondes&quot;</span><span class="p">)</span>
+<span class="n">ou</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">microphone</span><span class="o">.</span><span class="n">during</span><span class="p">(</span><span class="s2">&quot;5 secondes&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="exemple-complet">Exemple Complet</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">robot</span> <span class="kn">import</span> <span class="n">Robot</span>
 
 <span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
-
 <span class="n">robot</span><span class="o">.</span><span class="n">initialiser_module_microphone</span><span class="p">()</span>
-
 <span class="n">robot</span><span class="o">.</span><span class="n">microphone</span><span class="o">.</span><span class="n">une_phrase</span><span class="p">()</span><span class="o">.</span><span class="n">enregistrer_sous</span><span class="p">(</span><span class="s2">&quot;Ma_phrase.wav&quot;</span><span class="p">)</span>
-
 <span class="n">robot</span><span class="o">.</span><span class="n">microphone</span><span class="o">.</span><span class="n">pour_chaque_phrase</span><span class="p">()</span><span class="o">.</span><span class="n">enregistrer_sous</span><span class="p">(</span><span class="s2">&quot;Mon_texte.wav&quot;</span><span class="p">)</span>
-
 <span class="n">robot</span><span class="o">.</span><span class="n">microphone</span><span class="o">.</span><span class="n">pendant</span><span class="p">(</span><span class="s2">&quot;5 secondes&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">enregistrer_sous</span><span class="p">(</span><span class="s2">&quot;enregistrement.wav&quot;</span><span class="p">)</span>
 </code></pre></div>
 

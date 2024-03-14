@@ -9,13 +9,11 @@ Avant d’utiliser un module, il faut systématiquement l'initialiser, sans quoi
 
 !!!Success "Démarrer le module _microphone_"
 
-``````python
+```python
 robot.initialiser_module_microphone()
-
-    ou alors
-
-    robot.init_microphone_module()
-    ```
+ou
+robot.init_microphone_module()
+```
 
 À partir de ce moment, l'objet microphone est initialisé dans le robot.
 
@@ -32,13 +30,11 @@ paramètre.
 
 !!!Success "Enregistrer une phrase"
 
-`````python
+```python
 robot.microphone.une_phrase()
-
-    ou alors
-
-    robot.microphone.one_sentence()
-    ```
+ou
+robot.microphone.one_sentence()
+```
 
 ## Enregistrer plusieurs phrase
 
@@ -51,13 +47,11 @@ prend en paramètre une fonction qui prend elle même en paramètre un `Traiteme
 
 !!!Success "Enregistrer plusieurs phrases"
 
-````python
+```python
 robot.microphone.pour_chaque_phrase()
-
-    ou alors
-
-    robot.microphone.for_each_sentence()
-    ```
+ou
+robot.microphone.for_each_sentence()
+```
 
 ## Enregistrer pendant une durée
 
@@ -72,11 +66,9 @@ prend en paramètre une durée en `str` ou en `float`, et un delai en `str`, en
 !!!Success "Enregistrer pendant une durée"
 ```python
 robot.microphone.pendant("5 secondes")
-
-    ou alors
-
-    robot.microphone.during("5 secondes")
-    ```
+ou
+robot.microphone.during("5 secondes")
+```
 
 ## Exemple Complet
 
@@ -84,13 +76,8 @@ robot.microphone.pendant("5 secondes")
 from robot import Robot
 
 robot = Robot()
-
 robot.initialiser_module_microphone()
-
 robot.microphone.une_phrase().enregistrer_sous("Ma_phrase.wav")
-
 robot.microphone.pour_chaque_phrase().enregistrer_sous("Mon_texte.wav")
-
 robot.microphone.pendant("5 secondes").enregistrer_sous("enregistrement.wav")
-
-``````
+```

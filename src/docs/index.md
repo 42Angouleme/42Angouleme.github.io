@@ -56,3 +56,8 @@ Le mélange des langues et d’ailleurs possible même si fortement déconseille
 Pour mettre les images dans un cadre, nous vous conseillons d'utiliser un logiciel tel que gimp.
 
 Pour l'installer, écrivez la commande suivante dans le terminal : `flatpak install flathub org.gimp.GIMP -y`
+
+
+352
+51 Boulevard Besson Bey
+24931
