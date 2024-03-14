@@ -50,3 +50,9 @@ robot = Robot()
 Ce robot est utilisable en français et en anglais.  
 En effet, toutes les méthodes et les modules présentés dans la suite de la documentation sont disponibles en français comme en anglais (avec les commentaires des fonctions traduits aussi).  
 Le mélange des langues et d’ailleurs possible même si fortement déconseiller pour des questions de lisibilité et de compréhension du code.
+
+# Installer GIMP
+
+Pour mettre les images dans un cadre, nous vous conseillons d'utiliser un logiciel tel que gimp.
+
+Pour l'installer, écrivez la commande suivante dans le terminal : `flatpak install flathub org.gimp.GIMP -y`
