@@ -11,6 +11,7 @@ nav:
       - Module IA - AI: module_ai.md
       - Module Utilisateur - User: module_user.md
       - Module HautParleur - Speaker: module_speaker.md
+      - Module Microphone - Microphone: module_microphone.md
       - Utiliser l'administration web: admin.md
       - Référence complète: ref.md
   - Utiliser la bibliothèque:
