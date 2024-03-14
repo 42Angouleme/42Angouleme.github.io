@@ -291,12 +291,12 @@ robot.user.logout()
 ```
 
 ```python
-robot.utilisateur.creer_utilisateur(prenom, nom, carte)
+robot.utilisateur.creer(prenom, nom, carte)
 robot.user.create(firstname, lastname, card)
 ```
 
 ```python
-robot.utilisateur.supprimer_utilisateur()
+robot.utilisateur.supprimer()
 robot.user.delete()
 ```
 

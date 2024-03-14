@@ -94,11 +94,11 @@ Pour se déconnecter, on peut utiliser la méthode `deconnecter()` (fr) - `logou
 ### Créer une session
 
 Pour pouvoir se connecter, il faut avoir un compte utilisateur, pour avoir un compte utilisateur, il faut le créer.
-Pour créer un utilisateur il faut utiliser la méthode `creer_utilisateur(prenom, nom, carte)` (fr) - `create(firstname, lastname, card)` (en).
+Pour créer un utilisateur il faut utiliser la méthode `creer(prenom, nom, carte)` (fr) - `create(firstname, lastname, card)` (en).
 
 !!!Success "Création d'un utilisateur"
     ```python
-    robot.utilisateur.creer_utilisateur("Jean", "Dupont", carte)
+    robot.utilisateur.creer("Jean", "Dupont", carte)
 
     ou alors
 
@@ -106,18 +106,18 @@ Pour créer un utilisateur il faut utiliser la méthode `creer_utilisateur(preno
     ```
 
 !!! Note
-    La carte en paramètre de la méthode créer_utilisateur(prenom, nom, **carte**) doit être une image récupérée avec la méthode [detecter_carte()` (fr) - `detect_card() (en)](module_user.md#récuperer-la-carte-detectée-àlécran).
+    La carte en paramètre de la méthode `créer(prenom, nom, **carte**)` doit être une image récupérée avec la méthode [detecter_carte()` (fr) - `detect_card() (en)](module_user.md#récuperer-la-carte-detectée-àlécran).
 
 !!! Warning
     La personne qui vient de créer son compte ne sera pas connecté, il faut appeler la méthode [`connecter()` (fr) - `login()` (en)](module_user.md#se-connecter) pour se connecter.
 
 ### Supprimer une session
 
-Pour supprimer un utilisateur, il faut faire appel à la méthode `supprimer_utilisateur()` (fr) - `delete()` (en).
+Pour supprimer un utilisateur, il faut faire appel à la méthode `supprimer()` (fr) - `delete()` (en).
 
 !!!Success "Suppression d'un utilisateur"
     ```python
-    robot.utilisateur.supprimer_utilisateur()
+    robot.utilisateur.supprimer()
 
     ou alors
 

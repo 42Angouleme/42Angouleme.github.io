@@ -105,7 +105,7 @@ Ici, vous donnez donc au robot la capacité de se souvenir des interactions qu'i
 
 !!!Success "Charger un historique de conversation"
     ```python
-    historique = robot.utilisateur.obtenir_historique_conversation_utilisateur()
+    historique = robot.utilisateur.obtenir_historique_conversation()
     robot.IA.charger_historique_conversation(historique)
 
     ou alors

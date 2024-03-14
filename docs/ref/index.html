@@ -552,6 +552,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../module_microphone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Microphone - Microphone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../admin/" class="md-nav__link">
         
   
@@ -1322,10 +1343,10 @@
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">utilisateur</span><span class="o">.</span><span class="n">deconnecter</span><span class="p">()</span>
 <span class="n">robot</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">logout</span><span class="p">()</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">utilisateur</span><span class="o">.</span><span class="n">creer_utilisateur</span><span class="p">(</span><span class="n">prenom</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">carte</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">utilisateur</span><span class="o">.</span><span class="n">creer</span><span class="p">(</span><span class="n">prenom</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">carte</span><span class="p">)</span>
 <span class="n">robot</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">firstname</span><span class="p">,</span> <span class="n">lastname</span><span class="p">,</span> <span class="n">card</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">utilisateur</span><span class="o">.</span><span class="n">supprimer_utilisateur</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">utilisateur</span><span class="o">.</span><span class="n">supprimer</span><span class="p">()</span>
 <span class="n">robot</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">utilisateur</span><span class="o">.</span><span class="n">obtenir_utilisateur_connecte</span><span class="p">()</span>
@@ -1356,6 +1377,15 @@
 <h3 id="module-microphone">Module Microphone</h3>
 <div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">initialiser_module_microphone</span><span class="p">()</span>
 <span class="n">robot</span><span class="o">.</span><span class="n">init_microphone_module</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">microphone</span><span class="o">.</span><span class="n">une_phrase</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">microphone</span><span class="o">.</span><span class="n">one_sentence</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">microphone</span><span class="o">.</span><span class="n">pour_chaque_phrase</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">TraitementAudio</span><span class="p">],</span> <span class="kc">None</span><span class="p">])</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">microphone</span><span class="o">.</span><span class="n">for_each_sentence</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">TraitementAudio</span><span class="p">],</span> <span class="kc">None</span><span class="p">])</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">microphone</span><span class="o">.</span><span class="n">pendant</span><span class="p">(</span><span class="n">duree</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">float</span><span class="p">,</span> <span class="n">delai</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">microphone</span><span class="o">.</span><span class="n">during</span><span class="p">(</span><span class="n">duree</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">float</span><span class="p">,</span> <span class="n">delai</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="les-boutons">Les boutons</h2>
 <div class="highlight"><pre><span></span><code><span class="n">ajouter_texte</span><span class="p">(</span><span class="n">texte</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">position_x</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">position_y</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">taille</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">couleur</span> <span class="p">:</span> <span class="n">Couleur</span><span class="p">)</span>

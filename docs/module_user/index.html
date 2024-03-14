@@ -751,6 +751,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../module_microphone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Microphone - Microphone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../admin/" class="md-nav__link">
         
   
@@ -1306,10 +1327,10 @@ Pour cela, on peut utiliser la méthode <code>verifier_session()</code> (fr) - <
 <h2 id="creer-supprimer-un-compte-utilisateur">Créer/ Supprimer un compte utilisateur</h2>
 <h3 id="creer-une-session">Créer une session</h3>
 <p>Pour pouvoir se connecter, il faut avoir un compte utilisateur, pour avoir un compte utilisateur, il faut le créer.
-Pour créer un utilisateur il faut utiliser la méthode <code>creer_utilisateur(prenom, nom, carte)</code> (fr) - <code>create(firstname, lastname, card)</code> (en).</p>
+Pour créer un utilisateur il faut utiliser la méthode <code>creer(prenom, nom, carte)</code> (fr) - <code>create(firstname, lastname, card)</code> (en).</p>
 <div class="admonition success">
 <p class="admonition-title">Création d'un utilisateur</p>
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">utilisateur</span><span class="o">.</span><span class="n">creer_utilisateur</span><span class="p">(</span><span class="s2">&quot;Jean&quot;</span><span class="p">,</span> <span class="s2">&quot;Dupont&quot;</span><span class="p">,</span> <span class="n">carte</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">utilisateur</span><span class="o">.</span><span class="n">creer</span><span class="p">(</span><span class="s2">&quot;Jean&quot;</span><span class="p">,</span> <span class="s2">&quot;Dupont&quot;</span><span class="p">,</span> <span class="n">carte</span><span class="p">)</span>
 
 <span class="n">ou</span> <span class="n">alors</span>
 
@@ -1318,17 +1339,17 @@ Pour créer un utilisateur il faut utiliser la méthode <code>creer_utilisateur(
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>La carte en paramètre de la méthode créer_utilisateur(prenom, nom, <strong>carte</strong>) doit être une image récupérée avec la méthode <a href="./#récuperer-la-carte-detectée-àlécran">detecter_carte()<code>(fr) -</code>detect_card() (en)</a>.</p>
+<p>La carte en paramètre de la méthode <code>créer(prenom, nom, **carte**)</code> doit être une image récupérée avec la méthode <a href="./#récuperer-la-carte-detectée-àlécran">detecter_carte()<code>(fr) -</code>detect_card() (en)</a>.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>La personne qui vient de créer son compte ne sera pas connecté, il faut appeler la méthode <a href="./#se-connecter"><code>connecter()</code> (fr) - <code>login()</code> (en)</a> pour se connecter.</p>
 </div>
 <h3 id="supprimer-une-session">Supprimer une session</h3>
-<p>Pour supprimer un utilisateur, il faut faire appel à la méthode <code>supprimer_utilisateur()</code> (fr) - <code>delete()</code> (en).</p>
+<p>Pour supprimer un utilisateur, il faut faire appel à la méthode <code>supprimer()</code> (fr) - <code>delete()</code> (en).</p>
 <div class="admonition success">
 <p class="admonition-title">Suppression d'un utilisateur</p>
-<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">utilisateur</span><span class="o">.</span><span class="n">supprimer_utilisateur</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">utilisateur</span><span class="o">.</span><span class="n">supprimer</span><span class="p">()</span>
 
 <span class="n">ou</span> <span class="n">alors</span>
 
