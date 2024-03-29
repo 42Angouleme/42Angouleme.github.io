@@ -9,7 +9,7 @@ Il existe trois dépôts *github* publics liés au projet :
 
 La démo est archivée et sert seulement comme référence, le développement se déroule exclusivement sur le dépôt de la bibliothèque *pybot* et les [tickets sont rassemblés ici](https://github.com/42Angouleme/pybot/issues).
 
-## Installation du projet
+## Installation du projet sous PC (Ubuntu)
 
 La bibliothèque utilise le language Python (>3.10) avec un grand nombre de dépendances (pygame, flask, opencv...). Pour l'installer en local il suffit de cloner le dépôt, installer un environnement virtuel python avec les dépendances.
 
@@ -21,6 +21,20 @@ La bibliothèque utilise le language Python (>3.10) avec un grand nombre de dép
     python3 -m venv venv
     source venv/bin/activate
     python3 -m pip install -r requirements.txt
+    ```
+
+## Installation du projet sous Raspberry Pi
+
+Le projet est aussi compatible avec les Raspberry Pi (Raspberry Pi OS).
+
+!!! success "Commandes :"
+
+    ```bash
+    git clone git@github.com:42Angouleme/pybot.git
+    cd pybot
+    python3 -m venv --system-site-packages venv
+    source venv/bin/activate
+    python3 -m pip install -Ir requirements.txt
     ```
 
 ## Ajouter un package python et mettre à jour le fichier requirements.txt
