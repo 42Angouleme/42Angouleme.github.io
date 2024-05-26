@@ -12,7 +12,7 @@ Les types possibles sont:
 - bool => Boolean True ("Vrai") ou False ("Faux")
 - ...
 
-# Exemple:
+## Exemple:
 
 ```python
 un_bool = True
@@ -30,7 +30,7 @@ print("Ceci est une chaine de caracteres:", une_str)
 Les fonctions définissent des actions à faire lors de leur appel.
 Une fonction est constituée de son nom, des paramètres pris en entrée et de son type de retour.
 
-# Exemple:
+## Exemple:
 
 ```python
 # Cette fonction affiche "bonjour"
@@ -60,7 +60,7 @@ def main():
 
 Les conditions permettent de limiter l'exécution d'une action si et seulement si la condition est valide.
 
-# Exemple:
+## Exemple:
 
 ```python
 def positif_ou_negatif(nombre: int):
@@ -75,7 +75,7 @@ def positif_ou_negatif(nombre: int):
 
 Les boucles sont des éléments qui permettent de répéter une action, un nombre de fois définit par la condition d'arrêt.
 
-# Exemple:
+## Exemple:
 
 ```python
 def dire_bonjour_a_tous_les_etudiants(nombre_etudiants: int):
@@ -93,7 +93,7 @@ Comme dans l'exemple suivant, vous pouvez importer une classes "Robot" depuis la
 Ensuite, il vous faut créer un objet Robot, avec ici un nom et un âge.
 Par la suite, vous pouvez donner des ordres à votre robot, en faisant appel aux méthodes que la classes Robot contient.
 
-# Exemple:
+## Exemple:
 
 ```python
 from pybot import Robot

@@ -46,7 +46,7 @@ Les bool sont des booléens (vrai ou faux). Ils sont utilisés pour les conditio
 
 ### Les couleurs
 
-!! note
+!!! note
     En informatique, nous utilisons les couleurs de base dites RGB en anglais **(Rouge (Red), Vert (Green), Bleu (Blue))**.
     Pour représenter une couleur, il faut combiner les différentes intensités de ces trois couleurs de base.
 
