@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.24">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -302,14 +302,12 @@
     
     
     
-    
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
           
@@ -317,7 +315,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
         
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -626,14 +624,15 @@
     
     
     
-    
-    
+      
+        
+        
       
       
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
@@ -746,14 +745,12 @@
     
     
     
-    
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
           
@@ -761,7 +758,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -891,7 +888,7 @@
 - str =&gt; Caractère ou chaîne de caractères
 - bool =&gt; Boolean True ("Vrai") ou False ("Faux")
 - ...</p>
-<h1 id="exemple">Exemple:</h1>
+<h2 id="exemple">Exemple:</h2>
 <div class="highlight"><pre><span></span><code><span class="n">un_bool</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">un_int</span> <span class="o">=</span> <span class="mi">42</span>
 <span class="n">une_str</span> <span class="o">=</span> <span class="s2">&quot;Coucou&quot;</span>
@@ -903,7 +900,7 @@
 <h1 id="2-les-fonctions">2. Les fonctions</h1>
 <p>Les fonctions définissent des actions à faire lors de leur appel.
 Une fonction est constituée de son nom, des paramètres pris en entrée et de son type de retour.</p>
-<h1 id="exemple_1">Exemple:</h1>
+<h2 id="exemple_1">Exemple:</h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># Cette fonction affiche &quot;bonjour&quot;</span>
 <span class="k">def</span> <span class="nf">afficher_bonjour</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bonjour&quot;</span><span class="p">)</span>
@@ -927,7 +924,7 @@ Une fonction est constituée de son nom, des paramètres pris en entrée et de s
 </code></pre></div>
 <h1 id="3-les-conditions">3. Les conditions</h1>
 <p>Les conditions permettent de limiter l'exécution d'une action si et seulement si la condition est valide.</p>
-<h1 id="exemple_2">Exemple:</h1>
+<h2 id="exemple_2">Exemple:</h2>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">positif_ou_negatif</span><span class="p">(</span><span class="n">nombre</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">nombre</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="s2">&quot;est positif !&quot;</span><span class="p">)</span>
@@ -936,7 +933,7 @@ Une fonction est constituée de son nom, des paramètres pris en entrée et de s
 </code></pre></div>
 <h1 id="4-les-boucles">4. Les Boucles</h1>
 <p>Les boucles sont des éléments qui permettent de répéter une action, un nombre de fois définit par la condition d'arrêt.</p>
-<h1 id="exemple_3">Exemple:</h1>
+<h2 id="exemple_3">Exemple:</h2>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">dire_bonjour_a_tous_les_etudiants</span><span class="p">(</span><span class="n">nombre_etudiants</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
     <span class="n">indice</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">while</span> <span class="n">indice</span> <span class="o">&lt;=</span> <span class="n">nombre_etudiants</span><span class="p">:</span>
@@ -948,7 +945,7 @@ Une fonction est constituée de son nom, des paramètres pris en entrée et de s
 Comme dans l'exemple suivant, vous pouvez importer une classes "Robot" depuis la bibliothèque "Robot". 
 Ensuite, il vous faut créer un objet Robot, avec ici un nom et un âge.
 Par la suite, vous pouvez donner des ordres à votre robot, en faisant appel aux méthodes que la classes Robot contient.</p>
-<h1 id="exemple_4">Exemple:</h1>
+<h2 id="exemple_4">Exemple:</h2>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pybot</span> <span class="kn">import</span> <span class="n">Robot</span>
 
 
@@ -1006,10 +1003,10 @@ Par la suite, vous pouvez donner des ordres à votre robot, en faisant appel aux
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.tabs"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.tabs"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.081f42fc.min.js"></script>
       
     
   </body>
